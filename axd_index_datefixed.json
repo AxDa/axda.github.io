@@ -11531,8 +11531,23 @@
   "size": 947800,
   "type": "svg"
 },
+  "title": "Bleakst_2112_circa_19062026.mp3",
+  "url": "https://axda.github.io/Blu/Bleakst_2112_circa_19062026mp3",
+  "thumbnail": "",
+  "tags": [
+    "audio",
+    "archive",
+    "Bleakst",
+    "testimony"
+  ],
+  "date": "2026-06-19",
+  "motif": "civic decay",
+  "cluster": "perambulator",
+  "size": 49600,
+  "type": "mp3"
+},
 {
-  "title": "TomRobinson_Nirvana_Perspective_02042026.png",
+  "title": "TomRobinson_Nirvana_Perspective_02042026",
   "url": "https://axda.github.io/Blu/TomRobinson_Nirvana_Perspective_02042026.png",
   "thumbnail": "TomRobinson_Nirvana_Perspective_02042026.png",
   "tags": [
@@ -11545,7 +11560,7 @@
   "cluster": "interface",
   "size": 267000,
   "type": "png"
- },
+},
 {
   "title": "Machine+voice_obs_19062026.png",
   "url": "https://axda.github.io/Blu/Machine+voice_obs_19062026.png",
