@@ -1,0 +1,689 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive Index</title>
+<style>
+.file-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center;
+}
+
+/*.icon-doc  { background-image: url('icons/doc.svg'); }
+.icon-mp3  { background-image: url('icons/mp3.svg'); }
+.icon-png  { background-image: url('icons/png.svg'); }
+.icon-html { background-image: url('icons/html.svg'); }
+.icon-svg  { background-image: url('icons/svg.svg'); }
+.icon-pdf  { background-image: url('icons/pdf.svg'); }
+*/
+/* Disable ALL icon visuals completely */
+.file-icon,
+.icon,
+.icon-mp3,
+.icon-png,
+.icon-html,
+.icon-svg,
+.icon-doc,
+.icon-file {
+    background: none !important;
+    background-image: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: none !important;
+}
+
+
+
+
+</style>
+  
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 20px; }
+    .controls { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; }
+    .index-grid { display: flex; flex-wrap: wrap; gap: 15px; }
+.item {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  width: 180px;
+  padding: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 13px;
+}
+
+.item img {
+  width: 160px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item a {
+  display: block;
+  margin-top: 8px;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+
+  /* Prevent long-title overflow */
+  font-size: 13px;
+  line-height: 1.2;
+  max-height: 2.4em; /* two lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+}
+    .item a:hover { text-decoration: underline; }
+.compact .item {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.compact .item img {
+  display: none;
+}
+    .compact .item a { margin: 0; font-weight: normal; }
+    .legend { display: flex; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-color { width: 16px; height: 16px; border-radius: 3px; }
+
+    /* File-type dropdown styling */
+    #fileTypeFilter {
+      padding: 6px 10px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      background: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #fileTypeFilter:hover {
+      border-color: #0077cc;
+    }
+.info-banner {
+  background: #fff;
+  border: 2px solid #2b6cb0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.info-banner h2 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+}
+
+.info-banner p {
+  margin: 4px 0;
+}
+.audio-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#audioToggle {
+  padding: 6px 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#audioToggle:hover {
+  border-color: #0077cc;
+}
+
+#audioTitle {
+  font-size: 14px;
+  cursor: pointer;
+  color: #0077cc;
+}
+</style>
+<style>
+.item-size {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+.thumb-orange {
+    width: 64px;       /* adjust to taste */
+    height: auto;
+    opacity: 0.9;
+    object-fit: contain;
+}
+
+</style>
+</head>
+<body>
+  <h1>Archive Index</h1>
+  <div id="legend" class="legend"></div>
+
+  <div class="info-banner">
+  <h2>Current Context: King Charles in Bermuda</h2>
+  <p><strong>King Charles is currently on a high‑profile visit to Bermuda, where multiple reputable news outlets report he is carrying out a three‑day royal tour following his U.S. state visit.</strong></p>
+  <p>His Bermuda trip marks his first visit to a British Overseas Territory as monarch, and the first time in 400 years that a reigning king has visited the islands. Reports describe a full ceremonial welcome, key engagements in defence and space science, cultural and historical events, and a warm public reception across the island.</p>
+</div>
+<div class="controls">
+    <input type="text" id="search" placeholder="Search by title or tag...">
+    <select id="tagFilter"></select>
+    <select id="sortOrder">
+      <option value="desc">Newest first</option>
+      <option value="asc">Oldest first</option>
+    </select>
+
+    <select id="fileTypeFilter">
+      <option value="">All file types</option>
+    </select>
+
+    <select id="sortBy">
+      <option value="date">Sort by Date</option>
+      <option value="title">Sort by Title</option>
+    </select>
+
+<div id="itemCount" style="margin-top:10px; font-weight:bold;"></div>
+
+  
+    <button id="toggleView">Compact View</button>
+
+    <button id="openIndexFin2" onclick="window.open('indexfin2_data.html?ref=master', '_blank')">
+      Open IndexFin2 Data
+    </button>
+
+    <button id="openEnhancedAudioPlayer" onclick="window.open('AudioPlayer.html', '_blank')">
+      Enhanced Audio Player
+    </button>
+
+<!-- AUDIO BOX INSIDE CONTROLS -->
+<div class="audio-box">
+  <button id="audioToggle">Audio: OFF</button>
+  <button id="audioPlay">▶ Play</button>
+
+  <!-- Audio selector -->
+  <select id="audioSelect">
+    <option value="David%20Lowe%20Matt%20Chorley_R5L_24042026_1010mmss_axd_v0.1.mp3">
+      David Lowe & Matt Chorley
+    </option>
+    <option value="Times_clips.mp3">
+      Times Clips (in assosiation w handle frank'n)
+    </option>
+  </select>
+
+  <!-- Speed control -->
+  <select id="speedControl">
+    <option value="0.25">0.25×</option>
+    <option value="0.5">0.5×</option>
+    <option value="1" selected>1×</option>
+    <option value="1.5">1.5×</option>
+    <option value="2">2×</option>
+  </select>
+
+  <!-- Reverse toggle -->
+  <button id="reverseBtn">Reverse: OFF</button>
+
+  <span id="audioTitle">
+    Audio Clip David%20Lowe%20Matt%20Chorley_R5L_24042026_1010mmss_axd_v0.1.mp3
+  </span>
+</div>
+
+<audio id="hoverAudio"
+       src="David%20Lowe%20Matt%20Chorley_R5L_24042026_1010mmss_axd_v0.1.mp3">
+</audio>
+<canvas id="waveCanvas" width="600" height="80" style="width:100%; height:80px;"></canvas>
+</div>
+<!-- INDEX GRID BELOW CONTROLS -->
+<div id="index"></div>
+<div class="item-size">Size: N bytes</div>
+<div class="earth-launch">
+  <h3>View Tour Route in Google Earth</h3>
+  <a href="https://earth.google.com/web/@?link=https://axda.github.io/Blu/tour_route_enhanced.kml"
+     target="_blank"
+     style="display:inline-block;padding:10px 16px;background:#4285f4;color:#fff;text-decoration:none;border-radius:4px;">
+     🌍 Open in Google Earth Web
+  </a>
+</div>
+<script>
+async function loadIndex() {
+
+    // Load JSON
+    const res = await fetch("./axd_index_datefixed.json");
+    let data = await res.json();
+
+    // Apply waveform thumbnail fix BEFORE anything else
+    data = await fixMissingThumbnails(data);
+
+
+    // Store total count
+    window.fullIndexCount = data.length;
+
+    const container = document.getElementById('index');
+    const searchBox = document.getElementById('search');
+    const tagFilter = document.getElementById('tagFilter');
+    const sortOrder = document.getElementById('sortOrder');
+    const sortBy = document.getElementById('sortBy');
+    const fileTypeFilter = document.getElementById('fileTypeFilter');
+    const legend = document.getElementById('legend');
+    const toggleView = document.getElementById('toggleView');
+
+    let compactMode = false;
+
+    const motifColors = {
+        "civic decay": "#2b6cb0",
+        "moral inquiry": "#38a169",
+        "rhetorical indictment": "#d69e2e",
+        "technical audit": "#805ad5"
+    };
+
+    function safeDate(d) {
+        const parsed = new Date(d);
+        return isNaN(parsed) ? 0 : parsed;
+    }
+
+function getFileType(item) {
+    const raw = (item.type || "").toLowerCase();
+    if (raw && raw !== "file") return raw;
+
+    const url = (item.url || "").toLowerCase();
+
+    if (url.includes("docs.google.com/document")) return "doc";
+    if (url.includes(".mp3")) return "mp3";
+    if (url.includes(".png")) return "png";
+    if (url.includes(".jpg") || url.includes(".jpeg")) return "jpg";
+    if (url.includes(".gif")) return "gif";
+
+    return "file";
+}
+
+function getFileIcon(type) {
+    switch (type) {
+        case "doc": return "icon-doc";
+        case "mp3": return "icon-mp3";
+        case "png": return "icon-png";
+        case "html": return "icon-html";
+        case "svg": return "icon-svg";
+        case "pdf": return "icon-pdf";
+        default: return "";
+    }
+}
+/* --- LEGEND + MOTIF DROPDOWN --- */
+if (legend) {
+    const motifs = [...new Set(data.map(item => item.motif))];
+
+    // Populate motif filter dropdown
+    tagFilter.innerHTML =
+        `<option value="">All motifs</option>` +
+        motifs.map(m => `<option value="${m}">${m}</option>`).join('');
+
+    // Populate legend
+    legend.innerHTML = motifs.map(m => `
+        <div class="legend-item">
+            <div class="legend-color" style="background:${motifColors[m] || '#999'}"></div>
+            <span>${m}</span>
+        </div>
+    `).join('');
+}
+/* --- FILE TYPE DROPDOWN --- */
+let fileTypes = [...new Set(data.map(getFileType))];
+
+// Always include "file" as a fallback type
+if (!fileTypes.includes("file")) {
+    fileTypes.push("file");
+}
+
+fileTypes = fileTypes.sort();
+
+// Reset dropdown
+fileTypeFilter.innerHTML = `<option value="">All file types</option>`;
+
+// Populate dropdown
+fileTypes.forEach(ft => {
+    fileTypeFilter.innerHTML += `<option value="${ft}">${ft.toUpperCase()}</option>`;
+});
+
+
+async function loadWaveformThumbnails() {
+    const res = await fetch("index_thumbnails.json");
+    const list = await res.json();
+    return list.map(f => "waveform_thumbnails/" + f.toLowerCase());
+}
+
+async function loadAllValidThumbnails() {
+    const waveform = await loadWaveformThumbnails();
+    const staticThumbs = ["default_placeholder.png"];
+    return new Set([
+        ...waveform.map(x => x.toLowerCase()),
+        ...staticThumbs
+    ]);
+}
+
+function isAudioEntry(entry) {
+    const url = (entry.url || "").toLowerCase();
+    return url.includes(".mp3");
+}
+async function fixMissingThumbnails(entries) {
+    const validThumbs = await loadAllValidThumbnails();
+
+    entries.forEach(entry => {
+        // Only repair MP3 entries
+        if (!isAudioEntry(entry)) return;
+
+        // EXEMPTION: "civic sound" MP3s use custom icons (icon_bw.png, etc.)
+        if ((entry.motif || "").toLowerCase().trim() === "civic sound") {
+            return;
+        }
+
+        let t = entry.thumbnail ? decodeURIComponent(entry.thumbnail.trim()) : "";
+        const tLower = t.toLowerCase();
+
+      // If thumbnail missing or invalid → replace BEFORE render()
+      // if (!t || !validThumbs.has(tLower)) {
+      //     entry.thumbnail = "icon_orange.png?ref=master";
+      // }
+
+    });
+
+    return entries;
+}
+
+function render(items) {
+    container.innerHTML = '';
+    const grid = document.createElement('div');
+    grid.className = compactMode ? 'index-grid compact' : 'index-grid';
+
+    items.forEach(item => {
+        const motifClass = `motif-${(item.motif || "unknown").replace(/\s+/g, '-')}`;
+        const div = document.createElement('div');
+        div.className = `item ${motifClass}`;
+
+        const isAudio = isAudioEntry(item);
+
+        const img = document.createElement('img');
+
+        if (item.thumbnail && item.thumbnail.trim() !== "") {
+            img.src = item.thumbnail;
+            img.loading = "lazy";
+        } else {
+            img.style.background = motifColors[(item.motif || "").toLowerCase().trim()] || "#ccc";
+            img.style.width = "160px";
+            img.style.height = "96px";
+        }
+        
+        img.alt = item.title || "Untitled";
+        
+        // 🔶 UNIVERSAL FALLBACK FOR ANY BROKEN THUMBNAIL
+        img.onerror = () => {
+            if (img.dataset.fallbackApplied === "true") return;
+        
+            img.src = "icon_orange.png";   // this file exists
+            img.dataset.fallbackApplied = "true";
+            img.classList.add("thumb-orange");
+        };
+
+        if (!compactMode) div.appendChild(img);
+
+        const link = document.createElement('a');
+        link.href = item.url;
+        link.target = "_blank";
+        link.textContent = item.title;
+
+        const date = document.createElement('p');
+        date.textContent = item.date;
+
+        let extra;
+        if (compactMode) {
+            extra = document.createElement('span');
+            extra.style.color = motifColors[item.motif] || '#999';
+            extra.textContent = item.motif;
+        } else {
+            extra = document.createElement('p');
+            extra.textContent = item.cluster;
+        }
+
+        const sizeEl = document.createElement('p');
+        sizeEl.className = "item-size";
+        sizeEl.textContent = item.size ? `Size: ${item.size} bytes` : "";
+
+        div.append(link, date, extra, sizeEl);
+        grid.appendChild(div);
+    });
+
+    container.appendChild(grid);
+}
+
+function filterAndRender() {
+    const q = searchBox.value.toLowerCase();
+    const motif = tagFilter.value.toLowerCase();
+    const fileType = fileTypeFilter.value.toLowerCase();
+
+    let filtered = data.filter(item => {
+        const titleMatch = (item.title || "").toLowerCase().includes(q);
+        const tagMatch = (item.tags || []).some(tag =>
+            tag.toLowerCase().includes(q)
+        );
+        const motifMatch = motif === '' || (item.motif || "").toLowerCase() === motif;
+        const type = getFileType(item);
+        const typeMatch = fileType === '' || type === fileType;
+
+        return (titleMatch || tagMatch) && motifMatch && typeMatch;
+    });
+
+    filtered.sort((a, b) => {
+        if (sortBy.value === 'title') {
+            return sortOrder.value === 'asc'
+                ? a.title.localeCompare(b.title)
+                : b.title.localeCompare(a.title);
+        } else {
+            const da = safeDate(a.date);
+            const db = safeDate(b.date);
+            return sortOrder.value === 'asc' ? da - db : db - da;
+        }
+    });
+
+    render(filtered);
+    updateCount();
+}
+
+function updateCount() {
+    const displayed = document.querySelectorAll('.item').length;
+    const total = window.fullIndexCount || 0;
+    const counter = document.getElementById('itemCount');
+    if (counter) counter.textContent = `Items displayed: ${displayed} / ${total}`;
+}
+
+// Event listeners
+toggleView.addEventListener('click', () => {
+    compactMode = !compactMode;
+    toggleView.textContent = compactMode ? 'Full View' : 'Compact View';
+    filterAndRender();
+});
+
+searchBox.addEventListener('input', filterAndRender);
+tagFilter.addEventListener('change', filterAndRender);
+sortOrder.addEventListener('change', filterAndRender);
+sortBy.addEventListener('change', filterAndRender);
+fileTypeFilter.addEventListener('change', filterAndRender);
+
+// Initial render
+filterAndRender();
+}
+
+loadIndex();
+</script>
+  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("hoverAudio");
+  const toggle = document.getElementById("audioToggle");
+  const playBtn = document.getElementById("audioPlay");
+  const title = document.getElementById("audioTitle");
+  const selector = document.getElementById("audioSelect");
+  const speedControl = document.getElementById("speedControl");
+  const reverseBtn = document.getElementById("reverseBtn");
+  const canvas = document.getElementById("waveCanvas");
+  const ctx = canvas.getContext("2d");
+
+  let audioEnabled = false;
+  let reverseMode = false;
+  let reverseInterval = null;
+
+  // Web Audio API
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const track = audioCtx.createMediaElementSource(audio);
+  const analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 2048;
+
+  track.connect(analyser);
+  analyser.connect(audioCtx.destination);
+
+  const bufferLength = analyser.frequencyBinCount;
+  const dataArray = new Uint8Array(bufferLength);
+
+  function drawWaveform() {
+    requestAnimationFrame(drawWaveform);
+
+    analyser.getByteTimeDomainData(dataArray);
+
+    ctx.fillStyle = "#111";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "#00ff88";
+    ctx.beginPath();
+
+    const sliceWidth = canvas.width / bufferLength;
+    let x = 0;
+
+    for (let i = 0; i < bufferLength; i++) {
+      const v = dataArray[i] / 128.0;
+      const y = (v * canvas.height) / 2;
+
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+
+      x += sliceWidth;
+    }
+
+    ctx.lineTo(canvas.width, canvas.height / 2);
+    ctx.stroke();
+  }
+
+  drawWaveform();
+
+  // -------------------------
+  // Existing audio logic
+  // -------------------------
+
+  audio.volume = 0.5;
+
+  toggle.addEventListener("click", () => {
+    audioCtx.resume().catch(() => {});   // ← REQUIRED
+    audioEnabled = !audioEnabled;
+    toggle.textContent = audioEnabled ? "Audio: ON" : "Audio: OFF";
+
+    if (!audioEnabled) {
+      stopReverse();
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  });
+
+  selector.addEventListener("change", () => {
+    const file = selector.value;
+    stopReverse();
+    audio.src = file;
+    title.textContent = "Audio Clip " + file;
+    audio.pause();
+    audio.currentTime = 0;
+  });
+
+  speedControl.addEventListener("change", () => {
+    audio.playbackRate = parseFloat(speedControl.value);
+  });
+
+  reverseBtn.addEventListener("click", () => {
+    reverseMode = !reverseMode;
+    reverseBtn.textContent = reverseMode ? "Reverse: ON" : "Reverse: OFF";
+
+    if (reverseMode) startReverse();
+    else stopReverse();
+  });
+
+  function startReverse() {
+    stopReverse();
+  
+    // Mute the audio but keep it "playing"
+    audio.volume = 0;
+    audio.play().catch(() => {});
+  
+    reverseInterval = setInterval(() => {
+      if (audio.currentTime <= 0) {
+        stopReverse();
+        audio.pause();
+        audio.currentTime = 0;
+        audio.volume = 0.5;
+        return;
+      }
+  
+      audio.currentTime -= 0.05;
+    }, 50);
+  }
+
+
+  function stopReverse() {
+    if (reverseInterval) {
+      clearInterval(reverseInterval);
+      reverseInterval = null;
+    }
+
+      // Restore volume
+      audio.volume = 0.5;
+  }
+
+  playBtn.addEventListener("click", () => {
+    audioCtx.resume().catch(() => {});   // ← REQUIRED
+    if (!audioEnabled) return;
+
+    stopReverse();
+
+    if (!reverseMode) {
+      audio.play().catch(() => {});
+    } else {
+      startReverse();
+    }
+  });
+
+  title.addEventListener("mouseenter", () => {
+    audioCtx.resume().catch(() => {});   // ← prevents hover-block
+    if (!audioEnabled) return;
+
+    stopReverse();
+
+    if (!reverseMode) audio.play().catch(() => {});
+    else startReverse();
+  });
+
+  title.addEventListener("mouseleave", () => {
+    stopReverse();
+    audio.pause();
+    audio.currentTime = 0;
+  });
+});
+</script>
+</body>
+</html>
