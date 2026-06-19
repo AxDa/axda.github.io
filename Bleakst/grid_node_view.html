@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Node Grid: The Ash of Thera</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #controls, #legend {
+      padding: 12px;
+      background: #111;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+    select {
+      font-size: 16px;
+      padding: 4px 8px;
+    }
+    .gang-legend {
+      cursor: pointer;
+    }
+
+    /* Pulse effect for filtered nodes */
+    @keyframes pulse {
+      0% { r: 4; opacity: 0.5; }
+      50% { r: 7; opacity: 1; }
+      100% { r: 4; opacity: 0.5; }
+    }
+    .pulse {
+      animation: pulse 1.5s ease-in-out 1;
+    }
+  </style>
+</head>
+<body>
+
+<div id="controls">
+  <label for="gangSelect">Filter by Gang:</label>
+  <select id="gangSelect">
+    <option value="all">All Gangs</option>
+    <option value="Agency">Agency</option>
+    <option value="Siren">Siren</option>
+    <option value="Aire">Aire</option>
+    <option value="Bleakst">Bleakst</option>
+    <option value="Neighbour">Neighbour</option>
+    <option value="Bleed">Bleed</option>
+    <option value="Corporation">Corporation</option>
+    <option value="Fireworks">Fireworks</option>
+    <option value="K9">K9</option>
+    <option value="Leo">Leo</option>
+    <option value="Perambulator">Perambulator</option>
+    <option value="Sonics">Sonics</option>
+    <option value="Street Circus">Street Circus</option>
+  </select>
+</div>
+
+<!-- Load SVG -->
+<object id="svgObject" type="image/svg+xml" data="output_with_grid_nodes_the ash of Thera whispers, the link is open, but the gate keeper is blind May 24, 2025, 08_19_58 AM.svg" width="100%" height="1000px"></object>
+
+<div id="legend">
+  <strong>Gang Legend:</strong>
+  <span class="gang-legend" data-gang="Agency" style="color:#e6194B;">⬤ Agency</span>
+  <span class="gang-legend" data-gang="Siren" style="color:#4363d8;">⬤ Siren</span>
+  <span class="gang-legend" data-gang="Aire" style="color:#3cb44b;">⬤ Aire</span>
+  <span class="gang-legend" data-gang="Bleakst" style="color:#ffe119;">⬤ Bleakst</span>
+  <span class="gang-legend" data-gang="Neighbour" style="color:#f58231;">⬤ Neighbour</span>
+  <span class="gang-legend" data-gang="Bleed" style="color:#911eb4;">⬤ Bleed</span>
+  <span class="gang-legend" data-gang="Corporation" style="color:#46f0f0;">⬤ Corporation</span>
+  <span class="gang-legend" data-gang="Fireworks" style="color:#f032e6;">⬤ Fireworks</span>
+  <span class="gang-legend" data-gang="K9" style="color:#bcf60c;">⬤ K9</span>
+  <span class="gang-legend" data-gang="Leo" style="color:#fabebe;">⬤ Leo</span>
+  <span class="gang-legend" data-gang="Perambulator" style="color:#008080;">⬤ Perambulator</span>
+  <span class="gang-legend" data-gang="Sonics" style="color:#e6beff;">⬤ Sonics</span>
+  <span class="gang-legend" data-gang="Street Circus" style="color:#9a6324;">⬤ Street Circus</span>
+</div>
+
+<audio controls src="audio/your_file.mp3" style="margin: 10px;"></audio>
+
+</html>
+
+### 🧩 HTML + JavaScript Template (Drop-in Ready) del nada -_- háo wúlǐyóu 毫无理由 🧩 ###  <audio controls src="audio/your_file.mp3"></audio>  
+</html>
+
+<script>
+  function filterGang(gang) {
+    const svgDoc = document.getElementById("svgObject").contentDocument;
+    const allNodes = svgDoc.querySelectorAll("circle");
+    const allLabels = svgDoc.querySelectorAll("text");
+    const className = `gang-${gang.replace(/\s/g, "_")}`;
+
+    allNodes.forEach(node => {
+      const cls = node.getAttribute("class") || "";
+      if (gang === "all" || cls.includes(className)) {
+        node.style.display = "";
+        node.classList.add("pulse");
+        setTimeout(() => node.classList.remove("pulse"), 1500);
+      } else {
+        node.style.display = "none";
+      }
+    });
+
+    allLabels.forEach(label => {
+      const prev = label.previousElementSibling;
+      const cls = prev && prev.getAttribute("class") || "";
+      if (gang === "all" || cls.includes(className)) {
+        label.style.display = "";
+      } else {
+        label.style.display = "none";
+      }
+    });
+  }
+
+  function syncDropdowns(gang) {
+    document.getElementById("gangSelect").value = gang;
+  }
+
+  document.getElementById("svgObject").addEventListener("load", () => {
+    // Dropdown filtering
+    document.getElementById("gangSelect").addEventListener("change", function () {
+      filterGang(this.value);
+    });
+
+    // Clickable legend
+    document.querySelectorAll(".gang-legend").forEach(span => {
+      span.addEventListener("click", () => {
+        const gang = span.dataset.gang;
+        filterGang(gang);
+        syncDropdowns(gang);
+      });
+
+      // Hover highlight
+      span.addEventListener("mouseenter", () => {
+        const svgDoc = document.getElementById("svgObject").contentDocument;
+        const nodes = svgDoc.querySelectorAll(`.gang-${span.dataset.gang.replace(/\s/g, "_")}`);
+        nodes.forEach(n => n.style.stroke = "white");
+      });
+      span.addEventListener("mouseleave", () => {
+        const svgDoc = document.getElementById("svgObject").contentDocument;
+        const nodes = svgDoc.querySelectorAll(`.gang-${span.dataset.gang.replace(/\s/g, "_")}`);
+        nodes.forEach(n => n.style.stroke = "");
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
