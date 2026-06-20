@@ -11519,8 +11519,8 @@
     "cluster": "testimony",
     "size": 21300,
     "type": "png"
-  },
-  {
+ },
+ {
   "title": "IMG_20260617_2224_utc+1_axd.svg",
   "url": "https://axda.github.io/Blu/IMG_20260617_2224_utc+1_axd.svg",
   "thumbnail": "IMG_20260617_2224_utc+1_axd.svg",
@@ -11530,8 +11530,8 @@
   "cluster": "deposits",
   "size": 947800,
   "type": "svg"
- },
- {
+},
+{
   "title": "Bleakst_2112_circa_19062026.mp3",
   "url": "https://axda.github.io/Blu/Bleakst_2112_circa_19062026mp3",
   "thumbnail": "",
@@ -11546,8 +11546,8 @@
   "cluster": "perambulator",
   "size": 49600,
   "type": "mp3"
-  },
- {
+},
+{
   "title": "TomRobinson_Nirvana_Perspective_02042026",
   "url": "https://axda.github.io/Blu/TomRobinson_Nirvana_Perspective_02042026.png",
   "thumbnail": "TomRobinson_Nirvana_Perspective_02042026.png",
@@ -11572,5 +11572,63 @@
   "cluster": "testimony",
   "size": 10700,
   "type": "png"
+},
+{
+  "title": "Bleaksirenst_0440_utc_1_20062026_v0.2.mp3",
+  "url": "https://axda.github.io/Blu/Bleaksirenst_0440_utc_1_20062026_v0.2.mp3",
+  "thumbnail": "",
+  "tags": [
+    "audio",
+    "archive",
+    "Bleaksirenst",
+    "testimony"
+  ],
+  "date": "2026-06-20",
+  "motif": "civic sound",
+  "cluster": "siren_blue",
+  "size": 38200,
+  "type": "mp3"
+},
+{
+  "title": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_state_0355_utc_1__20062029.png",
+  "url": "https://axda.github.io/Blu/IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_state_0355_utc_1__20062029.png",
+  "thumbnail": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_state_0355_utc_1__20062029.png",
+  "tags": ["Ira", "Keller", "Fountain", "Park"],
+  "date": "2026-06-20",
+  "motif": "rare earth locations",
+  "cluster": "deposits",
+  "size": 56000,
+  "type": "png"
+},
+{
+  "title": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axd.kml",
+  "url": "https://earth.google.com/web/@?link=IraKellerFountainParkWGS84Park_Boundary_Waterfall_Point_axda.kml",
+  "thumbnail": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_thumb.png",
+  "tags": [
+    "rare_earth",
+    "water",
+    "deposits"
+  ],
+  "date": "2026-06-20",
+  "motif": "rare earth locations",
+  "cluster": "deposits",
+  "size": 1000,
+  "type": "kml"
+},
+{
+  "title": "Test_IraKellerFountainParkWGS84Park_Boundary_Waterfall_axd.kml",
+  "url": "https://earth.google.com/earth/d/12kDyEQl5lheG_OfPVWw0wpFq_ExB7qlR?usp=sharing",
+  "thumbnail": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_thumb.png",
+  "tags": [
+    "rare_earth",
+    "water",
+    "deposits"
+  ],
+  "date": "2026-06-20",
+  "motif": "rare earth locations",
+  "cluster": "deposits",
+  "size": 1000,
+  "type": "kml"
 }
+
 ]
