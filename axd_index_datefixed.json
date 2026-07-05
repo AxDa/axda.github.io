@@ -8834,6 +8834,7 @@
     "date": "2025-02-28",
     "motif": "reference_material",
     "cluster": "documents",
+    "size": "99000",
     "type": "doc"
   },
   {
@@ -8960,7 +8961,7 @@
     "date": "2026-03-01",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": null,
+    "size": 1730000,
     "type": "doc"
   },
   {
@@ -8975,7 +8976,7 @@
     "date": "2026-03-08",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": null,
+    "size": 5000,
     "type": "doc"
   },
   {
@@ -8990,7 +8991,7 @@
     "date": "2026-03-15",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": null,
+    "size": 2000000,
     "type": "doc"
   },
   {
@@ -9005,7 +9006,7 @@
     "date": "2026-03-30",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": null,
+    "size": 2400000,
     "type": "doc"
   },
   {
@@ -9020,7 +9021,7 @@
     "date": "2026-04-06",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": null,
+    "size": 2300000,
     "type": "doc"
   },
   {
@@ -9035,7 +9036,7 @@
     "date": "2026-04-13",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": null,
+    "size": 5700000,
     "type": "doc"
   },
   {
@@ -9050,7 +9051,7 @@
     "date": "2026-04-20",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": null,
+    "size": 8800000,
     "type": "doc"
   },
   {
@@ -9065,7 +9066,7 @@
     "date": "2026-05-05",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": null,
+    "size": 600000,
     "type": "doc"
   },
   {
@@ -9774,8 +9775,8 @@
   },
   {
     "title": "2026_Untitled_33_document_wk22_24052026",
-    "url": "https://axda.github.io/Blu/html_placeholder.png",
-    "thumbnail": "html_placeholder.png",
+    "url": "https://docs.google.com/document/d/1DCje2TclPDJmGANIMyFkxg5qPI_pPEU2zLBeZotgdyM/edit?usp=sharing",
+    "thumbnail": "",
     "tags": [
       "document",
       "google",
@@ -10627,8 +10628,8 @@
   },
   {
     "title": "2026_Untitled_34_document_wk23_01062026",
-    "url": "https://axda.github.io/Blu/html_placeholder.png",
-    "thumbnail": "html_placeholder.png",
+    "url": "https://docs.google.com/document/d/1ucLq2KXZLszqM2gTeshLi5hcBe_his16KwHndT1K4G0/edit?usp=sharing",
+    "thumbnail": "",
     "tags": [
       "document",
       "google",
@@ -10642,8 +10643,8 @@
   },
   {
     "title": "2026_Untitled_35_document_wk24_07062026_p33",
-    "url": "https://axda.github.io/Blu/html_placeholder.png",
-    "thumbnail": "html_placeholder.png",
+    "url": "https://docs.google.com/document/d/1pClJmJVtj3CzyyHaAhJyLr0sT-o0QHwRDeY0zDjpL90/edit?usp=sharing",
+    "thumbnail": "",
     "tags": [
       "document",
       "google",
@@ -10786,7 +10787,7 @@
     ],
     "date": "2026-06-04",
     "motif": "civic sound",
-    "cluster": "testimony",
+    "cluster": "siren_blue",
     "size": 25900,
     "type": "mp3"
   },
@@ -11317,8 +11318,8 @@
   },
   {
     "title": "2026_Untitled_36_document_wk25_14062026",
-    "url": "https://axda.github.io/Blu/html_placeholder.png",
-    "thumbnail": "html_placeholder.png",
+    "url": "https://docs.google.com/document/d/1NtCgCL3hq-wXwqcP7x6HPMDI1XOfmTWcXbxiWraQ_QE/edit?usp=sharingg",
+    "thumbnail": "",
     "tags": [
       "document",
       "google",
@@ -11327,7 +11328,7 @@
     "date": "2026-06-14",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": null,
+    "size": 41600,
     "type": "doc"
   },
   {
@@ -11519,58 +11520,1189 @@
     "cluster": "testimony",
     "size": 21300,
     "type": "png"
+   },
+   {
+    "title": "IMG_20260617_2224_utc+1_axd.svg",
+    "url": "https://axda.github.io/Blu/IMG_20260617_2224_utc+1_axd.svg",
+    "thumbnail": "IMG_20260617_2224_utc+1_axd.svg",
+    "tags": ["IMG", "population", "L_M_H", "Ivanpah Valley", "Water", "Electric", "rare_earth", "ree", "deposits", "La-Ce-Nd-Pr", "global bind", "NiMH"],
+    "date": "2026-06-16",
+    "motif": "rare earth locations",
+    "cluster": "deposits",
+    "size": 947800,
+    "type": "svg"
   },
   {
-  "title": "IMG_20260617_2224_utc+1_axd.svg",
-  "url": "https://axda.github.io/Blu/IMG_20260617_2224_utc+1_axd.svg",
-  "thumbnail": "IMG_20260617_2224_utc+1_axd.svg",
-  "tags": ["IMG", "population", "L_M_H", "Ivanpah Valley", "Water", "Electric", "rare_earth", "ree", "deposits", "La-Ce-Nd-Pr", "global bind", "NiMH"],
-  "date": "2026-06-16",
-  "motif": "rare earth locations",
-  "cluster": "deposits",
-  "size": 947800,
-  "type": "svg"
- },
- {
-  "title": "Bleakst_2112_circa_19062026.mp3",
-  "url": "https://axda.github.io/Blu/Bleakst_2112_circa_19062026mp3",
-  "thumbnail": "",
+    "title": "Bleakst_2112_circa_19062026.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_2112_circa_19062026mp3",
+    "thumbnail": "",
+    "tags": [
+      "audio",
+      "archive",
+      "Bleakst",
+      "testimony"
+    ],
+    "date": "2026-06-19",
+    "motif": "civic decay",
+    "cluster": "perambulator",
+    "size": 49600,
+    "type": "mp3"
+  },
+  {
+    "title": "TomRobinson_Nirvana_Perspective_02042026",
+    "url": "https://axda.github.io/Blu/TomRobinson_Nirvana_Perspective_02042026.png",
+    "thumbnail": "TomRobinson_Nirvana_Perspective_02042026.png",
+    "tags": [
+      "graphviz",
+      "Tom",
+      "visual"
+    ],
+    "date": "2026-06-19",
+    "motif": "moral inquiry",
+    "cluster": "interface",
+    "size": 267000,
+    "type": "png"
+  },
+  {
+    "title": "Machine+voice_obs_19062026.png",
+    "url": "https://axda.github.io/Blu/Machine+voice_obs_19062026.png",
+    "thumbnail": "Machine+voice_obs_19062026.png",
+    "tags": ["Log", "observation"],
+    "date": "2026-06-19",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 10700,
+    "type": "png"
+  },
+   {
+    "title": "Bleaksirenst_1628_utc_1_20062026_V0.01.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksirenst_1628_utc_1_20062026_V0.01.mp3",
+    "thumbnail": "",
+    "tags": [
+      "audio",
+      "archive",
+      "Bleaksirenst",
+      "testimony"
+    ],
+    "date": "2026-06-20",
+    "motif": "civic sound",
+    "cluster": "siren_blue",
+    "size": 190000,
+    "type": "mp3"
+  },
+  {
+    "title": "Transmission_opilot_20260620_095348_Log_0622_930_utc_1_20062026_axd.png",
+    "url": "https://axda.github.io/Blu/Transmission_opilot_20260620_095348_Log_0622_930_utc_1_20062026_axd.png",
+    "thumbnail": "Transmission_opilot_20260620_095348_Log_0622_930_utc_1_20062026_axd_thumb.png",
+    "tags": ["Fifty", "Keller", "Fountain", "Park", "pound"],
+    "date": "2026-06-20",
+    "motif": "rare earth locations",
+    "cluster": "deposits",
+    "size": 3714000,
+    "type": "png"
+  },
+   {
+    "title": "Bleaksirenst_1100_utc_1_20062026_v0.2.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksirenst_1100_utc_1_20062026_v0.2.mp3",
+    "thumbnail": "",
+    "tags": [
+      "audio",
+      "archive",
+      "Bleaksirenst",
+      "testimony"
+    ],
+    "date": "2026-06-20",
+    "motif": "civic sound",
+    "cluster": "siren_blue",
+    "size": 829000,
+    "type": "mp3"
+  },
+  {
+    "title": "Transmission_opilot_20260620_095348_Log_0622_930_utc_1_20062026_axd.png",
+    "url": "https://axda.github.io/Blu/Transmission_opilot_20260620_095348_Log_0622_930_utc_1_20062026_axd.png",
+    "thumbnail": "Transmission_opilot_20260620_095348_Log_0622_930_utc_1_20062026_axd_thumb.png",
+    "tags": ["Ira", "Keller", "Fountain", "Park"],
+    "date": "2026-06-20",
+    "motif": "rare earth locations",
+    "cluster": "deposits",
+    "size": 3714000,
+    "type": "png"
+  },
+  {
+    "title": "Bleaksirenst_0440_utc_1_20062026_v0.2.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksirenst_0440_utc_1_20062026_v0.2.mp3",
+    "thumbnail": "",
+    "tags": [
+      "audio",
+      "archive",
+      "Bleaksirenst",
+      "testimony"
+    ],
+    "date": "2026-06-20",
+    "motif": "civic sound",
+    "cluster": "siren_blue",
+    "size": 382000,
+    "type": "mp3"
+  },
+  {
+    "title": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_state_0355_utc_1__20062029.png",
+    "url": "https://axda.github.io/Blu/IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_state_0355_utc_1__20062029.png",
+    "thumbnail": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_state_0355_utc_1__20062029.png",
+    "tags": ["Ira", "Keller", "Fountain", "Park"],
+    "date": "2026-06-20",
+    "motif": "rare earth locations",
+    "cluster": "deposits",
+    "size": 56000,
+    "type": "png"
+  },
+  {
+    "title": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axd.kml",
+    "url": "https://earth.google.com/web/@?link=IraKellerFountainParkWGS84Park_Boundary_Waterfall_Point_axda.kml",
+    "thumbnail": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_thumb.png",
+    "tags": [
+      "rare_earth",
+      "water",
+      "deposits"
+    ],
+    "date": "2026-06-20",
+    "motif": "rare earth locations",
+    "cluster": "deposits",
+    "size": 1000,
+    "type": "kml"
+  },
+  {
+    "title": "Test_IraKellerFountainParkWGS84Park_Boundary_Waterfall_axd.kml",
+    "url": "https://earth.google.com/earth/d/12kDyEQl5lheG_OfPVWw0wpFq_ExB7qlR?usp=sharing",
+    "thumbnail": "IraKellerFountainParkWGS84Park_Boundary_Waterfall_axda_thumb.png",
+    "tags": [
+      "rare_earth",
+      "water",
+      "deposits"
+    ],
+    "date": "2026-06-20",
+    "motif": "rare earth locations",
+    "cluster": "deposits",
+    "size": 1000,
+    "type": "kml"
+  },
+  {
+    "title": "burg_lattice_map_762_nodes_edge_USGS_knn_warp_weft_algorithm_woven_21062026_axd.png",
+    "url": "https://axda.github.io/Blu/burg_lattice_map_762_nodes_edge_USGS_knn_warp_weft_algorithm_woven_21062026.png",
+    "thumbnail": "burg_lattice_map_762_nodes_edge_USGS_knn_warp_weft_algorithm_woven_21062026_axd_thumb.png",
+    "tags": ["7620", "nodes", "USGS", "warp", "weft", "woven", "fabric"],
+    "date": "2026-06-21",
+    "motif": "rare earth locations",
+    "cluster": "cross_state_conectivity_deposits",
+    "size": 3380000,
+    "type": "png"
+  },
+  {
+    "title": "burg_lattice_balanced_map_7620_nodes_edge_USGS_knn_warp_weft_algorithm_woven_21062026_axd.svg",
+    "url": "https://axda.github.io/Blu/7260_burg_lattice_balanced_axd_0254_1_21062026_axd.svg",
+    "thumbnail": "burg_lattice_map_762_nodes_edge_USGS_knn_warp_weft_algorithm_woven_21062026_axd_thumb.png",
+    "tags": ["7620", "nodes", "USGS", "warp", "weft", "woven", "fabric"],
+    "date": "2026-06-21",
+    "motif": "rare earth locations",
+    "cluster": "cross_state_conectivity_deposits",
+    "size": 1589000,
+    "type": "png"
+  },
+  {
+    "title": "burg_lattice_balanced_map_7620_nodes_edge_USGS_knn_warp_weft_algorithm_woven_21062026_axd.html",
+    "url": "https://axda.github.io/Blu/burg_viewer_with_minimap.html",
+    "thumbnail": "burg_lattice_map_762_nodes_edge_USGS_knn_warp_weft_algorithm_woven_21062026_axd_thumb.png",
+    "tags": ["7620", "nodes", "USGS", "warp", "weft", "woven", "fabric"],
+    "date": "2026-06-21",
+    "motif": "rare earth locations",
+    "cluster": "cross_state_conectivity_deposits",
+    "size": 1589000,
+    "type": "html"
+  },
+  {
+    "title": "Bleaksirenst_2145_utc_1_22062026.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksirenst_2145_utc_1_22062026.mp3",
+    "thumbnail": "waveform_thumbnails/bleaksirenst2301_2301utc_1_17042025.png",
+    "tags": [
+      "audio",
+      "bleaksirenst",
+      "archive",
+      "testimony",
+      "neighbours",
+      "business",
+      "bbcreau"
+    ],
+    "date": "2026-06-22",
+    "motif": "civic decay",
+    "cluster": "siren_blue",
+    "size": 57000,
+    "type": "mp3"
+  },
+  {
+    "title": "Brandenburg_Brandenburger_Tor_Gates_Combined_KML_Both_MSTs_22062026_axd.svg",
+    "url": "https://axda.github.io/Blu/Brandenburg_Brandenburger_Tor_Gates_Combined_KML_Both_MSTs_22062026_axd.svg",
+    "thumbnail": "Brandenburg_Brandenburger_Tor_Gates_Combined_KML_Both_MSTs_22062026_axd.png",
+    "tags": ["historical", "nodes", "burg", "tor", "Gates"],
+    "date": "2026-06-22",
+    "motif": "rare earth locations",
+    "cluster": "cross_state_conectivity_deposits",
+    "size": 27000,
+    "type": "svg"
+  },
+  {
+    "title": "Brandenburg_Gate_Brandenburger_Tor_1949_utc_1_22062026_axd.png",
+    "url": "https://axda.github.io/Blu/Brandenburg_Gate_Brandenburger_Tor_1949_utc_1_22062026_axd.png",
+    "thumbnail": "Brandenburg_Gate_Brandenburger_Tor_1949_utc_1_22062026_axd.png",
+    "tags": ["historical", "nodes", "burg", "tor"],
+    "date": "2026-06-22",
+    "motif": "rare earth locations",
+    "cluster": "cross_state_conectivity_deposits",
+    "size": 126000,
+    "type": "png"
+  },
+  {
+    "title": "Bleaksirenst_drum_perambulator_1832_1838_utc_1_22062026_v0.1.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksirenst_drum_perambulator_1832_1838_utc_1_22062026_v0.1.mp3",
+    "thumbnail": "waveform_thumbnails/bleaksirenst2301_2301utc_1_17042025.png",
+    "tags": [
+      "audio",
+      "bleaksirenst",
+      "archive",
+      "testimony",
+      "same_evil",
+      "neighbours",
+      "business",
+      "perambulator",
+      "bbcreau"
+    ],
+    "date": "2026-06-22",
+    "motif": "civic decay",
+    "cluster": "siren_blue",
+    "size": 698000,
+    "type": "mp3"
+  },
+  {
+    "title": "Bleakst_1648___utc_1_22062026.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksi_1648___utc_1_22062026.mp3",
+    "thumbnail": "waveform_thumbnails/0041_bleak_bleed_agency_06032025_2.png",
+    "tags": [
+      "audio",
+      "archive",
+      "testimony",
+      "same_evil",
+      "neighbours",
+      "business",
+      "bbcreau"
+    ],
+    "date": "2026-06-22",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 401000,
+    "type": "mp3"
+  },
+  {
+    "title": "Bleakst_1327_utc_1_22062026_v0.1.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_1327_utc_1_22062026_v0.1.mp3",
+    "thumbnail": "waveform_thumbnails/Bleak-Street_16072024.png",
+    "tags": [
+      "audio",
+      "archive",
+      "testimony",
+      "evil",
+      "neighbours",
+      "business",
+      "bbcreau"
+    ],
+    "date": "2026-06-22",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 401000,
+    "type": "mp3"
+  },
+  {
+    "title": "bizarre_story_fragment_v0.1",
+    "url": "https://axda.github.io/Blu/This_is_a_bizarre story_nay_0100_utc_1_22062026.png",
+    "thumbnail": "This_is_a_bizarre story_nay_0100_utc_1_22062026.png",
+    "tags": [
+      "bizarre",
+      "archive",
+      "weekly",
+      "story"
+    ],
+    "date": "2026-06-22",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 266000,
+    "type": "fragment"
+  },
+  {
+    "title": "Bleakst_audio_alt_0124_utc_1_22062026_v0.1.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_audio_alt_0124_utc_1_22062026_v0.1.mp3",
+    "thumbnail": "waveform_thumbnails/audio_thumb_v1.png",
+    "tags": [
+      "audio",
+      "alt",
+      "ia",
+      "archive",
+      "testimony"
+    ],
+    "date": "2026-06-22",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 122000,
+    "type": "mp3"
+  },
+  {
+    "title": "2026_Untitled_37_document_wk26_21062026",
+    "url": "https://docs.google.com/document/d/1Sf2CLnqWPduW2GNfstec57-cmf2lSn17DC1AdtKkKXM/edit?usp=sharing",
+    "thumbnail": "",
+    "tags": [
+      "document",
+      "google",
+      "reference"
+    ],
+    "date": "2026-06-21",
+    "motif": "reference_material",
+    "cluster": "documents",
+    "size": 18400000,
+    "type": "doc"
+  },
+  {
+    "title": "Bleakst_perambulator_exhausts_1140_utc_1_22062026_v0.1.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_perambulator_exhausts_1140_utc_1_22062026_v0.1.mp3",
+    "thumbnail": "waveform_thumbnails/bleakperambulatorexhaustst__1212_utc_1_09052025.png",
+    "tags": [
+      "audio",
+      "archive",
+      "testimony",
+      "perambulator",
+      "exhausts",
+      "neighbours",
+      "business",
+      "bbcreau"
+    ],
+    "date": "2026-06-22",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 2201000,
+    "type": "mp3"
+   },
+   {
+    "title": "Bleakst_business_national_emergency_bank_rate_history_dot_2139_utc_1_23062026_v0.1.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_business_national_emergency_bank_rate_history_dot_2139_utc_1_23062026_v0.1.mp3",
+    "thumbnail": "waveform_thumbnails/audio_thumb.png",
+    "tags": [
+      "audio",
+      "national",
+      "emergency",
+      "bleakst",
+      "the business",
+      "archive",
+      "testimony"
+    ],
+    "date": "2026-06-23",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 3634000,
+    "type": "mp3"
+   },
+   {
+    "title": "Bleaksirenst_1806_utc_1_23062023.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksirenst_1806_utc_1_23062023.mp3",
+    "thumbnail": "waveform_thumbnails/bleakbluesirenst_1950_circa_utc_1_27042025_v0.2_axd.png",
+    "tags": [
+      "audio",
+      "bleaksirenst",
+      "archive",
+      "testimony"
+    ],
+    "date": "2026-06-23",
+    "motif": "civic decay",
+    "cluster": "siren_blue",
+    "size": 177000,
+    "type": "mp3"
+   },
+   {
+    "title": "Bleaksirenst_1750_utc_1_23062023_v0.2_axd.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksirenst_1750_utc_1_23062023_v0.2.mp3",
+    "thumbnail": "waveform_thumbnails/bleakbluesirenst_full_1252_utc_1_25042025.png",
+    "tags": [
+      "audio",
+      "bleaksirenst",
+      "archive",
+      "testimony"
+    ],
+    "date": "2026-06-23",
+    "motif": "civic decay",
+    "cluster": "siren_blue",
+    "size": 536000,
+    "type": "mp3"
+   },
+   {
+    "title": "Bleakst_k9_agency_street_0525_0528_utc_23062026.mp3 ",
+    "url": "https://axda.github.io/Blu/Bleakst_k9_agency_street_0525_0528_utc_23062026.mp3 ",
+    "thumbnail": "waveform_thumbnails/trk_1_Bleak-Street_36_2052utc_1_dog_patrol_rescue_vanguard_14072024.png",
+    "tags": [
+      "audio",
+      "archive",
+      "street",
+      "k9"
+    ],
+    "date": "2026-06-23",
+    "motif": "cultural commentary",
+    "cluster": "testimony",
+    "size": 703000,
+    "type": "mp3"
+   },
+   {
+    "title": "Bleakairest_0400_utc_1_23062026_v0.1_axd.mp3",
+    "url": "https://axda.github.io/Blu/Bleakairest_0400_utc_1_23062026_v0.1_axd.mp3",
+    "thumbnail": "waveform_thumbnails/bleakstaire1838_1844_utc_1_07052025.png",
+    "tags": [
+      "audio",
+      "bleakairest",
+      "archive",
+      "testimony"
+    ],
+    "date": "2026-06-23",
+    "motif": "civic decay",
+    "cluster": "siren_blue",
+    "size": 1045000,
+    "type": "mp3"
+   },
+   {
+    "title": "Budget_923_days_thru_23062026_axd.pdf",
+    "url": "https://axda.github.io/Blu/Budget_923_days_thru_23062023_axd.pdf",
+    "thumbnail": "waveform_thumbnails/Budget_923_days_thru_23062026_axd_0156_utc_1_thumb.png",
+    "tags": [
+      "pdf",
+      "document",
+      "budget",
+      "literary"
+    ],
+    "date": "2026-06-23",
+    "motif": "moral inquiry",
+    "cluster": "allegory",
+    "size": 247000,
+    "type": "file"
+   },
+   {
+    "title": "Bleakst_2029_utc_1_24062026_v0.0.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_2029_utc_1_24062026_v0.0.mp3",
+    "thumbnail": "waveform_thumbnails/bleakst_1835_1842_utc_1_09052025_v0.0.png",
+    "tags": [
+      "audio",
+      "archive",
+      "testimony",
+      "street",
+      "bbcreau"
+    ],
+    "date": "2026-06-24",
+    "motif": "civic decay",
+    "cluster": "perambulator",
+    "size": 216000,
+    "type": "mp3"
+  },
+  {
+    "title": "Thrinacie_1830_utc_1_axd_24062026.png",
+    "url": "https://axda.github.io/Blu/Thrinacie_1830_utc_1_axd_24062026.png",
+    "thumbnail": "Thrinacie_1830_utc_1_axd_24062026.png",
+    "tags": ["Fifty", "Conjecture", "face", "modern-day slavery", "the business", "the agency", "the bureau", "the corporation",
+    "garden framework",  "inhumanity",  "inverse society", "on itself", "within itself", "ubiquitous", "systemic", "systems", "puppeteer's",
+    "Scylla", "Sisyphus", "troad",  "plato’s cave", "Hawkin’s radiation", "entropy", "black hole’s", "rings of power", "controls", 
+    "dystopia", "property", "loss", "fodder", "life", "brutal", "short", "cruel", "Fountain", "Park", "pound", "cia", "thrinacia", "thrinakia", "immortal", "flocks", "cattle"],
+    "date": "2026-06-24",
+    "motif": "rare earth locations",
+    "cluster": "deposits",
+    "size": 56000,
+    "type": "png"
+  },
+  {
+  "title": "Bleakst_1612_1616_utc_1_24062026_v0.0a.mp3",
+  "url": "https://axda.github.io/Blu/Bleakst_1612_1616_utc_1_24062026_v0.0a.mp3",
+  "thumbnail": "waveform_thumbnails/bleak_circus_2_1735gmt_27102024.png",
+  "tags": [
+  "audio",
+  "archive",
+  "testimony",
+  "harassment",
+  "bbcreau"
+  ],
+  "date": "2026-06-24",
+  "motif": "civic decay",
+  "cluster": "perambulator",
+  "size": 783000,
+  "type": "mp3"
+  },
+  {
+  "title": "Bleakst_1526_1534_utc_1_24062026.mp3",
+  "url": "https://axda.github.io/Blu/Bleakst_1526_1534_utc_1_24062026.mp3",
+  "thumbnail": "waveform_thumbnails/0041_bleak_bleed_agency_06032025_2.png",
   "tags": [
     "audio",
     "archive",
-    "Bleakst",
-    "testimony"
+    "testimony",
+    "harassment",
+    "bbcreau"
   ],
-  "date": "2026-06-19",
+  "date": "2026-06-24",
   "motif": "civic decay",
   "cluster": "perambulator",
-  "size": 49600,
+  "size": 1900000,
   "type": "mp3"
   },
- {
-  "title": "TomRobinson_Nirvana_Perspective_02042026",
-  "url": "https://axda.github.io/Blu/TomRobinson_Nirvana_Perspective_02042026.png",
-  "thumbnail": "TomRobinson_Nirvana_Perspective_02042026.png",
+  {
+  "title": "Bleakst_alt_ia_0247_utc_1_24062026_c_v0.0.mp3",
+  "url": "https://axda.github.io/Blu/Bleakst_alt_ia_0247_utc_1_24062026_c_v0.0.mp3",
+  "thumbnail": "waveform_thumbnails/audio_thumb_v1.png",
   "tags": [
-    "graphviz",
-    "Tom",
-    "visual"
+    "audio",
+    "alt",
+    "ia",
+    "archive",
+    "testimony"
   ],
-  "date": "2026-06-19",
-  "motif": "moral inquiry",
-  "cluster": "interface",
-  "size": 267000,
-  "type": "png"
-},
-{
-  "title": "Machine+voice_obs_19062026.png",
-  "url": "https://axda.github.io/Blu/Machine+voice_obs_19062026.png",
-  "thumbnail": "Machine+voice_obs_19062026.png",
-  "tags": ["Log", "observation"],
-  "date": "2026-06-19",
+  "date": "2026-06-24",
   "motif": "civic decay",
   "cluster": "testimony",
-  "size": 10700,
-  "type": "png"
-}
+  "size": 1050000,
+  "type": "mp3"
+  },
+  {
+    "title": "Bleakst_ia_0247_0301_utc_1_24062026_v0.2.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_ia_0247_0301_utc_1_24062026_v0.2.mp3",
+    "thumbnail": "waveform_thumbnails/audio_thumb_v1.png",
+    "tags": [
+      "audio",
+      "ia",
+      "archive",
+      "testimony"
+    ],
+    "date": "2026-06-25",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 1096000,
+    "type": "mp3"
+  },
+  {
+  "title": "Eon_Budget_812_days_thru_23062026_axd_0404_utc_1_25062026.png",
+  "url": "https://axda.github.io/Blu/Eon_Budget_812_days_thru_23062026_axd_0404_utc_1_25062026.png",
+  "thumbnail": "Eon_budget_summary_812_days_thru_23062026_axd_0420_utc_1_25062026.png",
+  "tags": [
+    "eon",
+    "document",
+    "budget",
+    "literary"
+  ],
+  "date": "2026-06-25",
+  "motif": "moral inquiry",
+  "cluster": "allegory",
+  "size": 464000,
+  "type": "file"
+  },
+  {
+    "title": "Bleakst_0825_utc_1_26062026_v0.0.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_0825_utc_1_26062026_v0.0.mp3",
+    "thumbnail": "waveform_thumbnails/Bleak-St_0759_0801_utc_22032025.png",
+    "tags": [
+      "audio",
+      "archive",
+      "testimony"
+    ],
+    "date": "2026-06-26",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 80000,
+    "type": "mp3"
+  },
+  {
+  "title": "Electric_avg_kWh_p_day_min_avg_montly_Temp_Tour_Relationship_2351_utc_1_27062026_axd.svg",
+  "url": "https://axda.github.io/Blu/Electric_avg_kWh_p_day_min_avg_montly_Temp_Tour_Relationship_2351_utc_1_27062026_axd.svg",
+  "thumbnail": "Electric_avg_kWh_p_day_min_avg_montly_Temp_Tour_Relationship_2351_utc_1_27062026_axd.png",
+  "tags": [
+    "eon",
+    "document",
+    "budget",
+    "literary",
+    "graph",
+    "tour"
+  ],
+  "date": "2026-06-27",
+  "motif": "moral inquiry",
+  "cluster": "allegory",
+  "size": 584000,
+  "type": "file"
+  },
+  {
+    "title": "Bleaksirenst_1812_utc_`1_27062026.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksirenst_1812_utc_`1_27062026.mp3",
+    "thumbnail": "waveform_thumbnails/bleakbluesiren_1745__1747_utc_1_04052025_v0.2_axd.png",
+    "tags": [
+      "audio",
+      "bleaksirenst",
+      "archive",
+      "testimony",
+      "street",
+      "bbcreau"
+    ],
+    "date": "2026-06-27",
+    "motif": "civic decay",
+    "cluster": "siren_blue",
+    "size": 354000,
+    "type": "mp3"
+  },
+  {
+    "title": "Bleakst_1030_utc_1_27062026.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_1030_utc_1_27062026.mp3",
+    "thumbnail": "waveform_thumbnails/Bleak-Street_084138_clip_102708utc_08112024.png",
+    "tags": [
+      "audio",
+      "archive",
+      "street",
+      "bbcreau",
+      "horn",
+      "perambulator"
+    ],
+    "date": "2026-06-27",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 3918000,
+    "type": "mp3"
+  },
+  {
+  "title": "Electric_avgkWh_per_day_13630_days_27021989_23062023_Temp_axd_Hm.png",
+  "url": "https://axda.github.io/Blu/Electric_avgkWh_per_day_13630_days_27021989_23062023_Temp_axd_Hm.png",
+  "thumbnail": "Electric_avgkWh_per_day_13630_days_27021989_23062023_Temp_axd_Hm.png",
+  "tags": [
+    "eon",
+    "document",
+    "budget",
+    "literary",
+    "graph"
+  ],
+  "date": "2026-06-27",
+  "motif": "moral inquiry",
+  "cluster": "allegory",
+  "size": 261000,
+  "type": "file"
+  },
+  {
+    "title": "Bleakst_ia_0247_0301_utc_1_24062026_0334_utc_1_27062026_v0.0_test_2a.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_ia_0247_0301_utc_1_24062026_0334_utc_1_27062026_v0.0_test_2a.mp3",
+    "thumbnail": "waveform_thumbnails/audio_thumb_v1.png",
+    "tags": [
+      "audio",
+      "archive",
+      "test"
+    ],
+    "date": "2026-06-27",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 239000,
+    "type": "mp3"
+  },
+  {
+    "title": "Bleakst_0007_utc_1_27062026_v0.0.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_0007_utc_1_27062026_v0.0.mp3",
+    "thumbnail": "waveform_thumbnails/trk_1_Bleak-Street_bbc_v2.1_2204_utc_1_axd18072024.png",
+    "tags": [
+      "audio",
+      "bbcreau",
+      "archive",
+      "testimony"
+    ],
+    "date": "2026-06-27",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 1908000,
+    "type": "mp3"
+  },
+  {
+    "title": "Bleaksirenst_blue_1412_utc_1_28062026.mp3",
+    "url": "https://axda.github.io/Blu/Bleaksirenst_blue_1412_utc_1_28062026.mp3",
+    "thumbnail": "icon_bw.png",
+    "tags": [
+      "audio",
+      "bleaksirenst",
+      "archive",
+      "testimony",
+      "street",
+      "blue"
+    ],
+    "date": "2026-06-28",
+    "motif": "civic decay",
+    "cluster": "siren_blue",
+    "size": 424000,
+    "type": "mp3"
+  },
+  {
+    "title": "Bleakst_1038_utc_1_28062026.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_1038_utc_1_28062026.mp3",
+    "thumbnail": "icon_red.png",
+    "tags": [
+      "audio",
+      "archive",
+      "testimony",
+      "street",
+      "agency"
+    ],
+    "date": "2026-06-28",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 282000,
+    "type": "mp3"
+  },
+  {
+  "title": "Electric_Tour_Temp_Daily_0535_utc_1_28062026.svg",
+  "url": "https://axda.github.io/Blu/Electric_Tour_Temp_Daily_0535_utc_1_28062026.svg",
+  "thumbnail": "thumbnails/Electric_Tour_Temp_Daily_0535_utc_1_28062026_thumb.png",
+  "tags": [
+    "eon",
+    "document",
+    "budget",
+    "literary",
+    "graph",
+    "tour"
+  ],
+  "date": "2026-06-28",
+  "motif": "moral inquiry",
+  "cluster": "allegory",
+  "size": 4094000,
+  "type": "file"
+  },
+  {
+  "title": "2026_Untitled_38_document_wk27_28062026",
+  "url": "https://docs.google.com/document/d/1SveL4OxYze6ILm1a15tPNjzErUpC0rdyvlHpn0MJajc/edit?usp=sharing",
+  "thumbnail": "",
+  "tags": [
+    "document",
+    "google",
+    "reference"
+  ],
+  "date": "2026-06-28",
+  "motif": "reference_material",
+  "cluster": "documents",
+  "size": null,
+  "type": "doc"
+  },
+  {
+    "title": "Bleakst_2032_2123_utc_1_29062026",
+    "url": "https://axda.github.io/Blu/Bleakst_2032_2123_utc_1_29062026.flac",
+    "thumbnail": "waveform_thumbnails/BS_sipp_bleak_desk_m_29062026.png",
+    "tags": [
+      "audio",
+      "archive",
+      "testimony",
+      "bbcreau",
+      "business"
+    ],
+    "date": "2026-06-29",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 100000000,
+    "type": "wav"
+  },
+  {
+    "title": "Bleakst_snaptest_2034_utc_1_29062026_v0.01",
+    "url": "https://axda.github.io/Blu/Bleakst_snaptest_2034_utc_1_29062026_v0.01.mp3",
+    "thumbnail": "waveform_thumbnails/compass_chec_UnBS_sipp_bleak_desk_m_29062026.png",
+    "tags": [
+      "audio",
+      "snaptest",
+      "archive",
+      "testimony",
+      "log"
+    ],
+    "date": "2026-06-29",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 147000,
+    "type": "mp3"
+  },
+  {
+    "title": "BS_13hh15mm34ss_1834e_utc_1_29062026.wav",
+    "url": "https://axda.github.io/Blu/BS_13hh15mm34ss_1834e_utc_1_29062026.wav",
+    "thumbnail": "waveform_thumbnails/BS_sipp_bleak_desk_m_29062026.png",
+    "tags": [
+      "audio",
+      "neighbours",
+      "archive",
+      "testimony",
+      "bbcreau",
+      "business"
+    ],
+    "date": "2026-06-29",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 777000000,
+    "type": "wav"
+  },
+  {
+    "title": "Bleaksirenst_blue_1412_utc_1_28062026.mp3",
+    "url": "https://axda.github.io/Blu/BS_13hh15mm34ss_1834e_utc_1_29062026.wav",
+    "thumbnail": "waveform_thumbnails/compass_check_UnBS_sipp_bleak_desk_m_29062026.png",
+  
+    "tags": [
+      "audio",
+      "neighbours",
+      "archive",
+      "testimony",
+      "bbcreau",
+      "business"
+    ],
+    "date": "2026-06-29",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 777000,
+    "type": "wav"
+  },
+  {
+    "title": "circa_11400_163_avg_70_axd_29062026.png",
+    "url": "https://axda.github.io/Blu/circa_11400_163_avg_70_axd_29062026.png",
+    "thumbnail": "circa_11400_163_avg_70_axd_29062026.png",
+    "tags": [
+      "icon",
+      "background",
+      "visual"
+    ],
+    "date": "2026-06-29",
+    "motif": "moral inquiry",
+    "cluster": "interface",
+    "size": 2000,
+    "type": "png"
+  },
+  {  
+    "title": "Testamentum_verse_of_compass_0608_utc_1_01072026.png",
+    "url": "https://axda.github.io/Blu/Testamentum_verse_of_compass_0608_utc_1_01072026.png",
+    "thumbnail": "Testamentum_verse_of_compass_0608_utc_1_01072026.png",
+    "tags": [
+      "notes",
+      "background",
+      "visual",
+      "Testamentum"
+    ],
+    "date": "2026-07-01",
+    "motif": "moral inquiry",
+    "cluster": "interface",
+    "size": 264000,
+    "type": "png"
+  },
+  {  
+    "title": "Notes_2348_0042_utc_1_01072026.png",
+    "url": "https://axda.github.io/Blu/Notes_2348_0042_utc_1_01072026.png",
+    "thumbnail": "Notes_2348_0042_utc_1_01072026.png",
+    "tags": [
+      "notes",
+      "background",
+      "visual"
+    ],
+    "date": "2026-07-01",
+    "motif": "moral inquiry",
+    "cluster": "interface",
+    "size": 4000,
+    "type": "png"
+  },
+  {
+  "title": "Bleaksirenst_1608_utc_1_02072026_v0.0.mp3",
+  "url": "https://axda.github.io/Blu/Bleaksirenst_1608_utc_1_02072026_v0.0.mp3",
+  "thumbnail": "waveform_thumbnails/Bleaksirenst_1526_utc_1_02072026_v0.2_axd.png",
+  "tags": [
+    "audio",
+    "bleakairest",
+    "archive",
+    "testimony",
+    "leeds"
+  ],
+  "date": "2026-07-02",
+  "motif": "civic decay",
+  "cluster": "siren_blue",
+  "size": 202000,
+  "type": "mp3"
+  },
+  {
+  "title": "Bleaksirenst_1600_utc_1_02072026_v0.0.mp3",
+  "url": "https://axda.github.io/Blu/Bleaksirenst_1600_utc_1_02072026_v0.0.mp3",
+  "thumbnail": "waveform_thumbnails/Bleaksirenst_1526_utc_1_02072026_v0.2_axd.png",
+  "tags": [
+    "audio",
+    "bleakairest",
+    "archive",
+    "testimony",
+    "leeds"
+  ],
+  "date": "2026-07-02",
+  "motif": "civic decay",
+  "cluster": "siren_blue",
+  "size": 126000,
+  "type": "mp3"
+  },
+  {
+  "title": "Bleaksirenst_1526_utc_1_02072026_v0.2.mp3",
+  "url": "https://axda.github.io/Blu/Bleaksirenst_1526_utc_1_02072026_v0.2.mp3",
+  "thumbnail": "waveform_thumbnails/Bleaksirenst_1526_utc_1_02072026_v0.2_axd.png",
+  "tags": [
+    "audio",
+    "bleakairest",
+    "archive",
+    "testimony",
+    "leeds"
+  ],
+  "date": "2026-07-02",
+  "motif": "civic decay",
+  "cluster": "siren_blue",
+  "size": 214000,
+  "type": "mp3"
+  },
+  {
+  "title": "Bleakairest_1511_utc_1_02072026_v0.01.mp3",
+  "url": "https://axda.github.io/Blu/Bleakairest_1511_utc_1_02072026_v0.01.mp3",
+  "thumbnail": "waveform_thumbnails/Bleakairest1511_utc_1_02072026_v0.01_axd.png",
+  "tags": [
+    "audio",
+    "bleakairest",
+    "archive",
+    "testimony",
+    "london"
+  ],
+  "date": "2026-07-02",
+  "motif": "civic decay",
+  "cluster": "bleakairest",
+  "size": 2601000,
+  "type": "mp3"
+  },
+  {
+  "title": "Bleakairest_1230_utc_1_02072026_v0.0.mp3",
+  "url": "https://axda.github.io/Blu/Bleakairest_1230_utc_1_02072026_v0.0.mp3",
+  "thumbnail": "waveform_thumbnails/Bleakairest_1230_utc_1_02072026_v0.0_axd.png",
+  "tags": [
+    "audio",
+    "bleakairest",
+    "archive",
+    "testimony"
+  ],
+  "date": "2026-07-02",
+  "motif": "civic decay",
+  "cluster": "bleakairest",
+  "size": 195000,
+  "type": "mp3"
+  },
+  {
+  "title": "Bleakairest_1230_utc_1_02072026_v0.2.mp3",
+  "url": "https://axda.github.io/Blu/Bleakairest_1230_utc_1_02072026_v0.2.mp3",
+  "thumbnail": "waveform_thumbnails/Bleakairest_1230_utc_1_02072026_v0.0_axd.png",
+  "tags": [
+    "audio",
+    "bleakairest",
+    "archive",
+    "testimony"
+  ],
+  "date": "2026-07-02",
+  "motif": "civic decay",
+  "cluster": "blealairest",
+  "size": 390000,
+  "type": "mp3"
+  },
+  {
+    "title": "Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026_axd.png",
+    "url": "https://axda.github.io/Blu/Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026_axd.png",
+    "thumbnail": "Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026_axd.png",
+    "tags": [ "bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": "147000",
+    "type": ".png"
+  },
+  {
+    "title": "#1_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/1_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_1_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+  {
+    "title": "#2_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/2_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_2_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+  {
+    "title": "#3_Bleaksirenst_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/3_Bleaksirenst_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_3_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "bleaksirenst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+  {
+    "title": "#4_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/4_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_4_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+  {
+    "title": "#5_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/5_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_5_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+  {
+    "title": "#6_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/6_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_6_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+  {
+    "title": "#7_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/7_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_7_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+  {
+    "title": "#8_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/8_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_8_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+  {
+    "title": "#9_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/9_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_9_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+  {
+    "title": "#10_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "url": "https://axda.github.io/Blu/10_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3",
+    "thumbnail": "waveform_thumbnails/waveform_10_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_1952_2343_utc_1_0351hhmm_03072026.mp3.png",
+    "tags": ["bleakst", "frankenstinion", "neighbour", "epstionion", "bbcreau", "ceausescu", "agency", "business"],
+    "date": "2026-07-03",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 11074472,
+    "type": "mp3"
+  },
+    {
+    "title": "Verse_Three_Peaks_triangle_polygon_cave_site_Kingsdale_04072026_axd.png",
+    "url": "https://axda.github.io/Blu/Verse_Three_Peaks_triangle_polygon_cave_site_Kingsdale_04072026_axd.png",
+    "thumbnail": "Three_Peaks_triangle_polygon_cave_site_Kingsdale_04072026_axd_kml.png",
+    "tags": [
+      "rare_earth",
+      "ree",
+      "deposits",
+      "yorkshire_dales"
+    ],
+    "date": "2026-07-04",
+    "motif": "rare earth locations",
+    "cluster": "deposits",
+    "size": 182902,
+    "type": "png"
+  },
+  {
+    "title": "Bleakst_unverified_1956_2004_utc_1_04072026.mp3",
+    "url": "https://axda.github.io/Blu/Bleakst_unverified_1956_2004_utc_1_04072026.mp3",
+    "thumbnail": "waveform_thumbnails/Bleakst_unverified_1956_2004_utc_1_04072026_axd.png",
+    "tags": ["bbcreau", "significant"],
+    "date": "2026-07-04",
+    "motif": "civic decay",
+    "cluster": "unverified",
+    "size": 1955784,
+    "type": "mp3"
+  },
+  {
+    "title": "Soil_mechanics_panel_0852_utc_1_05072026.png",
+    "url": "https://axda.github.io/Blu/Soil_mechanics_panel_0852_utc_1_05072026.png",
+    "thumbnail": "Soil_mechanics_panel_0852_utc_1_05072026.png",
+    "tags": ["significant", "soil_mechanics" ],
+    "date": "2026-07-05",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 172032,
+    "type": "png"
+  },
+  {
+    "title": "Pew_unverified_Bleakst_soil_mechanics_ia_0734_utc_1_05072026.mp3",
+    "url": "https://axda.github.io/Blu/Pew_unverified_Bleakst_soil_mechanics_ia_0734_utc_1_05072026.mp3",
+    "thumbnail": "waveform_thumbnails/Pew_unverified_Bleakst_soil_mechanics_ia_0734_utc_1_05072026.png",
+    "tags": ["significant"],
+    "date": "2026-07-05",
+    "motif": "civic decay",
+    "cluster": "unverified",
+    "size": 623949,
+    "type": "mp3"
+  },
+  {
+    "title": "Notes_to_'Self'_0122_utc_1_05062026_axd",
+    "url": "https://axda.github.io/Blu/Notes_to_Self_0122_utc_1_05062026_axd.png",
+    "thumbnail": "Notes_to_Self_0233_utc_1_05062026_axd.png",
+    "tags": [
+      "self_deposits",
+      "yorkshire_dales",
+      "high_places",
+      "old_stones"
+    ],
+    "date": "2026-07-05",
+    "motif": "rare earth locations",
+    "cluster": "self_deposits",
+    "size": 3098,
+    "type": "png"
+  },
+  {
+    "title": "High Places and the Old Stones_verse_0027_utc+1_05072026png",
+    "url": "https://axda.github.io/Blu/High_Places_and_the_Old_Stone_verse_0027_utc_1_05072026.png",
+    "thumbnail": "High_Places_and_the_Old_Stone_verse_0027_utc_1_05072026.png",
+    "tags": [
+      "rare_earth",
+      "ree",
+      "deposits",
+      "yorkshire_dales",
+      "high_places",
+      "old_stones"
+    ],
+    "date": "2026-07-05",
+    "motif": "rare earth locations",
+    "cluster": "deposits",
+    "size": 141506,
+    "type": "png"
+  }
 ]
