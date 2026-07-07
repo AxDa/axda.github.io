@@ -12762,5 +12762,16 @@
     "cluster": "testimony",
     "size": 40960,
     "type": "png"
+  },
+  {
+    "title": "MortalLifeStoryboardTuesdaywithwind_0429_utc_1_07072026.svg",
+    "url": "https://axda.github.io/MortalLifeStoryboardTuesdaywithwind_0429_utc_1_07072026.svg",
+    "thumbnail": "https://axda.github.io/MortalLifeStoryboardTuesdaywithwind_411_UTC_1_07072026_thumb.png",
+    "tags": ["Log", "observation", "tuesday", "with_wind"],
+    "date": "2026-07-07",
+    "motif": "civic decay",
+    "cluster": "testimony",
+    "size": 24591536,
+    "type": "svg"
   }
 ]
