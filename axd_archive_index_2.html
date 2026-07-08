@@ -265,13 +265,13 @@
      style="display:inline-block;padding:10px 16px;background:#4285f4;color:#fff;text-decoration:none;border-radius:4px;">
      🌍 Open in Google Earth Web
   </a>
-</div>
-<script>
+</div><script>
 let mode = "pages";
 
 function setMode(newMode) {
     mode = newMode;
-    document.getElementById("current-mode").innerText = "Mode: " + (mode === "pages" ? "Pages" : "Raw");
+    document.getElementById("current-mode").innerText =
+        "Mode: " + (mode === "pages" ? "Pages" : "Raw");
     updateLinks();
 }
 
@@ -280,6 +280,7 @@ function updateLinks() {
 
     items.forEach(item => {
         const filename = item.dataset.filename;
+        if (!filename) return;
 
         if (mode === "raw") {
             item.href = "https://raw.githubusercontent.com/AxDa/axda.github.io/master/" + filename;
@@ -289,7 +290,6 @@ function updateLinks() {
     });
 }
 
-
 async function loadIndex() {
 
     // Load JSON
@@ -298,7 +298,6 @@ async function loadIndex() {
 
     // Apply waveform thumbnail fix BEFORE anything else
     data = await fixMissingThumbnails(data);
-
 
     // Store total count
     window.fullIndexCount = data.length;
@@ -326,262 +325,305 @@ async function loadIndex() {
         return isNaN(parsed) ? 0 : parsed;
     }
 
-function getFileType(item) {
-    const raw = (item.type || "").toLowerCase();
-    if (raw && raw !== "file") return raw;
+    function getFileType(item) {
+        const raw = (item.type || "").toLowerCase();
+        if (raw && raw !== "file") return raw;
 
-    const url = (item.url || "").toLowerCase();
+        const url = (item.url || "").toLowerCase();
 
-    if (url.includes("docs.google.com/document")) return "doc";
-    if (url.includes(".mp3")) return "mp3";
-    if (url.includes(".png")) return "png";
-    if (url.includes(".jpg") || url.includes(".jpeg")) return "jpg";
-    if (url.includes(".gif")) return "gif";
+        if (url.includes("docs.google.com/document")) return "doc";
+        if (url.includes(".mp3")) return "mp3";
+        if (url.includes(".png")) return "png";
+        if (url.includes(".jpg") || url.includes(".jpeg")) return "jpg";
+        if (url.includes(".gif")) return "gif";
 
-    return "file";
-}
-
-function getFileIcon(type) {
-    switch (type) {
-        case "doc": return "icon-doc";
-        case "mp3": return "icon-mp3";
-        case "png": return "icon-png";
-        case "html": return "icon-html";
-        case "svg": return "icon-svg";
-        case "pdf": return "icon-pdf";
-        default: return "";
+        return "file";
     }
-}
-/* --- LEGEND + MOTIF DROPDOWN --- */
-if (legend) {
-    const motifs = [...new Set(data.map(item => item.motif))];
 
-    // Populate motif filter dropdown
-    tagFilter.innerHTML =
-        `<option value="">All motifs</option>` +
-        motifs.map(m => `<option value="${m}">${m}</option>`).join('');
-
-    // Populate legend
-    legend.innerHTML = motifs.map(m => `
-        <div class="legend-item">
-            <div class="legend-color" style="background:${motifColors[m] || '#999'}"></div>
-            <span>${m}</span>
-        </div>
-    `).join('');
-}
-/* --- FILE TYPE DROPDOWN --- */
-let fileTypes = [...new Set(data.map(getFileType))];
-
-// Always include "file" as a fallback type
-if (!fileTypes.includes("file")) {
-    fileTypes.push("file");
-}
-
-fileTypes = fileTypes.sort();
-
-// Reset dropdown
-fileTypeFilter.innerHTML = `<option value="">All file types</option>`;
-
-// Populate dropdown
-fileTypes.forEach(ft => {
-    fileTypeFilter.innerHTML += `<option value="${ft}">${ft.toUpperCase()}</option>`;
-});
-
-
-async function loadWaveformThumbnails() {
-    const res = await fetch("index_thumbnails.json");
-    const list = await res.json();
-    return list.map(f => "waveform_thumbnails/" + f.toLowerCase());
-}
-
-async function loadAllValidThumbnails() {
-    const waveform = await loadWaveformThumbnails();
-    const staticThumbs = ["default_placeholder.png"];
-    return new Set([
-        ...waveform.map(x => x.toLowerCase()),
-        ...staticThumbs
-    ]);
-}
-
-function isAudioEntry(entry) {
-    const url = (entry.url || "").toLowerCase();
-    return url.includes(".mp3");
-}
-async function fixMissingThumbnails(entries) {
-    const validThumbs = await loadAllValidThumbnails();
-
-    entries.forEach(entry => {
-        // Only repair MP3 entries
-        if (!isAudioEntry(entry)) return;
-
-        // EXEMPTION: "civic sound" MP3s use custom icons (icon_bw.png, etc.)
-        if ((entry.motif || "").toLowerCase().trim() === "civic sound") {
-            return;
+    function getFileIcon(type) {
+        switch (type) {
+            case "doc": return "icon-doc";
+            case "mp3": return "icon-mp3";
+            case "png": return "icon-png";
+            case "html": return "icon-html";
+            case "svg": return "icon-svg";
+            case "pdf": return "icon-pdf";
+            default: return "";
         }
+    }
 
-        let t = entry.thumbnail ? decodeURIComponent(entry.thumbnail.trim()) : "";
-        const tLower = t.toLowerCase();
+    /* --- LEGEND + MOTIF DROPDOWN --- */
+    if (legend) {
+        const motifs = [...new Set(data.map(item => item.motif))];
 
-      // If thumbnail missing or invalid → replace BEFORE render()
-      // if (!t || !validThumbs.has(tLower)) {
-      //     entry.thumbnail = "icon_orange.png?ref=master";
-      // }
+        // Populate motif filter dropdown
+        tagFilter.innerHTML =
+            `<option value="">All motifs</option>` +
+            motifs.map(m => `<option value="${m}">${m}</option>`).join('');
 
+        // Populate legend
+        legend.innerHTML = motifs.map(m => `
+            <div class="legend-item">
+                <div class="legend-color" style="background:${motifColors[m] || '#999'}"></div>
+                <span>${m}</span>
+            </div>
+        `).join('');
+    }
+
+    /* --- FILE TYPE DROPDOWN --- */
+    let fileTypes = [...new Set(data.map(getFileType))];
+
+    // Always include "file" as a fallback type
+    if (!fileTypes.includes("file")) {
+        fileTypes.push("file");
+    }
+
+    fileTypes = fileTypes.sort();
+
+    // Reset dropdown
+    fileTypeFilter.innerHTML = `<option value="">All file types</option>`;
+
+    // Populate dropdown
+    fileTypes.forEach(ft => {
+        fileTypeFilter.innerHTML += `<option value="${ft}">${ft.toUpperCase()}</option>`;
     });
 
-    return entries;
-}
-function chooseBestUrl(item) {
-    // Prefer Pages URL first
-    const pages = item.url_pages;
-    const raw = item.url_raw;
+    async function loadWaveformThumbnails() {
+        const res = await fetch("index_thumbnails.json");
+        const list = await res.json();
+        return list.map(f => "waveform_thumbnails/" + f.toLowerCase());
+    }
 
-    // Create a test request (HEAD = lightweight)
-    return fetch(pages, { method: "HEAD" })
-        .then(res => {
-            if (res.ok) return pages;   // Pages works
-            return raw;                // fallback to raw
-        })
-        .catch(() => raw);             // Pages unreachable → raw
-}
+    async function loadAllValidThumbnails() {
+        const waveform = await loadWaveformThumbnails();
+        const staticThumbs = ["default_placeholder.png"];
+        return new Set([
+            ...waveform.map(x => x.toLowerCase()),
+            ...staticThumbs
+        ]);
+    }
 
-function render(items) {
-    container.innerHTML = '';
-    const grid = document.createElement('div');
-    grid.className = compactMode ? 'index-grid compact' : 'index-grid';
+    function isAudioEntry(entry) {
+        const url = (entry.url || "").toLowerCase();
+        return url.includes(".mp3");
+    }
 
-    items.forEach(item => {
-        const motifClass = `motif-${(item.motif || "unknown").replace(/\s+/g, '-')}`;
-        const div = document.createElement('div');
-        div.className = `item ${motifClass}`;
+    async function fixMissingThumbnails(entries) {
+        const validThumbs = await loadAllValidThumbnails();
 
-        const isAudio = isAudioEntry(item);
+        entries.forEach(entry => {
+            // Only repair MP3 entries
+            if (!isAudioEntry(entry)) return;
 
-        const img = document.createElement('img');
+            // EXEMPTION: "civic sound" MP3s use custom icons (icon_bw.png, etc.)
+            if ((entry.motif || "").toLowerCase().trim() === "civic sound") {
+                return;
+            }
 
-        if (item.thumbnail && item.thumbnail.trim() !== "") {
-            img.src = item.thumbnail_pages;
+            let t = entry.thumbnail ? decodeURIComponent(entry.thumbnail.trim()) : "";
+            const tLower = t.toLowerCase();
 
-            img.onerror = () => {
-            img.src = item.thumbnail_raw;   // fallback to raw thumbnail
-        };
-
-            img.loading = "lazy";
-        } else {
-            img.style.background = motifColors[(item.motif || "").toLowerCase().trim()] || "#ccc";
-            img.style.width = "160px";
-            img.style.height = "96px";
-        }
-        
-        img.alt = item.title || "Untitled";
-        
-        // 🔶 UNIVERSAL FALLBACK FOR ANY BROKEN THUMBNAIL
-        img.onerror = () => {
-            if (img.dataset.fallbackApplied === "true") return;
-        
-            img.src = "icon_orange.png";   // this file exists
-            img.dataset.fallbackApplied = "true";
-            img.classList.add("thumb-orange");
-        };
-
-        if (!compactMode) div.appendChild(img);
-
-        const link = document.createElement('a');
-        link.className = "archive-item";
-        link.dataset.filename = item.url_pages.split('/').pop();    //link.dataset.filename = item.title;   // or item.url.split('/').pop()
-        chooseBestUrl(item).then(best => {
-        link.href = best;
+            // If thumbnail missing or invalid → you can optionally repair here
+            // if (!t || !validThumbs.has(tLower)) {
+            //     entry.thumbnail = "icon_orange.png?ref=master";
+            // }
         });
 
-        link.target = "_blank";
-        link.textContent = item.title;
+        return entries;
+    }
 
+    // UNIVERSAL HELPERS
 
-        const date = document.createElement('p');
-        date.textContent = item.date;
+    function pickUrl(item) {
+        if (item.url_raw) return item.url_raw;
+        if (item.url_pages) return item.url_pages;
 
-        let extra;
-        if (compactMode) {
-            extra = document.createElement('span');
-            extra.style.color = motifColors[item.motif] || '#999';
-            extra.textContent = item.motif;
-        } else {
-            extra = document.createElement('p');
-            extra.textContent = item.cluster;
+        if (item.url) {
+            if (!item.url.startsWith("http")) {
+                return "https://raw.githubusercontent.com/AxDa/axda.github.io/master/" + item.url;
+            }
+            return item.url;
         }
 
-        const sizeEl = document.createElement('p');
-        sizeEl.className = "item-size";
-        sizeEl.textContent = item.size ? `Size: ${item.size} bytes` : "";
+        return null;
+    }
 
-        div.append(link, date, extra, sizeEl);
-        grid.appendChild(div);
-    });
+    function pickThumbnail(item) {
+        if (item.thumbnail_raw) return item.thumbnail_raw;
+        if (item.thumbnail_pages) return item.thumbnail_pages;
 
-    container.appendChild(grid);
-        /* ⭐⭐ ADD THIS LINE HERE ⭐⭐ */
-    updateLinks();
-}
-
-function filterAndRender() {
-    const q = searchBox.value.toLowerCase();
-    const motif = tagFilter.value.toLowerCase();
-    const fileType = fileTypeFilter.value.toLowerCase();
-
-    let filtered = data.filter(item => {
-        const titleMatch = (item.title || "").toLowerCase().includes(q);
-        const tagMatch = (item.tags || []).some(tag =>
-            tag.toLowerCase().includes(q)
-        );
-        const motifMatch = motif === '' || (item.motif || "").toLowerCase() === motif;
-        const type = getFileType(item);
-        const typeMatch = fileType === '' || type === fileType;
-
-        return (titleMatch || tagMatch) && motifMatch && typeMatch;
-    });
-
-    filtered.sort((a, b) => {
-        if (sortBy.value === 'title') {
-            return sortOrder.value === 'asc'
-                ? a.title.localeCompare(b.title)
-                : b.title.localeCompare(a.title);
-        } else {
-            const da = safeDate(a.date);
-            const db = safeDate(b.date);
-            return sortOrder.value === 'asc' ? da - db : db - da;
+        if (item.thumbnail) {
+            if (!item.thumbnail.startsWith("http")) {
+                return "https://raw.githubusercontent.com/AxDa/axda.github.io/master/" + item.thumbnail;
+            }
+            return item.thumbnail;
         }
+
+        return "icon_orange.png";
+    }
+
+    function pickFilename(item) {
+        if (item.url_raw) return item.url_raw.split('/').pop();
+        if (item.url_pages) return item.url_pages.split('/').pop();
+        if (item.url) return item.url.split('/').pop();
+        return null;
+    }
+
+    function chooseBestUrl(item) {
+        const raw = item.url_raw;
+        const pages = item.url_pages;
+        const simple = item.url ? pickUrl(item) : null;
+
+        if (raw) {
+            return fetch(raw, { method: "HEAD" })
+                .then(res => res.ok ? raw : (pages || simple))
+                .catch(() => pages || simple);
+        }
+
+        if (pages) {
+            return fetch(pages, { method: "HEAD" })
+                .then(res => res.ok ? pages : simple)
+                .catch(() => simple);
+        }
+
+        return Promise.resolve(simple);
+    }
+
+    function render(items) {
+        container.innerHTML = '';
+        const grid = document.createElement('div');
+        grid.className = compactMode ? 'index-grid compact' : 'index-grid';
+
+        items.forEach(item => {
+            const motifClass = `motif-${(item.motif || "unknown").replace(/\s+/g, '-')}`;
+            const div = document.createElement('div');
+            div.className = `item ${motifClass}`;
+
+            const isAudio = isAudioEntry(item);
+
+            const img = document.createElement('img');
+
+            const thumb = pickThumbnail(item);
+            if (thumb && thumb.trim() !== "") {
+                img.src = thumb;
+                img.loading = "lazy";
+            } else {
+                img.style.background = motifColors[(item.motif || "").toLowerCase().trim()] || "#ccc";
+                img.style.width = "160px";
+                img.style.height = "96px";
+            }
+
+            img.alt = item.title || "Untitled";
+
+            // UNIVERSAL FALLBACK FOR ANY BROKEN THUMBNAIL
+            img.onerror = () => {
+                if (img.dataset.fallbackApplied === "true") return;
+
+                img.src = "icon_orange.png";
+                img.dataset.fallbackApplied = "true";
+                img.classList.add("thumb-orange");
+            };
+
+            if (!compactMode) div.appendChild(img);
+
+            const link = document.createElement('a');
+            link.className = "archive-item";
+
+            const filename = pickFilename(item);
+            link.dataset.filename = filename || "";
+
+            chooseBestUrl(item).then(best => {
+                if (best) link.href = best;
+            });
+
+            link.target = "_blank";
+            link.textContent = item.title;
+
+            const date = document.createElement('p');
+            date.textContent = item.date;
+
+            let extra;
+            if (compactMode) {
+                extra = document.createElement('span');
+                extra.style.color = motifColors[item.motif] || '#999';
+                extra.textContent = item.motif;
+            } else {
+                extra = document.createElement('p');
+                extra.textContent = item.cluster;
+            }
+
+            const sizeEl = document.createElement('p');
+            sizeEl.className = "item-size";
+            sizeEl.textContent = item.size ? `Size: ${item.size} bytes` : "";
+
+            div.append(link, date, extra, sizeEl);
+            grid.appendChild(div);
+        });
+
+        container.appendChild(grid);
+        updateLinks();
+    }
+
+    function filterAndRender() {
+        const q = searchBox.value.toLowerCase();
+        const motif = tagFilter.value.toLowerCase();
+        const fileType = fileTypeFilter.value.toLowerCase();
+
+        let filtered = data.filter(item => {
+            const titleMatch = (item.title || "").toLowerCase().includes(q);
+            const tagMatch = (item.tags || []).some(tag =>
+                tag.toLowerCase().includes(q)
+            );
+            const motifMatch = motif === '' || (item.motif || "").toLowerCase() === motif;
+            const type = getFileType(item);
+            const typeMatch = fileType === '' || type === fileType;
+
+            return (titleMatch || tagMatch) && motifMatch && typeMatch;
+        });
+
+        filtered.sort((a, b) => {
+            if (sortBy.value === 'title') {
+                return sortOrder.value === 'asc'
+                    ? a.title.localeCompare(b.title)
+                    : b.title.localeCompare(a.title);
+            } else {
+                const da = safeDate(a.date);
+                const db = safeDate(b.date);
+                return sortOrder.value === 'asc' ? da - db : db - da;
+            }
+        });
+
+        render(filtered);
+        updateCount();
+    }
+
+    function updateCount() {
+        const displayed = document.querySelectorAll('.item').length;
+        const total = window.fullIndexCount || 0;
+        const counter = document.getElementById('itemCount');
+        if (counter) counter.textContent = `Items displayed: ${displayed} / ${total}`;
+    }
+
+    // Event listeners
+    toggleView.addEventListener('click', () => {
+        compactMode = !compactMode;
+        toggleView.textContent = compactMode ? 'Full View' : 'Compact View';
+        filterAndRender();
     });
 
-    render(filtered);
-    updateCount();
-}
+    searchBox.addEventListener('input', filterAndRender);
+    tagFilter.addEventListener('change', filterAndRender);
+    sortOrder.addEventListener('change', filterAndRender);
+    sortBy.addEventListener('change', filterAndRender);
+    fileTypeFilter.addEventListener('change', filterAndRender);
 
-function updateCount() {
-    const displayed = document.querySelectorAll('.item').length;
-    const total = window.fullIndexCount || 0;
-    const counter = document.getElementById('itemCount');
-    if (counter) counter.textContent = `Items displayed: ${displayed} / ${total}`;
-}
-
-// Event listeners
-toggleView.addEventListener('click', () => {
-    compactMode = !compactMode;
-    toggleView.textContent = compactMode ? 'Full View' : 'Compact View';
+    // Initial render
     filterAndRender();
-});
-
-searchBox.addEventListener('input', filterAndRender);
-tagFilter.addEventListener('change', filterAndRender);
-sortOrder.addEventListener('change', filterAndRender);
-sortBy.addEventListener('change', filterAndRender);
-fileTypeFilter.addEventListener('change', filterAndRender);
-
-// Initial render
-filterAndRender();
 }
 
 loadIndex();
 </script>
+
   
 <script>
 document.addEventListener("DOMContentLoaded", () => {
