@@ -573,8 +573,19 @@ async function loadIndex() {
                 img.src = url;
                 img.loading = "lazy";
             });
-
-
+            
+            img.alt = item.title || "Untitled";
+            
+            // UNIVERSAL FALLBACK FOR ANY BROKEN THUMBNAIL
+            img.onerror = () => {
+                if (img.dataset.fallbackApplied === "true") return;
+            
+                img.src = "icon_orange.png";
+                img.dataset.fallbackApplied = "true";
+                img.classList.add("thumb-orange");
+            };
+            
+            if (!compactMode) div.appendChild(img);
         
             // 2. Try ROOT repo first
             if (primary) {
