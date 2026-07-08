@@ -430,6 +430,19 @@ async function fixMissingThumbnails(entries) {
 
     return entries;
 }
+function chooseBestUrl(item) {
+    // Prefer Pages URL first
+    const pages = item.url_pages;
+    const raw = item.url_raw;
+
+    // Create a test request (HEAD = lightweight)
+    return fetch(pages, { method: "HEAD" })
+        .then(res => {
+            if (res.ok) return pages;   // Pages works
+            return raw;                // fallback to raw
+        })
+        .catch(() => raw);             // Pages unreachable → raw
+}
 
 function render(items) {
     container.innerHTML = '';
@@ -446,7 +459,12 @@ function render(items) {
         const img = document.createElement('img');
 
         if (item.thumbnail && item.thumbnail.trim() !== "") {
-            img.src = item.thumbnail;
+            img.src = item.thumbnail_pages;
+
+            img.onerror = () => {
+            img.src = item.thumbnail_raw;   // fallback to raw thumbnail
+        };
+
             img.loading = "lazy";
         } else {
             img.style.background = motifColors[(item.motif || "").toLowerCase().trim()] || "#ccc";
@@ -470,7 +488,10 @@ function render(items) {
         const link = document.createElement('a');
         link.className = "archive-item";
         link.dataset.filename = item.title;   // or item.url.split('/').pop()
-        link.href = item.url;
+        chooseBestUrl(item).then(best => {
+        link.href = best;
+        });
+
         link.target = "_blank";
         link.textContent = item.title;
 
