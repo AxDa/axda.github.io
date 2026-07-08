@@ -290,13 +290,12 @@ async function chooseThumbnail(item, mode) {
         const bluUrl = primary.replace("https://axda.github.io/", "https://axda.github.io/Blu/");
         if (await urlExists(bluUrl)) return bluUrl;
     }
-    
+
     // 3. Final fallback
     return "https://axda.github.io/Orange_icon.png";
-    }   // ← THIS BRACE WAS MISSING
-    
-    async function urlExists(url) {
+}   // ← THIS WAS MISSING
 
+async function urlExists(url) {
     try {
         const res = await fetch(url, { method: "HEAD" });
         return res.ok;
