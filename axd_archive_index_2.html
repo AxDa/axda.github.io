@@ -505,18 +505,42 @@ async function loadIndex() {
 
             const thumb = pickThumbnail(item);
             if (thumb && thumb.trim() !== "") {
-                if (mode === "pages" && item.thumbnail_pages) {
-                img.src = item.thumbnail_pages;
-            } 
-            else if (mode === "raw" && item.thumbnail_raw) {
-                img.src = item.thumbnail_raw;
-            } 
-            else if (item.thumbnail) {
-                img.src = item.thumbnail;   // legacy support
-            } 
-            else {
-                img.src = "Orange_icon.png";   // fallback
+            const img = document.createElement('img');
+
+            // NEW thumbnail logic
+            chooseThumbnail(item, mode).then(url => {
+                img.src = url;
+                img.loading = "lazy";
+            });
+
+        
+            // 2. Try ROOT repo first
+            if (primary) {
+                const rootUrl = primary.replace("https://axda.github.io/Blu/", "https://axda.github.io/");
+                const rootExists = await urlExists(rootUrl);
+                if (rootExists) return rootUrl;
             }
+        
+            // 3. Fallback to Blu repo thumbnails
+            if (primary) {
+                const bluUrl = primary.replace("https://axda.github.io/", "https://axda.github.io/Blu/");
+                const bluExists = await urlExists(bluUrl);
+                if (bluExists) return bluUrl;
+            }
+        
+            // 4. Final fallback
+            return "https://axda.github.io/Orange_icon.png";
+        }
+        
+        async function urlExists(url) {
+            try {
+                const res = await fetch(url, { method: "HEAD" });
+                return res.ok;
+            } catch {
+                return false;
+            }
+        }
+
 
                 img.loading = "lazy";
             } else {
