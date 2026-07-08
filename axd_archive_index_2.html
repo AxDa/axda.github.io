@@ -505,7 +505,19 @@ async function loadIndex() {
 
             const thumb = pickThumbnail(item);
             if (thumb && thumb.trim() !== "") {
-                img.src = thumb;
+                if (mode === "pages" && item.thumbnail_pages) {
+                img.src = item.thumbnail_pages;
+            } 
+            else if (mode === "raw" && item.thumbnail_raw) {
+                img.src = item.thumbnail_raw;
+            } 
+            else if (item.thumbnail) {
+                img.src = item.thumbnail;   // legacy support
+            } 
+            else {
+                img.src = "Orange_icon.png";   // fallback
+            }
+
                 img.loading = "lazy";
             } else {
                 img.style.background = motifColors[(item.motif || "").toLowerCase().trim()] || "#ccc";
