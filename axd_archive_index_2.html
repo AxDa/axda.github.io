@@ -265,7 +265,46 @@
      style="display:inline-block;padding:10px 16px;background:#4285f4;color:#fff;text-decoration:none;border-radius:4px;">
      🌍 Open in Google Earth Web
   </a>
-</div><script>
+</div>
+  <script>
+
+async function chooseThumbnail(item, mode) {
+    let primary = null;
+
+    if (mode === "pages" && item.thumbnail_pages) {
+        primary = item.thumbnail_pages;
+    } else if (mode === "raw" && item.thumbnail_raw) {
+        primary = item.thumbnail_raw;
+    } else if (item.thumbnail) {
+        primary = item.thumbnail;   // legacy support
+    }
+
+    // 1. Try ROOT repo version
+    if (primary) {
+        const rootUrl = primary.replace("https://axda.github.io/Blu/", "https://axda.github.io/");
+        if (await urlExists(rootUrl)) return rootUrl;
+    }
+
+    // 2. Try Blu repo version
+    if (primary) {
+        const bluUrl = primary.replace("https://axda.github.io/", "https://axda.github.io/Blu/");
+        if (await urlExists(bluUrl)) return bluUrl;
+    }
+
+    // 3. Final fallback
+    return "https://axda.github.io/Orange_icon.png";
+}
+
+async function urlExists(url) {
+    try {
+        const res = await fetch(url, { method: "HEAD" });
+        return res.ok;
+    } catch {
+        return false;
+    }
+}
+
+    
 let mode = "pages";
 
 function setMode(newMode) {
@@ -407,19 +446,7 @@ async function loadIndex() {
         const url = (entry.url || "").toLowerCase();
         return url.includes(".mp3");
     }
-
-      async function chooseThumbnail(item, mode) {
-      let primary = null;
-    
-      // toggle-aware selection
-      if (mode === "pages" && item.thumbnail_pages) {
-          primary = item.thumbnail_pages;
-      } else if (mode === "raw" && item.thumbnail_raw) {
-          primary = item.thumbnail_raw;
-      } else if (item.thumbnail) {
-          primary = item.thumbnail;   // legacy support
-      }
-    
+  
       // 1. Try ROOT repo version
       if (primary) {
           const rootUrl = primary.replace("https://axda.github.io/Blu/", "https://axda.github.io/");
@@ -540,16 +567,13 @@ async function loadIndex() {
             const isAudio = isAudioEntry(item);
 
             const img = document.createElement('img');
-
-            const thumb = pickThumbnail(item);
-            if (thumb && thumb.trim() !== "") {
-            const img = document.createElement('img');
-
+            
             // NEW thumbnail logic
             chooseThumbnail(item, mode).then(url => {
                 img.src = url;
                 img.loading = "lazy";
             });
+
 
         
             // 2. Try ROOT repo first
