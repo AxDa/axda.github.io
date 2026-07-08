@@ -291,9 +291,6 @@ async function chooseThumbnail(item, mode) {
         if (await urlExists(bluUrl)) return bluUrl;
     }
 
-    // 3. Final fallback
-    return "https://axda.github.io/Orange_icon.png";
-
 async function urlExists(url) {
     try {
         const res = await fetch(url, { method: "HEAD" });
@@ -302,7 +299,6 @@ async function urlExists(url) {
         return false;
     }
 }
-
     
 let mode = "pages";
 
