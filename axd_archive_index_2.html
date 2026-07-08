@@ -293,7 +293,6 @@ async function chooseThumbnail(item, mode) {
 
     // 3. Final fallback
     return "https://axda.github.io/Orange_icon.png";
-}
 
 async function urlExists(url) {
     try {
@@ -445,19 +444,6 @@ async function loadIndex() {
     function isAudioEntry(entry) {
         const url = (entry.url || "").toLowerCase();
         return url.includes(".mp3");
-    }
-    
-      // 3. Final fallback
-      return "https://axda.github.io/Orange_icon.png";
-    }
-    
-    async function urlExists(url) {
-      try {
-          const res = await fetch(url, { method: "HEAD" });
-          return res.ok;
-      } catch {
-          return false;
-      }
     }
 
   
