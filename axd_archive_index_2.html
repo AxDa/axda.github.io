@@ -536,12 +536,6 @@ async function loadIndex() {
       
               const img = document.createElement('img');
       
-              // NEW thumbnail logic
-              chooseThumbnail(item, mode).then(url => {
-                  img.src = url;
-                  img.loading = "lazy";
-              });
-      
               img.alt = item.title || "Untitled";
       
               // UNIVERSAL FALLBACK FOR ANY BROKEN THUMBNAIL
