@@ -282,12 +282,13 @@ function updateLinks() {
         const filename = item.dataset.filename;
 
         if (mode === "raw") {
-            item.href = "https://raw.githubusercontent.com/AxDa/Blu/master/" + filename;
+            item.href = "https://raw.githubusercontent.com/AxDa/axda.github.io/master/" + filename;
         } else {
-            item.href = "https://axda.github.io/Blu/" + filename;
+            item.href = "https://axda.github.io/" + filename;
         }
     });
 }
+
 
 async function loadIndex() {
 
@@ -487,7 +488,7 @@ function render(items) {
 
         const link = document.createElement('a');
         link.className = "archive-item";
-        link.dataset.filename = item.title;   // or item.url.split('/').pop()
+        link.dataset.filename = item.url_pages.split('/').pop();    //link.dataset.filename = item.title;   // or item.url.split('/').pop()
         chooseBestUrl(item).then(best => {
         link.href = best;
         });
