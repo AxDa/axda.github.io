@@ -446,18 +446,6 @@ async function loadIndex() {
         const url = (entry.url || "").toLowerCase();
         return url.includes(".mp3");
     }
-  
-      // 1. Try ROOT repo version
-      if (primary) {
-          const rootUrl = primary.replace("https://axda.github.io/Blu/", "https://axda.github.io/");
-          if (await urlExists(rootUrl)) return rootUrl;
-      }
-    
-      // 2. Try Blu repo version
-      if (primary) {
-          const bluUrl = primary.replace("https://axda.github.io/", "https://axda.github.io/Blu/");
-          if (await urlExists(bluUrl)) return bluUrl;
-      }
     
       // 3. Final fallback
       return "https://axda.github.io/Orange_icon.png";
@@ -586,20 +574,6 @@ async function loadIndex() {
             };
             
             if (!compactMode) div.appendChild(img);
-        
-            // 2. Try ROOT repo first
-            if (primary) {
-                const rootUrl = primary.replace("https://axda.github.io/Blu/", "https://axda.github.io/");
-                const rootExists = await urlExists(rootUrl);
-                if (rootExists) return rootUrl;
-            }
-        
-            // 3. Fallback to Blu repo thumbnails
-            if (primary) {
-                const bluUrl = primary.replace("https://axda.github.io/", "https://axda.github.io/Blu/");
-                const bluExists = await urlExists(bluUrl);
-                if (bluExists) return bluUrl;
-            }
         
             // 4. Final fallback
             return "https://axda.github.io/Orange_icon.png";
