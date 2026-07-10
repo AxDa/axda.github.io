@@ -13656,5 +13656,24 @@
     "cluster": "testimony",
     "size": 518103,
     "type": "mp3"
+  },
+  {
+    "title": "wastewater_cross_section_lemniscate_series_101_utc_1_10072026_axd.svg",
+    "url_pages": "https://axda.github.io/wastewater_cross_section_lemniscate_series_101_utc_1_10072026_axd.svg",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/wastewater_cross_section_lemniscate_series_101_utc_1_10072026_axd.svg",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/wastewater_cross_section_lemniscate_series_101_utc_1_10072026_axd_thumb.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/wastewater_cross_section_lemniscate_series_101_utc_1_10072026_axd_thumb.png",
+    "tags": [
+      "lemniscate_series",
+      "eucalid",
+      "archive",
+      "technical",
+      "pioneer"
+    ],
+    "date": "2026-07-10",
+    "motif": "technical audit",
+    "cluster": "signal",
+    "size": 7398887,
+    "type": "svg"
   }
 ]
