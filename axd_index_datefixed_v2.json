@@ -13976,5 +13976,26 @@
     "cluster": "signal",
     "size": 524288,
     "type": "png"
+  },
+  {
+    "title": "Observation_0535 utc_1_12072026_axd_ls9_7_doc.png",
+    "url_pages": "https://axda.github.io/Observation_0535 utc_1_12072026_axd_ls9_7_doc.png",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/Observation_0535 utc_1_12072026_axd_ls9_7_doc.png",
+    "thumbnail_pages": "https://axda.github.io/Observation_0535 utc_1_12072026_axd_ls9_7_doc.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/Observation_0535 utc_1_12072026_axd_ls9_7_doc.png",
+    "tags": [
+      "stack_effect",
+      "sintra_twin",
+      "conical_chimneys",
+      "archive",
+      "technical",
+      "observation",
+      "pioneer"
+    ],
+    "date": "2026-07-12",
+    "motif": "technical audit",
+    "cluster": "signal",
+    "size": 82065,
+    "type": "png"
   }
 ]
