@@ -14955,5 +14955,26 @@
     "cluster": "signal",
     "size": 82065,
     "type": "png"
-  }
+  },
+  {
+    "title": "england_regional_hubs_0754_13072026.svg",
+    "url_pages": "https://axda.github.io/sintra_electric_generation_equivalent_volumetric_flow_rate_el_sótano_de_las_golandrenas_2110_11072026.svg",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/england_regional_hubs_0754_13072026.svg",
+    "thumbnail_pages": "https://axda.github.io/england_regional_hubs_0754_13072026.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/england_regional_hubs_0754_13072026.png",
+    "tags": [
+      "stack_effect",
+      "sintra_twin",
+      "conical_chimneys",
+	  "elevated_capability",
+      "archive",
+      "technical",
+      "pioneer"
+    ],
+    "date": "2026-07-13",
+    "motif": "technical audit",
+    "cluster": "signal",
+    "size": 47541,
+    "type": "svg"
+ },
 ]
