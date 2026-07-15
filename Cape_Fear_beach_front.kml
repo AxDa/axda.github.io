@@ -1,41 +1,39 @@
-xml<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://opengis.net">
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Wilmington &amp; Cape Fear: Coast and Promenade</name>
     <description>Polygon boundaries for the main wavefront, beachfront, and promenade structures around Wilmington and Carolina Beach / Cape Fear area.</description>
 
-    <!-- Styles for Polygons -->
     <Style id="beachStyle">
       <LineStyle>
-        <color>ff00aaff</color> <!-- Orange Outline -->
+        <color>ff00aaff</color>
         <width>3</width>
       </LineStyle>
       <PolyStyle>
-        <color>7f00d5ff</color> <!-- Semi-transparent Light Orange Sand -->
+        <color>7f00d5ff</color>
       </PolyStyle>
     </Style>
 
     <Style id="jettyStyle">
       <LineStyle>
-        <color>ff555555</color> <!-- Dark Grey Outline -->
+        <color>ff555555</color>
         <width>2</width>
       </LineStyle>
       <PolyStyle>
-        <color>b3888888</color> <!-- Solid Grey Structure -->
+        <color>b3888888</color>
       </PolyStyle>
     </Style>
 
     <Style id="promenadeStyle">
       <LineStyle>
-        <color>ff00ff00</color> <!-- Bright Green Outline -->
+        <color>ff00ff00</color>
         <width>2</width>
       </LineStyle>
       <PolyStyle>
-        <color>6600ff00</color> <!-- Semi-transparent Green Boardwalk -->
+        <color>6600ff00</color>
       </PolyStyle>
     </Style>
 
-    <!-- Folder 1: Beach Front Boundaries -->
     <Folder>
       <name>Beach Front Areas</name>
       <Placemark>
@@ -60,10 +58,9 @@ xml<?xml version="1.0" encoding="UTF-8"?>
       </Placemark>
     </Folder>
 
-    <!-- Folder 2: Promenade & Jetty Structures -->
     <Folder>
       <name>Promenade &amp; Jetty Infrastructure</name>
-      
+
       <Placemark>
         <name>Carolina Beach Boardwalk/Promenade</name>
         <description>Polygon tracking the active pedestrian promenade corridor along the beach strip.</description>
@@ -105,6 +102,7 @@ xml<?xml version="1.0" encoding="UTF-8"?>
           </outerBoundaryIs>
         </Polygon>
       </Placemark>
+
     </Folder>
 
   </Document>
