@@ -1,0 +1,35 @@
+xml<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://opengis.net">
+  <Document>
+    <name>Cape Fear and Wilmington, NC</name>
+    <description>Key landmarks around Wilmington and the Cape Fear River region.</description>
+    
+    <!-- Wilmington Placemark -->
+    <Placemark>
+      <name>Wilmington, North Carolina</name>
+      <description>Historic port city known for its riverfront boardwalk and Southern charm.</description>
+      <Point>
+        <coordinates>-77.944710,34.225726,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- Cape Fear River Placemark -->
+    <Placemark>
+      <name>Cape Fear River (Downtown Front St)</name>
+      <description>The major 191-mile river that empties into the Atlantic Ocean.</description>
+      <Point>
+        <coordinates>-77.951914,34.234902,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- Cape Fear Landform Placemark -->
+    <Placemark>
+      <name>Cape Fear (Landform Point)</name>
+      <description>The prominent headland jutting into the Atlantic Ocean at Bald Head Island.</description>
+      <Point>
+        <coordinates>-77.957778,33.841944,0</coordinates>
+      </Point>
+    </Placemark>
+    
+  </Document>
+</kml>

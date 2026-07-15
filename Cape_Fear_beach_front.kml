@@ -1,0 +1,111 @@
+xml<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://opengis.net">
+  <Document>
+    <name>Wilmington &amp; Cape Fear: Coast and Promenade</name>
+    <description>Polygon boundaries for the main wavefront, beachfront, and promenade structures around Wilmington and Carolina Beach / Cape Fear area.</description>
+
+    <!-- Styles for Polygons -->
+    <Style id="beachStyle">
+      <LineStyle>
+        <color>ff00aaff</color> <!-- Orange Outline -->
+        <width>3</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00d5ff</color> <!-- Semi-transparent Light Orange Sand -->
+      </PolyStyle>
+    </Style>
+
+    <Style id="jettyStyle">
+      <LineStyle>
+        <color>ff555555</color> <!-- Dark Grey Outline -->
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>b3888888</color> <!-- Solid Grey Structure -->
+      </PolyStyle>
+    </Style>
+
+    <Style id="promenadeStyle">
+      <LineStyle>
+        <color>ff00ff00</color> <!-- Bright Green Outline -->
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>6600ff00</color> <!-- Semi-transparent Green Boardwalk -->
+      </PolyStyle>
+    </Style>
+
+    <!-- Folder 1: Beach Front Boundaries -->
+    <Folder>
+      <name>Beach Front Areas</name>
+      <Placemark>
+        <name>Carolina Beach Front Segment</name>
+        <description>Polygon approximating a primary section of the Atlantic beachfront near the historic boardwalk area.</description>
+        <styleUrl>#beachStyle</styleUrl>
+        <Polygon>
+          <extrude>1</extrude>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                -77.888500,34.034500,0
+                -77.886000,34.034500,0
+                -77.889000,34.015000,0
+                -77.891500,34.015000,0
+                -77.888500,34.034500,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+
+    <!-- Folder 2: Promenade & Jetty Structures -->
+    <Folder>
+      <name>Promenade &amp; Jetty Infrastructure</name>
+      
+      <Placemark>
+        <name>Carolina Beach Boardwalk/Promenade</name>
+        <description>Polygon tracking the active pedestrian promenade corridor along the beach strip.</description>
+        <styleUrl>#promenadeStyle</styleUrl>
+        <Polygon>
+          <extrude>1</extrude>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                -77.889100,34.034200,0
+                -77.888800,34.034200,0
+                -77.890800,34.020000,0
+                -77.891100,34.020000,0
+                -77.889100,34.034200,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+
+      <Placemark>
+        <name>Cape Fear Inlet Jetty System</name>
+        <description>Polygon highlighting the protective coastal stone jetty structure modifying local drift patterns near the inlet openings.</description>
+        <styleUrl>#jettyStyle</styleUrl>
+        <Polygon>
+          <extrude>1</extrude>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+                -77.940500,33.889500,0
+                -77.935000,33.889500,0
+                -77.935000,33.888000,0
+                -77.940500,33.888000,0
+                -77.940500,33.889500,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+
+  </Document>
+</kml>
