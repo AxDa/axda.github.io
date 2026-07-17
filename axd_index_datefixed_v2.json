@@ -15854,4 +15854,23 @@
     "size": 583305,
     "type": "mp3"
   }
+  {
+    "title": "1_In_the_eyes_of_the_worldBleakst_ia_circa_1030_utc_1_17072026.mp3",
+    "url_pages": "https://axda.github.io/1_In_the_eyes_of_the_worldBleakst_ia_circa_1030_utc_1_17072026.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_In_the_eyes_of_the_worldBleakst_ia_circa_1030_utc_1_17072026.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_In_the_eyes_of_the_worldBleakst_ia_circa_1030_utc_1_17072026.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_In_the_eyes_of_the_worldBleakst_ia_circa_1030_utc_1_17072026.mp3.png",
+    "tags": [
+      "transmission",
+      "piggy_back",
+      "bleakst",
+      "in_the_eyes_of_the_world",
+      "ia"
+    ],
+    "date": "2026-07-17",
+    "motif": "civic decay",
+    "cluster": "transmission",
+    "size": 911821,
+    "type": "mp3"
+  }
 ]
