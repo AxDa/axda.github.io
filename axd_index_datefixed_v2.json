@@ -15714,11 +15714,13 @@
     "cluster": "signal",
     "size": 127680,
     "type": "png"
-  },
+  },  
   {
     "title": "1_Bleakst_bbcreau_spurious_2340_2353_utc_1_16072026.mp3",
-    "url": "https://axda.github.io/1_Bleakst_bbcreau_spurious_2340_2353_utc_1_16072026.mp3",
-    "thumbnail": "https://axda.github.io/waveform_thumbnails/1_Bleakst_bbcreau_spurious_2340_2353_utc_1_16072026.mp3.png",
+    "url_pages": "https://axda.github.io/1_Bleakst_bbcreau_spurious_2340_2353_utc_1_16072026.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_Bleakst_bbcreau_spurious_2340_2353_utc_1_16072026.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_bbcreau_spurious_2340_2353_utc_1_16072026.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_Bleakst_bbcreau_spurious_2340_2353_utc_1_16072026.mp3.png",
     "tags": [
       "harehills",
       "atlantic",
