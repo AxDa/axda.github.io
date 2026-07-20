@@ -16268,23 +16268,20 @@
     "type": "mp3"
   },
   {
-    "title": "1_copy_ping_over_183830_circa_utc_1_freesound_community_ping_82822.mp3",
-    "url_pages": "https://axda.github.io/1_copy_ping_over_183830_circa_utc_1_freesound_community_ping_82822.mp3",
-    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_copy_ping_over_183830_circa_utc_1_freesound_community_ping_82822.mp3",
-    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_copy_ping_over_183830_circa_utc_1_freesound_community_ping_82822.mp3.png",
-    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_copy_ping_over_183830_circa_utc_1_freesound_community_ping_82822.mp3.png",
+    "title": "2_Bleakst_Fireworks_211920_211935_utc_1_20072026.mp3",
+    "url_pages": "https://axda.github.io/1_Bleakst_Fireworks_211920_211935_utc_1_20072026.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/2_Bleakst_Fireworks_211920_211935_utc_1_20072026.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/2_Bleakst_Fireworks_211920_211935_utc_1_20072026.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/2_Bleakst_Fireworks_211920_211935_utc_1_20072026.mp3.png",
     "tags": [
+      "harehills",
       "bleakst",
-      "pot_holes",
-      "ping",
-      "over",
-      "copy",
-      "hack"
+      "fireworks"
     ],
     "date": "2026-07-20",
     "motif": "civic decay",
-    "cluster": "ping",
-    "size": 70051,
+    "cluster": "perambulators",
+    "size": 406926,
     "type": "mp3"
   },
   {
