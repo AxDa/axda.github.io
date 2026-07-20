@@ -16096,6 +16096,22 @@
     "type": "png"
   },
   {
+    "title": "1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3",
+    "url_pages": "https://axda.github.io/1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3.png",
+    "tags": [
+      "bleakst",
+      "pot_holes"
+    ],
+    "date": "2026-07-18",
+    "motif": "civic decay",
+    "cluster": "pot_holes",
+    "size": 2604137,
+    "type": "mp3"
+  },
+  {
     "title": "2026_Untitled_41_document_wk30_19072026_p",
     "url": "https://docs.google.com/document/d/1943jDbzBIwMZHbz4aBmnX2Roqe-1n4-vFs4tXxHMcIk/edit?_",
     "thumbnail": "edit",
@@ -16137,22 +16153,6 @@
     "cluster": "signal",
     "size": 1718618 ,
     "type": "png"
-  },
-  {
-    "title": "1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3",
-    "url_pages": "https://axda.github.io/1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3",
-    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3",
-    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3.png",
-    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_Bleakst_pot_holes_cowper_road_0706_utc+1_18072026_v0.2.mp3.png",
-    "tags": [
-      "bleakst",
-      "pot_holes"
-    ],
-    "date": "2026-07-18",
-    "motif": "civic decay",
-    "cluster": "pot_holes",
-    "size": 2604137,
-    "type": "mp3"
   },
   {
     "title": "1_Bleaksirenairest_135631_143145_utc_1_19072026_v0.1.mp3",
@@ -16210,5 +16210,35 @@
     "cluster": "street",
     "size": 16077052,
     "type": "mp3"
-  }
+  },
+  {
+    "title": "spiral_pew_taxonomy_orbiting _he_cracked_garden_wall_0931_utc+1_20072026.png",
+    "url_pages": "https://axda.github.io/spiral_pew_taxonomy_orbiting _he_cracked_garden_wall_0931_utc+1_20072026.png",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/master/spiral_pew_taxonomy_orbiting _he_cracked_garden_wall_0931_utc+1_20072026.png",
+    "thumbnail_pages": "https://axda.github.io/spiral_pew_taxonomy_orbiting _he_cracked_garden_wall_0931_utc+1_20072026.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/master/spiral_pew_taxonomy_orbiting _he_cracked_garden_wall_0931_utc+1_20072026.png",
+    "tags": [
+	    "scatter_output",
+        "gang_groups",
+        "cracked_garden_wall",
+        "spiral_pew_taxonomy",
+        "triangulation",
+        "high_office",
+        "england_city",
+        "axes",
+        "the_swan_with_two_necks",
+        "Fry", "Lmn", "WshngUp", "Liquid", "1190ml",
+        "stack_effect",
+        "conical_chimneys",
+        "elevated_capability",
+        "archive",
+        "technical",
+        "pioneer"
+    ],
+    "date": "2026-07-20",
+    "motif": "technical audit",
+    "cluster": "signal",
+    "size": 3798917  ,
+    "type": "png"
+  },
 ]
