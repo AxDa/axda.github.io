@@ -12270,19 +12270,19 @@
   "type": "file"
   },
   {
-  "title": "2026_Untitled_38_document_wk27_28062026",
-  "url": "https://docs.google.com/document/d/1SveL4OxYze6ILm1a15tPNjzErUpC0rdyvlHpn0MJajc/edit?usp=sharing",
-  "thumbnail": "",
-  "tags": [
-    "document",
-    "google",
-    "reference"
-  ],
-  "date": "2026-06-28",
-  "motif": "reference_material",
-  "cluster": "documents",
-  "size": null,
-  "type": "doc"
+    "title": "2026_Untitled_38_document_wk27_28062026",
+    "url": "https://docs.google.com/document/d/1SveL4OxYze6ILm1a15tPNjzErUpC0rdyvlHpn0MJajc/edit?_",
+    "thumbnail": "edit",
+    "tags": [
+      "document",
+      "google",
+      "reference"
+    ],
+    "date": "2026-06-28",
+    "motif": "reference_material",
+    "cluster": "documents",
+    "size": 6700000,
+    "type": "doc"
   },
   {
     "title": "Bleakst_2032_2123_utc_1_29062026",
@@ -12648,6 +12648,21 @@
     "cluster": "unverified",
     "size": 1955784,
     "type": "mp3"
+  },
+  {
+    "title": "2026_Untitled_39_document_wk28_05072026_p18",
+    "url": "https://docs.google.com/document/d/1dyEPcxKh-ihKLCiw6_a_nQyR8zWoAetiIec3QrrxkyQ/edit?_",
+    "thumbnail": "edit",
+    "tags": [
+      "document",
+      "google",
+      "reference"
+    ],
+    "date": "2026-07-05",
+    "motif": "reference_material",
+    "cluster": "documents",
+    "size": 30500000,
+    "type": "doc"
   },
   {
     "title": "Soil_mechanics_panel_0852_utc_1_05072026.png",
@@ -13976,6 +13991,21 @@
     "cluster": "signal",
     "size": 524288,
     "type": "png"
+  },
+  {
+    "title": "2026_Untitled_40_document_wk29_12072026_p26",
+    "url": "https://docs.google.com/document/d/1B2LDLIXNmfawGJq_OGCpcW8cwBbjb7Nwi6j8XfXO4yY/edit?_",
+    "thumbnail": "edit",
+    "tags": [
+      "document",
+      "google",
+      "reference"
+    ],
+    "date": "2026-07-12",
+    "motif": "reference_material",
+    "cluster": "documents",
+    "size": 35000000,
+    "type": "doc"
   },
   {
     "title": "1_Bleakst_perambulator_horn_street_2317_utc_1_12072026.mp3",
@@ -16064,6 +16094,21 @@
     "cluster": "testimony",
     "size": 3340609,
     "type": "png"
+  },
+  {
+    "title": "2026_Untitled_41_document_wk30_19072026_p",
+    "url": "https://docs.google.com/document/d/1943jDbzBIwMZHbz4aBmnX2Roqe-1n4-vFs4tXxHMcIk/edit?_",
+    "thumbnail": "edit",
+    "tags": [
+      "document",
+      "google",
+      "reference"
+    ],
+    "date": "2026-07-19",
+    "motif": "reference_material",
+    "cluster": "documents",
+    "size": 1900000,
+    "type": "doc"
   },
   {
     "title": "group_gangs_1233_utc_1_19072026",
