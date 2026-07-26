@@ -17241,5 +17241,20 @@
     "cluster": "neighbours",
     "size": 241832,
     "type": "mp3"
-  }
+  },
+  {
+    "title": "2026_Untitled_42_document_wk31_26072026_p",
+    "url": "https://docs.google.com/document/d/1Dk-1_GII5zIeOUm3q8l5JbkEHHWMpzDbwTz2wSyqGwY/",
+    "thumbnail": "edit",
+    "tags": [
+      "document",
+      "google",
+      "reference"
+    ],
+    "date": "2026-07-26",
+    "motif": "reference_material",
+    "cluster": "documents",
+    "size": 0,
+    "type": "doc"
+  },
 ]
