@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Storyboard Viewer: global_iron_handel_index_axd_date_time_range_bleakst_23_to_27_07_2026_graph3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    margin: 0;
+    background: #111;
+    color: #eee;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overscroll-behavior: none;
+  }
+
+  header {
+    padding: 0.5rem 1rem;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #ddd;
+  }
+
+  .controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  button {
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background: #333;
+    color: #eee;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+
+  button:hover {
+    background: #444;
+  }
+
+  main {
+    flex: 1;
+    overflow: hidden;
+    background: #111;
+    touch-action: none;
+    position: relative;
+  }
+
+  #panzoom-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #panzoom-content {
+    transform-origin: 0 0;
+    will-change: transform;
+  }
+
+  object {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+  }
+
+  #zoom-controls {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  #zoom-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+
+  #minimap {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 180px;
+    height: 180px;
+    border: 2px solid #666;
+    background: #222;
+    overflow: hidden;
+    opacity: 0.85;
+    z-index: 10;
+  }
+
+  #minimap svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  #minimap-viewport {
+    position: absolute;
+    border: 2px solid #00ffff;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+
+<body>
+  <script src="svg-pan-zoom.min.js"></script>
+
+<header>
+  <h1>Storyboard Viewer</h1>
+  <div class="controls">
+    <button onclick="location.reload()">Refresh</button>
+    <button onclick="window.location.href='https://axda.github.io/Blu/axd_archive_index_2.html'">
+      Back to Archive Index
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <div id="zoom-controls">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">−</button>
+    <button id="zoom-reset">⟳</button>
+  </div>
+
+  <div id="minimap">
+    <div id="minimap-viewport"></div>
+  </div>
+
+  <div id="panzoom-wrapper">
+    <div id="panzoom-content">
+      <object
+        id="svgObject"
+        type="image/svg+xml"
+        data="axd_date_time_range_bleakst_23_27_07_2026_graph3.svg">
+      </object>
+    </div>
+  </div>
+
+</main>
+
+<script>
+(function() {
+  const wrapper = document.getElementById("panzoom-wrapper");
+  const content = document.getElementById("panzoom-content");
+  const svgObject = document.getElementById("svgObject");
+  const zoomInBtn = document.getElementById("zoom-in");
+  const zoomOutBtn = document.getElementById("zoom-out");
+  const zoomResetBtn = document.getElementById("zoom-reset");
+  const minimap = document.getElementById("minimap");
+  const minimapViewport = document.getElementById("minimap-viewport");
+
+  const ZOOM_SENSITIVITY = 0.08;
+  const PAN_SENSITIVITY = 0.6;
+  const MIN_ZOOM = 0.2;
+  const MAX_ZOOM = 10;
+
+  let scale = 1;
+  let originX = 0;
+  let originY = 0;
+  let isDragging = false;
+  let lastX = 0;
+  let lastY = 0;
+  let vx = 0;
+  let vy = 0;
+  let inertiaActive = false;
+  let svg, vb;
+
+  function clampPan() {
+    if (!vb) return;
+    const w = wrapper.clientWidth;
+    const h = wrapper.clientHeight;
+    const scaledWidth = vb.width * scale;
+    const scaledHeight = vb.height * scale;
+
+    const minX = Math.min(0, w - scaledWidth);
+    const maxX = Math.max(0, w - scaledWidth);
+    const minY = Math.min(0, h - scaledHeight);
+    const maxY = Math.max(0, h - scaledHeight);
+
+    originX = Math.min(Math.max(originX, minX), maxX);
+    originY = Math.min(Math.max(originY, minY), maxY);
+  }
+
+  function updateTransform() {
+    clampPan();
+    content.style.transform = `translate(${originX}px, ${originY}px) scale(${scale})`;
+    updateMinimap();
+  }
+
+  function startInertia() {
+    if (inertiaActive) return;
+    inertiaActive = true;
+    function step() {
+      vx *= 0.9;
+      vy *= 0.9;
+      originX += vx;
+      originY += vy;
+      if (Math.abs(vx) < 0.1 && Math.abs(vy) < 0.1) {
+        inertiaActive = false;
+        clampPan();
+        updateTransform();
+        return;
+      }
+      updateTransform();
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  svgObject.addEventListener("load", () => {
+    svg = svgObject.contentDocument.querySelector("svg");
+    if (!svg || !svg.viewBox || !svg.viewBox.baseVal) return;
+
+    vb = svg.viewBox.baseVal;
+    const w = wrapper.clientWidth;
+    const h = wrapper.clientHeight;
+
+    const scaleX = w / vb.width;
+    const scaleY = h / vb.height;
+
+    scale = Math.min(scaleX, scaleY) * 0.95;
+    originX = (w - vb.width * scale) / 2;
+    originY = (h - vb.height * scale) / 2;
+
+    const miniContainer = document.createElement("div");
+    miniContainer.innerHTML = svg.outerHTML;
+    const miniSvg = miniContainer.querySelector("svg");
+    miniSvg.removeAttribute("width");
+    miniSvg.removeAttribute("height");
+    miniSvg.style.width = "100%";
+    miniSvg.style.height = "100%";
+    minimap.appendChild(miniSvg);
+
+    updateTransform();
+  });
+
+  function zoomAt(factor, cx, cy) {
+    if (!vb) return;
+    const w = wrapper.clientWidth;
+    const h = wrapper.clientHeight;
+
+    const beforeScale = scale;
+    scale *= factor;
+    scale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, scale));
+    const actualFactor = scale / beforeScale;
+
+    const dx = cx - originX;
+    const dy = cy - originY;
+
+    originX = cx - dx * actualFactor;
+    originY = cy - dy * actualFactor;
+
+    updateTransform();
+  }
+
+  zoomInBtn.onclick = () => {
+    const cx = wrapper.clientWidth / 2;
+    const cy = wrapper.clientHeight / 2;
+    zoomAt(1.2, cx, cy);
+  };
+
+  zoomOutBtn.onclick = () => {
+    const cx = wrapper.clientWidth / 2;
+    const cy = wrapper.clientHeight / 2;
+    zoomAt(0.8, cx, cy);
+  };
+
+  zoomResetBtn.onclick = () => {
+    if (!vb) return;
+    const w = wrapper.clientWidth;
+    const h = wrapper.clientHeight;
+    const scaleX = w / vb.width;
+    const scaleY = h / vb.height;
+    scale = Math.min(scaleX, scaleY) * 0.95;
+    originX = (w - vb.width * scale) / 2;
+    originY = (h - vb.height * scale) / 2;
+    updateTransform();
+  };
+
+  wrapper.addEventListener("wheel", e => {
+    e.preventDefault();
+    const rect = wrapper.getBoundingClientRect();
+    const cx = e.clientX - rect.left;
+    const cy = e.clientY - rect.top;
+    const factor = 1 + (-e.deltaY * ZOOM_SENSITIVITY / 100);
+    zoomAt(factor, cx, cy);
+  });
+
+  wrapper.addEventListener("pointerdown", e => {
+    isDragging = true;
+    inertiaActive = false;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    vx = 0;
+    vy = 0;
+  });
+
+  wrapper.addEventListener("pointermove", e => {
+    if (!isDragging) return;
+    const dx = (e.clientX - lastX) * PAN_SENSITIVITY;
+    const dy = (e.clientY - lastY) * PAN_SENSITIVITY;
+    originX += dx;
+    originY += dy;
+    vx = dx;
+    vy = dy;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    updateTransform();
+  });
+
+  wrapper.addEventListener("pointerup", () => {
+    isDragging = false;
+    startInertia();
+  });
+
+  wrapper.addEventListener("pointerleave", () => {
+    isDragging = false;
+    startInertia();
+  });
+
+  let lastTapTime = 0;
+  wrapper.addEventListener("touchend", e => {
+    const now = Date.now();
+    if (e.touches.length === 0 && e.changedTouches.length === 1) {
+      if (now - lastTapTime < 300) {
+        const t = e.changedTouches[0];
+        const rect = wrapper.getBoundingClientRect();
+        const cx = t.clientX - rect.left;
+        const cy = t.clientY - rect.top;
+        zoomAt(1.5, cx, cy);
+      }
+      lastTapTime = now;
+    }
+  });
+
+  let lastDist = 0;
+  wrapper.addEventListener("touchmove", e => {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      const [t1, t2] = e.touches;
+      const dist = Math.hypot(t1.pageX - t2.pageX, t1.pageY - t2.pageY);
+      if (lastDist) {
+        const delta = (dist - lastDist) * ZOOM_SENSITIVITY * 0.01;
+        const rect = wrapper.getBoundingClientRect();
+        const cx = (t1.clientX + t2.clientX) / 2 - rect.left;
+        const cy = (t1.clientY + t2.clientY) / 2 - rect.top;
+        zoomAt(1 + delta, cx, cy);
+      }
+      lastDist = dist;
+    }
+  });
+
+  wrapper.addEventListener("touchend", () => {
+    lastDist = 0;
+  });
+
+  document.addEventListener("keydown", e => {
+    if (!vb) return;
+    const step = 40;
+    if (e.key === "ArrowLeft") {
+      originX += step;
+      updateTransform();
+    } else if (e.key === "ArrowRight") {
+      originX -= step;
+      updateTransform();
+    } else if (e.key === "ArrowUp") {
+      originY += step;
+      updateTransform();
+    } else if (e.key === "ArrowDown") {
+      originY -= step;
+      updateTransform();
+    } else if (e.key === "+" || e.key === "=") {
+      const cx = wrapper.clientWidth / 2;
+      const cy = wrapper.clientHeight / 2;
+      zoomAt(1.1, cx, cy);
+    } else if (e.key === "-" || e.key === "_") {
+      const cx = wrapper.clientWidth / 2;
+      const cy = wrapper.clientHeight / 2;
+      zoomAt(0.9, cx, cy);
+    }
+  });
+
+  function updateMinimap() {
+    if (!vb) return;
+    const miniW = minimap.clientWidth;
+    const miniH = minimap.clientHeight;
+
+    const scaleX = miniW / vb.width;
+    const scaleY = miniH / vb.height;
+
+    const viewW = wrapper.clientWidth / scale;
+    const viewH = wrapper.clientHeight / scale;
+
+    minimapViewport.style.width = (viewW * scaleX) + "px";
+    minimapViewport.style.height = (viewH * scaleY) + "px";
+    minimapViewport.style.left = (-originX / scale * scaleX) + "px";
+    minimapViewport.style.top = (-originY / scale * scaleY) + "px";
+  }
+
+})();
+</script>
+
+</body>
+</html>
