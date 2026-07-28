@@ -209,14 +209,14 @@ svgObject.addEventListener("load", () => {
     svg = svgObject.contentDocument.querySelector("svg");
     vb = svg.viewBox.baseVal;
 
-    // --- WIDTH-FIT + FULL-HEIGHT INITIALIZATION ---
-    // Show one screen-width horizontally (readable)
-    viewW = wrapper.clientWidth;
+    // --- HEIGHT-FIT INITIALIZATION FOR TALL SVGs ---
+    // Fit width exactly (so text is readable)
+    viewW = vb.width;
 
-    // Show the FULL height of the SVG so you can scroll down
-    viewH = vb.height;
+    // Show only one screen-height slice (so you can scroll down)
+    viewH = wrapper.clientHeight;
 
-    // Start at the top-left corner
+    // Start at the top
     viewX = vb.x;
     viewY = vb.y;
 
@@ -232,6 +232,7 @@ svgObject.addEventListener("load", () => {
 
     updateViewBox();
 });
+
 
 
 
