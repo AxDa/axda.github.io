@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SVG Pan & Zoom Clarity Matrix</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    background: #111;
+    color: #eee;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  th, td {
+    border: 1px solid #444;
+    padding: 0.4rem 0.6rem;
+    vertical-align: top;
+  }
+  th {
+    background: #222;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: #181818;
+  }
+  .tag-best { color: #00ffcc; }
+  .tag-warn { color: #ffcc00; }
+  .tag-bad  { color: #ff6666; }
+</style>
+</head>
+<body>
+<main>
+  <h1>SVG Pan &amp; Zoom Clarity Matrix</h1>
+
+  <h2>Embedding method vs browser security</h2>
+  <table>
+    <tr>
+      <th>Embedding method</th><th>Online (HTTPS)</th><th>Offline (file://)</th>
+      <th>Local server (localhost)</th><th>Firefox</th><th>Chrome/Edge</th><th>Clarity</th><th>Notes</th>
+    </tr>
+    <tr>
+      <td>&lt;object&gt;</td><td>✔</td><td><span class="tag-warn">⚠</span></td>
+      <td><span class="tag-warn">⚠</span></td><td>✔</td><td><span class="tag-bad">✘</span></td>
+      <td><span class="tag-best">★</span></td><td>Best online; offline blocked in Chrome/Edge.</td>
+    </tr>
+    <tr>
+      <td>&lt;embed&gt;</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td>
+      <td><span class="tag-best">★</span></td><td>Safest universal method.</td>
+    </tr>
+    <tr>
+      <td>&lt;img&gt; + fetch</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td>
+      <td><span class="tag-best">★</span></td><td>Requires JS to fetch and inject SVG.</td>
+    </tr>
+    <tr>
+      <td>Inline &lt;svg&gt;</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td>
+      <td><span class="tag-best">★</span></td><td>Perfect clarity; no external file.</td>
+    </tr>
+  </table>
+
+  <h2>Zoom method vs clarity</h2>
+  <table>
+    <tr>
+      <th>Zoom method</th><th>Clarity</th><th>Notes</th>
+    </tr>
+    <tr>
+      <td>CSS transform: <code>scale()</code></td>
+      <td><span class="tag-bad">✘ blurry</span></td>
+      <td>Rasterizes SVG; always soft at zoom.</td>
+    </tr>
+    <tr>
+      <td>SVG <code>viewBox</code> zoom</td>
+      <td><span class="tag-best">✔ perfect</span></td>
+      <td>True vector zoom; infinite resolution.</td>
+    </tr>
+    <tr>
+      <td>SVG <code>transform="scale()"</code></td>
+      <td><span class="tag-warn">⚠</span></td>
+      <td>Better than CSS, but text can rasterize.</td>
+    </tr>
+  </table>
+
+  <h2>Recommended setups</h2>
+  <table>
+    <tr>
+      <th>Use case</th><th>Recommended</th><th>Why</th>
+    </tr>
+    <tr>
+      <td>GitHub Pages (online)</td>
+      <td>&lt;object&gt; or &lt;embed&gt; + viewBox zoom</td>
+      <td>HTTPS, no security blocking; best clarity.</td>
+    </tr>
+    <tr>
+      <td>Offline Firefox</td>
+      <td>&lt;object&gt; + viewBox zoom</td>
+      <td>Firefox allows <code>contentDocument</code> access.</td>
+    </tr>
+    <tr>
+      <td>Offline Chrome/Edge</td>
+      <td>&lt;embed&gt; + viewBox zoom</td>
+      <td>Avoids object security restrictions.</td>
+    </tr>
+    <tr>
+      <td>Local dev (all browsers)</td>
+      <td>&lt;embed&gt; + viewBox zoom</td>
+      <td>Universal behaviour across engines.</td>
+    </tr>
+    <tr>
+      <td>Maximum clarity</td>
+      <td>Inline &lt;svg&gt; + viewBox zoom</td>
+      <td>No external file; pure vector rendering.</td>
+    </tr>
+  </table>
+</main>
+</body>
+</html>
