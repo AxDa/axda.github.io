@@ -205,19 +205,134 @@
     requestAnimationFrame(step);
   }
 
-  svgObject.addEventListener("load", () => {
+svgObject.addEventListener("load", () => {
     svg = svgObject.contentDocument.querySelector("svg");
     vb = svg.viewBox.baseVal;
 
-    // WIDTH-FIT INITIALIZATION (fixes thin vertical line)
-    const scaleX = vb.width / wrapper.clientWidth;
+    // --- SUPER-CLARITY WIDTH-FIT INITIALIZATION ---
+    // Show only one screen-width of the SVG (readable!)
+    viewW = wrapper.clientWidth;      // readable width
+    viewH = wrapper.clientHeight;     // readable height
 
-    viewW = vb.width / scaleX;
-    viewH = vb.height / scaleX;
-
-    viewX = 0;
-    viewY = 0;
+    // Start at the left edge of the SVG
+    viewX = vb.x;
+    viewY = vb.y;
 
     // Minimap clone
     const miniContainer = document.createElement("div");
-    miniContainer.innerHTML = svg
+    miniContainer.innerHTML = svg.outerHTML;
+    const miniSvg = miniContainer.querySelector("svg");
+    miniSvg.removeAttribute("width");
+    miniSvg.removeAttribute("height");
+    miniSvg.style.width = "100%";
+    miniSvg.style.height = "100%";
+    minimap.appendChild(miniSvg);
+
+    updateViewBox();
+});
+
+
+  zoomInBtn.onclick = () => {
+    zoomAt(1.2, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
+  };
+
+  zoomOutBtn.onclick = () => {
+    zoomAt(0.8, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
+  };
+
+  zoomResetBtn.onclick = () => {
+    viewX = vb.x;
+    viewY = vb.y;
+    viewW = vb.width;
+    viewH = vb.height;
+    updateViewBox();
+  };
+
+  wrapper.addEventListener("wheel", e => {
+    e.preventDefault();
+    const rect = wrapper.getBoundingClientRect();
+    const cx = e.clientX - rect.left;
+    const cy = e.clientY - rect.top;
+    const factor = 1 + (-e.deltaY * 0.001);
+    zoomAt(factor, cx, cy);
+  });
+
+  wrapper.addEventListener("pointerdown", e => {
+    isDragging = true;
+    inertiaActive = false;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    vx = 0;
+    vy = 0;
+  });
+
+  wrapper.addEventListener("pointermove", e => {
+    if (!isDragging) return;
+
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+
+    viewX -= dx * (viewW / wrapper.clientWidth);
+    viewY -= dy * (viewH / wrapper.clientHeight);
+
+    vx = dx;
+    vy = dy;
+
+    lastX = e.clientX;
+    lastY = e.clientY;
+
+    updateViewBox();
+  });
+
+  wrapper.addEventListener("pointerup", () => {
+    isDragging = false;
+    startInertia();
+  });
+
+  wrapper.addEventListener("pointerleave", () => {
+    isDragging = false;
+    startInertia();
+  });
+
+  let lastDist = 0;
+  wrapper.addEventListener("touchmove", e => {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      const [t1, t2] = e.touches;
+      const dist = Math.hypot(t1.pageX - t2.pageX, t1.pageY - t2.pageY);
+
+      const rect = wrapper.getBoundingClientRect();
+      const cx = (t1.clientX + t2.clientX) / 2 - rect.left;
+      const cy = (t1.clientY + t2.clientY) / 2 - rect.top;
+
+      if (lastDist) {
+        const factor = 1 + (dist - lastDist) * 0.002;
+        zoomAt(factor, cx, cy);
+      }
+
+      lastDist = dist;
+    }
+  });
+
+  wrapper.addEventListener("touchend", () => {
+    lastDist = 0;
+  });
+
+  function updateMinimap() {
+    const miniW = minimap.clientWidth;
+    const miniH = minimap.clientHeight;
+
+    const scaleX = miniW / vb.width;
+    const scaleY = miniH / vb.height;
+
+    minimapViewport.style.width = (viewW * scaleX) + "px";
+    minimapViewport.style.height = (viewH * scaleY) + "px";
+    minimapViewport.style.left = (viewX * scaleX) + "px";
+    minimapViewport.style.top = (viewY * scaleY) + "px";
+  }
+
+})();
+</script>
+
+</body>
+</html>
