@@ -71,11 +71,10 @@
     position: relative;
   }
 
-  object {
+  embed {
     width: 100%;
     height: 100%;
     display: block;
-    pointer-events: auto;
   }
 
   #zoom-controls {
@@ -149,11 +148,11 @@
 
   <div id="panzoom-wrapper">
     <div id="panzoom-content">
-      <object
-        id="svgObject"
-        type="image/svg+xml"
-        data="rancidity.svg">
-      </object>
+      <embed
+        id="svgEmbed"
+        src="rancidity.svg"
+        type="image/svg+xml">
+      </embed>
     </div>
   </div>
 
@@ -162,7 +161,7 @@
 <script>
 (function() {
   const wrapper = document.getElementById("panzoom-wrapper");
-  const svgObject = document.getElementById("svgObject");
+  const svgEmbed = document.getElementById("svgEmbed");
   const zoomInBtn = document.getElementById("zoom-in");
   const zoomOutBtn = document.getElementById("zoom-out");
   const zoomResetBtn = document.getElementById("zoom-reset");
@@ -205,20 +204,18 @@
     requestAnimationFrame(step);
   }
 
-svgObject.addEventListener("load", () => {
-    svg = svgObject.contentDocument.querySelector("svg");
+  svgEmbed.addEventListener("load", () => {
+    svg = svgEmbed.getSVGDocument().querySelector("svg");
     vb = svg.viewBox.baseVal;
 
-    // --- HEIGHT-FIT INITIALIZATION FOR TALL SVGs ---
-    // Fit width exactly (so text is readable)
-    viewW = vb.width;
+    // Log what the browser actually sees
+    console.log('viewBox:', vb.x, vb.y, vb.width, vb.height);
 
-    // Show only one screen-height slice (so you can scroll down)
-    viewH = wrapper.clientHeight;
-
-    // Start at the top
+    // SUPER-TALL INITIALIZATION: show full SVG, then zoom/pan into it
     viewX = vb.x;
     viewY = vb.y;
+    viewW = vb.width;    // 937
+    viewH = vb.height;   // 91879.99
 
     // Minimap clone
     const miniContainer = document.createElement("div");
@@ -231,10 +228,20 @@ svgObject.addEventListener("load", () => {
     minimap.appendChild(miniSvg);
 
     updateViewBox();
-});
+  });
 
+  function zoomAt(factor, cx, cy) {
+    const px = viewX + (cx / wrapper.clientWidth) * viewW;
+    const py = viewY + (cy / wrapper.clientHeight) * viewH;
 
+    viewW /= factor;
+    viewH /= factor;
 
+    viewX = px - (cx / wrapper.clientWidth) * viewW;
+    viewY = py - (cy / wrapper.clientHeight) * viewH;
+
+    updateViewBox();
+  }
 
   zoomInBtn.onclick = () => {
     zoomAt(1.2, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
