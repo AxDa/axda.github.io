@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>axd_Storyboard Viewer: clarity_at_any_zoom_level_global_iron_handel_index_rancidity_28_07_2026.html</title>
+<title>Storyboard Viewer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -11,9 +11,9 @@
     background: #111;
     color: #eee;
     font-family: system-ui, sans-serif;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 100vh;
   }
 
   main {
@@ -23,18 +23,17 @@
     touch-action: none;
   }
 
-  /* IMPORTANT: do NOT force scaling */
-  embed {
-    width: auto;
-    height: auto;
-    display: block;
-  }
-
   #panzoom-wrapper {
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
+  }
+
+  #svgContainer svg {
+    width: auto;
+    height: auto;
+    display: block;
   }
 
   #zoom-controls {
@@ -77,29 +76,30 @@
 <script>
 (function() {
   const wrapper = document.getElementById("panzoom-wrapper");
-  const svgEmbed = document.getElementById("svgEmbed");
+  const container = document.getElementById("svgContainer");
 
   let svg, vb;
   let viewX = 0, viewY = 0, viewW = 100, viewH = 100;
 
+  // ⭐ Load SVG via fetch() to bypass GitHub sanitization
   fetch("rancidity.svg")
     .then(r => r.text())
     .then(svgText => {
-      document.getElementById("svgContainer").innerHTML = svgText;
-  
-      svg = document.querySelector("#svgContainer svg");
+      container.innerHTML = svgText;
+
+      svg = container.querySelector("svg");
       vb = svg.viewBox.baseVal;
-  
+
       console.log("viewBox:", vb.x, vb.y, vb.width, vb.height);
-  
+
+      // Fit width, show one screen-height slice
       viewX = vb.x;
       viewY = vb.y;
       viewW = vb.width;
       viewH = wrapper.clientHeight;
-  
+
       updateViewBox();
     });
-
 
   function updateViewBox() {
     svg.setAttribute("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`);
@@ -132,15 +132,14 @@
     updateViewBox();
   };
 
-  wrapper.addEventListener("pointerdown", e => {
-    wrapper.setPointerCapture(e.pointerId);
-    lastX = e.clientX;
-    lastY = e.clientY;
-    dragging = true;
-  });
-
   let dragging = false;
   let lastX = 0, lastY = 0;
+
+  wrapper.addEventListener("pointerdown", e => {
+    dragging = true;
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
 
   wrapper.addEventListener("pointermove", e => {
     if (!dragging) return;
@@ -164,4 +163,3 @@
 
 </body>
 </html>
-
