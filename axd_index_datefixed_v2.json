@@ -17651,6 +17651,27 @@
     "cluster": "testimony",
     "size": 321662,
     "type": "mp3"
+  },  
+  {
+    "title": "1_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_230000_utc_1_28072026_v0.01.mp3",
+    "url_pages": "https://axda.github.io/1_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_230000_utc_1_28072026_v0.01.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_230000_utc_1_28072026_v0.01.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_230000_utc_1_28072026_v0.01.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_Bleakst_Ceausescu_Frankenstinion_Epstionion_neighbour_230000_utc_1_28072026_v0.01.mp3.png",
+    "tags": [
+      "harehills",
+      "bleakst",
+      "ceausescu",
+      "frankenstinion",
+      "epstionion",
+      "neighbour",
+      "mp3"
+    ],
+    "date": "2026-07-28",
+    "motif": "civic decay",
+    "cluster": "neighbours",
+    "size": 164092,
+    "type": "mp3"
   },
   {
     "title": "clarity_at_any_zoom_level_global_iron_handel_index_rancidity_28_07_2026.html",
