@@ -70,7 +70,7 @@
   </div>
 
   <div id="panzoom-wrapper">
-    <embed id="svgEmbed" src="rancidity.svg" type="image/svg+xml"></embed>
+    <div id="svgContainer"></div>
   </div>
 </main>
 
@@ -82,24 +82,24 @@
   let svg, vb;
   let viewX = 0, viewY = 0, viewW = 100, viewH = 100;
 
-  svgEmbed.addEventListener("load", () => {
-    svg = svgEmbed.getSVGDocument().querySelector("svg");
-    vb = svg.viewBox.baseVal;
+  fetch("rancidity.svg")
+    .then(r => r.text())
+    .then(svgText => {
+      document.getElementById("svgContainer").innerHTML = svgText;
+  
+      svg = document.querySelector("#svgContainer svg");
+      vb = svg.viewBox.baseVal;
+  
+      console.log("viewBox:", vb.x, vb.y, vb.width, vb.height);
+  
+      viewX = vb.x;
+      viewY = vb.y;
+      viewW = vb.width;
+      viewH = wrapper.clientHeight;
+  
+      updateViewBox();
+    });
 
-    console.log("viewBox:", vb.x, vb.y, vb.width, vb.height);
-
-    // --- CORRECT INITIALIZATION FOR TALL SVG ---
-    viewX = vb.x;
-    viewY = vb.y;
-
-    // Fit width (4888 px)
-    viewW = vb.width;
-
-    // Show only one screen-height slice (~900 px)
-    viewH = wrapper.clientHeight;
-
-    updateViewBox();
-  });
 
   function updateViewBox() {
     svg.setAttribute("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`);
