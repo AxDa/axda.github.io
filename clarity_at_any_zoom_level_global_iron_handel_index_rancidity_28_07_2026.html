@@ -30,10 +30,15 @@
     position: relative;
   }
 
+  #svgContainer {
+    width: 100%;
+    height: 100%;
+  }
+
   #svgContainer svg {
-      width: 100%;
-      height: 100%;
-      display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 
   #zoom-controls {
@@ -55,6 +60,7 @@
     background: #333;
     color: #eee;
     border: 1px solid #555;
+    cursor: pointer;
   }
 </style>
 </head>
@@ -81,27 +87,29 @@
   let svg, vb;
   let viewX = 0, viewY = 0, viewW = 100, viewH = 100;
 
-  // ⭐ Load SVG via fetch() to bypass GitHub sanitization
+  // Load rancidity.svg via fetch
   fetch("rancidity.svg")
     .then(r => r.text())
     .then(svgText => {
       container.innerHTML = svgText;
 
-    svg = container.querySelector("svg");
-    vb = svg.viewBox.baseVal;
-    
-    console.log("viewBox:", vb.x, vb.y, vb.width, vb.height);
-    
-    // Fit width
-    viewX = 0;
-    viewY = 0;   // ⭐ FIX: force camera to top of content
-    viewW = vb.width;
-    viewH = wrapper.clientHeight;
-    
-    updateViewBox();
+      svg = container.querySelector("svg");
+      vb = svg.viewBox.baseVal;
 
+      console.log("viewBox:", vb.x, vb.y, vb.width, vb.height);
+
+      // Fit width, show one screen-height slice
+      viewX = 0;
+      viewY = 0;
+      viewW = vb.width;              // 4400
+      viewH = wrapper.clientHeight;  // ~viewport height
+
+      updateViewBox();
+    })
+    .catch(err => console.error("SVG load error:", err));
 
   function updateViewBox() {
+    if (!svg) return;
     svg.setAttribute("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`);
   }
 
@@ -125,8 +133,9 @@
     zoomAt(0.8, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
 
   document.getElementById("zoom-reset").onclick = () => {
-    viewX = vb.x;
-    viewY = vb.y;
+    if (!vb) return;
+    viewX = 0;
+    viewY = 0;
     viewW = vb.width;
     viewH = wrapper.clientHeight;
     updateViewBox();
@@ -142,7 +151,7 @@
   });
 
   wrapper.addEventListener("pointermove", e => {
-    if (!dragging) return;
+    if (!dragging || !vb) return;
 
     const dx = e.clientX - lastX;
     const dy = e.clientY - lastY;
@@ -157,7 +166,7 @@
   });
 
   wrapper.addEventListener("pointerup", () => dragging = false);
-
+  wrapper.addEventListener("pointerleave", () => dragging = false);
 })();
 </script>
 
