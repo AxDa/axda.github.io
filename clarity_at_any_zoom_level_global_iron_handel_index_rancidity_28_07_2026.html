@@ -101,8 +101,8 @@
       // Fit width, show one screen-height slice
       viewX = 0;
       viewY = 0;
-      viewW = vb.width;              // 4400
-      viewH = wrapper.clientHeight;  // ~viewport height
+      viewW = vb.width;
+      viewH = vb.height;   // ⭐ FIX: show full SVG height
 
       updateViewBox();
     })
