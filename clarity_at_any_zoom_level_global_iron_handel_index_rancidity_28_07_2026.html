@@ -98,16 +98,29 @@
 
       console.log("viewBox:", vb.x, vb.y, vb.width, vb.height);
 
-      // Fit width, show one screen-height slice
+      // Start zoomed-in so detail is readable
       viewX = 0;
       viewY = 0;
-      // Start zoomed-in so detail is readable
-      viewW = vb.width /4;
-      viewH = vb.height /4;   // ⭐ FIX: show full SVG height
+      viewW = vb.width / 2;   // adjust factor if you want more/less zoom
+      viewH = vb.height / 2;
 
+      clampViewBox();
       updateViewBox();
     })
     .catch(err => console.error("SVG load error:", err));
+
+  function clampViewBox() {
+    if (!vb) return;
+
+    if (viewX < 0) viewX = 0;
+    if (viewY < 0) viewY = 0;
+
+    if (viewX + viewW > vb.width)
+      viewX = vb.width - viewW;
+
+    if (viewY + viewH > vb.height)
+      viewY = vb.height - viewH;
+  }
 
   function updateViewBox() {
     if (!svg) return;
@@ -115,6 +128,8 @@
   }
 
   function zoomAt(factor, cx, cy) {
+    if (!vb) return;
+
     const px = viewX + (cx / wrapper.clientWidth) * viewW;
     const py = viewY + (cy / wrapper.clientHeight) * viewH;
 
@@ -124,6 +139,7 @@
     viewX = px - (cx / wrapper.clientWidth) * viewW;
     viewY = py - (cy / wrapper.clientHeight) * viewH;
 
+    clampViewBox();
     updateViewBox();
   }
 
@@ -137,8 +153,9 @@
     if (!vb) return;
     viewX = 0;
     viewY = 0;
-    viewW = vb.width;
-    viewH = wrapper.clientHeight;
+    viewW = vb.width / 4;
+    viewH = vb.height / 4;
+    clampViewBox();
     updateViewBox();
   };
 
@@ -163,6 +180,7 @@
     lastX = e.clientX;
     lastY = e.clientY;
 
+    clampViewBox();
     updateViewBox();
   });
 
