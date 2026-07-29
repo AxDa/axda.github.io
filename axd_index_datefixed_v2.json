@@ -7470,7 +7470,7 @@
   },
   {
     "title": "icon_bw.png",
-    "url": "https://axda.github.io/Blu/icon_bw.png",
+    "url": "https://axda.github.io/icon_bw.png",
     "thumbnail": "icon_bw.png",
     "tags": [],
     "date": "2026-04-30",
@@ -7492,7 +7492,7 @@
   },
   {
     "title": "icon_green.png",
-    "url": "https://axda.github.io/Blu/icon_green.png",
+    "url": "https://axda.github.io/icon_green.png",
     "thumbnail": "icon_green.png",
     "tags": [],
     "date": "2026-04-30",
@@ -7503,7 +7503,7 @@
   },
   {
     "title": "icon_orange.png",
-    "url": "https://axda.github.io/Blu/icon_orange.png",
+    "url": "https://axda.github.io/icon_orange.png",
     "thumbnail": "icon_orange.png",
     "tags": [],
     "date": "2026-04-30",
@@ -7514,7 +7514,7 @@
   },
   {
     "title": "icon_red.png",
-    "url": "https://axda.github.io/Blu/icon_red.png",
+    "url": "https://axda.github.io/icon_red.png",
     "thumbnail": "icon_red.png",
     "tags": [],
     "date": "2026-04-30",
@@ -12237,7 +12237,7 @@
   {
     "title": "Bleakst_1038_utc_1_28062026.mp3",
     "url": "https://axda.github.io/Blu/Bleakst_1038_utc_1_28062026.mp3",
-    "thumbnail": "https://axda.github.io/Blu/icon_red.png",
+    "thumbnail": "https://axda.github.io/icon_red.png",
     "tags": [
       "audio",
       "archive",
@@ -17677,8 +17677,8 @@
     "title": "clarity_at_any_zoom_level_global_iron_handel_index_rancidity_28_07_2026.html",
     "url_pages": "https://axda.github.io/clarity_at_any_zoom_level_global_iron_handel_index_rancidity_28_07_2026.html",
     "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/clarity_at_any_zoom_level_global_red_iconiron_handel_index_rancidity_28_07_2026.html",
-    "thumbnail_pages": "https://axda.github.io/Blu/icon_red.png",
-    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/red_icon.png",
+    "thumbnail_pages": "https://axda.github.io/icon_red.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/master/icon_red.png",
     "tags": [
 	  "graph",
       "ash",
@@ -17755,8 +17755,8 @@
     "title": "1_Bleakst_rancidity_140000_utc_1_28072026_v0.1.mp3.png",
     "url_pages": "https://axda.github.io/Rancidity_1408_26072026.png",
     "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/Rancidity_1408_26072026.png",
-    "thumbnail_pages": "https://axda.github.io/Blu/icon_red.png",
-    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/https://axda.github.io/Blu/icon_red.png",
+    "thumbnail_pages": "https://axda.github.io/icon_red.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/master/icon_red.png",
     "tags": [
       "bleaksirenst",
       "blue",
