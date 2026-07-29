@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Storyboard Viewer: rancidity...continu-nation 29th July 2026 Wednesday wk31 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    margin: 0;
+    background: #111;
+    color: #eee;
+    font-family: system-ui, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    touch-action: none;
+  }
+
+  #panzoom-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #svgContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  #svgContainer svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #zoom-controls {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  #zoom-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    background: #333;
+    color: #eee;
+    border: 1px solid #555;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+<main>
+  <div id="zoom-controls">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">−</button>
+    <button id="zoom-reset">⟳</button>
+  </div>
+
+  <div id="panzoom-wrapper">
+    <div id="svgContainer"></div>
+  </div>
+</main>
+
+<script>
+(function() {
+  const wrapper = document.getElementById("panzoom-wrapper");
+  const container = document.getElementById("svgContainer");
+
+  let svg, vb;
+  let viewX = 0, viewY = 0, viewW = 100, viewH = 100;
+
+  // Load rancidity.svg via fetch
+  fetch("rancidity_multicolumn_2030_utc_1_29072026.svg")
+    .then(r => r.text())
+    .then(svgText => {
+      container.innerHTML = svgText;
+
+      svg = container.querySelector("svg");
+      vb = svg.viewBox.baseVal;
+
+      console.log("viewBox:", vb.x, vb.y, vb.width, vb.height);
+
+      // Start zoomed-in so detail is readable
+      viewX = 0;
+      viewY = 0;
+      viewW = vb.width;
+      viewH = vb.height;
+
+      clampViewBox();
+      updateViewBox();
+    })
+    .catch(err => console.error("SVG load error:", err));
+
+  function clampViewBox() {
+    if (!vb) return;
+
+    if (viewX < 0) viewX = 0;
+    if (viewY < 0) viewY = 0;
+
+    if (viewX + viewW > vb.width)
+      viewX = vb.width - viewW;
+
+    if (viewY + viewH > vb.height)
+      viewY = vb.height - viewH;
+  }
+
+  function updateViewBox() {
+    if (!svg) return;
+    svg.setAttribute("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`);
+  }
+
+  function zoomAt(factor, cx, cy) {
+    if (!vb) return;
+
+    const px = viewX + (cx / wrapper.clientWidth) * viewW;
+    const py = viewY + (cy / wrapper.clientHeight) * viewH;
+
+    viewW /= factor;
+    viewH /= factor;
+
+    viewX = px - (cx / wrapper.clientWidth) * viewW;
+    viewY = py - (cy / wrapper.clientHeight) * viewH;
+
+    clampViewBox();
+    updateViewBox();
+  }
+
+  document.getElementById("zoom-in").onclick = () =>
+    zoomAt(1.2, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
+
+  document.getElementById("zoom-out").onclick = () =>
+    zoomAt(0.8, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
+
+  document.getElementById("zoom-reset").onclick = () => {
+    if (!vb) return;
+    viewX = 0;
+    viewY = 0;
+    viewW = vb.width / 4;
+    viewH = vb.height / 4;
+    clampViewBox();
+    updateViewBox();
+  };
+
+  let dragging = false;
+  let lastX = 0, lastY = 0;
+
+  wrapper.addEventListener("pointerdown", e => {
+    dragging = true;
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
+
+  wrapper.addEventListener("pointermove", e => {
+    if (!dragging || !vb) return;
+
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+
+    viewX -= dx * (viewW / wrapper.clientWidth);
+    viewY -= dy * (viewH / wrapper.clientHeight);
+
+    lastX = e.clientX;
+    lastY = e.clientY;
+
+    clampViewBox();
+    updateViewBox();
+  });
+
+  wrapper.addEventListener("pointerup", () => dragging = false);
+  wrapper.addEventListener("pointerleave", () => dragging = false);
+})();
+</script>
+
+</body>
+</html>
