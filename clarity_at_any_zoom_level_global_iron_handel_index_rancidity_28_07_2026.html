@@ -101,8 +101,9 @@
       // Fit width, show one screen-height slice
       viewX = 0;
       viewY = 0;
-      viewW = vb.width;
-      viewH = vb.height;   // ⭐ FIX: show full SVG height
+      // Start zoomed-in so detail is readable
+      viewW = vb.width /4;
+      viewH = vb.height /4;   // ⭐ FIX: show full SVG height
 
       updateViewBox();
     })
