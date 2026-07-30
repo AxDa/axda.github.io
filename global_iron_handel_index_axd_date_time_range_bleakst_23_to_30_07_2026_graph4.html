@@ -21,13 +21,14 @@
     height: 100%;
   }
 
-  header {
+header {
     padding: 0.5rem 1rem;
     background: #222;
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+    flex-direction: row;        /* ← FIX */
+    align-items: center;        /* ← FIX */
+    justify-content: space-between; /* ← FIX */
+}
 
   header h1 {
     font-size: 0.9rem;
