@@ -3413,7 +3413,7 @@
   {
     "title": "Mexico Jalisco Times News 1730_26022026_v0.2b.mp3",
     "url": "https://axda.github.io/Blu/Mexico%20Jalisco%20Times%20News%201730_26022026_v0.2b.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakbluesirenst_0933_093315_utc_1_29042025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-02-26",
     "motif": "civic decay",
@@ -3424,7 +3424,7 @@
   {
     "title": "Mick_Mulvaney_Times Ayesha_Hazarika_01032026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Mick_Mulvaney_Times%20Ayesha_Hazarika_01032026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakbluesirenst_0933a_093315_utc_1_29042025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-01",
     "motif": "civic decay",
@@ -3435,7 +3435,7 @@
   {
     "title": "Mikel_Arteta_Max_Dowman'sR5L_Sport_1430_utc_16032026.mp3",
     "url": "https://axda.github.io/Blu/Mikel_Arteta_Max_Dowman'sR5L_Sport_1430_utc_16032026.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakbluesirenst_1252_utc_1_25042025_trk1_axd.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-16",
     "motif": "civic decay",
@@ -3446,7 +3446,7 @@
   {
     "title": "Minneapolis Mayor Jacob Frey Full YT 20260108-220953_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Minneapolis%20Mayor%20Jacob%20Frey%20Full%20YT%2020260108-220953_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakbluesirenst_1950_circa_utc_1_27042025_v0.2_axd.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-01-08",
     "motif": "civic decay",
@@ -3457,25 +3457,7 @@
   {
     "title": "Minneapolis Mayor WS  20260108-220953.mp3",
     "url": "https://axda.github.io/Blu/Minneapolis%20Mayor%20WS%20%2020260108-220953.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakbluesirenst_1950_circa_utc_1_27042025_v0.2_axd_112kbps_.png",
-    "title": "1_Bleaksirenst_194845_utc_1_01082026_v0.2.mp3",
-    "url_pages": "https://axda.github.io/1_Bleaksirenst_194845_utc_1_01082026_v0.2.mp3",
-    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_Bleaksirenst_194845_utc_1_01082026_v0.2.mp3",
-    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleaksirenst_194845_utc_1_01082026_v0.2.mp3.png",
-    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_Bleaksirenst_194845_utc_1_01082026_v0.2.mp3.png",
-    "tags": [
-      "bleaksirenst",
-      "interviews",
-      "194845",
-      "sirenblue",
-      "clarity's"
-    ],
-    "date": "2026-08-01",
-    "motif": "civic decay",
-    "cluster": "testimony",
-    "size": 1923282,
-    "type": "mp3"
-  },
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-01-08",
     "motif": "civic decay",
@@ -3486,7 +3468,7 @@
   {
     "title": "Minnesota Gov Tim Walz Renee Nicol Good x WSJ (Journal)_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Minnesota%20Gov%20Tim%20Walz%20Renee%20Nicol%20Good%20x%20WSJ%20(Journal)_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakbluesirenst_2158_utc_1_25042025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-04-30",
     "motif": "civic decay",
@@ -3497,7 +3479,7 @@
   {
     "title": "Mix Skeleton Day9 Milan Cortina Matt Weston_Tabbitha Stoecker (Sharlot Banks Hugh Nightingale)Katie_Smith_15022026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Mix%20Skeleton%20Day9%20Milan%20Cortina%20Matt%20Weston_Tabbitha%20Stoecker%20(Sharlot%20Banks%20Hugh%20Nightingale)Katie_Smith_15022026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakbluesirenst____0904utc_1_23052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-02-15",
     "motif": "civic decay",
@@ -3508,7 +3490,7 @@
   {
     "title": "Moby_dick_inspirations_St_Andrews_University_1000_utc_24032026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Moby_dick_inspirations_St_Andrews_University_1000_utc_24032026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakbluesirenst_full_1252_utc_1_25042025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-24",
     "motif": "civic decay",
@@ -3519,7 +3501,7 @@
   {
     "title": "Mohammed_Marandi_Tehran University_professor_0900_utc_Times_18032026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Mohammed_Marandi_Tehran%20University_professor_0900_utc_Times_18032026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakburgttemptberg_wiw_uf_st_1612utc_1_11052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-18",
     "motif": "civic decay",
@@ -3530,7 +3512,7 @@
   {
     "title": "Morgan McSweeney_Caroline_Quinn_Times_2150_utc+1_23042026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Morgan%20McSweeney_Caroline_Quinn_Times_2150_utc%2B1_23042026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakbusinessst_1342_1444_utc_1_13052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-04-23",
     "motif": "civic decay",
@@ -3541,7 +3523,7 @@
   {
     "title": "Morgan McSweeney_Giving_Evidence_Commitee_Times_News_1600_utc+1_28042026_v0.2a.mp3",
     "url": "https://axda.github.io/Blu/Morgan%20McSweeney_Giving_Evidence_Commitee_Times_News_1600_utc%2B1_28042026_v0.2a.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakdrummerst_2033_utc_1_27042025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-04-28",
     "motif": "civic decay",
@@ -3552,7 +3534,7 @@
   {
     "title": "Mr Comer 17_27_World News_World_News_0000_utc_WS_10012026.mp3",
     "url": "https://axda.github.io/Blu/Mr%20Comer%2017_27_World%20News_World_News_0000_utc_WS_10012026.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakdrummerst_2033_utc_1_27042025_1.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-01-10",
     "motif": "civic decay",
@@ -3563,7 +3545,7 @@
   {
     "title": "Mr_Speaker_Hoyle_Spring_Statement_Surrender__R5L_03032026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Mr_Speaker_Hoyle_Spring_Statement_Surrender__R5L_03032026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakeshaustst_1855_circa_utc__1_06052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-03",
     "motif": "civic decay",
@@ -3574,7 +3556,7 @@
   {
     "title": "Munich Conference PM Starmer Times 14022026.mp3",
     "url": "https://axda.github.io/Blu/Munich%20Conference%20PM%20Starmer%20Times%2014022026.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakeshaustst_1855_circa_utc__1_06052025_edit.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-02-14",
     "motif": "civic decay",
@@ -3607,7 +3589,7 @@
   {
     "title": "NFL_Superbowl_R5L_08022026_v0.2 Charlie_Booth_axd.mp3",
     "url": "https://axda.github.io/Blu/NFL_Superbowl_R5L_08022026_v0.2%20Charlie_Booth_axd.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakexhaust_1139_utc_1_12052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-02-08",
     "motif": "civic decay",
@@ -3618,7 +3600,7 @@
   {
     "title": "NFL_Superbowl_R5L_08022026_v0.2 Charlie_Puth_axd.mp3",
     "url": "https://axda.github.io/Blu/NFL_Superbowl_R5L_08022026_v0.2%20Charlie_Puth_axd.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakexhaustst_1259_utc_1_05052028_v0.2_axd.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-02-08",
     "motif": "civic decay",
@@ -3629,7 +3611,7 @@
   {
     "title": "Naga_Munchetty_Denise_Lloyd_President_Trump_Truth_Social_Times_1130_utc+1_31032026_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Naga_Munchetty_Denise_Lloyd_President_Trump_Truth_Social_Times_1130_utc%2B1_31032026_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakfireworkst_2202740.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-31",
     "motif": "civic decay",
@@ -3662,7 +3644,7 @@
   {
     "title": "Newcastle 3v2 (9-3 agg)Quarabag_R5L_Chris Sutton_John_Murray_2110_utc_24022026.mp3",
     "url": "https://axda.github.io/Blu/Newcastle%203v2%20(9-3%20agg)Quarabag_R5L_Chris%20Sutton_John_Murray_2110_utc_24052026.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakhorn4st_1912_1913_circa_utc_1_29042025_v0.2_axd.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-02-24",
     "motif": "civic decay",
@@ -3673,7 +3655,7 @@
   {
     "title": "Newcastle_6_v_1_agg_Qarabag R5L_Chris_Sutton_John_Murray_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Newcastle_8_v_1_agg_Qarabag%20R5L_Chris_Sutton_John_Murray_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakhornst_0127_utc_1_07052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-02-18",
     "motif": "civic decay",
@@ -3684,7 +3666,7 @@
   {
     "title": "Newcastle_Utd_2_Wiliam_Osula_Bends_v_1_ManUtd_24022026_v0.2b.mp3",
     "url": "https://axda.github.io/Blu/Newcastle_Utd_2_Wiliam_Osula_Bends_v_1_ManUtd_04032026_v0.2b.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakhornst_0127_utc_1_07052025_v02_axd.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-24",
     "motif": "civic decay",
@@ -3695,7 +3677,7 @@
   {
     "title": "Nigel_Farage_Suella_Braverman_times_Radio_1430_utc_26012026_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Nigel_Farage_Suella_Braverman_times_Radio_1430_utc_26012026_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakhornst_0127_utc_1_07052025_v02_edit.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-01-26",
     "motif": "civic decay",
@@ -3730,7 +3712,7 @@
   {
     "title": "Oaxaca Central Mexico Times_Kait_Borsay_18032026_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Oaxaca%20Central%20Mexico%20Times_Kait_Borsay_18032026_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakleo_shairsalon_1858_1859_1904_utc_1_07052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",,
     "tags": [],
     "date": "2026-03-18",
     "motif": "civic decay",
@@ -3741,7 +3723,7 @@
   {
     "title": "Office_Budget_Responsibility_Professor_David_Miles_Times_10032026_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Office_Budget_Responsibility_Professor_David_Miles_Times_10032026_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakleo_shairsalon_1927_utc_1_070520251927.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-10",
     "motif": "civic decay",
@@ -3763,7 +3745,7 @@
   {
     "title": "Oliver_Wright_The dogs on the Street_Fi_Jane_Times_1505_utc+1_21042026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Oliver_Wright_The%20dogs%20on%20the%20Street_Fi_Jane_Times_1505_utc%2B1_21042026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakleo_shairsalonst_1200_1246_utc_1_01052025_v0.0_axd_trk_1_west_yorkshire_.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-04-21",
     "motif": "civic decay",
@@ -3829,7 +3811,7 @@
   {
     "title": "Orwell_2plus2=5_TB_axd.png",
     "url": "https://axda.github.io/Blu/Orwell_2plus2=5_TB_axd.png",
-    "thumbnail": "Orwell_2plus2=5_TB_axd.png",
+    "thumbnail": ""https://axda.github.io/Blu/Orwell_2plus2=5_TB_axd.png",
     "tags": [],
     "date": "2026-03-26",
     "motif": "civic decay",
@@ -3851,7 +3833,7 @@
   {
     "title": "Orwell_Motif_Comparison_TB_axd_26032026.png",
     "url": "https://axda.github.io/Blu/Orwell_Motif_Comparison_TB_axd_26032026.png",
-    "thumbnail": "Orwell_Motif_Comparison_TB_axd_26032026.png",
+    "thumbnail": ""https://axda.github.io/Blu/Orwell_Motif_Comparison_TB_axd_26032026.png",
     "tags": [],
     "date": "2026-03-26",
     "motif": "civic decay",
@@ -3862,7 +3844,7 @@
   {
     "title": "PMQ's_Times_1500_utc_Times_18032026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/PMQ's_Times_1500_utc_Times_18032026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakleo_shairsalonst_1539_1549_utc_1_02052025_v0.0_axd.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-18",
     "motif": "civic decay",
@@ -3873,7 +3855,7 @@
   {
     "title": "PMQ_1230_utc+1_29042026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/PMQ_1230_utc%2B1_29042026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakleocohortst1625_utc_1_11062025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-04-29",
     "motif": "civic decay",
@@ -3884,7 +3866,7 @@
   {
     "title": "PMQs Mr Speaker Times Radio Nigel Farage 1252_utc_07012026.mp3",
     "url": "https://axda.github.io/Blu/PMQs%20Mr%20Speaker%20Times%20Radio%20Nigel%20Farage%201252_utc_07012026.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakparambulatorexhaustst_0017utc_1_20142025_tk1.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-01-07",
     "motif": "civic decay",
@@ -3906,7 +3888,7 @@
   {
     "title": "PM_Press_Times_1130_utc+1_17042026_v0.1a.mp3",
     "url": "https://axda.github.io/Blu/PM_Press_Times_1130_utc%2B1_17042026_v0.1a.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakperambulatorexhaustst_1232_utc_1_09052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-04-17",
     "motif": "civic decay",
@@ -3928,7 +3910,7 @@
   {
     "title": "Palestinian_Poltician_Dr_R5L_News_2302_utc_17012026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Palestinian_Poltician_Dr_R5L_News_2302_utc_17012026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakperambulatorexhaustst_2101_utc_1_06052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-01-17",
     "motif": "civic decay",
@@ -3939,7 +3921,7 @@
   {
     "title": "Pam_Ayres_Fi&Jane_Times_19032026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Pam_Ayres_Fi&Jane_Times_19032026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakperambulatorexhaustst__1212_utc_1_09052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-19",
     "motif": "civic decay",
@@ -4016,7 +3998,7 @@
   {
     "title": "Pep Guardiola Draw R5L 01022026v0.2.mp3",
     "url": "https://axda.github.io/Blu/Pep%20Guardiola%20Draw%20R5L%2001022026v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakperambulatorst_0756_0815_utc_1_07052025_v0.01_trk1.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-02-01",
     "motif": "civic decay",
@@ -4027,7 +4009,7 @@
   {
     "title": "Pep Guardiola R5L Leeds0ManCity1_2230_utc_28022026_V0.2.mp3",
     "url": "https://axda.github.io/Blu/Pep%20Guardiola%20R5L%20Leeds0ManCity1_2230_utc_28022026_V0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakperambulatorstbaffels_2145__2233_utc_1_07052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-02-28",
     "motif": "civic decay",
@@ -4038,7 +4020,7 @@
   {
     "title": "Pete_Hegeth_Times1700_utc_News_02032026_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Pete_Hegeth_Times1700_utc_News_02032026_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakroverst_1831_circa_utc_1_24042025_v0.2_trk1.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-02",
     "motif": "civic decay",
@@ -4049,7 +4031,7 @@
   {
     "title": "Pete_Hegseth_(General_Dan_Caine)_1327_Times1330utc_News02032026_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Pete_Hegseth_(General_Dan_Caine)_1327_Times1330utc_News02032026_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakroverst_1831_circa_utc_1_24042025_v0.2_trk1_64kbps_.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-02",
     "motif": "civic decay",
@@ -4060,7 +4042,7 @@
   {
     "title": "Pete_Hegseth_Kait_Borsay_Times_2005_utc+1_31032026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Pete_Hegseth_Kait_Borsay_Times_2005_utc%2B1_31032026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleakshippingst1500_1515_circa_utc_1_12052025_edit.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-31",
     "motif": "civic decay",
@@ -4071,7 +4053,7 @@
   {
     "title": "Pete_Hegseth_Times_1900_utc+1_31032026_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Pete_Hegseth_Times_1900_utc%2B1_31032026_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleaksiranst_1828utc_1_v0.2_26042025_axd__128kbps_.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-31",
     "motif": "civic decay",
@@ -4082,7 +4064,7 @@
   {
     "title": "Pete_Hegseth_US_Defence_Department_Times_1330_utc+1_08042026_v0.1.mp3",
     "url": "https://axda.github.io/Blu/Pete_Hegseth_US_Defence_Department_Times_1330_utc%2B1_08042026_v0.1.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleaksiren_st2250_2309utc_1_17042025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-04-08",
     "motif": "civic decay",
@@ -4093,7 +4075,7 @@
   {
     "title": "Pete_Hegseth_US_Defence_Dept_R5L_Matt_Chorley_16042026_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Pete_Hegseth_US_Defence_Dept_R5L_Matt_Chorley_16042026_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleaksiren_st_1139_utc_1_27042025.png",
+    "thumbnail":"https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-04-16",
     "motif": "civic decay",
@@ -4104,7 +4086,7 @@
   {
     "title": "Pete_Hegseth_US_Secretary_of_Defense_2051_utc_02032026.mp3",
     "url": "https://axda.github.io/Blu/Pete_Hegseth_US_Secretary_of_Defense_2051_utc_02032026.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleaksirenst1145_1146_utc_1_05052025.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-03-02",
     "motif": "civic decay",
@@ -4170,7 +4152,7 @@
   {
     "title": "Pope Leo XIV Times John Penaer_16042026_v0.2.mp3",
     "url": "https://axda.github.io/Blu/Pope%20Leo%20XIV%20Times%20John%20Penaer_16042026_v0.2.mp3?ref=master",
-    "thumbnail": "waveform_thumbnails/bleaksound_1338utc_1_17042025_trk1_torment.png",
+    "thumbnail": "https://axda.github.io/Blu/icon_green.png",
     "tags": [],
     "date": "2026-04-16",
     "motif": "civic decay",
