@@ -17616,7 +17616,7 @@
     "date": "2026-07-26",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": 0,
+    "size": 30600000,
     "type": "doc"
   },
   {
@@ -18861,5 +18861,20 @@
     "cluster": "signal",
     "size": 1062256,
     "type": "html"
+  },
+  {
+    "title": "2026_Untitled_43_document_wk32_02082026_p",
+    "url_pages": "https://docs.google.com/document/d/1lpIgxXCLV48NAYbEgS3faFU0fXLVFVEOsJrvmaXOL2Y/edit?usp=sharing",
+    "thumbnail_pages": " ",
+    "tags": [
+      "document",
+      "google",
+      "reference"
+    ],
+    "date": "2026-08-02",
+    "motif": "reference_material",
+    "cluster": "documents",
+    "size": 0,
+    "type": "doc"
   }
 ]
