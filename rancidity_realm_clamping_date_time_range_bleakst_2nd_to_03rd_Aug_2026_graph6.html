@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Storyboard Viewer: rancidity_realm_clamping_date_time_range_bleakst_2nd_to_03rd_Aug_2026_graph6.svg</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    margin: 0;
+    background: #111;
+    color: #eee;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overscroll-behavior: none;
+  }
+
+  header {
+    padding: 0.5rem 1rem;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #ddd;
+  }
+
+  .controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  button {
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background: #333;
+    color: #eee;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+
+  button:hover {
+    background: #444;
+  }
+
+  main {
+    flex: 1;
+    overflow: hidden;
+    background: #111;
+    touch-action: none;
+    position: relative;
+  }
+
+  #panzoom-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #panzoom-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  object {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none; /* SVG handles events */
+  }
+
+  #zoom-controls {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  #zoom-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+
+  #minimap {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 180px;
+    height: 180px;
+    border: 2px solid #666;
+    background: #222;
+    overflow: hidden;
+    opacity: 0.85;
+    z-index: 10;
+  }
+
+  #minimap svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  #minimap-viewport {
+    position: absolute;
+    border: 2px solid #00ffff;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Storyboard Viewer</h1>
+  <div class="controls">
+    <button onclick="location.reload()">Refresh</button>
+    <button onclick="window.location.href='https://axda.github.io/Blu/axd_archive_index_2.html'">
+      Back to Archive Index
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <div id="zoom-controls">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">−</button>
+    <button id="zoom-reset">⟳</button>
+  </div>
+
+  <div id="minimap">
+    <div id="minimap-viewport"></div>
+  </div>
+
+  <div id="panzoom-wrapper">
+    <div id="panzoom-content">
+      <object
+        id="svgObject"
+        type="image/svg+xml"
+        data="rancidity_clamping_date_time_range_bleakst_02_to_03_08_2026_graph6.svg">
+      </object>
+    </div>
+  </div>
+
+</main>
+
+
+  <div id="zoom-controls">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">−</button>
+    <button id="zoom-reset">⟳</button>
+  </div>
+
+  <div id="minimap">
+    <div id="minimap-viewport"></div>
+  </div>
+
+  <div id="panzoom-wrapper">
+    <div id="panzoom-content">
+      <object
+        id="svgObject"
+        type="image/svg+xml"
+        data="rancidity_clamping_date_time_range_bleakst_02_to_03_08_2026_graph6.svg">
+      </object>
+    </div>
+  </div>
+
+</main>
+
+<script>
+(function() {
+  const wrapper = document.getElementById("panzoom-wrapper");
+  const svgObject = document.getElementById("svgObject");
+  const zoomInBtn = document.getElementById("zoom-in");
+  const zoomOutBtn = document.getElementById("zoom-out");
+  const zoomResetBtn = document.getElementById("zoom-reset");
+  const minimap = document.getElementById("minimap");
+  const minimapViewport = document.getElementById("minimap-viewport");
+
+  let svg, vb;
+  let viewX = 0, viewY = 0, viewW = 100, viewH = 100;
+  let isDragging = false;
+  let lastX = 0, lastY = 0;
+  let vx = 0, vy = 0;
+  let inertiaActive = false;
+
+  function updateViewBox() {
+    svg.setAttribute("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`);
+    updateMinimap();
+  }
+
+  function startInertia() {
+    if (inertiaActive) return;
+    inertiaActive = true;
+
+    function step() {
+      vx *= 0.9;
+      vy *= 0.9;
+
+      viewX -= vx * (viewW / wrapper.clientWidth);
+      viewY -= vy * (viewH / wrapper.clientHeight);
+
+      if (Math.abs(vx) < 0.1 && Math.abs(vy) < 0.1) {
+        inertiaActive = false;
+        updateViewBox();
+        return;
+      }
+
+      updateViewBox();
+      requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  svgObject.addEventListener("load", () => {
+    svg = svgObject.contentDocument.querySelector("svg");
+    vb = svg.viewBox.baseVal;
+
+    viewX = vb.x;
+    viewY = vb.y;
+    viewW = vb.width;
+    viewH = vb.height;
+
+    // Minimap clone
+    const miniContainer = document.createElement("div");
+    miniContainer.innerHTML = svg.outerHTML;
+    const miniSvg = miniContainer.querySelector("svg");
+    miniSvg.removeAttribute("width");
+    miniSvg.removeAttribute("height");
+    miniSvg.style.width = "100%";
+    miniSvg.style.height = "100%";
+    minimap.appendChild(miniSvg);
+
+    updateViewBox();
+  });
+
+  function zoomAt(factor, cx, cy) {
+    const px = viewX + (cx / wrapper.clientWidth) * viewW;
+    const py = viewY + (cy / wrapper.clientHeight) * viewH;
+
+    viewW /= factor;
+    viewH /= factor;
+
+    viewX = px - (cx / wrapper.clientWidth) * viewW;
+    viewY = py - (cy / wrapper.clientHeight) * viewH;
+
+    updateViewBox();
+  }
+
+  zoomInBtn.onclick = () => {
+    zoomAt(1.2, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
+  };
+
+  zoomOutBtn.onclick = () => {
+    zoomAt(0.8, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
+  };
+
+  zoomResetBtn.onclick = () => {
+    viewX = vb.x;
+    viewY = vb.y;
+    viewW = vb.width;
+    viewH = vb.height;
+    updateViewBox();
+  };
+
+  wrapper.addEventListener("wheel", e => {
+    e.preventDefault();
+    const rect = wrapper.getBoundingClientRect();
+    const cx = e.clientX - rect.left;
+    const cy = e.clientY - rect.top;
+    const factor = 1 + (-e.deltaY * 0.001);
+    zoomAt(factor, cx, cy);
+  });
+
+  wrapper.addEventListener("pointerdown", e => {
+    isDragging = true;
+    inertiaActive = false;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    vx = 0;
+    vy = 0;
+  });
+
+  wrapper.addEventListener("pointermove", e => {
+    if (!isDragging) return;
+
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+
+    viewX -= dx * (viewW / wrapper.clientWidth);
+    viewY -= dy * (viewH / wrapper.clientHeight);
+
+    vx = dx;
+    vy = dy;
+
+    lastX = e.clientX;
+    lastY = e.clientY;
+
+    updateViewBox();
+  });
+
+  wrapper.addEventListener("pointerup", () => {
+    isDragging = false;
+    startInertia();
+  });
+
+  wrapper.addEventListener("pointerleave", () => {
+    isDragging = false;
+    startInertia();
+  });
+
+  let lastDist = 0;
+  wrapper.addEventListener("touchmove", e => {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      const [t1, t2] = e.touches;
+      const dist = Math.hypot(t1.pageX - t2.pageX, t1.pageY - t2.pageY);
+
+      const rect = wrapper.getBoundingClientRect();
+      const cx = (t1.clientX + t2.clientX) / 2 - rect.left;
+      const cy = (t1.clientY + t2.clientY) / 2 - rect.top;
+
+      if (lastDist) {
+        const factor = 1 + (dist - lastDist) * 0.002;
+        zoomAt(factor, cx, cy);
+      }
+
+      lastDist = dist;
+    }
+  });
+
+  wrapper.addEventListener("touchend", () => {
+    lastDist = 0;
+  });
+
+  function updateMinimap() {
+    const miniW = minimap.clientWidth;
+    const miniH = minimap.clientHeight;
+
+    const scaleX = miniW / vb.width;
+    const scaleY = miniH / vb.height;
+
+    minimapViewport.style.width = (viewW * scaleX) + "px";
+    minimapViewport.style.height = (viewH * scaleY) + "px";
+    minimapViewport.style.left = (viewX * scaleX) + "px";
+    minimapViewport.style.top = (viewY * scaleY) + "px";
+  }
+
+})();
+</script>
+
+</body>
+</html>
