@@ -19737,6 +19737,45 @@
     "cluster": "fireworkshell_burst",
     "size": 24911,
     "type": "mp3"
+ },
+ {
+    "title": "1_Bleaksirenst_082351_082420_utc_1_06082026_v0.0.mp3",
+    "url_pages": "https://axda.github.io/1_Bleaksirenst_082351_082420_utc_1_06082026_v0.0.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_Bleaksirenst_082351_082420_utc_1_06082026_v0.0.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleaksirenst_082351_082420_utc_1_06082026_v0.0.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_Bleaksirenst_082351_082420_utc_1_06082026_v0.0.mp3.png",
+    "tags": [
+      "bleaksirenst",
+      "interviews",
+      "082351",
+      "sirenblue",
+      "clarity's"
+    ],
+    "date": "2026-08-06",
+    "motif": "civic decay",
+    "cluster": "siren_blue",
+    "size": 505982,
+    "type": "mp3"
+  },
+  {
+    "title": "1_Bleakst_224550_perambulator_loud_exhaust_224650_utc_1_05082026_v0.0.mp3",
+    "url_pages": "https://axda.github.io/1_Bleakst_224550_perambulator_loud_exhaust_224650_utc_1_05082026_v0.0.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_Bleakst_224550_perambulator_loud_exhaust_224650_utc_1_05082026_v0.0.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_224550_perambulator_loud_exhaust_224650_utc_1_05082026_v0.0.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_Bleakst_224550_perambulator_loud_exhaust_224650_utc_1_05082026_v0.0.mp3.png",
+    "tags": [
+      "harehills",
+      "perambulator",
+      "loud",
+      "exhaust",
+      "sounds",
+      "224550"
+    ],
+    "date": "2026-08-06",
+    "motif": "civic decay",
+    "cluster": "perambulators",
+    "size": 962812,
+    "type": "mp3"
 },
 {
   "title": "clamping_date_time_range_bleakst_04_to_05_08_2026_graph6_0952_utc_1_06082026",
