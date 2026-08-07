@@ -19738,7 +19738,49 @@
     "size": 24911,
     "type": "mp3"
 },
-{
+  {
+    "title": "1_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3",
+    "url_pages": "https://axda.github.io/1_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3.png",
+    "tags": [
+      "bleakst",
+      "2230",
+      "agency",
+      "2148",
+      "leo_hsz",
+      "comms",
+      "exhaust"
+    ],
+    "date": "2026-08-06",
+    "motif": "civic decay",
+    "cluster": "agency",
+    "size": 8646991,
+    "type": "mp3"
+  },
+  {
+    "title": "2_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3",
+    "url_pages": "https://axda.github.io/2_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/2_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/2_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/2_Bleakst_Leo_hsz_comms_2230_2148_utc_1_06082026_v0.1.mp3.png",
+    "tags": [
+      "bleakst",
+      "2230",
+      "agency",
+      "2148",
+      "leo_hsz",
+      "comms",
+      "exhaust"
+    ],
+    "date": "2026-08-06",
+    "motif": "civic decay",
+    "cluster": "agency",
+    "size": 8646991,
+    "type": "mp3"
+ },
+ {
   "title": "clamping_date_time_range_bleakst_05_to_06_08_2026_graph8_1744_utc_1_06082026.svg",
   "url_pages": "https://axda.github.io/clamping_date_time_range_bleakst_05_to_06_08_2026_graph8_1744_utc_1_06082026.svg",
   "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/clamping_date_time_range_bleakst_05_to_06_08_2026_graph8_1744_utc_1_06082026.html.svg",
