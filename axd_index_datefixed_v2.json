@@ -19896,5 +19896,24 @@
   "cluster": "signal",
   "size": 1382935,
   "type": "html"
-}
+},
+{
+    "title": "1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3",
+    "url_pages": "https://axda.github.io/1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3.png",
+    "tags": [
+      "harehills",
+      "confidential",
+      "street_sound",
+      "130800",
+      "mp3"
+    ],
+    "date": "2026-08-07",
+    "motif": "civic decay",
+    "cluster": "neighbour",
+    "size": 3371092,
+    "type": "mp3"
+  }
 ]
