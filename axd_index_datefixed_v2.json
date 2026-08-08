@@ -1,6 +1,6 @@
 [
   {
-    "title": "testimony__archive_1509_100_v0.1a",
+    "title": "testimony_archive_1509_100_v0.1a",
     "url": "https://axda.github.io/Blu/testimony_archive_1509_100_v0.1a.mp3",
     "thumbnail": "waveform_thumbnails/0041_bleak_bleed_agency_06032025_2.png",
     "tags": [
@@ -19940,26 +19940,26 @@
   "type": "html"
 },
 {
-"title": "pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
-"url_pages": "https://axda.github.io/pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
-"url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
-"thumbnail_pages": "https://axda.github.io/pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
-"thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
-"tags": [
-  "git"
-],
-"date": "2026-08-07",
-"motif": "decay",
-"cluster": "deploy",
-"size": 441397,
-"type": "png"
+	"title": "pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
+	"url_pages": "https://axda.github.io/pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
+	"url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
+	"thumbnail_pages": "https://axda.github.io/pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
+	"thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/pages-artifact@v3_deploy_configure_pages@v4_2253_utc_1_07082026.png",
+	"tags": [
+	  "git"
+	],
+	"date": "2026-08-07",
+	"motif": "decay",
+	"cluster": "deploy",
+	"size": 441397,
+	"type": "png"
 },
 {
     "title": "1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3",
     "url_pages": "https://axda.github.io/1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3",
     "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3",
-    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3.png",
-    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_Bleakst_neighbour_085830_130800_utc_107082026_v0.1.mp3.png",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails2/caucescu_1_bleakst_business_130800_07082026_v01.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails2/caucescu_1_bleakst_business_130800_07082026_v01.png",
     "tags": [
       "harehills",
       "confidential",
@@ -19972,5 +19972,20 @@
     "cluster": "neighbour",
     "size": 3371092,
     "type": "mp3"
+  },
+  {
+    "title": "Mole_phone_to_c_0839_utc_1_080082026.png",
+    "url_pages": "https://axda.github.io/Mole_phone_to_c_0839_utc_1_080082026.png",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/axda.github.io/main/Mole_phone_to_c_0839_utc_1_080082026.png",
+    "thumbnail_pages": "https://axda.github.io/Mole_phone_to_c_0839_utc_1_080082026.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/Mole_phone_to_c_0839_utc_1_080082026.png",
+    "tags": [
+      "git"
+    ],
+    "date": "2026-08-08",
+    "motif": "civic decay",
+    "cluster": "deploy",
+    "size": 85949,
+    "type": "png"
   }
 ]
