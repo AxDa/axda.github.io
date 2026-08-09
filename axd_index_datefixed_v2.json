@@ -20222,8 +20222,38 @@
     "cluster": "deploy",
     "size": 85949,
     "type": "png"
+ },
+ {
+    "title": "1_Bleakst_010506_street_011003_utc_1_09082021.mp3",
+    "url_pages": "https://axda.github.io/1_Bleakst_010506_street_011003_utc_1_09082021.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_Bleakst_010506_street_011003_utc_1_09082021.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_010506_street_011003_utc_1_09082021.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_Bleakst_010506_street_011003_utc_1_09082021.mp3.png",
+    "tags": [
+      "bleakst"
+    ],
+    "date": "2026-08-09",
+    "motif": "civic decay",
+    "cluster": "agency",
+    "size": 4765822,
+    "type": "mp3"
   },
-{
+  {
+    "title": "1_Bleakst_005528_0005602_utc_1_09082021_v0.01.mp3",
+    "url_pages": "https://axda.github.io/1_Bleakst_005528_0005602_utc_1_09082021_v0.01.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_Bleakst_005528_0005602_utc_1_09082021_v0.01.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_Bleakst_005528_0005602_utc_1_09082021_v0.01.mp3.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_Bleakst_005528_0005602_utc_1_09082021_v0.01.mp3.png",
+    "tags": [
+      "bleakst"
+    ],
+    "date": "2026-08-09",
+    "motif": "civic decay",
+    "cluster": "agency",
+    "size": 545688,
+    "type": "mp3"
+ },
+ {
   "title": "clamping_date_time_range_bleakst_08_to_09_08_2026_graph10_0119_utc_1_09082026.svg",
   "url_pages": "https://axda.github.io/clamping_date_time_range_bleakst_08_to_09_08_2026_graph10_0119_utc_1_09082026.svg",
   "url_raw": "https://raw.githubusercontent.com/AxDa/main/clamping_date_time_range_bleakst_08_to_09_08_2026_graph10_0119_utc_1_09082026.svg",
