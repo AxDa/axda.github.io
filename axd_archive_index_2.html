@@ -305,34 +305,6 @@ async function urlExists(url) {
         return false;
     }
 }
-<!-- DISABLED TOGGLE CODE
-<script>
-let mode = "pages";
-
-function setMode(newMode) {
-    mode = newMode;
-    document.getElementById("current-mode").innerText =
-        "Mode: " + (mode === "pages" ? "Pages" : "Raw");
-    updateLinks();
-}
-
-function updateLinks() {
-    const items = document.querySelectorAll(".archive-item");
-
-    items.forEach(item => {
-        const filename = item.dataset.filename;
-        if (!filename) return;
-
-        if (mode === "raw") {
-            item.href = "https://raw.githubusercontent.com/AxDa/axda.github.io/master/" + filename;
-        } else {
-            item.href = "https://axda.github.io/" + filename;
-        }
-    });
-}
-</script>
-END DISABLED TOGGLE CODE -->
-
 async function loadIndex() {
 
     // Load JSON
