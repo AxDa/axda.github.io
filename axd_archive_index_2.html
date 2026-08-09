@@ -456,8 +456,9 @@ async function loadIndex() {
     // UNIVERSAL HELPERS
 
     function pickUrl(item) {
-        if (item.url_raw) return item.url_raw;
         if (item.url_pages) return item.url_pages;
+        if (item.url_raw) return item.url_raw;
+
 
         if (item.url) {
             if (!item.url.startsWith("http")) {
