@@ -491,25 +491,28 @@ async function loadIndex() {
         return null;
     }
 
-    function chooseBestUrl(item) {
-        const raw = item.url_raw;
-        const pages = item.url_pages;
-        const simple = item.url ? pickUrl(item) : null;
+function chooseBestUrl(item) {
+    const raw = item.url_raw;
+    const pages = item.url_pages;
+    const simple = item.url ? pickUrl(item) : null;
 
-        if (raw) {
-            return fetch(raw, { method: "HEAD" })
-                .then(res => res.ok ? raw : (pages || simple))
-                .catch(() => pages || simple);
-        }
+    // PAGES FIRST
+    if (pages) {
+        return fetch(pages, { method: "HEAD" })
+            .then(res => res.ok ? pages : (raw || simple))
+            .catch(() => raw || simple);
+    }
 
-        if (pages) {
-            return fetch(pages, { method: "HEAD" })
-                .then(res => res.ok ? pages : simple)
-                .catch(() => simple);
-        }
+    // RAW SECOND
+    if (raw) {
+        return fetch(raw, { method: "HEAD" })
+            .then(res => res.ok ? raw : simple)
+            .catch(() => simple);
+    }
 
-        return Promise.resolve(simple);
-      }
+    return Promise.resolve(simple);
+}
+
 
 function render(items) {
     container.innerHTML = '';
