@@ -20240,11 +20240,13 @@
       "raster",
       "laurance",
       "215700",
-      "mp3"
+      "mp3",  
+	  “wypc_log”,
+	  "accessories_to_fact"
     ],
-    "date": "2026-08-08",
+    "date": "2026-08-09",
     "motif": "civic decay",
-    "cluster": "neighbour",
+    "cluster":"bbcreau",
     "size": 4644196,
     "type": "mp3"
   },
