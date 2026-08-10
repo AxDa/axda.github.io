@@ -20505,5 +20505,26 @@
     "cluster": "documents",
     "size": 1900000,
     "type": "doc"
+  },
+  {
+    "title": "1_bleaksirenst_naked_183200_183220_utc_1_10082026_v0.2.mp3",
+    "url_pages": "https://axda.github.io/1_bleaksirenst_naked_183200_183220_utc_1_10082026_v0.2.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleaksirenst_naked_183200_183220_utc_1_10082026_v0.2.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleaksirenst_naked_183200_183220_utc_1_10082026_v0_2.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleaksirenst_naked_183200_183220_utc_1_10082026_v0_2.png",
+    "tags": [
+      "bleaksirenst",
+      "interviews",
+      "183200",
+      "sirenblue",
+      "clarity's",
+      "pressure",
+      "naked"
+    ],
+    "date": "2026-08-08",
+    "motif": "civic delay",
+    "cluster": "siren_blue",
+    "size": 1940836,
+    "type": "mp3"
   }
 ]
