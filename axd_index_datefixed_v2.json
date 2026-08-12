@@ -20864,5 +20864,26 @@
 	  "cluster": "signal",
 	  "size": 596745,
 	  "type": "html"
+  },
+  {
+    "title": "1_bleaksirenst_105915_110115_utc_1_12082026_v0.2.mp3",
+    "url_pages": "https://axda.github.io/1_bleaksirenst_105915_110115_utc_1_12082026_v0.2.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleaksirenst_105915_110115_utc_1_12082026_v0.2.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleaksirenst_105915_110115_utc_1_12082026_v0_2.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleaksirenst_105915_110115_utc_1_12082026_v0_2.png",
+    "tags": [
+      "bleaksirenst",
+      "interviews",
+      "105915",
+      "sirenblue",
+      "clarity's",
+      "pressure",
+      "naked"
+    ],
+    "date": "2026-08-12",
+    "motif": "civic delay",
+    "cluster": "siren_blue",
+    "size": 1045985,
+    "type": "mp3"
   }
 ]
