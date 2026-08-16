@@ -20503,7 +20503,7 @@
     "date": "2026-08-09",
     "motif": "reference_material",
     "cluster": "documents",
-    "size": 1900000,
+    "size": 3600000,
     "type": "doc"
   },
   {
@@ -21617,10 +21617,12 @@
   "size": 596745,
   "type": "html"
 },
-{
+ {
   "title": "earth_to_cosmos_continum_mole_phone_to_c_2140_utc_1_16082026.png",
-  "url": "https://axda.github.io/earth_to_cosmos_continum_mole_phone_to_c_2140_utc_1_16082026.png",
-  "thumbnail": "https://axda.github.io/earth_to_cosmos_continum_mole_phone_to_c_2140_utc_1_16082026.png",
+  "url_pages": "https://axda.github.io/earth_to_cosmos_continum_mole_phone_to_c_2140_utc_1_16082026.png",
+  "url_raw": "https://raw.githubusercontent.com/AxDa/main/earth_to_cosmos_continum_mole_phone_to_c_2140_utc_1_16082026.png",
+  "thumbnail_pages": "https://axda.github.io/earth_to_cosmos_continum_mole_phone_to_c_2140_utc_1_16082026.png",
+  "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/main/earth_to_cosmos_continum_mole_phone_to_c_2140_utc_1_16082026.png",
   "tags": [
     "graph",
     "business",
@@ -21656,8 +21658,10 @@
 },
 {
   "title": "earth_to_cosmos_mole_phone_to_c_2140_utc_1_16082026.png",
-  "url": "https://axda.github.io/earth_to_cosmos_mole_phone_to_c_2140_utc_1_16082026.png",
-  "thumbnail": "https://axda.github.io/earth_to_cosmos_mole_phone_to_c_2140_utc_1_16082026.png",
+  "url_pages": "https://axda.github.io/earth_to_cosmos_mole_phone_to_c_2140_utc_1_16082026.png",
+  "url_raw": "https://raw.githubusercontent.com/AxDa/main/earth_to_cosmos_mole_phone_to_c_2140_utc_1_16082026.png",
+  "thumbnail_pages": "https://axda.github.io/earth_to_cosmos_mole_phone_to_c_2140_utc_1_16082026.png",
+  "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/main/earth_to_cosmos_mole_phone_to_c_2140_utc_1_16082026.png",
   "tags": [
     "graph",
     "business",
@@ -21767,5 +21771,20 @@
   "cluster": "signal",
   "size": 13878114,
   "type": "html"
-}
+},
+{
+	"title": "2026_Untitled_45_document_wk34_09082026_p0",
+	"url_pages": "https://docs.google.com/document/d/1LWOECRjc7xBDvixMKjJGkjXgzxDvQ1JLSOJj3UiMeg8/edit?usp=sharing",
+	"thumbnail_pages": "edit",
+	"tags": [
+	  "document",
+	  "google",
+	  "reference"
+	],
+	"date": "2026-08-16",
+	"motif": "reference_material",
+	"cluster": "documents",
+	"size": 0000,
+	"type": "doc"
+ },
 ]
