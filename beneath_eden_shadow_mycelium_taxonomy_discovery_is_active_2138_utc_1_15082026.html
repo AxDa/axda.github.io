@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pan & Zoom PNG Viewer</title>
+<style>
+  body {
+    margin: 0;
+    background: #111;
+    color: #eee;
+    font-family: sans-serif;
+  }
+  #viewport {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #111;
+    cursor: grab;
+  }
+  #viewport.grabbing {
+    cursor: grabbing;
+  }
+  #canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+  }
+</style>
+</head>
+<body>
+<div id="viewport">
+  <img id="canvas" src="col_ascent_hedge_thrush_panel_discovery_is_active_opilot_beneath_eden_shadow_taxonomy_of_accomplices_garden_framework_rings_1918_utc_1_15082026-fs8_1.png" alt="beneath_eden_shadow_taxonomy">
+</div>
+
+<script>
+(function () {
+  const viewport = document.getElementById('viewport');
+  const canvas = document.getElementById('canvas');
+
+  let scale = 1;
+  let originX = 0;
+  let originY = 0;
+  let isDragging = false;
+  let lastX = 0;
+  let lastY = 0;
+
+  function updateTransform() {
+    canvas.style.transform = `translate(${originX}px, ${originY}px) scale(${scale})`;
+  }
+
+  // Mouse wheel zoom
+  viewport.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    const zoomFactor = 1.1;
+    const rect = canvas.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    const oldScale = scale;
+    if (e.deltaY < 0) {
+      scale *= zoomFactor;
+    } else {
+      scale /= zoomFactor;
+    }
+    scale = Math.max(0.1, Math.min(scale, 20));
+
+    // Keep zoom centered around mouse
+    originX -= (mouseX / oldScale - mouseX / scale);
+    originY -= (mouseY / oldScale - mouseY / scale);
+
+    updateTransform();
+  }, { passive: false });
+
+  // Mouse drag pan
+  viewport.addEventListener('mousedown', function (e) {
+    isDragging = true;
+    viewport.classList.add('grabbing');
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
+
+  window.addEventListener('mousemove', function (e) {
+    if (!isDragging) return;
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+    originX += dx;
+    originY += dy;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    updateTransform();
+  });
+
+  window.addEventListener('mouseup', function () {
+    isDragging = false;
+    viewport.classList.remove('grabbing');
+  });
+
+  // Optional: double‑click to reset
+  viewport.addEventListener('dblclick', function () {
+    scale = 1;
+    originX = 0;
+    originY = 0;
+    updateTransform();
+  });
+
+  updateTransform();
+})();
+</script>
+</body>
+</html>
