@@ -22119,5 +22119,30 @@
     "cluster": "mycelium_mole_phone",
     "size": 4407558,
     "type": "png"
+  },
+  {
+    "title": "1_bleakst_1333_utc_1_22082026_v0.1.mp3",
+    "url_pages": "https://axda.github.io/1_bleakst_1333_utc_1_22082026_v0.1.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleakst_1333_utc_1_22082026_v0.1.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleakst_1333_utc_1_22082026_v0_1.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleakst_1333_utc_1_22082026_v0_1.png",
+    "tags": [
+      "harehills",
+      "shout",
+      "space",
+      "wypc_log",
+      "bleakst",
+      "bbcreau",
+      "street_sound",
+      "1333",
+      "repetative",
+      "beat",
+      "mp3"
+    ],
+    "date": "2026-08-22",
+    "motif": "civic decay",
+    "cluster": "corporation",
+    "size": 705349,
+    "type": "mp3"
   }
 ]
