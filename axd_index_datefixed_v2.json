@@ -21780,7 +21780,7 @@
    "date": "2026-08-16",
    "motif": "reference_material",
    "cluster": "documents",
-   "size": 100000,
+   "size": 21700000,
    "type": "doc"
 },
 {
@@ -22294,5 +22294,16 @@
     "cluster": "mycelium_mole_phone",
     "size": 63950,
     "type": "png"
-  }
+},
+{
+   "title": "2026_Untitled_46_document_wk35_23082026_p0",
+   "url_pages": "https://docs.google.com/document/d/10zCe9RJKR8B0V3gKEZ2W2qtQkUlCrkEpJU5M3ADKQxo/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-08-24",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 100000,
+   "type": "doc"
+}
 ]
