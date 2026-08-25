@@ -5,7 +5,13 @@
 <title>Cluster Viewer: corp_clustered_scandles_clusters</title>
 <style>
   body { margin: 0; background: #111; }
-  #view { width: 100vw; height: 100vh; overflow: hidden; position: relative; }
+  #view {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;  /* keep hidden so transform works */
+    position: relative;
+}
+
   #img { transform-origin: 0 0; cursor: grab; }
   #img.grabbing { cursor: grabbing; }
   #info {
@@ -29,6 +35,18 @@ let scale = 1, ox = 0, oy = 0, drag = false, lx = 0, ly = 0;
 function update() {
   img.style.transform = `translate(${ox}px, ${oy}px) scale(${scale})`;
 }
+
+window.addEventListener('keydown', (e) => {
+    const step = 50;  // how far each arrow key moves
+
+    if (e.key === "ArrowLeft") originX += step;
+    if (e.key === "ArrowRight") originX -= step;
+    if (e.key === "ArrowUp") originY += step;
+    if (e.key === "ArrowDown") originY -= step;
+
+    update();
+});
+
 
 window.addEventListener("wheel", e => {
   e.preventDefault();
