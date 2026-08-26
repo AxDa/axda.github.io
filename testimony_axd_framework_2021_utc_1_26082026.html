@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cluster Viewer: testimony_axd_framework_2021_utc_1_26082026</title>
+<style>
+  body { margin: 0; background: #111; }
+  #view { width: 100vw; height: 100vh; overflow: hidden; position: relative; }
+  #img { transform-origin: 0 0; cursor: grab; }
+  #img.grabbing { cursor: grabbing; }
+  #info {
+    position: absolute; top: 10px; left: 10px;
+    background: rgba(0,0,0,0.6); padding: 6px 10px;
+    color: #eee; font-family: sans-serif; font-size: 12px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+<div id="view">
+  <div id="info">Scroll to zoom, drag to pan, double‑click to reset</div>
+  <img id="img" src="corp_clustered_scandles_clusters_.svg">
+</div>
+
+<script>
+const img = document.getElementById("img");
+let scale = 1, ox = 0, oy = 0, drag = false, lx = 0, ly = 0;
+
+function update() {
+  img.style.transform = `translate(${ox}px, ${oy}px) scale(${scale})`;
+}
+
+window.addEventListener("wheel", e => {
+  e.preventDefault();
+  scale *= e.deltaY < 0 ? 1.1 : 0.9;
+  scale = Math.max(0.1, Math.min(scale, 10));
+  update();
+}, { passive: false });
+
+img.addEventListener("mousedown", e => {
+  drag = true; lx = e.clientX; ly = e.clientY;
+  img.classList.add("grabbing");
+});
+
+window.addEventListener("mousemove", e => {
+  if (!drag) return;
+  ox += e.clientX - lx;
+  oy += e.clientY - ly;
+  lx = e.clientX; ly = e.clientY;
+  update();
+});
+
+window.addEventListener("mouseup", () => {
+  drag = false;
+  img.classList.remove("grabbing");
+});
+
+window.addEventListener("dblclick", () => {
+  scale = 1; ox = 0; oy = 0; update();
+});
+
+update();
+</script>
+</body>
+</html>
