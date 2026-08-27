@@ -704,7 +704,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let reverseMode = false;
   let reverseInterval = null;
 
-  // --- Waveform scrubbing (drag on canvas) ---
+// --- Waveform scrubbing (drag on canvas) ---
 
 let isScrubbing = false;
 let wasPlaying = false;
@@ -762,6 +762,74 @@ function scrubToEvent(e) {
   // Update timestamp
   timeDisplay.textContent = `${fmt(audio.currentTime)} / ${fmt(audio.duration)}`;
 }
+
+
+
+
+// Elements
+const scrub = document.getElementById("audioScrub");
+const timeDisplay = document.getElementById("audioTime");
+const progressContainer = document.getElementById("progressContainer");
+const progressBar = document.getElementById("progressBar");
+const bufferBar = document.getElementById("bufferBar");
+
+// Format time (mm:ss)
+function fmt(t) {
+  const m = Math.floor(t / 60);
+  const s = Math.floor(t % 60);
+  return `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+}
+
+// Update timestamp + progress + scrub
+audio.addEventListener("timeupdate", () => {
+  if (!audio.duration) return;
+
+  const cur = audio.currentTime;
+  const dur = audio.duration;
+
+  // Timestamp
+  timeDisplay.textContent = `${fmt(cur)} / ${fmt(dur)}`;
+
+  // Progress bar
+  const pct = (cur / dur) * 100;
+  progressBar.style.width = pct + "%";
+
+  // Scrub slider
+  scrub.value = pct;
+});
+
+// Update buffer bar (YouTube-style)
+audio.addEventListener("progress", () => {
+  if (!audio.duration || audio.buffered.length === 0) return;
+
+  const end = audio.buffered.end(audio.buffered.length - 1);
+  const pct = (end / audio.duration) * 100;
+  bufferBar.style.width = pct + "%";
+});
+
+// Scrub slider → seek
+scrub.addEventListener("input", () => {
+  if (!audio.duration) return;
+  const newTime = (scrub.value / 100) * audio.duration;
+  audio.currentTime = newTime;
+});
+
+// Clickable progress bar → seek
+progressContainer.addEventListener("click", (e) => {
+  const rect = progressContainer.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const pct = x / rect.width;
+  audio.currentTime = pct * audio.duration;
+});
+
+// Clickable waveform → seek
+canvas.addEventListener("click", (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const pct = x / rect.width;
+  audio.currentTime = pct * audio.duration;
+});
+
 
   // Web Audio API
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
