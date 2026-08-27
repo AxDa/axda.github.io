@@ -277,6 +277,19 @@
 
 <canvas id="waveCanvas" width="600" height="80" style="width:100%; height:80px;"></canvas>
 
+<!-- Timestamp -->
+<div id="audioTime" style="color:#ccc; font-size:14px; margin-top:4px;">
+  00:00 / 00:00
+</div>
+
+<!-- Progress + buffer bar -->
+<div id="progressContainer" style="position:relative; width:100%; height:8px; background:#222; margin-top:6px; cursor:pointer;">
+  <div id="bufferBar" style="position:absolute; height:100%; width:0%; background:#444;"></div>
+  <div id="progressBar" style="position:absolute; height:100%; width:0%; background:#00ff88;"></div>
+</div>
+
+<!-- Scrub slider -->
+<input type="range" id="audioScrub" min="0" max="100" value="0" step="0.1" style="width:100%; margin-top:6px;">
 
 
 <!-- INDEX GRID BELOW CONTROLS -->
@@ -690,6 +703,65 @@ document.addEventListener("DOMContentLoaded", () => {
   let audioEnabled = false;
   let reverseMode = false;
   let reverseInterval = null;
+
+  // --- Waveform scrubbing (drag on canvas) ---
+
+let isScrubbing = false;
+let wasPlaying = false;
+
+canvas.addEventListener("mousedown", (e) => {
+  if (!audio.duration) return;
+
+  isScrubbing = true;
+
+  // Remember if audio was playing
+  wasPlaying = !audio.paused;
+
+  // Pause during scrub
+  audio.pause();
+
+  scrubToEvent(e);
+});
+
+canvas.addEventListener("mousemove", (e) => {
+  if (!isScrubbing) return;
+  scrubToEvent(e);
+});
+
+canvas.addEventListener("mouseup", () => {
+  if (!isScrubbing) return;
+  isScrubbing = false;
+
+  // Resume only if it was playing before
+  if (wasPlaying) {
+    audio.play().catch(() => {});
+  }
+});
+
+canvas.addEventListener("mouseleave", () => {
+  if (!isScrubbing) return;
+  isScrubbing = false;
+
+  if (wasPlaying) {
+    audio.play().catch(() => {});
+  }
+});
+
+// Core scrub function
+function scrubToEvent(e) {
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const pct = Math.min(Math.max(x / rect.width, 0), 1);
+  audio.currentTime = pct * audio.duration;
+
+  // Update progress bar + scrub slider if present
+  const percent = pct * 100;
+  progressBar.style.width = percent + "%";
+  scrub.value = percent;
+
+  // Update timestamp
+  timeDisplay.textContent = `${fmt(audio.currentTime)} / ${fmt(audio.duration)}`;
+}
 
   // Web Audio API
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
