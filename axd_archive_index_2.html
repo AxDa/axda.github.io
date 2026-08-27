@@ -686,10 +686,10 @@ function render(items) {
 
 loadIndex();
 </script>
-
-  
+ 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
   const audio = document.getElementById("hoverAudio");
   const toggle = document.getElementById("audioToggle");
   const playBtn = document.getElementById("audioPlay");
@@ -700,138 +700,129 @@ document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("waveCanvas");
   const ctx = canvas.getContext("2d");
 
+  const scrub = document.getElementById("audioScrub");
+  const timeDisplay = document.getElementById("audioTime");
+  const progressContainer = document.getElementById("progressContainer");
+  const progressBar = document.getElementById("progressBar");
+  const bufferBar = document.getElementById("bufferBar");
+
   let audioEnabled = false;
   let reverseMode = false;
   let reverseInterval = null;
 
-// --- Waveform scrubbing (drag on canvas) ---
-
-let isScrubbing = false;
-let wasPlaying = false;
-
-canvas.addEventListener("mousedown", (e) => {
-  if (!audio.duration) return;
-
-  isScrubbing = true;
-
-  // Remember if audio was playing
-  wasPlaying = !audio.paused;
-
-  // Pause during scrub
-  audio.pause();
-
-  scrubToEvent(e);
-});
-
-canvas.addEventListener("mousemove", (e) => {
-  if (!isScrubbing) return;
-  scrubToEvent(e);
-});
-
-canvas.addEventListener("mouseup", () => {
-  if (!isScrubbing) return;
-  isScrubbing = false;
-
-  // Resume only if it was playing before
-  if (wasPlaying) {
-    audio.play().catch(() => {});
+  // -------------------------
+  // TIME FORMATTER
+  // -------------------------
+  function fmt(t) {
+    const m = Math.floor(t / 60);
+    const s = Math.floor(t % 60);
+    return `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
   }
-});
 
-canvas.addEventListener("mouseleave", () => {
-  if (!isScrubbing) return;
-  isScrubbing = false;
+  // -------------------------
+  // WAVEFORM SCRUBBING (Option C)
+  // -------------------------
+  let isScrubbing = false;
+  let wasPlaying = false;
 
-  if (wasPlaying) {
-    audio.play().catch(() => {});
+  function scrubToEvent(e) {
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const pct = Math.min(Math.max(x / rect.width, 0), 1);
+
+    audio.currentTime = pct * audio.duration;
+
+    const percent = pct * 100;
+    progressBar.style.width = percent + "%";
+    scrub.value = percent;
+
+    timeDisplay.textContent = `${fmt(audio.currentTime)} / ${fmt(audio.duration)}`;
   }
-});
 
-// Core scrub function
-function scrubToEvent(e) {
-  const rect = canvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const pct = Math.min(Math.max(x / rect.width, 0), 1);
-  audio.currentTime = pct * audio.duration;
+  canvas.addEventListener("mousedown", (e) => {
+    if (!audio.duration) return;
 
-  // Update progress bar + scrub slider if present
-  const percent = pct * 100;
-  progressBar.style.width = percent + "%";
-  scrub.value = percent;
+    isScrubbing = true;
+    wasPlaying = !audio.paused;
 
-  // Update timestamp
-  timeDisplay.textContent = `${fmt(audio.currentTime)} / ${fmt(audio.duration)}`;
-}
+    audio.pause();
+    scrubToEvent(e);
+  });
 
+  canvas.addEventListener("mousemove", (e) => {
+    if (isScrubbing) scrubToEvent(e);
+  });
 
+  canvas.addEventListener("mouseup", () => {
+    if (!isScrubbing) return;
+    isScrubbing = false;
 
+    if (wasPlaying) audio.play().catch(() => {});
+  });
 
-// Elements
-const scrub = document.getElementById("audioScrub");
-const timeDisplay = document.getElementById("audioTime");
-const progressContainer = document.getElementById("progressContainer");
-const progressBar = document.getElementById("progressBar");
-const bufferBar = document.getElementById("bufferBar");
+  canvas.addEventListener("mouseleave", () => {
+    if (!isScrubbing) return;
+    isScrubbing = false;
 
-// Format time (mm:ss)
-function fmt(t) {
-  const m = Math.floor(t / 60);
-  const s = Math.floor(t % 60);
-  return `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
-}
+    if (wasPlaying) audio.play().catch(() => {});
+  });
 
-// Update timestamp + progress + scrub
-audio.addEventListener("timeupdate", () => {
-  if (!audio.duration) return;
+  // Option C: click only jumps if NOT dragging
+  canvas.addEventListener("click", (e) => {
+    if (isScrubbing) return; // ignore click during drag
 
-  const cur = audio.currentTime;
-  const dur = audio.duration;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const pct = x / rect.width;
 
-  // Timestamp
-  timeDisplay.textContent = `${fmt(cur)} / ${fmt(dur)}`;
+    audio.currentTime = pct * audio.duration;
+  });
 
-  // Progress bar
-  const pct = (cur / dur) * 100;
-  progressBar.style.width = pct + "%";
+  // -------------------------
+  // SCRUB SLIDER
+  // -------------------------
+  scrub.addEventListener("input", () => {
+    if (!audio.duration) return;
+    audio.currentTime = (scrub.value / 100) * audio.duration;
+  });
 
-  // Scrub slider
-  scrub.value = pct;
-});
+  // -------------------------
+  // PROGRESS BAR CLICK
+  // -------------------------
+  progressContainer.addEventListener("click", (e) => {
+    const rect = progressContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const pct = x / rect.width;
+    audio.currentTime = pct * audio.duration;
+  });
 
-// Update buffer bar (YouTube-style)
-audio.addEventListener("progress", () => {
-  if (!audio.duration || audio.buffered.length === 0) return;
+  // -------------------------
+  // TIMEUPDATE + BUFFER BAR
+  // -------------------------
+  audio.addEventListener("timeupdate", () => {
+    if (!audio.duration) return;
 
-  const end = audio.buffered.end(audio.buffered.length - 1);
-  const pct = (end / audio.duration) * 100;
-  bufferBar.style.width = pct + "%";
-});
+    const cur = audio.currentTime;
+    const dur = audio.duration;
 
-// Scrub slider → seek
-scrub.addEventListener("input", () => {
-  if (!audio.duration) return;
-  const newTime = (scrub.value / 100) * audio.duration;
-  audio.currentTime = newTime;
-});
+    timeDisplay.textContent = `${fmt(cur)} / ${fmt(dur)}`;
 
-// Clickable progress bar → seek
-progressContainer.addEventListener("click", (e) => {
-  const rect = progressContainer.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const pct = x / rect.width;
-  audio.currentTime = pct * audio.duration;
-});
+    const pct = (cur / dur) * 100;
+    progressBar.style.width = pct + "%";
+    scrub.value = pct;
+  });
 
-// Clickable waveform → seek
-canvas.addEventListener("click", (e) => {
-  const rect = canvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const pct = x / rect.width;
-  audio.currentTime = pct * audio.duration;
-});
+  audio.addEventListener("progress", () => {
+    if (!audio.duration || audio.buffered.length === 0) return;
 
+    const end = audio.buffered.end(audio.buffered.length - 1);
+    const pct = (end / audio.duration) * 100;
+    bufferBar.style.width = pct + "%";
+  });
 
-  // Web Audio API
+  // -------------------------
+  // WEB AUDIO API (Waveform)
+  // -------------------------
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   const track = audioCtx.createMediaElementSource(audio);
   const analyser = audioCtx.createAnalyser();
@@ -875,13 +866,12 @@ canvas.addEventListener("click", (e) => {
   drawWaveform();
 
   // -------------------------
-  // Existing audio logic
+  // AUDIO LOGIC
   // -------------------------
-
   audio.volume = 0.5;
 
   toggle.addEventListener("click", () => {
-    audioCtx.resume().catch(() => {});   // ← REQUIRED
+    audioCtx.resume().catch(() => {});
     audioEnabled = !audioEnabled;
     toggle.textContent = audioEnabled ? "Audio: ON" : "Audio: OFF";
 
@@ -915,11 +905,9 @@ canvas.addEventListener("click", (e) => {
 
   function startReverse() {
     stopReverse();
-  
-    // Mute the audio but keep it "playing"
     audio.volume = 0;
     audio.play().catch(() => {});
-  
+
     reverseInterval = setInterval(() => {
       if (audio.currentTime <= 0) {
         stopReverse();
@@ -928,37 +916,30 @@ canvas.addEventListener("click", (e) => {
         audio.volume = 0.5;
         return;
       }
-  
       audio.currentTime -= 0.05;
     }, 50);
   }
-
 
   function stopReverse() {
     if (reverseInterval) {
       clearInterval(reverseInterval);
       reverseInterval = null;
     }
-
-      // Restore volume
-      audio.volume = 0.5;
+    audio.volume = 0.5;
   }
 
   playBtn.addEventListener("click", () => {
-    audioCtx.resume().catch(() => {});   // ← REQUIRED
+    audioCtx.resume().catch(() => {});
     if (!audioEnabled) return;
 
     stopReverse();
 
-    if (!reverseMode) {
-      audio.play().catch(() => {});
-    } else {
-      startReverse();
-    }
+    if (!reverseMode) audio.play().catch(() => {});
+    else startReverse();
   });
 
   title.addEventListener("mouseenter", () => {
-    audioCtx.resume().catch(() => {});   // ← prevents hover-block
+    audioCtx.resume().catch(() => {});
     if (!audioEnabled) return;
 
     stopReverse();
@@ -972,7 +953,9 @@ canvas.addEventListener("click", (e) => {
     audio.pause();
     audio.currentTime = 0;
   });
+
 });
 </script>
+
 </body>
 </html>
