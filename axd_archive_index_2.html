@@ -346,13 +346,9 @@ async function chooseThumbnail(item, mode) {
 }   // ← THIS WAS MISSING
 
 async function urlExists(url) {
-    try {
-        const res = await fetch(url, { method: "HEAD" });
-        return res.ok;
-    } catch {
-        return false;
-    }
+    return true; // or remove this function entirely
 }
+
 async function loadIndex() {
 
     // Load JSON
@@ -539,23 +535,10 @@ function chooseBestUrl(item) {
     const pages = item.url_pages;
     const simple = item.url ? pickUrl(item) : null;
 
-    // PAGES FIRST
-    if (pages) {
-        return fetch(pages, { method: "HEAD" })
-            .then(res => res.ok ? pages : (raw || simple))
-            .catch(() => raw || simple);
-    }
-
-    // RAW SECOND
-    if (raw) {
-        return fetch(raw, { method: "HEAD" })
-            .then(res => res.ok ? raw : simple)
-            .catch(() => simple);
-    }
-
+    if (pages) return Promise.resolve(pages);
+    if (raw)   return Promise.resolve(raw);
     return Promise.resolve(simple);
 }
-
 
 function render(items) {
     container.innerHTML = '';
