@@ -22914,5 +22914,20 @@
   "cluster": "signal",
   "size": 4753639,
   "type": "html"
-}
+},
+{
+    "title": "1_you_are_evil_sic_crimminal_people_0220_28082026_v0.0.mp3",
+    "url_pages": "https://axda.github.io/1_you_are_evil_sic_crimminal_people_0220_28082026_v0.0.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_you_are_evil_sic_crimminal_people_0220_28082026_v0.0.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_you_are_evil_sic_crimminal_people_0220_28082026_v0_0.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_you_are_evil_sic_crimminal_people_0220_28082026_v0_0.png",
+    "tags": [
+      "sic"
+    ],
+    "date": "2026-08-28",
+    "motif": "civic decay",
+    "cluster": "Sonics",
+    "size": 1041388,
+    "type": "mp3"
+  }
 ]
