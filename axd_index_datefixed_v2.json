@@ -22422,7 +22422,7 @@
    "date": "2026-08-24",
    "motif": "reference_material",
    "cluster": "documents",
-   "size": 100000,
+   "size": 35800000,
    "type": "doc"
 },
 {
@@ -23184,5 +23184,46 @@
   "cluster": "signal",
   "size": 1114857,
   "type": "html"
+},
+{
+  "title": "andrew_davison_watermarked_mole_phone_to_c_myceliun_hollow_straws_velvet_protocol_30082026.html",
+  "url_pages": "https://axda.github.io/andrew_davison_watermarked_mole_phone_to_c_myceliun_hollow_straws_velvet_protocol_30082026.html",
+  "url_raw": "https://raw.githubusercontent.com/AxDa/main/andrew_davison_watermarked_mole_phone_to_c_myceliun_hollow_straws_velvet_protocol_30082026.html",
+  "thumbnail_pages": "https://axda.github.io/watermarked_mole_phone_to_c_myceliun_hollow_velvet_protocol_30082026_thumb.png",
+  "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/main/watermarked_mole_phone_to_c_myceliun_hollow_velvet_protocol_30082026_thumb.png",
+  "tags": [
+    "graph",
+    "ash",
+    "mycelium_mole_phone",
+    "over-dub_corporation",
+    "hypothesis",
+    "chiculub",
+    "porambulators",
+    "tor_rising",
+    "branden_burger",
+    "elevated_capability",
+    "archive",
+    "technical",
+    "clarity",
+    "crystal",
+    "velvet_protocol",
+    "pioneer"
+  ],
+  "date": "2026-08-30",
+  "motif": "technical audit",
+  "cluster": "mycelium_mole_phone",
+  "size": 22190955,
+  "type": "html"
+},
+{
+   "title": "2026_Untitled_47_document_wk36_30082026_p0",
+   "url_pages": "https://docs.google.com/document/d/1JXGkFQy7MiN0XvXY8KWLdO_zAaE8k3GPT84eo53PLms/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-08-30",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 100000,
+   "type": "doc"
 }
 ]
