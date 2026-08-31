@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Storyboard Viewer: rancidity_clamping_date_time_range_bleakst_epsteinion_underworld_conundrum_7ring_nar_1927_31082026.svg</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    margin: 0;
+    background: #111;
+    color: #eee;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overscroll-behavior: none;
+  }
+
+  html {
+    height: 100%;
+  }
+
+header {
+    padding: 0.5rem 1rem;
+    background: #222;
+    display: flex;
+    flex-direction: row;        /* ← FIX */
+    align-items: center;        /* ← FIX */
+    justify-content: space-between; /* ← FIX */
+}
+
+  header h1 {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #ddd;
+  }
+
+  .controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  button {
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background: #333;
+    color: #eee;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+
+  button:hover {
+    background: #444;
+  }
+
+  main {
+      flex: 1;
+      overflow: hidden;
+      background: #111;
+      touch-action: none;
+      position: relative;
+  }
+
+  #panzoom-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+  }
+
+  #panzoom-content {
+      transform-origin: 0 0;
+      will-change: transform;
+  }
+
+  object {
+      width: 100%;
+      height: 100%;
+      display: block;
+      pointer-events: none;
+  }
+
+
+
+  #zoom-controls {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  #zoom-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+
+  #minimap {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 180px;
+    height: 180px;
+    border: 2px solid #666;
+    background: #222;
+    overflow: hidden;
+    opacity: 0.85;
+    z-index: 10;
+  }
+
+  #minimap svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  #minimap-viewport {
+    position: absolute;
+    border: 2px solid #00ffff;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+
+<body>
+  <script src="svg-pan-zoom.min.js"></script>
+
+<header>
+  <h1>Storyboard Viewer</h1>
+  <div class="controls">
+    <button onclick="location.reload()">Refresh</button>
+    <button onclick="window.location.href='https://axda.github.io/Blu/axd_archive_index_2.html'">
+      Back to Archive Index
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- Zoom Buttons -->
+  <div id="zoom-controls">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">−</button>
+    <button id="zoom-reset">⟳</button>
+    <button id="open-minimap">☰</button>
+  </div>
+
+  <!-- Pan/Zoom Wrapper -->
+  <div id="panzoom-wrapper">
+    <object
+      id="svgObject"
+      type="image/svg+xml"
+      data="epsteinion_underworld_conundrum_7ring_nar_1927_31082026.svg">
+    </object>
+  </div>
+
+  <!-- Full‑screen Minimap Overlay -->
+  <div id="minimap-overlay">
+    <button id="minimap-close">×</button>
+    <div id="minimap-container"></div>
+    <div id="minimap-viewport"></div>
+  </div>
+
+</main>
+
+<style>
+  body, html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #111;
+  }
+
+  #panzoom-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    touch-action: none;
+    background: #111;
+  }
+
+  #svgObject {
+    width: 100%;
+    height: 100%;
+  }
+
+  #zoom-controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+    display: flex;
+    gap: 6px;
+  }
+
+  #zoom-controls button {
+    padding: 6px 10px;
+    font-size: 18px;
+    background: #222;
+    color: #eee;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #zoom-controls button:hover {
+    background: #333;
+  }
+
+  /* Full‑screen minimap overlay */
+  #minimap-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    z-index: 50;
+  }
+
+  #minimap-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #minimap-container {
+    position: absolute;
+    inset: 50px;
+    background: #222;
+    border: 2px solid #555;
+    overflow: hidden;
+  }
+
+  #minimap-container svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  #minimap-viewport {
+    position: absolute;
+    border: 2px solid #00adee;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+(function() {
+
+  /* DOM elements */
+  const wrapper = document.getElementById("panzoom-wrapper");
+  const svgObject = document.getElementById("svgObject");
+
+  const zoomInBtn = document.getElementById("zoom-in");
+  const zoomOutBtn = document.getElementById("zoom-out");
+  const zoomResetBtn = document.getElementById("zoom-reset");
+  const openMinimapBtn = document.getElementById("open-minimap");
+
+  const minimapOverlay = document.getElementById("minimap-overlay");
+  const minimapCloseBtn = document.getElementById("minimap-close");
+  const minimapContainer = document.getElementById("minimap-container");
+  const minimapViewport = document.getElementById("minimap-viewport");
+
+  /* Pan/Zoom state */
+  let svg, vb;
+  let viewX = 0, viewY = 0, viewW = 0, viewH = 0;
+
+  let isDragging = false;
+  let lastX = 0, lastY = 0;
+  let vx = 0, vy = 0;
+  let inertiaActive = false;
+
+  const MIN_ZOOM = 0.2;
+  const MAX_ZOOM = 10;
+
+  /* Load SVG */
+  svgObject.addEventListener("load", () => {
+    svg = svgObject.contentDocument.querySelector("svg");
+    vb = svg.viewBox.baseVal;
+
+    viewX = vb.x;
+    viewY = vb.y;
+    viewW = vb.width;
+    viewH = vb.height;
+
+    /* Create minimap SVG */
+    const mini = svg.cloneNode(true);
+    mini.removeAttribute("width");
+    mini.removeAttribute("height");
+    minimapContainer.appendChild(mini);
+
+    updateViewBox();
+  });
+
+  /* Update SVG viewBox */
+  function updateViewBox() {
+    svg.setAttribute("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`);
+    updateMinimap();
+  }
+
+  /* Zoom at point */
+  function zoomAt(factor, cx, cy) {
+    const newW = viewW / factor;
+    const newH = viewH / factor;
+
+    if (newW < vb.width * MIN_ZOOM || newW > vb.width * MAX_ZOOM) return;
+
+    const dx = (cx / wrapper.clientWidth) * viewW;
+    const dy = (cy / wrapper.clientHeight) * viewH;
+
+    viewX += dx - dx / factor;
+    viewY += dy - dy / factor;
+
+    viewW = newW;
+    viewH = newH;
+
+    updateViewBox();
+  }
+
+  /* Pan */
+  function pan(dx, dy) {
+    viewX -= dx * (viewW / wrapper.clientWidth);
+    viewY -= dy * (viewH / wrapper.clientHeight);
+    updateViewBox();
+  }
+
+  /* Inertia */
+  function startInertia() {
+    if (inertiaActive) return;
+    inertiaActive = true;
+
+    function step() {
+      vx *= 0.9;
+      vy *= 0.9;
+
+      pan(vx, vy);
+
+      if (Math.abs(vx) < 0.1 && Math.abs(vy) < 0.1) {
+        inertiaActive = false;
+        return;
+      }
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* Minimap update */
+  function updateMinimap() {
+    const miniW = minimapContainer.clientWidth;
+    const miniH = minimapContainer.clientHeight;
+
+    const scaleX = miniW / vb.width;
+    const scaleY = miniH / vb.height;
+
+    minimapViewport.style.width = (viewW * scaleX) + "px";
+    minimapViewport.style.height = (viewH * scaleY) + "px";
+    minimapViewport.style.left = (viewX * scaleX) + "px";
+    minimapViewport.style.top = (viewY * scaleY) + "px";
+  }
+
+  /* Zoom buttons */
+  zoomInBtn.onclick = () => zoomAt(1.2, wrapper.clientWidth/2, wrapper.clientHeight/2);
+  zoomOutBtn.onclick = () => zoomAt(0.8, wrapper.clientWidth/2, wrapper.clientHeight/2);
+
+  zoomResetBtn.onclick = () => {
+    viewX = vb.x;
+    viewY = vb.y;
+    viewW = vb.width;
+    viewH = vb.height;
+    updateViewBox();
+  };
+
+  /* Minimap overlay */
+  openMinimapBtn.onclick = () => minimapOverlay.style.display = "block";
+  minimapCloseBtn.onclick = () => minimapOverlay.style.display = "none";
+
+  /* Mouse pan */
+  wrapper.addEventListener("pointerdown", e => {
+    isDragging = true;
+    inertiaActive = false;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    vx = vy = 0;
+  });
+
+  wrapper.addEventListener("pointermove", e => {
+    if (!isDragging) return;
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+    pan(dx, dy);
+    vx = dx;
+    vy = dy;
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
+
+  wrapper.addEventListener("pointerup", () => {
+    isDragging = false;
+    startInertia();
+  });
+
+  /* Wheel zoom */
+  wrapper.addEventListener("wheel", e => {
+    e.preventDefault();
+    const rect = wrapper.getBoundingClientRect();
+    zoomAt(1 + (-e.deltaY * 0.002), e.clientX - rect.left, e.clientY - rect.top);
+  });
+
+})();
+</script>
