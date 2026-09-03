@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Storyboard Viewer: Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla</title>
+<title>Storyboard Viewer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -11,26 +11,25 @@
         padding: 0;
         height: 100%;
         background: #111;
-        overflow: visible;          /* ← NO CLIPPING */
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
+        font-family: system-ui;
     }
 
     header {
         padding: 0.5rem 1rem;
         background: #222;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
         color: #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     main {
         flex: 1;
         position: relative;
-        overflow: visible;          /* ← NO CLIPPING */
+        overflow: hidden;
         background: #111;
         touch-action: none;
     }
@@ -38,18 +37,15 @@
     #panzoom-wrapper {
         width: 100%;
         height: 100%;
+        overflow: hidden;
         position: relative;
-        overflow: visible;          /* ← NO CLIPPING */
-        background: #111;
-        touch-action: none;
     }
 
     #svgObject {
-        width: auto;                /* ← NATURAL SIZE */
-        height: auto;
-        max-width: none;
-        max-height: none;
-        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 0 0;
         pointer-events: none;
     }
 
@@ -70,49 +66,6 @@
         border: 1px solid #444;
         border-radius: 4px;
         cursor: pointer;
-    }
-
-    #zoom-controls button:hover {
-        background: #333;
-    }
-
-    /* Minimap overlay */
-    #minimap-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.85);
-        display: none;
-        z-index: 50;
-    }
-
-    #minimap-close {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 32px;
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    #minimap-container {
-        position: absolute;
-        inset: 50px;
-        background: #222;
-        border: 2px solid #555;
-        overflow: hidden;
-    }
-
-    #minimap-container svg {
-        width: 100%;
-        height: 100%;
-    }
-
-    #minimap-viewport {
-        position: absolute;
-        border: 2px solid #00adee;
-        pointer-events: none;
     }
 </style>
 </head>
@@ -135,18 +88,11 @@
         <button id="zoom-in">+</button>
         <button id="zoom-out">−</button>
         <button id="zoom-reset">⟳</button>
-        <button id="open-minimap">☰</button>
     </div>
 
     <div id="panzoom-wrapper">
         <object id="svgObject" type="image/svg+xml"
                 data="Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg"></object>
-    </div>
-
-    <div id="minimap-overlay">
-        <button id="minimap-close">×</button>
-        <div id="minimap-container"></div>
-        <div id="minimap-viewport"></div>
     </div>
 
 </main>
@@ -157,56 +103,43 @@
 const wrapper = document.getElementById("panzoom-wrapper");
 const svgObject = document.getElementById("svgObject");
 
-let svg, vb;
-let viewX, viewY, viewW, viewH;
+let scale = 1;
+let offsetX = 0;
+let offsetY = 0;
 
 svgObject.addEventListener("load", () => {
-    svg = svgObject.contentDocument.querySelector("svg");
-    vb = svg.viewBox.baseVal;
+    const svg = svgObject.contentDocument.querySelector("svg");
 
-    viewX = vb.x;
-    viewY = vb.y;
-    viewW = vb.width;
-    viewH = vb.height;
+    const w = svg.viewBox.baseVal.width;
+    const h = svg.viewBox.baseVal.height;
 
-    updateViewBox();
+    svgObject.style.width = w + "px";
+    svgObject.style.height = h + "px";
+
+    updateTransform();
 });
 
-function clampViewBox() {
-    if (viewX < vb.x) viewX = vb.x;
-    if (viewY < vb.y) viewY = vb.y;
-    if (viewX + viewW > vb.x + vb.width) viewX = vb.x + vb.width - viewW;
-    if (viewY + viewH > vb.y + vb.height) viewY = vb.y + vb.height - viewH;
+function updateTransform() {
+    svgObject.style.transform =
+        `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
 }
 
+document.getElementById("zoom-in").onclick = () => {
+    scale *= 1.2;
+    updateTransform();
+};
 
-function updateViewBox() {
-    clampViewBox();
-    svg.setAttribute("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`);
-}
+document.getElementById("zoom-out").onclick = () => {
+    scale /= 1.2;
+    updateTransform();
+};
 
-
-function zoomAt(factor, cx, cy) {
-    const newW = viewW / factor;
-    const newH = viewH / factor;
-
-    const dx = (cx / wrapper.clientWidth) * viewW;
-    const dy = (cy / wrapper.clientHeight) * viewH;
-
-    viewX += dx - dx / factor;
-    viewY += dy - dy / factor;
-
-    viewW = newW;
-    viewH = newH;
-
-    updateViewBox();
-}
-
-function pan(dx, dy) {
-    viewX -= dx * (viewW / wrapper.clientWidth);
-    viewY -= dy * (viewH / wrapper.clientHeight);
-    updateViewBox();
-}
+document.getElementById("zoom-reset").onclick = () => {
+    scale = 1;
+    offsetX = 0;
+    offsetY = 0;
+    updateTransform();
+};
 
 let dragging = false;
 let lastX = 0, lastY = 0;
@@ -219,19 +152,20 @@ wrapper.addEventListener("pointerdown", e => {
 
 wrapper.addEventListener("pointermove", e => {
     if (!dragging) return;
-    const dx = e.clientX - lastX;
-    const dy = e.clientY - lastY;
-    pan(dx, dy);
+    offsetX += (e.clientX - lastX);
+    offsetY += (e.clientY - lastY);
     lastX = e.clientX;
     lastY = e.clientY;
+    updateTransform();
 });
 
 wrapper.addEventListener("pointerup", () => dragging = false);
 
 wrapper.addEventListener("wheel", e => {
     e.preventDefault();
-    const rect = wrapper.getBoundingClientRect();
-    zoomAt(1 + (-e.deltaY * 0.002), e.clientX - rect.left, e.clientY - rect.top);
+    const factor = 1 + (-e.deltaY * 0.002);
+    scale *= factor;
+    updateTransform();
 });
 
 })();
