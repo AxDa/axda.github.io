@@ -9,27 +9,12 @@
     html, body {
         margin: 0;
         padding: 0;
-        height: 100%;
         background: #111;
-        overflow: hidden;
-        font-family: system-ui;
-    }
-
-    #panzoom-wrapper {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-        background: #111;
-        touch-action: none;
+        overflow: auto;      /* ← MUST BE AUTO, NOT HIDDEN */
     }
 
     #svgObject {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform-origin: 0 0;
-        pointer-events: none;
+        display: block;
         width: auto;
         height: auto;
         max-width: none;
@@ -40,42 +25,10 @@
 
 <body>
 
-<div id="panzoom-wrapper">
-    <embed id="svgObject"
-           type="image/svg+xml"
-           src="Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg">
+<embed id="svgObject"
+       type="image/svg+xml"
+       src="Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg">
 </embed>
-</div>
-
-<script>
-(function() {
-
-const wrapper = document.getElementById("panzoom-wrapper");
-const svgObject = document.getElementById("svgObject");
-
-let scale = 1;
-let offsetX = 0;
-let offsetY = 0;
-
-svgObject.addEventListener("load", () => {
-    const svg = svgObject.getSVGDocument().querySelector("svg");
-
-    const w = svg.viewBox.baseVal.width;
-    const h = svg.viewBox.baseVal.height;
-
-    svgObject.style.width = w + "px";
-    svgObject.style.height = h + "px";
-
-    updateTransform();
-});
-
-function updateTransform() {
-    svgObject.style.transform =
-        `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
-}
-
-})();
-</script>
 
 </body>
 </html>
