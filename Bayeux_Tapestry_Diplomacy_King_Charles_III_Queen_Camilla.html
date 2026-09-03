@@ -56,34 +56,10 @@ header {
     background: #444;
   }
 
-  main {
-      flex: 1;
-      overflow: visible;  /* <- FIX */
-      background: #111;
-      touch-action: none;
-      position: relative;
-  }
-
-  #panzoom-wrapper {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      overflow: visible;     /* ← FIX */
-  }
-
   #panzoom-content {
       transform-origin: 0 0;
       will-change: transform;
   }
-
-  object {
-      width: 100%;
-      height: 100%;
-      display: block;
-      pointer-events: none;
-  }
-
-
 
   #zoom-controls {
     position: absolute;
@@ -172,10 +148,19 @@ header {
 </main>
 
 <style>
+
+  main {
+    flex: 1;
+    overflow: visible;
+    background: #111;
+    touch-action: none;
+    position: relative;
+}
+  
   body, html {
     margin: 0;
     height: 100%;
-    overflow: hidden;
+    overflow: visible;
     background: #111;
   }
 
