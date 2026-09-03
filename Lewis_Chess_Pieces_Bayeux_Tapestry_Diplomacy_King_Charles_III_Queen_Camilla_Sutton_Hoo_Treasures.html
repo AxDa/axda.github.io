@@ -788,6 +788,100 @@
 <script>
 (function() {
 
+const svg = document.getElementById("svg29961");
+
+let scale = 1;
+let offsetX = 0;
+let offsetY = 0;
+
+function updateTransform() {
+    svg.style.transform =
+        `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+    svg.style.transformOrigin = "0 0";
+}
+
+/* ---------------------------
+   MOUSE WHEEL ZOOM
+----------------------------*/
+window.addEventListener("wheel", e => {
+    e.preventDefault();
+
+    const factor = 1 + (-e.deltaY * 0.002);
+    scale *= factor;
+
+    updateTransform();
+}, { passive: false });
+
+/* ---------------------------
+   DRAG PAN (mouse + touch)
+----------------------------*/
+let dragging = false;
+let lastX = 0, lastY = 0;
+
+window.addEventListener("pointerdown", e => {
+    dragging = true;
+    lastX = e.clientX;
+    lastY = e.clientY;
+});
+
+window.addEventListener("pointermove", e => {
+    if (!dragging) return;
+
+    offsetX += (e.clientX - lastX);
+    offsetY += (e.clientY - lastY);
+
+    lastX = e.clientX;
+    lastY = e.clientY;
+
+    updateTransform();
+});
+
+window.addEventListener("pointerup", () => dragging = false);
+
+/* ---------------------------
+   PINCH‑ZOOM (two fingers)
+----------------------------*/
+let pinchStartDist = 0;
+let pinchStartScale = 1;
+let pinchMidX = 0;
+let pinchMidY = 0;
+
+function distance(t1, t2) {
+    const dx = t2.clientX - t1.clientX;
+    const dy = t2.clientY - t1.clientY;
+    return Math.sqrt(dx*dx + dy*dy);
+}
+
+window.addEventListener("touchstart", e => {
+    if (e.touches.length === 2) {
+        pinchStartDist = distance(e.touches[0], e.touches[1]);
+        pinchStartScale = scale;
+
+        pinchMidX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+        pinchMidY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+    }
+}, { passive: false });
+
+window.addEventListener("touchmove", e => {
+    if (e.touches.length === 2) {
+        e.preventDefault();
+
+        const newDist = distance(e.touches[0], e.touches[1]);
+        const factor = newDist / pinchStartDist;
+
+        scale = pinchStartScale * factor;
+
+        updateTransform();
+    }
+}, { passive: false });
+
+})();
+</script>
+
+    
+<script>
+(function() {
+
 const wrapper = document.getElementById("panzoom-wrapper");
 const svgRoot = document.getElementById("svgRoot");
 
