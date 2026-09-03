@@ -23793,6 +23793,42 @@
     "type": "mp3"
  },
 {
+  "title": "Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg",
+  "url_pages": "https://axda.github.io/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg",
+  "url_raw": "https://raw.githubusercontent.com/AxDa/main/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg",
+  "thumbnail_pages": "https://axda.github.io/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla_thumb.png",
+  "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/main/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla_thumb.png",
+  "tags": [
+    "graph",
+    "Bayeux_Tapestry_Diplomacy",
+    "clarity",
+    "pioneer"
+  ],
+  "date": "2026-09-03",
+  "motif": "technical audit",
+  "cluster": "signal",
+  "size": 857669,
+  "type": "svg"
+ },
+ {
+  "title": "Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.html",
+  "url_pages": "https://axda.github.io/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.html",
+  "url_raw": "https://raw.githubusercontent.com/AxDa/main/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.html",
+  "thumbnail_pages": "https://axda.github.io/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla_thumb.png",
+  "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/main/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla_thumb.png",
+  "tags": [
+    "graph",
+    "Bayeux_Tapestry_Diplomacy",
+    "clarity",
+    "pioneer"
+  ],
+  "date": "2026-09-03",
+  "motif": "technical audit",
+  "cluster": "signal",
+  "size": 857669,
+  "type": "html"
+},
+{
   "title": "clamping_date_time_range_bleakst_31_to_02092026_graph16_0026_utc_1_03092026.svg",
   "url_pages": "https://axda.github.io/clamping_date_time_range_bleakst_31_to_02092026_graph16_0026_utc_1_03092026.svg",
   "url_raw": "https://raw.githubusercontent.com/AxDa/main/clamping_date_time_range_bleakst_31_to_02092026_graph16_0026_utc_1_03092026.svg",
@@ -23811,10 +23847,6 @@
     "elevated_capability",
     "archive",
     "technical",
-    "rancidity",
-    "rancidity_realm_clamping",
-    "wypc_log",
-    "clamping",
     "clarity",
     "pioneer"
   ],
@@ -23843,10 +23875,6 @@
     "elevated_capability",
     "archive",
     "technical",
-    "rancidity",
-    "rancidity_realm_clamping",
-    "wypc_log",
-    "clamping",
     "clarity",
     "pioneer"
   ],
