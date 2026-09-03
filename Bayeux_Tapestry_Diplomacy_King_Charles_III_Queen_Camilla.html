@@ -172,9 +172,19 @@ svgObject.addEventListener("load", () => {
     updateViewBox();
 });
 
+function clampViewBox() {
+    if (viewX < vb.x) viewX = vb.x;
+    if (viewY < vb.y) viewY = vb.y;
+    if (viewX + viewW > vb.x + vb.width) viewX = vb.x + vb.width - viewW;
+    if (viewY + viewH > vb.y + vb.height) viewY = vb.y + vb.height - viewH;
+}
+
+
 function updateViewBox() {
+    clampViewBox();
     svg.setAttribute("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`);
 }
+
 
 function zoomAt(factor, cx, cy) {
     const newW = viewW / factor;
