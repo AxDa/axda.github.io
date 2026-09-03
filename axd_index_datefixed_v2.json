@@ -23791,7 +23791,27 @@
     "cluster": "Times_News",
     "size": 647252,
     "type": "mp3"
- },
+},
+{
+  "title": "Lewis_Chess_Pieces_Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla_Sutton_Hoo_Treasures.html",
+  "url_pages": "https://axda.github.io/Lewis_Chess_Pieces_Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla_Sutton_Hoo_Treasures.html",
+  "url_raw": "https://raw.githubusercontent.com/AxDa/main/Lewis_Chess_Pieces_Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla_Sutton_Hoo_Treasures.html",
+  "thumbnail_pages": "https://axda.github.io/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla_thumb.png",
+  "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/main/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla_thumb.png",
+  "tags": [
+    "graph",
+    "Bayeux_Tapestry_Diplomacy",
+    "Sutton_Hoo_Treasures",
+    "Lewis_Chess_Pieces",
+    "clarity",
+    "pioneer"
+  ],
+  "date": "2026-09-03",
+  "motif": "technical audit",
+  "cluster": "signal",
+  "size": 857669,
+  "type": "html"
+},
 {
   "title": "Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg",
   "url_pages": "https://axda.github.io/Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg",
@@ -23801,6 +23821,8 @@
   "tags": [
     "graph",
     "Bayeux_Tapestry_Diplomacy",
+	"Sutton_Hoo_Treasures",
+    "Lewis_Chess_Pieces",
     "clarity",
     "pioneer"
   ],
@@ -23819,6 +23841,8 @@
   "tags": [
     "graph",
     "Bayeux_Tapestry_Diplomacy",
+	"Sutton_Hoo_Treasures",
+    "Lewis_Chess_Pieces",
     "clarity",
     "pioneer"
   ],
