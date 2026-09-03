@@ -12,26 +12,7 @@
         height: 100%;
         background: #111;
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
         font-family: system-ui;
-    }
-
-    header {
-        padding: 0.5rem 1rem;
-        background: #222;
-        color: #ddd;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    main {
-        flex: 1;
-        position: relative;
-        overflow: hidden;
-        background: #111;
-        touch-action: none;
     }
 
     #panzoom-wrapper {
@@ -39,6 +20,8 @@
         height: 100%;
         overflow: hidden;
         position: relative;
+        background: #111;
+        touch-action: none;
     }
 
     #svgObject {
@@ -47,55 +30,22 @@
         left: 0;
         transform-origin: 0 0;
         pointer-events: none;
-    }
-
-    #zoom-controls {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 20;
-        display: flex;
-        gap: 6px;
-    }
-
-    #zoom-controls button {
-        padding: 6px 10px;
-        font-size: 18px;
-        background: #222;
-        color: #eee;
-        border: 1px solid #444;
-        border-radius: 4px;
-        cursor: pointer;
+        width: auto;
+        height: auto;
+        max-width: none;
+        max-height: none;
     }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Storyboard Viewer</h1>
-    <div class="controls">
-        <button onclick="location.reload()">Refresh</button>
-        <button onclick="window.location.href='https://axda.github.io/Blu/axd_archive_index_2.html'">
-            Back to Archive Index
-        </button>
-    </div>
-</header>
-
-<main>
-
-    <div id="zoom-controls">
-        <button id="zoom-in">+</button>
-        <button id="zoom-out">−</button>
-        <button id="zoom-reset">⟳</button>
-    </div>
-
-    <div id="panzoom-wrapper">
-        <object id="svgObject" type="image/svg+xml"
-                data="Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg"></object>
-    </div>
-
-</main>
+<div id="panzoom-wrapper">
+    <embed id="svgObject"
+           type="image/svg+xml"
+           src="Bayeux_Tapestry_Diplomacy_King_Charles_III_Queen_Camilla.svg">
+</embed>
+</div>
 
 <script>
 (function() {
@@ -108,7 +58,7 @@ let offsetX = 0;
 let offsetY = 0;
 
 svgObject.addEventListener("load", () => {
-    const svg = svgObject.contentDocument.querySelector("svg");
+    const svg = svgObject.getSVGDocument().querySelector("svg");
 
     const w = svg.viewBox.baseVal.width;
     const h = svg.viewBox.baseVal.height;
@@ -123,50 +73,6 @@ function updateTransform() {
     svgObject.style.transform =
         `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
 }
-
-document.getElementById("zoom-in").onclick = () => {
-    scale *= 1.2;
-    updateTransform();
-};
-
-document.getElementById("zoom-out").onclick = () => {
-    scale /= 1.2;
-    updateTransform();
-};
-
-document.getElementById("zoom-reset").onclick = () => {
-    scale = 1;
-    offsetX = 0;
-    offsetY = 0;
-    updateTransform();
-};
-
-let dragging = false;
-let lastX = 0, lastY = 0;
-
-wrapper.addEventListener("pointerdown", e => {
-    dragging = true;
-    lastX = e.clientX;
-    lastY = e.clientY;
-});
-
-wrapper.addEventListener("pointermove", e => {
-    if (!dragging) return;
-    offsetX += (e.clientX - lastX);
-    offsetY += (e.clientY - lastY);
-    lastX = e.clientX;
-    lastY = e.clientY;
-    updateTransform();
-});
-
-wrapper.addEventListener("pointerup", () => dragging = false);
-
-wrapper.addEventListener("wheel", e => {
-    e.preventDefault();
-    const factor = 1 + (-e.deltaY * 0.002);
-    scale *= factor;
-    updateTransform();
-});
 
 })();
 </script>
