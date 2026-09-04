@@ -23947,5 +23947,30 @@
   "cluster": "signal",
   "size": 25570889,
   "type": "html"
-}
+},
+{
+    "title": "1_bleakst_bbcreau_harrasment_001500_utc_1_04092026_v0.2.mp3",
+    "url_pages": "https://axda.github.io/1_bleakst_bbcreau_harrasment_001500_utc_1_04092026_v0.2.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleakst_bbcreau_harrasment_001500_utc_1_04092026_v0.2.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleakst_bbcreau_harrasment_001500_utc_1_04092026_v0_2.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleakst_bbcreau_harrasment_001500_utc_1_04092026_v0_2.png",
+    "tags": [
+      "harehills",
+      "wypc_log",
+      "message_in_a_bottle",
+      "bleakst",
+      "bbcreau",
+      "street_sound",
+      "purpotraitorintimidation",
+      "bbcreau_harrasment",
+      "001500",
+      "harrasment",
+      "mp3"
+    ],
+    "date": "2026-09-04",
+    "motif": "civic decay",
+    "cluster": "bbcreau",
+    "size": 1983886,
+    "type": "mp3"
+  }
 ]
