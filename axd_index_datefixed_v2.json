@@ -23358,7 +23358,7 @@
    "date": "2026-08-30",
    "motif": "reference_material",
    "cluster": "documents",
-   "size": 100000,
+   "size": 57800000,
    "type": "doc"
 },
 {
@@ -24282,5 +24282,16 @@
     "cluster": "bbcreau",
     "size": 74447141,
     "type": "mp3"
-  }
+},
+{
+   "title": "2026_Untitled_48_document_wk37_06092026_p0",
+   "url_pages": "https://docs.google.com/document/d/1h8csLRQHIOnS4VbASTjZvm4Zo3mJnJPtf0qEVmrjAZk/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-09-06",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 100000,
+   "type": "doc"
+}
 ]
