@@ -13992,15 +13992,19 @@ function clampTransform() {
     const viewW = rect.width;
     const viewH = rect.height;
 
+    // LEFT boundary (drag SVG rightwards)
     const minX = -(svgW - viewW);
-    const maxX = 0;
+
+    // RIGHT boundary (drag SVG leftwards)
+    const maxX = viewW;   // <-- THIS is the fix
 
     const minY = -(svgH - viewH);
-    const maxY = 0;
+    const maxY = viewH;   // <-- same logic for vertical
 
     offsetX = Math.max(minX, Math.min(maxX, offsetX));
     offsetY = Math.max(minY, Math.min(maxY, offsetY));
 }
+
 
 
     /* ---------------------------
