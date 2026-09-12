@@ -99,29 +99,37 @@
 
 </style>
 
-<div id="camera-controls" style="margin-top:6px;">
-    <strong>Camera ViewBox:</strong>
+<div id="camera-controls" style="margin-top:20px; display:block; clear:both;">
 
-    <!-- Live display -->
+    <strong>Camera ViewBox:</strong>
     <span id="vb-display" style="margin-left:8px; font-family:monospace;">
         (loading…)
     </span>
 
-    <br>
+    <br><br>
 
-    <!-- Manual input -->
     <label for="vb-input">Set X,Y:</label>
     <input id="vb-input" type="text" value="0,0" size="12">
-
     <button id="vb-apply">Set View</button>
 
     <br><br>
 
-    <!-- Presets -->
     <button class="vb-preset" data-center="0,0">Top‑Left</button>
     <button class="vb-preset" data-center="2340.5,4351">Center</button>
     <button class="vb-preset" data-center="4681,8702">Bottom‑Right</button>
+
+    <br><br>
+
+    <div style="font-size:12px; opacity:0.8; margin-top:4px;">
+        <strong>Notation:</strong><br>
+        <em>X</em> = horizontal camera offset (left → right)<br>
+        <em>Y</em> = vertical camera offset (top → bottom)<br>
+        Larger X,Y values move the camera toward the bottom‑right.<br>
+        Width/Height stay fixed; only the camera origin changes.<br>
+    </div>
+
 </div>
+
 
 
 </head>
@@ -14282,13 +14290,7 @@ updateVBDisplay();
 
 
 </script>
-<div style="font-size:12px; opacity:0.8; margin-top:4px;">
-    <strong>Notation:</strong><br>
-    <em>X</em> = horizontal camera offset (left → right)<br>
-    <em>Y</em> = vertical camera offset (top → bottom)<br>
-    Larger X,Y values move the camera toward the bottom‑right.<br>
-    Width/Height stay fixed; only the camera origin changes.<br>
-</div>
+
 
 </body>
 </html>
