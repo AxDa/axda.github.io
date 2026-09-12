@@ -133,6 +133,8 @@ svg {
     <button id="btn-zoom-reset">Reset</button>
     <button id="btn-theme">Theme: dark</button>
     <button id="btn-bg-toggle">SVG BG</button>
+    <button id="btn-bottom-right">Bottom‑Right (force)</button>
+
 </div>
 
 <div id="panzoom-wrapper">
@@ -13940,6 +13942,24 @@ svg {
 </div>
 
 <script>
+function jumpToBottomRight() {
+    const vb = svg.viewBox.baseVal;
+
+    const svgW = vb.width * scale;
+    const svgH = vb.height * scale;
+
+    const rect = wrapper.getBoundingClientRect();
+    const viewW = rect.width;
+    const viewH = rect.height;
+
+    // Position so bottom‑right of SVG is in view
+    offsetX = -(svgW - viewW);
+    offsetY = -(svgH - viewH);
+
+    updateTransform();
+}
+
+
 (function() {
 
     const wrapper = document.getElementById("panzoom-wrapper");
@@ -13965,6 +13985,7 @@ svg {
     const btnZoomReset = document.getElementById("btn-zoom-reset");
     const btnTheme     = document.getElementById("btn-theme");
     const btnBgToggle  = document.getElementById("btn-bg-toggle");
+ document.getElementById("btn-bottom-right").onclick = jumpToBottomRight;
 
     const minimapContainer = document.getElementById("minimap-container");
     const minimapSvg       = document.getElementById("minimap-svg");
@@ -14003,6 +14024,22 @@ function clampTransform() {
 
     offsetX = Math.max(minX, Math.min(maxX, offsetX));
     offsetY = Math.max(minY, Math.min(maxY, offsetY));
+}
+function jumpToBottomRight() {
+    const vb = svg.viewBox.baseVal;
+
+    const svgW = vb.width * scale;
+    const svgH = vb.height * scale;
+
+    const rect = wrapper.getBoundingClientRect();
+    const viewW = rect.width;
+    const viewH = rect.height;
+
+    // Position so bottom‑right of SVG is in view
+    offsetX = -(svgW - viewW);
+    offsetY = -(svgH - viewH);
+
+    updateTransform();
 }
 
 
