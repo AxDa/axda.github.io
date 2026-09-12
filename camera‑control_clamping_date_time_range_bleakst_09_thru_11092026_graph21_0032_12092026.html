@@ -13970,6 +13970,10 @@ svg {
     const minimapSvg       = document.getElementById("minimap-svg");
     const minimapViewport  = document.getElementById("minimap-viewport");
 
+    const vbDisplay = document.getElementById("vb-display");
+    const vbInput   = document.getElementById("vb-input");
+    const vbApply   = document.getElementById("vb-apply");
+
     let svgBgOn = true;
 
     function updateTransform() {
@@ -14243,9 +14247,7 @@ svg {
     /* ---------------------------
        CAMERA CONTROLS (offset‑based)
     ----------------------------*/
-    const vbDisplay = document.getElementById("vb-display");
-    const vbInput   = document.getElementById("vb-input");
-    const vbApply   = document.getElementById("vb-apply");
+
 
     function updateVBDisplay() {
         vbDisplay.textContent =
