@@ -14054,22 +14054,26 @@ svg {
         updateVBDisplay();
     }
 
-    function clampTransform() {
-        const rect = wrapper.getBoundingClientRect();
-        const w = rect.width;
-        const h = rect.height;
+function clampTransform() {
+    const vb = svg.viewBox.baseVal;
 
-        const svgWidth  = w * scale;
-        const svgHeight = h * scale;
+    const svgW = vb.width * scale;
+    const svgH = vb.height * scale;
 
-        const minX = -svgWidth;
-        const maxX = w;
-        const minY = -svgHeight;
-        const maxY = h;
+    const rect = wrapper.getBoundingClientRect();
+    const viewW = rect.width;
+    const viewH = rect.height;
 
-        offsetX = Math.max(minX, Math.min(maxX, offsetX));
-        offsetY = Math.max(minY, Math.min(maxY, offsetY));
-    }
+    const minX = -(svgW - viewW);
+    const maxX = 0;
+
+    const minY = -(svgH - viewH);
+    const maxY = 0;
+
+    offsetX = Math.max(minX, Math.min(maxX, offsetX));
+    offsetY = Math.max(minY, Math.min(maxY, offsetY));
+}
+
 
     /* ZOOM AT CURSOR */
     wrapper.addEventListener("wheel", e => {
