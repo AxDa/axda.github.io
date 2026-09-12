@@ -99,7 +99,7 @@
 
 </style>
 
-<div id="camera-drawer" style="margin-top:20px;">
+<div id="camera-drawer" style="margin-top:40px;">
 
     <!-- Drawer Toggle -->
     <div id="camera-toggle"
@@ -14235,6 +14235,56 @@
         svgBgOn = !svgBgOn;
         svg.style.background = svgBgOn ? "transparent" : "rgba(0,0,0,0.7)";
     };
+
+   // === Camera Controls ===
+     // === Drawer Toggle ===
+   const drawerToggle = document.getElementById("camera-toggle");
+   const drawerContent = document.getElementById("camera-controls");
+
+   drawerToggle.onclick = () => {
+               const isOpen = drawerContent.style.display === "block";
+              drawerContent.style.display = isOpen ? "none" : "block";
+             drawerToggle.textContent = isOpen
+                     ? "[ Camera Controls ▼ ]"
+                     : "[ Camera Controls ▲ ]";
+   };
+
+         // === Camera Controls ===
+   const vbDisplay = document.getElementById("vb-display");
+   const vbInput   = document.getElementById("vb-input");
+   const vbApply   = document.getElementById("vb-apply");
+
+     // Update live display
+   function updateVBDisplay() {
+          const vb = svg.viewBox.baseVal;
+                  vbDisplay.textContent =
+                             `${vb.x.toFixed(2)}, ${vb.y.toFixed(2)}  |  ${vb.width} × ${vb.height}`;
+                  vbInput.value = `${vb.x.toFixed(2)},${vb.y.toFixed(2)}`;
+}
+
+// Apply manual input
+    vbApply.onclick = () => {
+                       const vb = svg.viewBox.baseVal;
+                       const [x, y] = vbInput.value.split(",").map(Number);
+                      svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
+                      updateVBDisplay();
+                      btnRefresh.click(); // your existing refresh button
+};
+
+// Preset buttons
+  document.querySelectorAll(".vb-preset").forEach(btn => {
+             btn.onclick = () => {
+                     const vb = svg.viewBox.baseVal;
+                    const [x, y] = btn.dataset.center.split(",").map(Number);
+                    svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
+                    updateVBDisplay();
+                    btnRefresh.click();
+           };
+});
+
+// Initialize display
+  updateVBDisplay();
+
 
     /* ---------------------------
        MINIMAP (clone SVG)
