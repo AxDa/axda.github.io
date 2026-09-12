@@ -6,143 +6,154 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden;
-    }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
 
-   /* body.dark {
-        background: #111;
-        color: #eee;
-    } */
+body.dark {
+    background: #111;
+    color: #eee;
+}
 
-    body.light {
-        background: #f5f5f5;
-        color: #222;
-    }
+body.light {
+    background: #f5f5f5;
+    color: #222;
+}
 
-    #panzoom-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        touch-action: none;
-        overflow: hidden;
-    }
+#panzoom-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    overflow: hidden;
+}
 
-    #panzoom-wrapper svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform-origin: 0 0;
-        display: block;
-        transition: transform 0.08s ease-out;
-    }
+#panzoom-wrapper svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    display: block;
+}
 
-    .controls {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 9999;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-    }
+/* Top controls */
+.controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
 
-    .controls button {
-        padding: 6px 10px;
-        font-size: 13px;
-        border-radius: 4px;
-        border: none;
-        cursor: pointer;
-    }
+.controls button {
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
 
-      body.dark svg {
-        filter: none;
-    }
+/* Minimap */
+#minimap-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 160px;
+    height: 120px;
+    border: 1px solid #666;
+    background: rgba(0,0,0,0.4);
+    z-index: 9998;
+    overflow: hidden;
+}
 
-        body.light svg {
-        filter: invert(1) hue-rotate(180deg);
-    }
+#minimap-svg {
+    width: 100%;
+    height: 100%;
+}
 
+#minimap-viewport {
+    position: absolute;
+    border: 1px solid #ff0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
 
-    /* Minimap */
-    #minimap-container {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        width: 160px;
-        height: 120px;
-        border: 1px solid #666;
-        background: rgba(0,0,0,0.4);
-        z-index: 9998;
-        overflow: hidden;
-    }
+svg {
+    background: transparent;
+}
 
-    #minimap-svg {
-        width: 100%;
-        height: 100%;
-    }
+/* Floating camera drawer (right side) */
+#camera-drawer {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    width: 260px;
+    z-index: 9999;
+    font-size: 13px;
+    background: rgba(0,0,0,0.75);
+    color: #eee;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
 
-    #minimap-viewport {
-        position: absolute;
-        border: 1px solid #ff0;
-        box-sizing: border-box;
-        pointer-events: none;
-    }
+/* Drawer header */
+#camera-drawer-header {
+    padding: 6px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(20,20,20,0.95);
+}
 
-    svg {
-        background: transparent;
-        filter: invert(1) hue-rotate(180deg);
-    }
+#camera-drawer-header span {
+    font-weight: bold;
+}
+
+#camera-drawer-arrow {
+    font-size: 12px;
+}
+
+/* Drawer content (animated) */
+#camera-drawer-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+    padding: 0 10px;
+}
+
+#camera-drawer-content.open {
+    max-height: 260px; /* enough for content */
+    opacity: 1;
+    padding-bottom: 10px;
+}
+
+/* Inputs/buttons inside drawer */
+#camera-drawer-content input {
+    font-size: 12px;
+    padding: 3px 5px;
+    margin-top: 4px;
+}
+
+#camera-drawer-content button {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
 
 </style>
-
-<div id="camera-drawer" style="margin-top:40px;">
-
-    <!-- Drawer Toggle -->
-    <div id="camera-toggle"
-         style="cursor:pointer; font-weight:bold; padding:6px 0;">
-        [ Camera Controls ▼ ]
-    </div>
-
-    <!-- Drawer Content -->
-    <div id="camera-controls"
-         style="display:none; padding:10px 0; border-top:1px solid #444;">
-
-        <strong>Camera ViewBox:</strong>
-        <span id="vb-display"
-              style="margin-left:8px; font-family:monospace;">
-            (loading…)
-        </span>
-
-        <br><br>
-
-        <label for="vb-input">Set X,Y:</label>
-        <input id="vb-input" type="text" value="0,0" size="12">
-        <button id="vb-apply">Set View</button>
-
-        <br><br>
-
-        <button class="vb-preset" data-center="0,0">Top‑Left</button>
-        <button class="vb-preset" data-center="2340.5,4351">Center</button>
-        <button class="vb-preset" data-center="4681,8702">Bottom‑Right</button>
-
-        <br><br>
-
-        <div style="font-size:12px; opacity:0.8; margin-top:4px;">
-            <strong>Notation:</strong><br>
-            <em>X</em> = horizontal camera offset (left → right)<br>
-            <em>Y</em> = vertical camera offset (top → bottom)<br>
-            Larger X,Y values move the camera toward the bottom‑right.<br>
-            Width/Height stay fixed; only the camera origin changes.<br>
-        </div>
-
-    </div>
-</div>
-
-
 
 </head>
 
@@ -157,6 +168,43 @@
     <button id="btn-theme">Theme: dark</button>
     <button id="btn-bg-toggle">SVG BG</button>
 </div>
+
+<div id="camera-drawer">
+    <div id="camera-drawer-header">
+        <span>[ Camera Controls ]</span>
+        <span id="camera-drawer-arrow">▼</span>
+    </div>
+
+    <div id="camera-drawer-content">
+        <div style="margin-top:8px;">
+            <strong>Camera (offset/scale):</strong><br>
+            <span id="vb-display" style="font-family:monospace;">
+                (loading…)
+            </span>
+        </div>
+
+        <div style="margin-top:8px;">
+            <label for="vb-input">Set offsetX,offsetY:</label><br>
+            <input id="vb-input" type="text" value="0,0" size="14">
+            <button id="vb-apply">Apply</button>
+        </div>
+
+        <div style="margin-top:8px;">
+            <button class="vb-preset" data-center="0,0">Top‑Left</button>
+            <button class="vb-preset" data-center="2340.5,4351">Center</button>
+            <button class="vb-preset" data-center="4681,8702">Bottom‑Right</button>
+        </div>
+
+        <div style="font-size:11px; opacity:0.8; margin-top:8px;">
+            <strong>Notation:</strong><br>
+            <em>offsetX</em> = horizontal camera shift (left → right)<br>
+            <em>offsetY</em> = vertical camera shift (top → bottom)<br>
+            Larger X,Y move the camera toward the bottom‑right.<br>
+            Scale stays fixed unless you zoom.
+        </div>
+    </div>
+</div>
+
 
 <div id="panzoom-wrapper">
     <!-- ⭐ INLINE YOUR SVG HERE ⭐ -->
@@ -13967,7 +14015,7 @@
 
     const wrapper = document.getElementById("panzoom-wrapper");
     const svg = wrapper.querySelector("svg");
-    if (!svg) return; // no SVG yet
+    if (!svg) return;
 
     let scale = 1;
     let offsetX = 0;
@@ -13999,6 +14047,7 @@
         svg.style.transform =
             `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
         updateMinimapViewport();
+        updateVBDisplay();
     }
 
     function clampTransform() {
@@ -14009,18 +14058,16 @@
         const svgWidth  = w * scale;
         const svgHeight = h * scale;
 
-        const minX = -svgWidth * 0.8;
-        const maxX = w * 0.8;
-        const minY = -svgHeight * 0.8;
-        const maxY = h * 0.8;
+        const minX = -svgWidth;
+        const maxX = w;
+        const minY = -svgHeight;
+        const maxY = h;
 
         offsetX = Math.max(minX, Math.min(maxX, offsetX));
         offsetY = Math.max(minY, Math.min(maxY, offsetY));
     }
 
-    /* ---------------------------
-       ZOOM AT CURSOR (mouse wheel)
-    ----------------------------*/
+    /* ZOOM AT CURSOR */
     wrapper.addEventListener("wheel", e => {
         e.preventDefault();
 
@@ -14042,9 +14089,7 @@
         updateTransform();
     }, { passive: false });
 
-    /* ---------------------------
-       DRAG PAN (mouse + touch)
-    ----------------------------*/
+    /* DRAG PAN */
     wrapper.addEventListener("pointerdown", e => {
         isDragging = true;
         inertiaActive = false;
@@ -14077,9 +14122,7 @@
         startInertia();
     });
 
-    /* ---------------------------
-       INERTIA / MOMENTUM
-    ----------------------------*/
+    /* INERTIA */
     function startInertia() {
         if (inertiaActive) return;
         inertiaActive = true;
@@ -14103,9 +14146,7 @@
         requestAnimationFrame(step);
     }
 
-    /* ---------------------------
-       PINCH ZOOM (Android + iOS)
-    ----------------------------*/
+    /* PINCH ZOOM */
     let pinchStartDist = 0;
     let pinchStartScale = 1;
 
@@ -14142,9 +14183,7 @@
         }
     }, { passive: false });
 
-    /* ---------------------------
-       DOUBLE‑TAP ZOOM
-    ----------------------------*/
+    /* DOUBLE‑TAP ZOOM */
     let lastTapTime = 0;
     wrapper.addEventListener("touchend", e => {
         const now = Date.now();
@@ -14172,9 +14211,7 @@
         }
     });
 
-    /* ---------------------------
-       ZOOM BUTTONS
-    ----------------------------*/
+    /* ZOOM BUTTONS */
     function zoomAtCenter(factor) {
         const rect = wrapper.getBoundingClientRect();
         const cx = rect.width / 2;
@@ -14204,17 +14241,13 @@
         updateTransform();
     };
 
-    /* ---------------------------
-       REFRESH + BACK
-    ----------------------------*/
-    btnRefresh.onclick = () => location.reload();
+    /* REFRESH + BACK */
+    btnRefresh.onclick = () => updateTransform(); // no reload
     btnBack.onclick = () => {
         window.location.href = "https://axda.github.io/Blu/axd_archive_index_2.html";
     };
 
-    /* ---------------------------
-       THEME SWITCHER
-    ----------------------------*/
+    /* THEME SWITCHER */
     btnTheme.onclick = () => {
         const body = document.body;
         if (body.classList.contains("dark")) {
@@ -14228,67 +14261,13 @@
         }
     };
 
-    /* ---------------------------
-       SVG BACKGROUND TOGGLE
-    ----------------------------*/
+    /* SVG BACKGROUND TOGGLE */
     btnBgToggle.onclick = () => {
         svgBgOn = !svgBgOn;
         svg.style.background = svgBgOn ? "transparent" : "rgba(0,0,0,0.7)";
     };
 
-   // === Camera Controls ===
-     // === Drawer Toggle ===
-   const drawerToggle = document.getElementById("camera-toggle");
-   const drawerContent = document.getElementById("camera-controls");
-
-   drawerToggle.onclick = () => {
-               const isOpen = drawerContent.style.display === "block";
-              drawerContent.style.display = isOpen ? "none" : "block";
-             drawerToggle.textContent = isOpen
-                     ? "[ Camera Controls ▼ ]"
-                     : "[ Camera Controls ▲ ]";
-   };
-
-         // === Camera Controls ===
-   const vbDisplay = document.getElementById("vb-display");
-   const vbInput   = document.getElementById("vb-input");
-   const vbApply   = document.getElementById("vb-apply");
-
-     // Update live display
-   function updateVBDisplay() {
-          const vb = svg.viewBox.baseVal;
-                  vbDisplay.textContent =
-                             `${vb.x.toFixed(2)}, ${vb.y.toFixed(2)}  |  ${vb.width} × ${vb.height}`;
-                  vbInput.value = `${vb.x.toFixed(2)},${vb.y.toFixed(2)}`;
-}
-
-// Apply manual input
-    vbApply.onclick = () => {
-                       const vb = svg.viewBox.baseVal;
-                       const [x, y] = vbInput.value.split(",").map(Number);
-                      svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
-                      updateVBDisplay();
-                      btnRefresh.click(); // your existing refresh button
-};
-
-// Preset buttons
-  document.querySelectorAll(".vb-preset").forEach(btn => {
-             btn.onclick = () => {
-                     const vb = svg.viewBox.baseVal;
-                    const [x, y] = btn.dataset.center.split(",").map(Number);
-                    svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
-                    updateVBDisplay();
-                    btnRefresh.click();
-           };
-});
-
-// Initialize display
-  updateVBDisplay();
-
-
-    /* ---------------------------
-       MINIMAP (clone SVG)
-    ----------------------------*/
+    /* MINIMAP */
     function initMinimap() {
         const clone = svg.cloneNode(true);
         clone.removeAttribute("id");
@@ -14313,60 +14292,53 @@
     initMinimap();
     updateTransform();
 
+    /* CAMERA DRAWER (animated) */
+    const drawer       = document.getElementById("camera-drawer");
+    const drawerHeader = document.getElementById("camera-drawer-header");
+    const drawerArrow  = document.getElementById("camera-drawer-arrow");
+    const drawerContent= document.getElementById("camera-drawer-content");
 
+    const vbDisplay = document.getElementById("vb-display");
+    const vbInput   = document.getElementById("vb-input");
+    const vbApply   = document.getElementById("vb-apply");
 
-// === Camera Controls ===
-// === Drawer Toggle ===
-        const drawerToggle = document.getElementById("camera-toggle");
-        const drawerContent = document.getElementById("camera-controls");
+    function updateVBDisplay() {
+        if (!vbDisplay || !vbInput) return;
+        vbDisplay.textContent =
+            `offsetX=${offsetX.toFixed(1)}, offsetY=${offsetY.toFixed(1)}, scale=${scale.toFixed(2)}`;
+        vbInput.value = `${offsetX.toFixed(1)},${offsetY.toFixed(1)}`;
+    }
 
-        drawerToggle.onclick = () => {
-            const isOpen = drawerContent.style.display === "block";
-            drawerContent.style.display = isOpen ? "none" : "block";
-            drawerToggle.textContent = isOpen
-                ? "[ Camera Controls ▼ ]"
-                : "[ Camera Controls ▲ ]";
+    drawerHeader.onclick = () => {
+        const isOpen = drawerContent.classList.toggle("open");
+        drawerArrow.textContent = isOpen ? "▲" : "▼";
+    };
+
+    vbApply.onclick = () => {
+        const [x, y] = vbInput.value.split(",").map(Number);
+        if (isNaN(x) || isNaN(y)) return;
+        offsetX = x;
+        offsetY = y;
+        clampTransform();
+        updateTransform();
+    };
+
+    document.querySelectorAll(".vb-preset").forEach(btn => {
+        btn.onclick = () => {
+            const [x, y] = btn.dataset.center.split(",").map(Number);
+            // map logical SVG coords to camera offsets (tune factor as needed)
+            offsetX = -x / 2;
+            offsetY = -y / 2;
+            clampTransform();
+            updateTransform();
         };
+    });
 
-// === Camera Controls ===
-          const vbDisplay = document.getElementById("vb-display");
-          const vbInput   = document.getElementById("vb-input");
-          const vbApply   = document.getElementById("vb-apply");
-
-// Update live display
-      function updateVBDisplay() {
-          const vb = svg.viewBox.baseVal;
-          vbDisplay.textContent =
-              `${vb.x.toFixed(2)}, ${vb.y.toFixed(2)}  |  ${vb.width} × ${vb.height}`;
-          vbInput.value = `${vb.x.toFixed(2)},${vb.y.toFixed(2)}`;
-      }
-
-// Apply manual input
-      vbApply.onclick = () => {
-          const vb = svg.viewBox.baseVal;
-          const [x, y] = vbInput.value.split(",").map(Number);
-          svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
-          updateVBDisplay();
-          btnRefresh.click(); // your existing refresh button
-      };
-
-// Preset buttons
-  document.querySelectorAll(".vb-preset").forEach(btn => {
-      btn.onclick = () => {
-          const vb = svg.viewBox.baseVal;
-          const [x, y] = btn.dataset.center.split(",").map(Number);
-          svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
-          updateVBDisplay();
-          btnRefresh.click();
-      };
-  });
-
-// Initialize display
-updateVBDisplay();
+    updateVBDisplay();
 
 })();
-
 </script>
+
 
 
 </body>
