@@ -99,7 +99,7 @@
 
 </style>
 
-<div id="camera-controls" style="margin-top:20px; display:block; clear:both;">
+<div id="camera-controls" style="margin-top:30px; display:block; clear:both;">
 
     <strong>Camera ViewBox:</strong>
     <span id="vb-display" style="margin-left:8px; font-family:monospace;">
@@ -14224,6 +14224,41 @@
         svg.style.background = svgBgOn ? "transparent" : "rgba(0,0,0,0.7)";
     };
 
+   // === Camera Controls ===
+   const vbDisplay = document.getElementById("vb-display");
+   const vbInput   = document.getElementById("vb-input");
+   const vbApply   = document.getElementById("vb-apply");
+
+   // Update live display
+   function updateVBDisplay() {
+       const vb = svg.viewBox.baseVal;
+       vbDisplay.textContent = `${vb.x.toFixed(2)}, ${vb.y.toFixed(2)}  |  ${vb.width} × ${vb.height}`;
+       vbInput.value = `${vb.x.toFixed(2)},${vb.y.toFixed(2)}`;
+   }
+
+   // Apply manual input
+   vbApply.onclick = () => {
+       const vb = svg.viewBox.baseVal;
+       const [x, y] = vbInput.value.split(",").map(Number);
+       svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
+       updateVBDisplay();
+       btnRefresh.click(); // use your existing refresh button
+   };
+
+   // Preset buttons
+   document.querySelectorAll(".vb-preset").forEach(btn => {
+       btn.onclick = () => {
+           const vb = svg.viewBox.baseVal;
+           const [x, y] = btn.dataset.center.split(",").map(Number);
+           svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
+           updateVBDisplay();
+           btnRefresh.click();
+       };
+   });
+
+   // Initialize display once SVG is ready
+   updateVBDisplay();
+
     /* ---------------------------
        MINIMAP (clone SVG)
     ----------------------------*/
@@ -14253,40 +14288,7 @@
 
 })();
 
-// === Camera Controls ===
-const vbDisplay = document.getElementById("vb-display");
-const vbInput   = document.getElementById("vb-input");
-const vbApply   = document.getElementById("vb-apply");
 
-// Update live display
-function updateVBDisplay() {
-    const vb = svg.viewBox.baseVal;
-    vbDisplay.textContent = `${vb.x.toFixed(2)}, ${vb.y.toFixed(2)}  |  ${vb.width} × ${vb.height}`;
-    vbInput.value = `${vb.x.toFixed(2)},${vb.y.toFixed(2)}`;
-}
-
-// Apply manual input
-vbApply.onclick = () => {
-    const vb = svg.viewBox.baseVal;
-    const [x, y] = vbInput.value.split(",").map(Number);
-    svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
-    updateVBDisplay();
-    btnRefresh.click(); // use your existing refresh button
-};
-
-// Preset buttons
-document.querySelectorAll(".vb-preset").forEach(btn => {
-    btn.onclick = () => {
-        const vb = svg.viewBox.baseVal;
-        const [x, y] = btn.dataset.center.split(",").map(Number);
-        svg.setAttribute("viewBox", `${x} ${y} ${vb.width} ${vb.height}`);
-        updateVBDisplay();
-        btnRefresh.click();
-    };
-});
-
-// Initialize display once SVG is ready
-updateVBDisplay();
 
 
 </script>
