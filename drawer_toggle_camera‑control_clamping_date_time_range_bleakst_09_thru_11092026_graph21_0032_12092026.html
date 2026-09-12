@@ -14041,6 +14041,10 @@ svg {
     const minimapSvg       = document.getElementById("minimap-svg");
     const minimapViewport  = document.getElementById("minimap-viewport");
 
+    const vbDisplay = document.getElementById("vb-display");
+    const vbInput   = document.getElementById("vb-input");
+    const vbApply   = document.getElementById("vb-apply");
+
     let svgBgOn = true;
 
     function updateTransform() {
@@ -14298,9 +14302,7 @@ svg {
     const drawerArrow  = document.getElementById("camera-drawer-arrow");
     const drawerContent= document.getElementById("camera-drawer-content");
 
-    const vbDisplay = document.getElementById("vb-display");
-    const vbInput   = document.getElementById("vb-input");
-    const vbApply   = document.getElementById("vb-apply");
+
 
     function updateVBDisplay() {
         if (!vbDisplay || !vbInput) return;
