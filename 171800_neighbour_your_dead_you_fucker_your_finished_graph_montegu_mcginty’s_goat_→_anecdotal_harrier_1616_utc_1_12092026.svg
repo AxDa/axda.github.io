@@ -1,0 +1,553 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5742pt" height="394pt" viewBox="0.00 0.00 5742.00 394.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 389.89)">
+<title>BluConstellation</title>
+<polygon fill="black" stroke="none" points="-4,4 -4,-389.89 5738,-389.89 5738,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="2867" y="-362.09" font-family="Helvetica,sans-Serif" font-size="22.00" fill="white">Blu Constellation: Goat Folklore × Bleakst Vernacular × Perambulator × Street_Comms_Neighbours</text>
+<g id="clust1" class="cluster">
+<title>cluster_street</title>
+<polygon fill="#222222" stroke="#222222" points="8,-149.74 8,-236.14 3116,-236.14 3116,-149.74 8,-149.74"/>
+<text xml:space="preserve" text-anchor="middle" x="1562" y="-212.34" font-family="Helvetica,sans-Serif" font-size="22.00" fill="white">Cluster: street_comms_neighbours</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_tags</title>
+<polygon fill="#111111" stroke="#111111" points="3506,-149.74 3506,-236.14 5726,-236.14 5726,-149.74 3506,-149.74"/>
+<text xml:space="preserve" text-anchor="middle" x="4616" y="-212.34" font-family="Helvetica,sans-Serif" font-size="22.00" fill="white">Tag Constellation (Vernacular Motifs)</text>
+</g>
+<!-- Goat -->
+<g id="node1" class="node">
+<title>Goat</title>
+<ellipse fill="#333300" stroke="black" stroke-width="2" cx="3213" cy="-175.74" rx="82.94" ry="82.94"/>
+<ellipse fill="none" stroke="black" stroke-width="2" cx="3213" cy="-175.74" rx="86.94" ry="86.94"/>
+<text xml:space="preserve" text-anchor="middle" x="3213" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">McGinty’s Goat</text>
+</g>
+<!-- Anecdotal -->
+<g id="node39" class="node">
+<title>Anecdotal</title>
+<polygon fill="#222222" stroke="black" points="3213,-36 3138.16,-18 3213,0 3287.84,-18 3213,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="3213" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">anecdotal</text>
+</g>
+<!-- Goat&#45;&gt;Anecdotal -->
+<g id="edge42" class="edge">
+<title>Goat-&gt;Anecdotal</title>
+<path fill="none" stroke="#666666" d="M3213,-88.67C3213,-73.84 3213,-59.42 3213,-47.57"/>
+<polygon fill="#666666" stroke="#666666" points="3216.5,-47.77 3213,-37.77 3209.5,-47.77 3216.5,-47.77"/>
+<text xml:space="preserve" text-anchor="middle" x="3254.59" y="-58.2" font-family="Times,serif" font-size="14.00">comic-folklore</text>
+</g>
+<!-- Bleakst171800 -->
+<g id="node2" class="node">
+<title>Bleakst171800</title>
+<path fill="#660000" stroke="black" d="M2260.62,-351.49C2260.62,-351.49 1535.38,-351.49 1535.38,-351.49 1529.38,-351.49 1523.38,-345.49 1523.38,-339.49 1523.38,-339.49 1523.38,-327.49 1523.38,-327.49 1523.38,-321.49 1529.38,-315.49 1535.38,-315.49 1535.38,-315.49 2260.62,-315.49 2260.62,-315.49 2266.62,-315.49 2272.62,-321.49 2272.62,-327.49 2272.62,-327.49 2272.62,-339.49 2272.62,-339.49 2272.62,-345.49 2266.62,-351.49 2260.62,-351.49"/>
+<text xml:space="preserve" text-anchor="middle" x="1898" y="-329.29" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">1_Bleakst_171800_neighbour_your_dead_you_fucker_your_finished_not_verified_clips_172222_12092026_v0.1.mp3</text>
+</g>
+<!-- Bleakst171800&#45;&gt;Goat -->
+<g id="edge41" class="edge">
+<title>Bleakst171800-&gt;Goat</title>
+<path fill="none" stroke="#006699" d="M2273.06,-324.9C2510.95,-319.07 2795.94,-309.89 2917,-297.49 2962.53,-292.83 3078.95,-282.92 3120,-262.69 3128.67,-258.42 3137.1,-253.08 3145.13,-247.17"/>
+<polygon fill="#006699" stroke="#006699" points="3147.06,-250.1 3152.81,-241.2 3142.76,-244.57 3147.06,-250.1"/>
+<text xml:space="preserve" text-anchor="middle" x="3103.73" y="-284.89" font-family="Times,serif" font-size="14.00">absurdity-contrast</text>
+</g>
+<!-- TagHarehills -->
+<g id="node5" class="node">
+<title>TagHarehills</title>
+<ellipse fill="#444444" stroke="black" cx="63" cy="-175.74" rx="47" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="63" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">harehills</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagHarehills -->
+<g id="edge1" class="edge">
+<title>Bleakst171800-&gt;TagHarehills</title>
+<path fill="none" stroke="#999900" d="M1523.15,-330.98C1129.74,-328.18 537.65,-320.2 311.9,-297.49 225.22,-288.77 191.59,-310.86 119,-262.69 97.94,-248.71 83.02,-223.82 73.9,-204.4"/>
+<polygon fill="#999900" stroke="#999900" points="77.17,-203.13 69.93,-195.4 70.76,-205.96 77.17,-203.13"/>
+<text xml:space="preserve" text-anchor="middle" x="334.45" y="-284.89" font-family="Times,serif" font-size="14.00">location</text>
+</g>
+<!-- TagHillsApts -->
+<g id="node6" class="node">
+<title>TagHillsApts</title>
+<ellipse fill="#444444" stroke="black" cx="215" cy="-175.74" rx="86.72" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="215" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">hills_appartments</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagHillsApts -->
+<g id="edge2" class="edge">
+<title>Bleakst171800-&gt;TagHillsApts</title>
+<path fill="none" stroke="#999900" d="M1522.9,-328.12C1281.43,-323.72 960.93,-314.95 677.9,-297.49 514.41,-287.4 461.07,-328.34 311,-262.69 280.61,-249.39 253.21,-222.66 235.54,-202.52"/>
+<polygon fill="#999900" stroke="#999900" points="238.26,-200.31 229.11,-194.96 232.92,-204.85 238.26,-200.31"/>
+<text xml:space="preserve" text-anchor="middle" x="700.45" y="-284.89" font-family="Times,serif" font-size="14.00">location</text>
+</g>
+<!-- TagCeausescu -->
+<g id="node7" class="node">
+<title>TagCeausescu</title>
+<ellipse fill="#550000" stroke="black" cx="492" cy="-175.74" rx="172.1" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="492" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">ceausescu_frankenstinion_epstionion</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagCeausescu -->
+<g id="edge3" class="edge">
+<title>Bleakst171800-&gt;TagCeausescu</title>
+<path fill="none" stroke="#cc0000" d="M1523.2,-330.3C1259.9,-326.91 931.48,-318.44 796.13,-297.49 696.24,-282.03 588.29,-229.73 531.74,-199.27"/>
+<polygon fill="#cc0000" stroke="#cc0000" points="533.57,-196.29 523.12,-194.58 530.22,-202.43 533.57,-196.29"/>
+<text xml:space="preserve" text-anchor="middle" x="826.07" y="-284.89" font-family="Times,serif" font-size="14.00">dark-motif</text>
+</g>
+<!-- TagRussianD -->
+<g id="node8" class="node">
+<title>TagRussianD</title>
+<ellipse fill="#003366" stroke="black" cx="749" cy="-175.74" rx="67.4" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="749" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">russian_dolls</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagRussianD -->
+<g id="edge4" class="edge">
+<title>Bleakst171800-&gt;TagRussianD</title>
+<path fill="none" stroke="#3366cc" d="M1523.02,-328.61C1303.8,-324.41 1049.34,-315.68 940.13,-297.49 887.4,-288.71 870,-291.54 825,-262.69 801.01,-247.31 780.1,-222.28 766.32,-203.19"/>
+<polygon fill="#3366cc" stroke="#3366cc" points="769.24,-201.26 760.65,-195.07 763.5,-205.27 769.24,-201.26"/>
+<text xml:space="preserve" text-anchor="middle" x="963.07" y="-284.89" font-family="Times,serif" font-size="14.00">layering</text>
+</g>
+<!-- TagBleakst -->
+<g id="node9" class="node">
+<title>TagBleakst</title>
+<ellipse fill="#333333" stroke="black" cx="876" cy="-175.74" rx="41.63" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="876" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">bleakst</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagBleakst -->
+<g id="edge5" class="edge">
+<title>Bleakst171800-&gt;TagBleakst</title>
+<path fill="none" stroke="#666666" d="M1522.97,-322.92C1271.12,-313.53 976.37,-295.65 926,-262.69 905.47,-249.26 892.33,-224.25 884.69,-204.67"/>
+<polygon fill="#666666" stroke="#666666" points="888.01,-203.54 881.33,-195.31 881.42,-205.9 888.01,-203.54"/>
+<text xml:space="preserve" text-anchor="middle" x="1126.15" y="-284.89" font-family="Times,serif" font-size="14.00">identity</text>
+</g>
+<!-- TagStolenLife -->
+<g id="node10" class="node">
+<title>TagStolenLife</title>
+<ellipse fill="#660000" stroke="black" cx="1058" cy="-175.74" rx="122.7" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="1058" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">we_have_stolen_your_life</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagStolenLife -->
+<g id="edge6" class="edge">
+<title>Bleakst171800-&gt;TagStolenLife</title>
+<path fill="none" stroke="#990000" d="M1565.76,-314.99C1416.78,-304.03 1259.19,-287.23 1190,-262.69 1150.75,-248.77 1111.48,-220.99 1086.11,-200.77"/>
+<polygon fill="#990000" stroke="#990000" points="1088.56,-198.25 1078.59,-194.66 1084.14,-203.69 1088.56,-198.25"/>
+<text xml:space="preserve" text-anchor="middle" x="1420.14" y="-284.89" font-family="Times,serif" font-size="14.00">threat-vernacular</text>
+</g>
+<!-- TagDeadFucker -->
+<g id="node12" class="node">
+<title>TagDeadFucker</title>
+<ellipse fill="#990000" stroke="black" cx="1461" cy="-175.74" rx="157.61" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="1461" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">neighbour_your_dead_you_fucker</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagDeadFucker -->
+<g id="edge7" class="edge">
+<title>Bleakst171800-&gt;TagDeadFucker</title>
+<path fill="none" stroke="#ff0000" d="M1718.46,-315.01C1697.07,-310.45 1675.79,-304.72 1655.94,-297.49 1592.31,-274.33 1527.18,-228.65 1490.63,-200.59"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1493.21,-198.16 1483.17,-194.79 1488.92,-203.69 1493.21,-198.16"/>
+<text xml:space="preserve" text-anchor="middle" x="1706.47" y="-284.89" font-family="Times,serif" font-size="14.00">hostile-vernacular</text>
+</g>
+<!-- TagFinished -->
+<g id="node13" class="node">
+<title>TagFinished</title>
+<ellipse fill="#990000" stroke="black" cx="1705" cy="-175.74" rx="68.48" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="1705" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">your_finished</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagFinished -->
+<g id="edge8" class="edge">
+<title>Bleakst171800-&gt;TagFinished</title>
+<path fill="none" stroke="#ff3300" d="M1809.69,-315.1C1798.34,-310.54 1787.4,-304.77 1777.94,-297.49 1746.71,-273.48 1725.93,-231.98 1714.8,-204.44"/>
+<polygon fill="#ff3300" stroke="#ff3300" points="1718.15,-203.42 1711.29,-195.35 1711.62,-205.94 1718.15,-203.42"/>
+<text xml:space="preserve" text-anchor="middle" x="1828.47" y="-284.89" font-family="Times,serif" font-size="14.00">hostile-vernacular</text>
+</g>
+<!-- TagNotVerified -->
+<g id="node14" class="node">
+<title>TagNotVerified</title>
+<ellipse fill="#333333" stroke="black" cx="1852" cy="-175.74" rx="60.96" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="1852" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">not_verified</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagNotVerified -->
+<g id="edge9" class="edge">
+<title>Bleakst171800-&gt;TagNotVerified</title>
+<path fill="none" stroke="#999999" d="M1892.9,-315.23C1885.03,-288.56 1869.82,-237.09 1860.33,-204.96"/>
+<polygon fill="#999999" stroke="#999999" points="1863.74,-204.14 1857.55,-195.54 1857.03,-206.12 1863.74,-204.14"/>
+<text xml:space="preserve" text-anchor="middle" x="1912.92" y="-284.89" font-family="Times,serif" font-size="14.00">uncertain</text>
+</g>
+<!-- TagE_Censor -->
+<g id="node15" class="node">
+<title>TagE_Censor</title>
+<ellipse fill="#003333" stroke="black" cx="2035" cy="-175.74" rx="104.44" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="2035" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">electronic_censorship</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagE_Censor -->
+<g id="edge10" class="edge">
+<title>Bleakst171800-&gt;TagE_Censor</title>
+<path fill="none" stroke="#006666" d="M1922.79,-315.05C1929.64,-309.75 1936.87,-303.68 1943,-297.49 1972.3,-267.9 2000.48,-228.83 2017.76,-203.26"/>
+<polygon fill="#006666" stroke="#006666" points="2020.57,-205.37 2023.21,-195.11 2014.74,-201.48 2020.57,-205.37"/>
+<text xml:space="preserve" text-anchor="middle" x="1987.05" y="-284.89" font-family="Times,serif" font-size="14.00">censorship</text>
+</g>
+<!-- TagFromSaid -->
+<g id="node16" class="node">
+<title>TagFromSaid</title>
+<ellipse fill="#333333" stroke="black" cx="2259" cy="-175.74" rx="101.75" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="2259" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">from_what_was_said</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagFromSaid -->
+<g id="edge11" class="edge">
+<title>Bleakst171800-&gt;TagFromSaid</title>
+<path fill="none" stroke="#999999" d="M1993.19,-315.01C2041.25,-303.96 2099.48,-287.07 2148,-262.69 2180.01,-246.61 2211.86,-220.66 2233.18,-201.47"/>
+<polygon fill="#999999" stroke="#999999" points="2235.52,-204.07 2240.52,-194.74 2230.79,-198.92 2235.52,-204.07"/>
+<text xml:space="preserve" text-anchor="middle" x="2125.97" y="-284.89" font-family="Times,serif" font-size="14.00">reported</text>
+</g>
+<!-- TagConfirmed -->
+<g id="node17" class="node">
+<title>TagConfirmed</title>
+<ellipse fill="#333333" stroke="black" cx="2495" cy="-175.74" rx="116.24" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="2495" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">confirmed_example_test</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagConfirmed -->
+<g id="edge12" class="edge">
+<title>Bleakst171800-&gt;TagConfirmed</title>
+<path fill="none" stroke="#999999" d="M2165.26,-315.04C2233.68,-304.65 2305.98,-288.31 2370,-262.69 2406.86,-247.94 2443.65,-220.76 2467.67,-200.9"/>
+<polygon fill="#999999" stroke="#999999" points="2469.68,-203.79 2475.07,-194.67 2465.17,-198.44 2469.68,-203.79"/>
+<text xml:space="preserve" text-anchor="middle" x="2332.65" y="-284.89" font-family="Times,serif" font-size="14.00">example</text>
+</g>
+<!-- TagLondon -->
+<g id="node18" class="node">
+<title>TagLondon</title>
+<ellipse fill="#333333" stroke="black" cx="2669" cy="-175.74" rx="40.04" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="2669" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">london</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagLondon -->
+<g id="edge13" class="edge">
+<title>Bleakst171800-&gt;TagLondon</title>
+<path fill="none" stroke="#999900" d="M2226.37,-314.99C2400.76,-303.17 2586.09,-285.53 2620,-262.69 2640.24,-249.05 2653.11,-224.07 2660.55,-204.54"/>
+<polygon fill="#999900" stroke="#999900" points="2663.81,-205.83 2663.82,-195.23 2657.21,-203.51 2663.81,-205.83"/>
+<text xml:space="preserve" text-anchor="middle" x="2570.37" y="-284.89" font-family="Times,serif" font-size="14.00">location</text>
+</g>
+<!-- TagClips -->
+<g id="node19" class="node">
+<title>TagClips</title>
+<ellipse fill="#333333" stroke="black" cx="2757" cy="-175.74" rx="30.36" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="2757" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">clips</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagClips -->
+<g id="edge14" class="edge">
+<title>Bleakst171800-&gt;TagClips</title>
+<path fill="none" stroke="#999999" d="M2272.69,-321.36C2403.64,-315.83 2533.7,-308.03 2597,-297.49 2652.2,-288.3 2675.65,-299.27 2718,-262.69 2735.25,-247.79 2745.27,-223.7 2750.82,-204.81"/>
+<polygon fill="#999999" stroke="#999999" points="2754.16,-205.88 2753.34,-195.31 2747.4,-204.08 2754.16,-205.88"/>
+<text xml:space="preserve" text-anchor="middle" x="2708.73" y="-284.89" font-family="Times,serif" font-size="14.00">format</text>
+</g>
+<!-- Tag172222 -->
+<g id="node20" class="node">
+<title>Tag172222</title>
+<ellipse fill="#333333" stroke="black" cx="2849" cy="-175.74" rx="43.26" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="2849" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">172222</text>
+</g>
+<!-- Bleakst171800&#45;&gt;Tag172222 -->
+<g id="edge15" class="edge">
+<title>Bleakst171800-&gt;Tag172222</title>
+<path fill="none" stroke="#999999" d="M2272.91,-324.38C2472.34,-318.69 2685.71,-309.87 2731,-297.49 2762.61,-288.85 2772.13,-285.14 2796,-262.69 2813.63,-246.1 2827.67,-222.39 2836.85,-204.08"/>
+<polygon fill="#999999" stroke="#999999" points="2839.98,-205.64 2841.16,-195.11 2833.67,-202.61 2839.98,-205.64"/>
+<text xml:space="preserve" text-anchor="middle" x="2803.26" y="-284.89" font-family="Times,serif" font-size="14.00">timestamp</text>
+</g>
+<!-- TagFileID -->
+<g id="node21" class="node">
+<title>TagFileID</title>
+<ellipse fill="#333333" stroke="black" cx="3009" cy="-175.74" rx="99.09" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="3009" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">12092026_v0.1.mp3</text>
+</g>
+<!-- Bleakst171800&#45;&gt;TagFileID -->
+<g id="edge16" class="edge">
+<title>Bleakst171800-&gt;TagFileID</title>
+<path fill="none" stroke="#999999" d="M2273.08,-326.5C2509.99,-321.32 2781.39,-312.28 2836,-297.49 2896.75,-281.04 2953.9,-232.27 2984.9,-201.98"/>
+<polygon fill="#999999" stroke="#999999" points="2987.25,-204.58 2991.86,-195.04 2982.31,-199.62 2987.25,-204.58"/>
+<text xml:space="preserve" text-anchor="middle" x="2895.63" y="-284.89" font-family="Times,serif" font-size="14.00">file-id</text>
+</g>
+<!-- MontegueHarrier -->
+<g id="node38" class="node">
+<title>MontegueHarrier</title>
+<ellipse fill="#333333" stroke="black" cx="3407" cy="-175.74" rx="88.87" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="3407" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">Montegue_Harrier</text>
+</g>
+<!-- Bleakst171800&#45;&gt;MontegueHarrier -->
+<g id="edge38" class="edge">
+<title>Bleakst171800-&gt;MontegueHarrier</title>
+<path fill="none" stroke="#3333cc" d="M2273.11,-330.27C2581.46,-326.93 2993.37,-318.53 3158,-297.49 3226.31,-288.76 3247.7,-294.08 3309,-262.69 3338.52,-247.57 3366.36,-221.6 3384.77,-202.15"/>
+<polygon fill="#3333cc" stroke="#3333cc" points="3387.3,-204.57 3391.51,-194.85 3382.15,-199.82 3387.3,-204.57"/>
+<text xml:space="preserve" text-anchor="middle" x="3296.09" y="-284.89" font-family="Times,serif" font-size="14.00">association</text>
+</g>
+<!-- Bleakst1550 -->
+<g id="node3" class="node">
+<title>Bleakst1550</title>
+<path fill="#4d4d4d" stroke="black" d="M4550.01,-351.49C4550.01,-351.49 4227.99,-351.49 4227.99,-351.49 4221.99,-351.49 4215.99,-345.49 4215.99,-339.49 4215.99,-339.49 4215.99,-327.49 4215.99,-327.49 4215.99,-321.49 4221.99,-315.49 4227.99,-315.49 4227.99,-315.49 4550.01,-315.49 4550.01,-315.49 4556.01,-315.49 4562.01,-321.49 4562.01,-327.49 4562.01,-327.49 4562.01,-339.49 4562.01,-339.49 4562.01,-345.49 4556.01,-351.49 4550.01,-351.49"/>
+<text xml:space="preserve" text-anchor="middle" x="4389" y="-329.29" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">Bleakst_neighbours_street_talk_1550_12092026.flac</text>
+</g>
+<!-- Bleakst1550&#45;&gt;Goat -->
+<g id="edge40" class="edge">
+<title>Bleakst1550-&gt;Goat</title>
+<path fill="none" stroke="#0099cc" d="M4215.68,-329.43C3990.85,-324.83 3611.02,-314.8 3472.23,-297.49 3398.62,-288.31 3375.13,-296.29 3309,-262.69 3299.85,-258.04 3290.89,-252.29 3282.35,-245.99"/>
+<polygon fill="#0099cc" stroke="#0099cc" points="3284.51,-243.24 3274.46,-239.89 3280.23,-248.78 3284.51,-243.24"/>
+<text xml:space="preserve" text-anchor="middle" x="3500.61" y="-284.89" font-family="Times,serif" font-size="14.00">motif-link</text>
+</g>
+<!-- TagBusiness -->
+<g id="node22" class="node">
+<title>TagBusiness</title>
+<ellipse fill="#663300" stroke="black" cx="4576" cy="-175.74" rx="107.12" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="4576" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">we’re in the business</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagBusiness -->
+<g id="edge17" class="edge">
+<title>Bleakst1550-&gt;TagBusiness</title>
+<path fill="none" stroke="#ff9900" d="M4409.73,-315.23C4443.09,-287.44 4508.81,-232.7 4546.88,-201"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="4548.86,-203.91 4554.3,-194.82 4544.38,-198.53 4548.86,-203.91"/>
+<text xml:space="preserve" text-anchor="middle" x="4479.02" y="-284.89" font-family="Times,serif" font-size="14.00">vernacular</text>
+</g>
+<!-- TagHatePolice -->
+<g id="node23" class="node">
+<title>TagHatePolice</title>
+<ellipse fill="#990000" stroke="black" cx="4354" cy="-175.74" rx="96.94" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="4354" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">we_hate_policemen</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagHatePolice -->
+<g id="edge18" class="edge">
+<title>Bleakst1550-&gt;TagHatePolice</title>
+<path fill="none" stroke="#cc0000" d="M4380.74,-315.34C4378.31,-309.75 4375.84,-303.45 4374.1,-297.49 4365.11,-266.63 4359.72,-230.09 4356.82,-205.35"/>
+<polygon fill="#cc0000" stroke="#cc0000" points="4360.34,-205.29 4355.76,-195.73 4353.38,-206.06 4360.34,-205.29"/>
+<text xml:space="preserve" text-anchor="middle" x="4397.05" y="-284.89" font-family="Times,serif" font-size="14.00">hostility</text>
+</g>
+<!-- TagDick -->
+<g id="node24" class="node">
+<title>TagDick</title>
+<ellipse fill="#990000" stroke="black" cx="4900" cy="-175.74" rx="63.11" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="4900" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">your_a_dick</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagDick -->
+<g id="edge19" class="edge">
+<title>Bleakst1550-&gt;TagDick</title>
+<path fill="none" stroke="#cc0000" d="M4554.68,-314.99C4575.66,-310.44 4596.56,-304.71 4616,-297.49 4629.21,-292.58 4629.54,-285.23 4642.88,-280.69 4721.15,-254.08 4754.88,-301.24 4828,-262.69 4853.07,-249.47 4872.92,-223.48 4885.37,-203.53"/>
+<polygon fill="#cc0000" stroke="#cc0000" points="4888.31,-205.43 4890.42,-195.04 4882.3,-201.85 4888.31,-205.43"/>
+<text xml:space="preserve" text-anchor="middle" x="4658.44" y="-284.89" font-family="Times,serif" font-size="14.00">insult</text>
+</g>
+<!-- TagLaMente -->
+<g id="node25" class="node">
+<title>TagLaMente</title>
+<ellipse fill="#003366" stroke="black" cx="3562" cy="-175.74" rx="48.08" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="3562" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">la mente</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagLaMente -->
+<g id="edge20" class="edge">
+<title>Bleakst1550-&gt;TagLaMente</title>
+<path fill="none" stroke="#0066cc" d="M4215.52,-327.16C4056.73,-321.52 3833.68,-311.5 3746.89,-297.49 3688.74,-288.1 3666.76,-297.18 3619,-262.69 3598.52,-247.9 3583.3,-223.31 3573.76,-204.21"/>
+<polygon fill="#0066cc" stroke="#0066cc" points="3577.02,-202.9 3569.58,-195.36 3570.69,-205.89 3577.02,-202.9"/>
+<text xml:space="preserve" text-anchor="middle" x="3772.94" y="-284.89" font-family="Times,serif" font-size="14.00">linguistic</text>
+</g>
+<!-- TagCriminals -->
+<g id="node26" class="node">
+<title>TagCriminals</title>
+<ellipse fill="#660000" stroke="black" cx="3859" cy="-175.74" rx="94.22" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="3859" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">we_are_crimminals</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagCriminals -->
+<g id="edge21" class="edge">
+<title>Bleakst1550-&gt;TagCriminals</title>
+<path fill="none" stroke="#990000" d="M4215.66,-328.5C4126.5,-324.25 4028.25,-315.49 3987.92,-297.49 3941.12,-276.6 3900.49,-231.53 3877.91,-202.75"/>
+<polygon fill="#990000" stroke="#990000" points="3880.74,-200.69 3871.88,-194.88 3875.18,-204.95 3880.74,-200.69"/>
+<text xml:space="preserve" text-anchor="middle" x="4027.96" y="-284.89" font-family="Times,serif" font-size="14.00">self-ascription</text>
+</g>
+<!-- TagSickness -->
+<g id="node27" class="node">
+<title>TagSickness</title>
+<ellipse fill="#006666" stroke="black" cx="4191" cy="-175.74" rx="48.07" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="4191" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">sickness</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagSickness -->
+<g id="edge22" class="edge">
+<title>Bleakst1550-&gt;TagSickness</title>
+<path fill="none" stroke="#009999" d="M4338.51,-315.06C4309.75,-303.39 4274.33,-285.9 4248,-262.69 4229.36,-246.26 4214.18,-222.39 4204.19,-203.97"/>
+<polygon fill="#009999" stroke="#009999" points="4207.34,-202.45 4199.61,-195.2 4201.13,-205.68 4207.34,-202.45"/>
+<text xml:space="preserve" text-anchor="middle" x="4320.36" y="-284.89" font-family="Times,serif" font-size="14.00">ambient</text>
+</g>
+<!-- TagDelinq -->
+<g id="node28" class="node">
+<title>TagDelinq</title>
+<ellipse fill="#660066" stroke="black" cx="5161" cy="-175.74" rx="62.58" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="5161" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">delinquency</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagDelinq -->
+<g id="edge23" class="edge">
+<title>Bleakst1550-&gt;TagDelinq</title>
+<path fill="none" stroke="#9900cc" d="M4562.04,-324.59C4640.15,-319.31 4722.9,-310.8 4759,-297.49 4771.19,-292.99 4770.65,-284.97 4782.92,-280.69 4847.46,-258.19 5029.04,-293.61 5090,-262.69 5115.13,-249.94 5134.65,-223.89 5146.8,-203.79"/>
+<polygon fill="#9900cc" stroke="#9900cc" points="5149.77,-205.65 5151.72,-195.24 5143.7,-202.16 5149.77,-205.65"/>
+<text xml:space="preserve" text-anchor="middle" x="4815.96" y="-284.89" font-family="Times,serif" font-size="14.00">behavioural</text>
+</g>
+<!-- TagPuppets -->
+<g id="node29" class="node">
+<title>TagPuppets</title>
+<ellipse fill="#330033" stroke="black" cx="3687" cy="-175.74" rx="59.36" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="3687" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">puppeteers</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagPuppets -->
+<g id="edge24" class="edge">
+<title>Bleakst1550-&gt;TagPuppets</title>
+<path fill="none" stroke="#663399" d="M4215.52,-329.9C4055.03,-324.57 3830.42,-308.8 3756,-262.69 3732.7,-248.25 3713.87,-223.06 3701.8,-203.67"/>
+<polygon fill="#663399" stroke="#663399" points="3704.87,-201.97 3696.74,-195.18 3698.85,-205.56 3704.87,-201.97"/>
+<text xml:space="preserve" text-anchor="middle" x="3873.65" y="-284.89" font-family="Times,serif" font-size="14.00">control</text>
+</g>
+<!-- TagRussian -->
+<g id="node30" class="node">
+<title>TagRussian</title>
+<ellipse fill="#003366" stroke="black" cx="5309" cy="-175.74" rx="67.4" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="5309" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">russian_dolls</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagRussian -->
+<g id="edge25" class="edge">
+<title>Bleakst1550-&gt;TagRussian</title>
+<path fill="none" stroke="#3366cc" d="M4562.29,-329.06C4670.08,-325.05 4797.64,-316.36 4849,-297.49 4860.93,-293.11 4860.15,-284.92 4872.13,-280.69 4947.85,-253.99 5160.64,-297.49 5233,-262.69 5259.26,-250.06 5280.32,-223.8 5293.56,-203.61"/>
+<polygon fill="#3366cc" stroke="#3366cc" points="5296.43,-205.61 5298.78,-195.28 5290.5,-201.9 5296.43,-205.61"/>
+<text xml:space="preserve" text-anchor="middle" x="4895.07" y="-284.89" font-family="Times,serif" font-size="14.00">layering</text>
+</g>
+<!-- TagElites -->
+<g id="node31" class="node">
+<title>TagElites</title>
+<ellipse fill="#222222" stroke="black" cx="4005" cy="-175.74" rx="33.58" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="4005" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">elites</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagElites -->
+<g id="edge26" class="edge">
+<title>Bleakst1550-&gt;TagElites</title>
+<path fill="none" stroke="#333333" d="M4215.7,-317.16C4184.83,-312.3 4153.22,-305.9 4124.01,-297.49 4088.31,-287.21 4074.72,-288.5 4048,-262.69 4031.5,-246.75 4020.33,-223.15 4013.51,-204.71"/>
+<polygon fill="#333333" stroke="#333333" points="4016.88,-203.75 4010.31,-195.44 4010.26,-206.03 4016.88,-203.75"/>
+<text xml:space="preserve" text-anchor="middle" x="4141.51" y="-284.89" font-family="Times,serif" font-size="14.00">power</text>
+</g>
+<!-- Tag45 -->
+<g id="node32" class="node">
+<title>Tag45</title>
+<ellipse fill="#666600" stroke="black" cx="5452" cy="-175.74" rx="57.22" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="5452" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">45_degree</text>
+</g>
+<!-- Bleakst1550&#45;&gt;Tag45 -->
+<g id="edge27" class="edge">
+<title>Bleakst1550-&gt;Tag45</title>
+<path fill="none" stroke="#999900" d="M4562.42,-331.33C4691.08,-328.54 4854.71,-320.39 4918,-297.49 4929.95,-293.17 4929.13,-284.86 4941.13,-280.69 5034.38,-248.3 5297.19,-307.8 5385,-262.69 5409.39,-250.16 5427.64,-224.26 5438.89,-204.16"/>
+<polygon fill="#999900" stroke="#999900" points="5441.97,-205.8 5443.56,-195.33 5435.79,-202.53 5441.97,-205.8"/>
+<text xml:space="preserve" text-anchor="middle" x="4967.57" y="-284.89" font-family="Times,serif" font-size="14.00">geometry</text>
+</g>
+<!-- TagCriminal -->
+<g id="node33" class="node">
+<title>TagCriminal</title>
+<ellipse fill="#660000" stroke="black" cx="5572" cy="-175.74" rx="44.3" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="5572" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">criminal</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagCriminal -->
+<g id="edge28" class="edge">
+<title>Bleakst1550-&gt;TagCriminal</title>
+<path fill="none" stroke="#990000" d="M4562.43,-333.2C4712.59,-331.86 4917.37,-324.77 4994,-297.49 5006,-293.22 5005.18,-284.83 5017.23,-280.69 5069.88,-262.59 5469.76,-290.49 5518,-262.69 5539.93,-250.05 5554.25,-224.55 5562.59,-204.59"/>
+<polygon fill="#990000" stroke="#990000" points="5565.84,-205.9 5566.18,-195.31 5559.31,-203.38 5565.84,-205.9"/>
+<text xml:space="preserve" text-anchor="middle" x="5038.61" y="-284.89" font-family="Times,serif" font-size="14.00">identity</text>
+</g>
+<!-- TagCabal -->
+<g id="node34" class="node">
+<title>TagCabal</title>
+<ellipse fill="#330000" stroke="black" cx="4091" cy="-175.74" rx="34.12" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="4091" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">cabal</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagCabal -->
+<g id="edge29" class="edge">
+<title>Bleakst1550-&gt;TagCabal</title>
+<path fill="none" stroke="#660000" d="M4239.79,-315.05C4201.94,-304.72 4163.65,-288.4 4134,-262.69 4116.57,-247.58 4105.42,-223.71 4098.85,-204.96"/>
+<polygon fill="#660000" stroke="#660000" points="4102.21,-203.95 4095.81,-195.51 4095.55,-206.1 4102.21,-203.95"/>
+<text xml:space="preserve" text-anchor="middle" x="4202.81" y="-284.89" font-family="Times,serif" font-size="14.00">cabal</text>
+</g>
+<!-- TagSaville -->
+<g id="node35" class="node">
+<title>TagSaville</title>
+<ellipse fill="#444444" stroke="black" cx="4760" cy="-175.74" rx="58.8" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="4760" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">saville_row</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagSaville -->
+<g id="edge30" class="edge">
+<title>Bleakst1550-&gt;TagSaville</title>
+<path fill="none" stroke="#444444" d="M4459.96,-315.04C4477.52,-310.02 4496.13,-304.09 4513,-297.49 4528.34,-291.49 4530.28,-285.5 4546.03,-280.69 4608.54,-261.58 4635.02,-294.72 4692,-262.69 4715.9,-249.26 4734.44,-223.71 4746.08,-203.95"/>
+<polygon fill="#444444" stroke="#444444" points="4749.1,-205.72 4750.94,-195.28 4743,-202.29 4749.1,-205.72"/>
+<text xml:space="preserve" text-anchor="middle" x="4581.01" y="-284.89" font-family="Times,serif" font-size="14.00">elite-fashion</text>
+</g>
+<!-- TagEpstinion -->
+<g id="node36" class="node">
+<title>TagEpstinion</title>
+<ellipse fill="#555555" stroke="black" cx="5031" cy="-175.74" rx="49.69" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="5031" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">epstinion</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagEpstinion -->
+<g id="edge31" class="edge">
+<title>Bleakst1550-&gt;TagEpstinion</title>
+<path fill="none" stroke="#555555" d="M4562.39,-324.27C4599.98,-318.91 4638.95,-310.51 4674,-297.49 4686.59,-292.81 4686.41,-285.01 4699.13,-280.69 4756.67,-261.14 4919.19,-292.75 4972,-262.69 4994.69,-249.77 5010.55,-224.11 5020.06,-204.18"/>
+<polygon fill="#555555" stroke="#555555" points="5023.19,-205.75 5024.08,-195.2 5016.8,-202.89 5023.19,-205.75"/>
+<text xml:space="preserve" text-anchor="middle" x="4729.07" y="-284.89" font-family="Times,serif" font-size="14.00">dark-motif</text>
+</g>
+<!-- TagTendrils -->
+<g id="node37" class="node">
+<title>TagTendrils</title>
+<ellipse fill="#003300" stroke="black" cx="5676" cy="-175.74" rx="42.17" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="5676" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">tendrils</text>
+</g>
+<!-- Bleakst1550&#45;&gt;TagTendrils -->
+<g id="edge32" class="edge">
+<title>Bleakst1550-&gt;TagTendrils</title>
+<path fill="none" stroke="#006600" d="M4562.13,-328.5C4745.33,-323.47 5014.27,-313.5 5060,-297.49 5072.1,-293.25 5071.32,-284.81 5083.46,-280.69 5140.47,-261.33 5573.18,-293.34 5625,-262.69 5646.45,-250 5659.88,-224.5 5667.54,-204.56"/>
+<polygon fill="#006600" stroke="#006600" points="5670.78,-205.9 5670.81,-195.31 5664.18,-203.57 5670.78,-205.9"/>
+<text xml:space="preserve" text-anchor="middle" x="5101.73" y="-284.89" font-family="Times,serif" font-size="14.00">spread</text>
+</g>
+<!-- Bleakst1550&#45;&gt;MontegueHarrier -->
+<g id="edge39" class="edge">
+<title>Bleakst1550-&gt;MontegueHarrier</title>
+<path fill="none" stroke="#3333cc" d="M4215.83,-332.19C4015.87,-330.57 3699.62,-323.74 3583.79,-297.49 3545.26,-288.76 3535.28,-283.97 3502,-262.69 3475.15,-245.52 3448.59,-220.64 3430.41,-202.07"/>
+<polygon fill="#3333cc" stroke="#3333cc" points="3432.94,-199.65 3423.48,-194.86 3427.89,-204.5 3432.94,-199.65"/>
+<text xml:space="preserve" text-anchor="middle" x="3614.9" y="-284.89" font-family="Times,serif" font-size="14.00">association</text>
+</g>
+<!-- Peramb2 -->
+<g id="node4" class="node">
+<title>Peramb2</title>
+<path fill="#330066" stroke="black" d="M5527.4,-351.49C5527.4,-351.49 5232.6,-351.49 5232.6,-351.49 5226.6,-351.49 5220.6,-345.49 5220.6,-339.49 5220.6,-339.49 5220.6,-327.49 5220.6,-327.49 5220.6,-321.49 5226.6,-315.49 5232.6,-315.49 5232.6,-315.49 5527.4,-315.49 5527.4,-315.49 5533.4,-315.49 5539.4,-321.49 5539.4,-327.49 5539.4,-327.49 5539.4,-339.49 5539.4,-339.49 5539.4,-345.49 5533.4,-351.49 5527.4,-351.49"/>
+<text xml:space="preserve" text-anchor="middle" x="5380" y="-329.29" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">perambulator_2_horn_blasts_153530_12092026</text>
+</g>
+<!-- Peramb2&#45;&gt;Goat -->
+<g id="edge43" class="edge">
+<title>Peramb2-&gt;Goat</title>
+<path fill="none" stroke="#cc66ff" d="M5262.01,-315.03C5233.33,-310.06 5202.85,-304.15 5174.81,-297.49 5150.02,-291.6 5145.18,-284.59 5120,-280.69 5020.57,-265.29 3402.8,-299.08 3309,-262.69 3299.09,-258.85 3289.56,-253.47 3280.6,-247.26"/>
+<polygon fill="#cc66ff" stroke="#cc66ff" points="3282.82,-244.55 3272.69,-241.42 3278.66,-250.18 3282.82,-244.55"/>
+<text xml:space="preserve" text-anchor="middle" x="5216.4" y="-284.89" font-family="Times,serif" font-size="14.00">absurdity-echo</text>
+</g>
+<!-- Peramb2&#45;&gt;TagDelinq -->
+<g id="edge33" class="edge">
+<title>Peramb2-&gt;TagDelinq</title>
+<path fill="none" stroke="#ff3300" d="M5328.19,-315.04C5298.31,-303.31 5261.21,-285.77 5233,-262.69 5211.93,-245.45 5192.39,-221.4 5179,-203.12"/>
+<polygon fill="#ff3300" stroke="#ff3300" points="5181.95,-201.22 5173.28,-195.13 5176.25,-205.3 5181.95,-201.22"/>
+<text xml:space="preserve" text-anchor="middle" x="5313.49" y="-284.89" font-family="Times,serif" font-size="14.00">behaviour</text>
+</g>
+<!-- Peramb2&#45;&gt;TagRussian -->
+<g id="edge37" class="edge">
+<title>Peramb2-&gt;TagRussian</title>
+<path fill="none" stroke="#3366cc" d="M5372.13,-315.23C5359.92,-288.45 5336.3,-236.64 5321.67,-204.54"/>
+<polygon fill="#3366cc" stroke="#3366cc" points="5324.87,-203.11 5317.53,-195.46 5318.5,-206.01 5324.87,-203.11"/>
+<text xml:space="preserve" text-anchor="middle" x="5385.78" y="-284.89" font-family="Times,serif" font-size="14.00">layering</text>
+</g>
+<!-- Peramb2&#45;&gt;Tag45 -->
+<g id="edge36" class="edge">
+<title>Peramb2-&gt;Tag45</title>
+<path fill="none" stroke="#999900" d="M5397.89,-315.03C5402.63,-309.73 5407.41,-303.67 5411,-297.49 5428.08,-268.07 5439.43,-230.47 5445.77,-205.1"/>
+<polygon fill="#999900" stroke="#999900" points="5449.14,-206.06 5448.06,-195.52 5442.33,-204.44 5449.14,-206.06"/>
+<text xml:space="preserve" text-anchor="middle" x="5434.22" y="-284.89" font-family="Times,serif" font-size="14.00">angle</text>
+</g>
+<!-- Peramb2&#45;&gt;TagCriminal -->
+<g id="edge34" class="edge">
+<title>Peramb2-&gt;TagCriminal</title>
+<path fill="none" stroke="#cc0000" d="M5430.48,-315.04C5458.64,-303.45 5492.97,-286.04 5518,-262.69 5535.8,-246.09 5550.11,-222.38 5559.52,-204.07"/>
+<polygon fill="#cc0000" stroke="#cc0000" points="5562.65,-205.62 5563.93,-195.1 5556.37,-202.53 5562.65,-205.62"/>
+<text xml:space="preserve" text-anchor="middle" x="5516.42" y="-284.89" font-family="Times,serif" font-size="14.00">identity</text>
+</g>
+<!-- Peramb2&#45;&gt;TagTendrils -->
+<g id="edge35" class="edge">
+<title>Peramb2-&gt;TagTendrils</title>
+<path fill="none" stroke="#009933" d="M5519.16,-315.04C5556.87,-304.75 5595.39,-288.46 5625,-262.69 5643.19,-246.86 5656.65,-222.9 5665.17,-204.29"/>
+<polygon fill="#009933" stroke="#009933" points="5668.35,-205.74 5669.12,-195.18 5661.93,-202.96 5668.35,-205.74"/>
+<text xml:space="preserve" text-anchor="middle" x="5630.82" y="-284.89" font-family="Times,serif" font-size="14.00">propagation</text>
+</g>
+<!-- Tag171800 -->
+<g id="node11" class="node">
+<title>Tag171800</title>
+<ellipse fill="#333333" stroke="black" cx="1242" cy="-175.74" rx="43.26" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="1242" y="-171.54" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">171800</text>
+</g>
+</g>
+</svg>
