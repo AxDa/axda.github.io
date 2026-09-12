@@ -14038,8 +14038,7 @@ svg {
     const btnZoomReset = document.getElementById("btn-zoom-reset");
     const btnTheme     = document.getElementById("btn-theme");
     const btnBgToggle  = document.getElementById("btn-bg-toggle");
-  document.getElementById("btn-bottom-right").onclick = jumpToBottomRight;
-
+    const btnBottomRight = document.getElementById("btn-bottom-right");
 
     const minimapContainer = document.getElementById("minimap-container");
     const minimapSvg       = document.getElementById("minimap-svg");
@@ -14051,46 +14050,52 @@ svg {
 
     let svgBgOn = true;
 
-function clampTransform() {
-    const vb = svg.viewBox.baseVal;
+    function clampTransform() {
+        const vb = svg.viewBox.baseVal;
 
-    const svgW = vb.width * scale;
-    const svgH = vb.height * scale;
+        const svgW = vb.width * scale;
+        const svgH = vb.height * scale;
 
-    const rect = wrapper.getBoundingClientRect();
-    const viewW = rect.width;
-    const viewH = rect.height;
+        const rect = wrapper.getBoundingClientRect();
+        const viewW = rect.width;
+        const viewH = rect.height;
 
-    // LEFT boundary (drag SVG rightwards)
-    const minX = -(svgW - viewW);function jumpToBottomRight() {
-    const vb = svg.viewBox.baseVal;
+        const minX = -(svgW - viewW);
+        const maxX = viewW;
 
-    const svgW = vb.width * scale;
-    const svgH = vb.height * scale;
+        const minY = -(svgH - viewH);
+        const maxY = viewH;
 
-    const rect = wrapper.getBoundingClientRect();
-    const viewW = rect.width;
-    const viewH = rect.height;
+        offsetX = Math.max(minX, Math.min(maxX, offsetX));
+        offsetY = Math.max(minY, Math.min(maxY, offsetY));
+    }
 
-    // Position so bottom‑right of SVG is in view
-    offsetX = -(svgW - viewW);
-    offsetY = -(svgH - viewH);
+    function updateTransform() {
+        svg.style.transform =
+            `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+        updateMinimapViewport();
+        updateVBDisplay();
+    }
 
-    updateTransform();
-}
+    function jumpToBottomRight() {
+        const vb = svg.viewBox.baseVal;
 
+        const svgW = vb.width * scale;
+        const svgH = vb.height * scale;
 
-    // RIGHT boundary (drag SVG leftwards)
-    const maxX = viewW;   // <-- THIS is the fix
+        const rect = wrapper.getBoundingClientRect();
+        const viewW = rect.width;
+        const viewH = rect.height;
 
-    const minY = -(svgH - viewH);
-    const maxY = viewH;   // <-- same logic for vertical
+        offsetX = -(svgW - viewW);
+        offsetY = -(svgH - viewH);
 
-    offsetX = Math.max(minX, Math.min(maxX, offsetX));
-    offsetY = Math.max(minY, Math.min(maxY, offsetY));
-}
+        updateTransform();
+    }
 
-
+    if (btnBottomRight) {
+        btnBottomRight.onclick = jumpToBottomRight;
+    }
 
     /* ZOOM AT CURSOR */
     wrapper.addEventListener("wheel", e => {
@@ -14267,7 +14272,7 @@ function clampTransform() {
     };
 
     /* REFRESH + BACK */
-    btnRefresh.onclick = () => updateTransform(); // no reload
+    btnRefresh.onclick = () => updateTransform();
     btnBack.onclick = () => {
         window.location.href = "https://axda.github.io/Blu/axd_archive_index_2.html";
     };
@@ -14323,8 +14328,6 @@ function clampTransform() {
     const drawerArrow  = document.getElementById("camera-drawer-arrow");
     const drawerContent= document.getElementById("camera-drawer-content");
 
-
-
     function updateVBDisplay() {
         if (!vbDisplay || !vbInput) return;
         vbDisplay.textContent =
@@ -14349,7 +14352,6 @@ function clampTransform() {
     document.querySelectorAll(".vb-preset").forEach(btn => {
         btn.onclick = () => {
             const [x, y] = btn.dataset.center.split(",").map(Number);
-            // map logical SVG coords to camera offsets (tune factor as needed)
             offsetX = -x / 2;
             offsetY = -y / 2;
             clampTransform();
@@ -14361,7 +14363,6 @@ function clampTransform() {
 
 })();
 </script>
-
 
 
 </body>
