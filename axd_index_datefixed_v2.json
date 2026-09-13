@@ -24345,7 +24345,7 @@
    "date": "2026-09-06",
    "motif": "reference_material",
    "cluster": "documents",
-   "size": 100000,
+   "size": 54600000,
    "type": "doc"
 },
 {
@@ -25466,5 +25466,16 @@
   "cluster": "signal",
   "size": 3508724 ,
   "type": "png"
+},
+{
+   "title": "2026_Untitled_49_document_wk38_13092026_p0",
+   "url_pages": "https://docs.google.com/document/d/1Lqj-B4IqSb_-1YoyQEedZ6ZspflIPHB_4B4Xcrg0Ov8/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-09-13",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 100000,
+   "type": "doc"
 }
 ]
