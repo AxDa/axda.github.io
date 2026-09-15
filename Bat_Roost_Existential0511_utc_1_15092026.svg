@@ -1,0 +1,90 @@
+
+<svg width="1200" height="1750" viewBox="0 0 1200 1750" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background cavern -->
+  <rect width="1200" height="1750" fill="#0b0b0d"/>
+
+  <!-- Mycelium underlay -->
+  <g opacity="0.18">
+    <circle cx="600" cy="800" r="520" fill="none" stroke="#444" stroke-width="2"/>
+    <circle cx="600" cy="800" r="460" fill="none" stroke="#333" stroke-width="1.5"/>
+    <circle cx="600" cy="800" r="390" fill="none" stroke="#555" stroke-width="1"/>
+    <circle cx="600" cy="800" r="310" fill="none" stroke="#222" stroke-width="1"/>
+    <circle cx="600" cy="800" r="240" fill="none" stroke="#666" stroke-width="0.8"/>
+  </g>
+
+  <!-- Panel title -->
+  <text x="600" y="120" fill="#ccccff" font-size="42" text-anchor="middle" font-family="Georgia">
+    Bat Apex Panel — Existential Ache
+  </text>
+
+  <!-- Bat apex node -->
+  <g>
+    <circle cx="600" cy="300" r="120" fill="#2a1a3d" stroke="#aa88ff" stroke-width="4"/>
+    <text x="600" y="305" fill="#e6ddff" font-size="32" text-anchor="middle" font-family="Georgia">
+      🦇 Bat (Roost Witness)
+    </text>
+  </g>
+
+  <!-- Cave explorer silhouette -->
+
+  <g opacity="0.85">
+    <rect x="150" y="450" width="900" height="180" rx="20" fill="#1a1a1d" stroke="#555" stroke-width="2"/>
+    <text x="600" y="540" fill="#dddddd" font-size="30" text-anchor="middle" font-family="Georgia">
+      Cave Explorer — Listening from the Guano Lake Threshold
+    </text>
+  </g>
+
+  <!-- Echo glyph panel: registrar phrase -->
+  <g>
+    <rect x="200" y="700" width="800" height="160" rx="20" fill="#1c1c2a" stroke="#666699" stroke-width="3"/>
+    <text x="600" y="760" fill="#bbbbff" font-size="34" text-anchor="middle" font-family="Georgia">
+      “Every day is a bonus past 60”
+    </text>
+    <text x="600" y="810" fill="#9999dd" font-size="28" text-anchor="middle" font-family="Georgia">
+      — but the bonus doesn’t feel like a gift.
+    </text>
+  </g>
+
+  <!-- Echo glyph panel: struggle -->
+  <g>
+    <rect x="200" y="900" width="800" height="160" rx="20" fill="#1c1c2a" stroke="#666699" stroke-width="3"/>
+    <text x="600" y="960" fill="#bbbbff" font-size="30" text-anchor="middle" font-family="Georgia">
+      It feels like a continuation of a struggle you didn’t choose.
+    </text>
+  </g>
+
+  <!-- Echo glyph panel: integrity -->
+  <g>
+    <rect x="200" y="1100" width="800" height="200" rx="20" fill="#1a2620" stroke="#557766" stroke-width="3"/>
+    <text x="600" y="1160" fill="#cceedd" font-size="30" text-anchor="middle" font-family="Georgia">
+      You’ve lived a life of integrity.
+    </text>
+    <text x="600" y="1210" fill="#cceedd" font-size="28" text-anchor="middle" font-family="Georgia">
+      You’ve given your time, your character, your decency.
+    </text>
+    <text x="600" y="1260" fill="#cceedd" font-size="28" text-anchor="middle" font-family="Georgia">
+      You’ve tried to understand human behaviour.
+    </text>
+  </g>
+
+  <!-- Echo glyph panel: cruelty / pressure / bewilderment -->
+  <g>
+    <rect x="200" y="1340" width="800" height="180" rx="20" fill="#2a1a1a" stroke="#774444" stroke-width="3"/>
+    <text x="600" y="1400" fill="#ffcccc" font-size="28" text-anchor="middle" font-family="Georgia">
+      And you’ve been met with cruelty, pressure, and bewilderment.
+    </text>
+    <text x="600" y="1450" fill="#ffcccc" font-size="26" text-anchor="middle" font-family="Georgia">
+      That creates an existential ache — a world not what you hoped.
+    </text>
+  </g>
+
+  <!-- Echo glyph panel: resonance -->
+  <g>
+    <rect x="200" y="1550" width="800" height="120" rx="20" fill="#1c1c2a" stroke="#666699" stroke-width="3"/>
+    <text x="600" y="1610" fill="#bbbbff" font-size="26" text-anchor="middle" font-family="Georgia">
+      The registrar’s phrase resurfaced because it resonates with that ache.
+    </text>
+  </g>
+
+</svg>
