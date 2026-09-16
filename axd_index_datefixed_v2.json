@@ -26124,7 +26124,7 @@
   "motif": "technical audit",
   "cluster": "signal",
   "size": 749434 ,
-  "type": "pngg"
+  "type": "png"
 },
 {
   "title": "clamping_date_time_range_bleakst_12_thru_14092026_graph22_0203_15092026.svg",
@@ -26157,5 +26157,39 @@
   "cluster": "signal",
   "size": 833487,
   "type": "svg"
+},
+{
+  "title": "thermos_flaskfallacy_0428_utc_1_16092026.png",
+  "url_pages": "https://axda.github.io/thermos_flaskfallacy_0428_utc_1_16092026.png",
+  "url_raw": "https://raw.githubusercontent.com/AxDa/main/thermos_flaskfallacy_0428_utc_1_16092026.png",
+  "thumbnail_pages": "https://axda.github.io/thermos_flaskfallacy_0428_utc_1_16092026.png",
+  "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/main/thermos_flaskfallacy_0428_utc_1_16092026.png",
+  "tags": [
+    "graph",
+    "underworld",
+    "sonics",
+    "thermos_flaskfallacy",
+    "conundrum",
+    "ash",
+    "warp_and_weft",
+    "fungal_tapestry",
+    "stack_effect",
+    "index_date_time",
+    "conical_chimneys",
+    "elevated_capability",
+    "archive",
+    "technical",
+    "rancidity",
+    "rancidity_realm_clamping",
+    "wypc_log",
+    "clamping",
+    "clarity",
+    "pioneer"
+  ],
+  "date": "2026-09-16",
+  "motif": "technical audit",
+  "cluster": "signal",
+  "size": 4322771,
+  "type": "png"
 }
 ]
