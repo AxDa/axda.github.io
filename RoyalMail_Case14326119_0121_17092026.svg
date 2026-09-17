@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2037pt" height="1339pt" viewBox="0.00 0.00 2037.00 1339.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1335.2)">
+<title>RoyalMail_Case14326119</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-1335.2 2032.61,-1335.2 2032.61,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="1014.3" y="-1307.4" font-family="Times,serif" font-size="22.00" fill="#333333">Royal Mail Case #14326119 — Deflection Pattern &amp; Escalation Map</text>
+<g id="clust1" class="cluster">
+<title>cluster_user</title>
+<polygon fill="#cce5ff" stroke="#cce5ff" points="745,-919.6 745,-1078.8 1547,-1078.8 1547,-919.6 745,-919.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1146" y="-1055" font-family="Times,serif" font-size="22.00" fill="#333333">User Evidence Submitted</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_rm</title>
+<polygon fill="#ffe6e6" stroke="#ffe6e6" points="8,-296.4 8,-624.4 502,-624.4 502,-296.4 8,-296.4"/>
+<text xml:space="preserve" text-anchor="middle" x="255" y="-600.6" font-family="Times,serif" font-size="22.00" fill="#333333">Royal Mail Responses (Scam Mail Helpdesk)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_analysis</title>
+<polygon fill="#f2f2f2" stroke="#f2f2f2" points="510,-321.6 510,-464 1428,-464 1428,-321.6 510,-321.6"/>
+<text xml:space="preserve" text-anchor="middle" x="969" y="-440.2" font-family="Times,serif" font-size="22.00" fill="#333333">Systemic Deflection Pattern</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_escalation</title>
+<polygon fill="#e6d9ff" stroke="#e6d9ff" points="1244,-8 1244,-261.6 1582,-261.6 1582,-8 1244,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="1413" y="-237.8" font-family="Times,serif" font-size="22.00" fill="#333333">Required Escalation Path</text>
+</g>
+<!-- User -->
+<g id="node1" class="node">
+<title>User</title>
+<polygon fill="#cce5ff" stroke="black" points="870.97,-1002.8 753.03,-1002.8 753.03,-961.2 870.97,-961.2 870.97,-1002.8"/>
+<text xml:space="preserve" text-anchor="middle" x="812" y="-986.2" font-family="Helvetica,sans-Serif" font-size="14.00">Andrew Davison</text>
+<text xml:space="preserve" text-anchor="middle" x="812" y="-969.4" font-family="Helvetica,sans-Serif" font-size="14.00">Warrington, UK</text>
+</g>
+<!-- RM_RequestInfo -->
+<g id="node5" class="node">
+<title>RM_RequestInfo</title>
+<polygon fill="#ffcccc" stroke="black" points="219.77,-573.6 16.23,-573.6 16.23,-515.2 219.77,-515.2 219.77,-573.6"/>
+<text xml:space="preserve" text-anchor="middle" x="118" y="-557" font-family="Helvetica,sans-Serif" font-size="14.00">Reply #1:</text>
+<text xml:space="preserve" text-anchor="middle" x="118" y="-540.2" font-family="Helvetica,sans-Serif" font-size="14.00">Request for tracking numbers,</text>
+<text xml:space="preserve" text-anchor="middle" x="118" y="-523.4" font-family="Helvetica,sans-Serif" font-size="14.00">name, address</text>
+</g>
+<!-- User&#45;&gt;RM_RequestInfo -->
+<g id="edge1" class="edge">
+<title>User-&gt;RM_RequestInfo</title>
+<path fill="none" stroke="#0066cc" d="M776.97,-960.73C685.56,-907.57 432.69,-758.95 229,-624.4 208.05,-610.56 185.4,-594.62 166.05,-580.7"/>
+<polygon fill="#0066cc" stroke="#0066cc" points="168.22,-577.95 158.06,-574.93 164.12,-583.62 168.22,-577.95"/>
+<text xml:space="preserve" text-anchor="middle" x="307.39" y="-636.6" font-family="Times,serif" font-size="14.00">submitted details</text>
+</g>
+<!-- RM_Reply2 -->
+<g id="node6" class="node">
+<title>RM_Reply2</title>
+<polygon fill="#ffcccc" stroke="black" points="494.23,-582 237.77,-582 237.77,-506.8 494.23,-506.8 494.23,-582"/>
+<text xml:space="preserve" text-anchor="middle" x="366" y="-565.4" font-family="Helvetica,sans-Serif" font-size="14.00">Reply #2:</text>
+<text xml:space="preserve" text-anchor="middle" x="366" y="-548.6" font-family="Helvetica,sans-Serif" font-size="14.00">Automated notifications explanation</text>
+<text xml:space="preserve" text-anchor="middle" x="366" y="-531.8" font-family="Helvetica,sans-Serif" font-size="14.00">Assumption: sender used your number</text>
+<text xml:space="preserve" text-anchor="middle" x="366" y="-515" font-family="Helvetica,sans-Serif" font-size="14.00">Instruction: contact sender yourself</text>
+</g>
+<!-- User&#45;&gt;RM_Reply2 -->
+<g id="edge2" class="edge">
+<title>User-&gt;RM_Reply2</title>
+<path fill="none" stroke="#0066cc" d="M794.3,-960.82C745.71,-905.82 605.21,-749.55 476,-632.4 459.79,-617.71 441.42,-602.61 424.39,-589.21"/>
+<polygon fill="#0066cc" stroke="#0066cc" points="426.85,-586.69 416.81,-583.29 422.54,-592.21 426.85,-586.69"/>
+<text xml:space="preserve" text-anchor="middle" x="580.53" y="-636.6" font-family="Times,serif" font-size="14.00">submitted tracking + SMS history</text>
+</g>
+<!-- TrackingList -->
+<g id="node2" class="node">
+<title>TrackingList</title>
+<polygon fill="#e6f2ff" stroke="black" points="1082.7,-1036.4 889.3,-1036.4 889.3,-927.6 1082.7,-927.6 1082.7,-1036.4"/>
+<text xml:space="preserve" text-anchor="middle" x="986" y="-1019.8" font-family="Helvetica,sans-Serif" font-size="14.00">Tracking Numbers Provided:</text>
+<text xml:space="preserve" text-anchor="middle" x="986" y="-1003" font-family="Helvetica,sans-Serif" font-size="14.00">QM805389139GB</text>
+<text xml:space="preserve" text-anchor="middle" x="986" y="-986.2" font-family="Helvetica,sans-Serif" font-size="14.00">YT444511785GB</text>
+<text xml:space="preserve" text-anchor="middle" x="986" y="-969.4" font-family="Helvetica,sans-Serif" font-size="14.00">YT386009807GB</text>
+<text xml:space="preserve" text-anchor="middle" x="986" y="-952.6" font-family="Helvetica,sans-Serif" font-size="14.00">MX064725682GB</text>
+<text xml:space="preserve" text-anchor="middle" x="986" y="-935.8" font-family="Helvetica,sans-Serif" font-size="14.00">MX090408966GB</text>
+</g>
+<!-- MissingChecks -->
+<g id="node10" class="node">
+<title>MissingChecks</title>
+<polygon fill="#e2e2e2" stroke="black" points="1420.29,-421.6 1241.71,-421.6 1241.71,-329.6 1420.29,-329.6 1420.29,-421.6"/>
+<text xml:space="preserve" text-anchor="middle" x="1331" y="-405" font-family="Helvetica,sans-Serif" font-size="14.00">Missing Checks:</text>
+<text xml:space="preserve" text-anchor="middle" x="1331" y="-388.2" font-family="Helvetica,sans-Serif" font-size="14.00">• Spoofing</text>
+<text xml:space="preserve" text-anchor="middle" x="1331" y="-371.4" font-family="Helvetica,sans-Serif" font-size="14.00">• Mislinked number</text>
+<text xml:space="preserve" text-anchor="middle" x="1331" y="-354.6" font-family="Helvetica,sans-Serif" font-size="14.00">• Retailer error repetition</text>
+<text xml:space="preserve" text-anchor="middle" x="1331" y="-337.8" font-family="Helvetica,sans-Serif" font-size="14.00">• Royal Mail system error</text>
+</g>
+<!-- TrackingList&#45;&gt;MissingChecks -->
+<g id="edge6" class="edge">
+<title>TrackingList-&gt;MissingChecks</title>
+<path fill="none" stroke="#d4aa00" d="M993.01,-927.3C1007.95,-832.09 1051.05,-631.93 1160.89,-506.8 1185.47,-478.79 1202.93,-486.02 1233,-464 1247.32,-453.52 1261.99,-441.33 1275.48,-429.44"/>
+<polygon fill="#d4aa00" stroke="#d4aa00" points="1277.45,-432.37 1282.58,-423.1 1272.79,-427.15 1277.45,-432.37"/>
+<text xml:space="preserve" text-anchor="middle" x="1217.44" y="-540.2" font-family="Times,serif" font-size="14.00">requires verification</text>
+</g>
+<!-- SMSHistory -->
+<g id="node3" class="node">
+<title>SMSHistory</title>
+<polygon fill="#e6f2ff" stroke="black" points="1338.91,-1011.2 1101.09,-1011.2 1101.09,-952.8 1338.91,-952.8 1338.91,-1011.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1220" y="-994.6" font-family="Helvetica,sans-Serif" font-size="14.00">15 SMS Notifications</text>
+<text xml:space="preserve" text-anchor="middle" x="1220" y="-977.8" font-family="Helvetica,sans-Serif" font-size="14.00">Dec 2025 → Feb 2026 → Sept 2026</text>
+<text xml:space="preserve" text-anchor="middle" x="1220" y="-961" font-family="Helvetica,sans-Serif" font-size="14.00">ryml.me short-links</text>
+</g>
+<!-- SMSHistory&#45;&gt;MissingChecks -->
+<g id="edge7" class="edge">
+<title>SMSHistory-&gt;MissingChecks</title>
+<path fill="none" stroke="#d4aa00" d="M1224.16,-952.55C1235.12,-878.72 1266.23,-674.98 1300.28,-506.8 1305.21,-482.44 1311.38,-455.71 1316.9,-432.83"/>
+<polygon fill="#d4aa00" stroke="#d4aa00" points="1320.23,-433.95 1319.19,-423.41 1313.43,-432.3 1320.23,-433.95"/>
+<text xml:space="preserve" text-anchor="middle" x="1367.14" y="-540.2" font-family="Times,serif" font-size="14.00">requires systemic check</text>
+</g>
+<!-- UserRequest -->
+<g id="node4" class="node">
+<title>UserRequest</title>
+<polygon fill="#e6f2ff" stroke="black" points="1539.26,-1036.4 1356.74,-1036.4 1356.74,-927.6 1539.26,-927.6 1539.26,-1036.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1448" y="-1019.8" font-family="Helvetica,sans-Serif" font-size="14.00">User Requests:</text>
+<text xml:space="preserve" text-anchor="middle" x="1448" y="-1003" font-family="Helvetica,sans-Serif" font-size="14.00">• Verify authenticity</text>
+<text xml:space="preserve" text-anchor="middle" x="1448" y="-986.2" font-family="Helvetica,sans-Serif" font-size="14.00">• Identify sender</text>
+<text xml:space="preserve" text-anchor="middle" x="1448" y="-969.4" font-family="Helvetica,sans-Serif" font-size="14.00">• Remove number</text>
+<text xml:space="preserve" text-anchor="middle" x="1448" y="-952.6" font-family="Helvetica,sans-Serif" font-size="14.00">• Block future alerts</text>
+<text xml:space="preserve" text-anchor="middle" x="1448" y="-935.8" font-family="Helvetica,sans-Serif" font-size="14.00">• Escalate to Fraud/Cyber</text>
+</g>
+<!-- Escalation -->
+<g id="node11" class="node">
+<title>Escalation</title>
+<polygon fill="#d9d2e9" stroke="black" points="1521.37,-219.2 1304.63,-219.2 1304.63,-127.2 1521.37,-127.2 1521.37,-219.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1413" y="-202.6" font-family="Helvetica,sans-Serif" font-size="14.00">Escalation Required:</text>
+<text xml:space="preserve" text-anchor="middle" x="1413" y="-185.8" font-family="Helvetica,sans-Serif" font-size="14.00">• Fraud &amp; Cyber Security Team</text>
+<text xml:space="preserve" text-anchor="middle" x="1413" y="-169" font-family="Helvetica,sans-Serif" font-size="14.00">• Internal tracking verification</text>
+<text xml:space="preserve" text-anchor="middle" x="1413" y="-152.2" font-family="Helvetica,sans-Serif" font-size="14.00">• Sender lookup</text>
+<text xml:space="preserve" text-anchor="middle" x="1413" y="-135.4" font-family="Helvetica,sans-Serif" font-size="14.00">• Number removal/block</text>
+</g>
+<!-- UserRequest&#45;&gt;Escalation -->
+<g id="edge8" class="edge">
+<title>UserRequest-&gt;Escalation</title>
+<path fill="none" stroke="#6a0dad" d="M1449.13,-927.17C1451.04,-811.46 1452.85,-530.57 1432,-296.4 1430.08,-274.84 1426.73,-251.3 1423.36,-230.7"/>
+<polygon fill="#6a0dad" stroke="#6a0dad" points="1426.86,-230.36 1421.75,-221.07 1419.95,-231.51 1426.86,-230.36"/>
+<text xml:space="preserve" text-anchor="middle" x="1514" y="-476.2" font-family="Times,serif" font-size="14.00">formal escalation needed</text>
+</g>
+<!-- RM_NoAction -->
+<g id="node7" class="node">
+<title>RM_NoAction</title>
+<polygon fill="#ff9999" stroke="black" points="486.37,-446.8 297.63,-446.8 297.63,-304.4 486.37,-304.4 486.37,-446.8"/>
+<text xml:space="preserve" text-anchor="middle" x="392" y="-430.2" font-family="Helvetica,sans-Serif" font-size="14.00">Actions NOT taken:</text>
+<text xml:space="preserve" text-anchor="middle" x="392" y="-413.4" font-family="Helvetica,sans-Serif" font-size="14.00">• No verification of tracking</text>
+<text xml:space="preserve" text-anchor="middle" x="392" y="-396.6" font-family="Helvetica,sans-Serif" font-size="14.00">• No sender identification</text>
+<text xml:space="preserve" text-anchor="middle" x="392" y="-379.8" font-family="Helvetica,sans-Serif" font-size="14.00">• No number removal</text>
+<text xml:space="preserve" text-anchor="middle" x="392" y="-363" font-family="Helvetica,sans-Serif" font-size="14.00">• No number block</text>
+<text xml:space="preserve" text-anchor="middle" x="392" y="-346.2" font-family="Helvetica,sans-Serif" font-size="14.00">• No escalation</text>
+<text xml:space="preserve" text-anchor="middle" x="392" y="-329.4" font-family="Helvetica,sans-Serif" font-size="14.00">• No spoofing check</text>
+<text xml:space="preserve" text-anchor="middle" x="392" y="-312.6" font-family="Helvetica,sans-Serif" font-size="14.00">• No systemic error check</text>
+</g>
+<!-- RM_Reply2&#45;&gt;RM_NoAction -->
+<g id="edge5" class="edge">
+<title>RM_Reply2-&gt;RM_NoAction</title>
+<path fill="none" stroke="#cc0000" d="M371.77,-506.38C374,-492.05 376.65,-475.04 379.29,-458.14"/>
+<polygon fill="#cc0000" stroke="#cc0000" points="382.7,-458.99 380.78,-448.57 375.78,-457.91 382.7,-458.99"/>
+<text xml:space="preserve" text-anchor="middle" x="421.58" y="-476.2" font-family="Times,serif" font-size="14.00">no investigation</text>
+</g>
+<!-- Deflection -->
+<g id="node8" class="node">
+<title>Deflection</title>
+<polygon fill="#e2e2e2" stroke="black" points="1005.79,-396.4 518.21,-396.4 518.21,-354.8 1005.79,-354.8 1005.79,-396.4"/>
+<text xml:space="preserve" text-anchor="middle" x="762" y="-379.8" font-family="Helvetica,sans-Serif" font-size="14.00">Deflection Pattern:</text>
+<text xml:space="preserve" text-anchor="middle" x="762" y="-363" font-family="Helvetica,sans-Serif" font-size="14.00">avoid escalation → avoid investigation → redirect responsibility → close case</text>
+</g>
+<!-- RM_Reply2&#45;&gt;Deflection -->
+<g id="edge3" class="edge">
+<title>RM_Reply2-&gt;Deflection</title>
+<path fill="none" stroke="#cc0000" d="M453.89,-506.38C529.86,-474.38 637.56,-429.02 703.44,-401.27"/>
+<polygon fill="#cc0000" stroke="#cc0000" points="704.78,-404.5 712.64,-397.39 702.07,-398.05 704.78,-404.5"/>
+<text xml:space="preserve" text-anchor="middle" x="588.2" y="-476.2" font-family="Times,serif" font-size="14.00">procedural deflection</text>
+</g>
+<!-- Assumptions -->
+<g id="node9" class="node">
+<title>Assumptions</title>
+<polygon fill="#e2e2e2" stroke="black" points="1223.83,-413.2 1024.17,-413.2 1024.17,-338 1223.83,-338 1223.83,-413.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1124" y="-396.6" font-family="Helvetica,sans-Serif" font-size="14.00">Assumptions Made:</text>
+<text xml:space="preserve" text-anchor="middle" x="1124" y="-379.8" font-family="Helvetica,sans-Serif" font-size="14.00">• Sender error</text>
+<text xml:space="preserve" text-anchor="middle" x="1124" y="-363" font-family="Helvetica,sans-Serif" font-size="14.00">• User responsibility</text>
+<text xml:space="preserve" text-anchor="middle" x="1124" y="-346.2" font-family="Helvetica,sans-Serif" font-size="14.00">• No internal lookup required</text>
+</g>
+<!-- RM_Reply2&#45;&gt;Assumptions -->
+<g id="edge4" class="edge">
+<title>RM_Reply2-&gt;Assumptions</title>
+<path fill="none" stroke="#cc0000" d="M494.59,-521.45C593.86,-505.31 734.78,-484.16 859.06,-472 893.59,-468.62 982.57,-476.34 1015,-464 1039.57,-454.65 1062.88,-437.55 1081.59,-420.94"/>
+<polygon fill="#cc0000" stroke="#cc0000" points="1083.72,-423.73 1088.73,-414.39 1078.99,-418.56 1083.72,-423.73"/>
+<text xml:space="preserve" text-anchor="middle" x="930.03" y="-476.2" font-family="Times,serif" font-size="14.00">unsupported assumptions</text>
+</g>
+<!-- RM_NoAction&#45;&gt;Escalation -->
+<g id="edge9" class="edge">
+<title>RM_NoAction-&gt;Escalation</title>
+<path fill="none" stroke="#6a0dad" d="M486.62,-305.08C493.02,-301.84 499.5,-298.9 506,-296.4 647.3,-241.99 1080.93,-200.86 1293.29,-183.4"/>
+<polygon fill="#6a0dad" stroke="#6a0dad" points="1293.29,-186.91 1302.97,-182.61 1292.72,-179.94 1293.29,-186.91"/>
+<text xml:space="preserve" text-anchor="middle" x="641.79" y="-273.8" font-family="Times,serif" font-size="14.00">forces escalation</text>
+</g>
+<!-- UserNext -->
+<g id="node12" class="node">
+<title>UserNext</title>
+<polygon fill="#d9d2e9" stroke="black" points="1573.71,-74.4 1252.29,-74.4 1252.29,-16 1573.71,-16 1573.71,-74.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1413" y="-57.8" font-family="Helvetica,sans-Serif" font-size="14.00">Next Step:</text>
+<text xml:space="preserve" text-anchor="middle" x="1413" y="-41" font-family="Helvetica,sans-Serif" font-size="14.00">Formal escalation email</text>
+<text xml:space="preserve" text-anchor="middle" x="1413" y="-24.2" font-family="Helvetica,sans-Serif" font-size="14.00">(verification + removal + block + fraud escalation)</text>
+</g>
+<!-- Escalation&#45;&gt;UserNext -->
+<g id="edge10" class="edge">
+<title>Escalation-&gt;UserNext</title>
+<path fill="none" stroke="#008080" d="M1413,-126.71C1413,-113.43 1413,-99.03 1413,-86.13"/>
+<polygon fill="#008080" stroke="#008080" points="1416.5,-86.29 1413,-76.29 1409.5,-86.29 1416.5,-86.29"/>
+<text xml:space="preserve" text-anchor="middle" x="1443.91" y="-96.6" font-family="Times,serif" font-size="14.00">next action</text>
+</g>
+<!-- Escalation_1 -->
+<g id="node13" class="node">
+<title>Escalation_1</title>
+<polygon fill="lightgrey" stroke="black" points="2028.61,-1296.8 1557.39,-1296.8 1557.39,-667.2 2028.61,-667.2 2028.61,-1296.8"/>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1280.2" font-family="Helvetica,sans-Serif" font-size="14.00">What they did not do</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1263.4" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1246.6" font-family="Helvetica,sans-Serif" font-size="14.00">They did not:</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1229.8" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1213" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1196.2" font-family="Helvetica,sans-Serif" font-size="14.00">check the tracking references</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1179.4" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1162.6" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1145.8" font-family="Helvetica,sans-Serif" font-size="14.00">confirm whether the SMS messages were genuine</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1129" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1112.2" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1095.4" font-family="Helvetica,sans-Serif" font-size="14.00">identify the sender</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1078.6" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1061.8" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1045" font-family="Helvetica,sans-Serif" font-size="14.00">remove your number from any notification system</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1028.2" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-1011.4" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-994.6" font-family="Helvetica,sans-Serif" font-size="14.00">block your number from future alerts</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-977.8" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-961" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-944.2" font-family="Helvetica,sans-Serif" font-size="14.00">escalate to the Fraud &amp; Cyber Security Team</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-927.4" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-910.6" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-893.8" font-family="Helvetica,sans-Serif" font-size="14.00">acknowledge the repeated pattern over 9 months</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-877" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-860.2" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-843.4" font-family="Helvetica,sans-Serif" font-size="14.00">address the possibility of spoofing</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-826.6" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-809.8" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-793" font-family="Helvetica,sans-Serif" font-size="14.00">address the possibility of a miss-linked Royal Mail account</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-776.2" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-759.4" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-742.6" font-family="Helvetica,sans-Serif" font-size="14.00">address the possibility of systemic error</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-725.8" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-709" font-family="Helvetica,sans-Serif" font-size="14.00"></text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-692.2" font-family="Helvetica,sans-Serif" font-size="14.00">They gave you</text>
+<text xml:space="preserve" text-anchor="middle" x="1793" y="-675.4" font-family="Helvetica,sans-Serif" font-size="14.00"> the “minimum viable reply” that closes the ticket unless you push back.</text>
+</g>
+</g>
+</svg>
