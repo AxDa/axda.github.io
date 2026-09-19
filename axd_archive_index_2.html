@@ -333,6 +333,134 @@
 
 </div>
 
+<!-- REE STRATEGIC DOSSIER (COLLAPSIBLE) -->
+<div style="margin-top:40px;">
+
+  <button onclick="toggleSection('reeDossierBlock')" 
+          style="padding:10px 16px;font-size:16px;background:#333;color:#fff;border:none;border-radius:6px;cursor:pointer;">
+    ▼ REE Strategic Capability Dossier (Click to Expand)
+  </button>
+
+  <div id="reeDossierBlock" style="display:none;margin-top:20px;">
+
+    <!-- CORE TRUTH -->
+    <div style="border:1px solid #900;padding:12px;margin-bottom:16px;background:#ffebee;">
+      <h3 style="margin-top:0;">The Core Truth</h3>
+      <p>
+        REE dominance is NOT about the number of deposits, mines, clusters, or processing plants.
+        It is about vertical integration:
+        <strong>Mining → Concentrate → Oxide → Metal → Alloy → Magnet → Motor → Device</strong>.
+      </p>
+      <p>
+        Only one country currently controls this chain end‑to‑end: <strong>China</strong>.
+        Everyone else is missing at least one critical stage. This is the backbone of this dossier.
+      </p>
+    </div>
+
+    <!-- COUNTRY MATRIX -->
+    <h3>Country Capability Matrix (0–3 Scale)</h3>
+    <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
+      <thead>
+        <tr style="background:#333;color:#fff;">
+          <th style="padding:8px;border:1px solid #444;">Country</th>
+          <th style="padding:8px;border:1px solid #444;">Raw</th>
+          <th style="padding:8px;border:1px solid #444;">Processing</th>
+          <th style="padding:8px;border:1px solid #444;">Magnets</th>
+          <th style="padding:8px;border:1px solid #444;">End‑Point</th>
+          <th style="padding:8px;border:1px solid #444;">Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>China</td><td>3</td><td>3</td><td>3</td><td>3</td><td>Full vertical integration; global dominance.</td></tr>
+        <tr><td>United States</td><td>1</td><td>0</td><td>0</td><td>1</td><td>Strong tech; REE chain dependent on imports.</td></tr>
+        <tr><td>Australia</td><td>2</td><td>2</td><td>0</td><td>1</td><td>Strong upstream; weak downstream.</td></tr>
+        <tr><td>Canada</td><td>2</td><td>0</td><td>0</td><td>0</td><td>Strong deposits; no processing.</td></tr>
+        <tr><td>India</td><td>1</td><td>1</td><td>0</td><td>0</td><td>Emerging; incomplete chain.</td></tr>
+        <tr><td>Russia</td><td>1</td><td>1</td><td>0</td><td>1</td><td>Partial; dependent on imports.</td></tr>
+        <tr><td>European Union</td><td>1</td><td>1</td><td>1</td><td>2</td><td>Strong downstream; weak raw materials.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- RADAR CHARTS -->
+    <h3>Capability Radar Charts</h3>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;">
+
+      <!-- Radar Chart Template Function -->
+      <!-- China -->
+      <div style="flex:1;min-width:200px;text-align:center;">
+        <h4>China</h4>
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <polygon points="60,10 110,60 60,110 10,60" fill="none" stroke="#ccc"/>
+          <polygon points="60,20 100,60 60,100 20,60" fill="rgba(255,0,0,0.3)" stroke="#f00"/>
+        </svg>
+      </div>
+
+      <!-- United States -->
+      <div style="flex:1;min-width:200px;text-align:center;">
+        <h4>United States</h4>
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <polygon points="60,10 110,60 60,110 10,60" fill="none" stroke="#ccc"/>
+          <polygon points="60,40 110,60 60,80 10,60" fill="rgba(0,0,255,0.3)" stroke="#00f"/>
+        </svg>
+      </div>
+
+      <!-- Australia -->
+      <div style="flex:1;min-width:200px;text-align:center;">
+        <h4>Australia</h4>
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <polygon points="60,10 110,60 60,110 10,60" fill="none" stroke="#ccc"/>
+          <polygon points="60,30 95,60 60,90 25,60" fill="rgba(0,150,136,0.3)" stroke="#009688"/>
+        </svg>
+      </div>
+
+      <!-- Canada -->
+      <div style="flex:1;min-width:200px;text-align:center;">
+        <h4>Canada</h4>
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <polygon points="60,10 110,60 60,110 10,60" fill="none" stroke="#ccc"/>
+          <polygon points="60,30 110,60 60,110 10,60" fill="rgba(76,175,80,0.3)" stroke="#4caf50"/>
+        </svg>
+      </div>
+
+      <!-- India -->
+      <div style="flex:1;min-width:200px;text-align:center;">
+        <h4>India</h4>
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <polygon points="60,10 110,60 60,110 10,60" fill="none" stroke="#ccc"/>
+          <polygon points="60,40 95,60 60,110 10,60" fill="rgba(255,193,7,0.3)" stroke="#ffc107"/>
+        </svg>
+      </div>
+
+      <!-- Russia -->
+      <div style="flex:1;min-width:200px;text-align:center;">
+        <h4>Russia</h4>
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <polygon points="60,10 110,60 60,110 10,60" fill="none" stroke="#ccc"/>
+          <polygon points="60,40 95,60 60,80 10,60" fill="rgba(139,0,0,0.3)" stroke="#8b0000"/>
+        </svg>
+      </div>
+
+      <!-- European Union -->
+      <div style="flex:1;min-width:200px;text-align:center;">
+        <h4>European Union</h4>
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <polygon points="60,10 110,60 60,110 10,60" fill="none" stroke="#ccc"/>
+          <polygon points="60,30 95,60 60,90 25,60" fill="rgba(0,0,128,0.3)" stroke="#000080"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleSection(id) {
+  const sec = document.getElementById(id);
+  sec.style.display = sec.style.display === "none" ? "" : "none";
+}
+</script>
+
+  
 <!-- REE INDEX TABLE -->
 <div id="reeTableContainer" style="margin-top:30px;">
   <h3>Rare Earth Element Deposits & Processing Index</h3>
