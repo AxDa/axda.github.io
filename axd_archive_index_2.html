@@ -271,6 +271,237 @@
 
 </div>
 
+
+
+<!-- EARTH BUTTONS CONTAINER -->
+<div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;">
+
+  <!-- T4 TOUR ROUTE -->
+  <div class="earth-launch" style="flex:1;min-width:250px;">
+    <h3>T4 Tour Route</h3>
+    <a href="https://earth.google.com/earth/d/1uSZ-q7RfDwj2JA5dFMampM_Qtij4WcD8?usp=sharing"
+       target="_blank"
+       style="display:inline-block;padding:12px 18px;background:#1a73e8;color:#fff;
+              text-decoration:none;border-radius:6px;font-weight:600;">
+       🌍 Open T4 Tour Route
+    </a>
+  </div>
+
+  <!-- ENHANCED ROUTE -->
+  <div class="earth-launch" style="flex:1;min-width:250px;">
+    <h3>Enhanced Route</h3>
+    <a href="https://earth.google.com/web/@?link=https://axda.github.io/Blu/tour_route_enhanced.kml"
+       target="_blank"
+       style="display:inline-block;padding:12px 18px;background:#34a853;color:#fff;
+              text-decoration:none;border-radius:6px;font-weight:600;">
+       🌍 Open Enhanced Route
+    </a>
+  </div>
+
+  <!-- KEY RARE EARTH OXIDE SEPARATION (EX CHINA) -->
+  <div class="earth-launch" style="flex:1;min-width:250px;">
+    <h3>REE Separation ex‑China</h3>
+    <a href="https://earth.google.com/earth/d/1p4nF1Oo63Lc6JxZDlqGyx-tLlcheCr6h?usp=sharing"
+       target="_blank"
+       style="display:inline-block;padding:12px 18px;background:#e65100;color:#fff;
+              text-decoration:none;border-radius:6px;font-weight:600;">
+       🌍 Open REE Separation Project
+    </a>
+  </div>
+
+  <!-- REE DEPOSITS – CANADA -->
+  <div class="earth-launch" style="flex:1;min-width:250px;">
+    <h3>REE Deposits – Canada</h3>
+    <a href="https://earth.google.com/earth/d/1_Wc9jzCMIadseKCGchggRm_9u1pVhe7b?usp=sharing"
+       target="_blank"
+       style="display:inline-block;padding:12px 18px;background:#0d47a1;color:#fff;
+              text-decoration:none;border-radius:6px;font-weight:600;">
+       🌍 Open Canada REE Deposits
+    </a>
+  </div>
+
+  <!-- GLOBAL REE POLYGONS -->
+  <div class="earth-launch" style="flex:1;min-width:250px;">
+    <h3>Global REE Polygons</h3>
+    <a href="https://earth.google.com/earth/d/1q1BVLhJ8Et-Kpgp4_hqkdQfttRjO-iOl?usp=sharing"
+       target="_blank"
+       style="display:inline-block;padding:12px 18px;background:#6a1b9a;color:#fff;
+              text-decoration:none;border-radius:6px;font-weight:600;">
+       🌍 Open Global REE Polygons
+    </a>
+  </div>
+
+</div>
+
+<!-- REE INDEX TABLE -->
+<div id="reeTableContainer" style="margin-top:30px;">
+  <h3>Rare Earth Element Deposits & Processing Index</h3>
+
+  <!-- SEARCH -->
+  <input type="text" id="reeSearch" placeholder="Search REE deposits..." 
+         style="width:100%;padding:8px;margin-bottom:10px;font-size:16px;">
+
+  <!-- CATEGORY FILTER -->
+  <select id="reeFilter" style="padding:8px;margin-bottom:10px;font-size:16px;">
+    <option value="">All Categories</option>
+    <option value="deposit">Deposits</option>
+    <option value="processing">Processing</option>
+    <option value="cluster">Clusters</option>
+    <option value="basin">Basins</option>
+  </select>
+
+  <!-- COLLAPSIBLE SECTIONS -->
+  <button onclick="toggleSection('reeDeposits')" 
+          style="padding:8px;margin-bottom:10px;">Deposits</button>
+  <button onclick="toggleSection('reeProcessing')" 
+          style="padding:8px;margin-bottom:10px;">Processing</button>
+  <button onclick="toggleSection('reeClusters')" 
+          style="padding:8px;margin-bottom:10px;">Clusters</button>
+  <button onclick="toggleSection('reeBasins')" 
+          style="padding:8px;margin-bottom:10px;">Basins</button>
+
+  <!-- TABLE -->
+  <table id="reeTable" style="width:100%;border-collapse:collapse;">
+    <thead>
+      <tr style="background:#333;color:#fff;cursor:pointer;">
+        <th onclick="sortTable(0)" style="padding:8px;border:1px solid #444;">Name</th>
+        <th onclick="sortTable(1)" style="padding:8px;border:1px solid #444;">Description</th>
+        <th style="padding:8px;border:1px solid #444;">Map</th>
+      </tr>
+    </thead>
+    <tbody id="reeDeposits"></tbody>
+    <tbody id="reeProcessing"></tbody>
+    <tbody id="reeClusters"></tbody>
+    <tbody id="reeBasins"></tbody>
+  </table>
+</div>
+
+<script>
+/* ===========================
+   REE DATA
+   =========================== */
+const reeData = [
+  /* Deposits */
+  {cat:"deposit", name:"01_Bayan_Obo_CN", desc:"Bayan Obo REE Deposit, Inner Mongolia, China.", link:""},
+  {cat:"deposit", name:"02_Mountain_Pass_US", desc:"Mountain Pass REE Deposit, California, USA.", link:""},
+  {cat:"deposit", name:"03_Mount_Weld_AU", desc:"Mount Weld REE Deposit, Western Australia.", link:""},
+  {cat:"deposit", name:"04_Nolans_Bore_AU", desc:"Nolans Bore REE Deposit, Northern Territory, Australia.", link:""},
+  {cat:"deposit", name:"05_Kvanefjeld_GL", desc:"Kvanefjeld REE-U Deposit, southern Greenland.", link:""},
+  {cat:"deposit", name:"06_Nechalacho_CA", desc:"Nechalacho REE Deposit, Northwest Territories, Canada.", link:""},
+  {cat:"deposit", name:"07_Steenkampskraal_ZA", desc:"Steenkampskraal REE Deposit, Western Cape, South Africa.", link:""},
+  {cat:"deposit", name:"08_Tomtor_RU", desc:"Tomtor REE-Nb Deposit, Yakutia, Russia.", link:""},
+  {cat:"deposit", name:"09_Bear_Lodge_US", desc:"Bear Lodge REE Deposit, Wyoming, USA.", link:""},
+  {cat:"deposit", name:"10_Strange_Lake_CA", desc:"Strange Lake REE Deposit, Quebec/Labrador, Canada.", link:""},
+  {cat:"deposit", name:"11_Norra_Karr_SE", desc:"Norra Kärr REE Deposit, southern Sweden.", link:""},
+  {cat:"deposit", name:"12_Dubbo_Toongi_AU", desc:"Dubbo (Toongi) REE-Zr Deposit, New South Wales, Australia.", link:""},
+  {cat:"deposit", name:"13_Lofdal_NA", desc:"Lofdal Heavy REE Project, Namibia.", link:""},
+  {cat:"deposit", name:"14_Kangankunde_MW", desc:"Kangankunde REE Deposit, Malawi.", link:""},
+  {cat:"deposit", name:"15_Weishan_CN", desc:"Weishan REE Deposit, Shandong, China.", link:""},
+  {cat:"deposit", name:"16_Maoniuping_CN", desc:"Maoniuping REE Deposit, Sichuan, China.", link:""},
+  {cat:"deposit", name:"17_Liangshan_CN", desc:"Liangshan REE region, Sichuan, China.", link:""},
+  {cat:"deposit", name:"18_Guanshan_CN", desc:"Guanshan REE Deposit, Jiangxi, China.", link:""},
+  {cat:"deposit", name:"19_Misery_Lake_CA", desc:"Misery Lake REE Prospect, Quebec, Canada.", link:""},
+  {cat:"deposit", name:"20_Wicheeda_CA", desc:"Wicheeda REE Deposit, British Columbia, Canada.", link:""},
+  {cat:"deposit", name:"21_Ngualla_TZ", desc:"Ngualla REE Deposit, Tanzania.", link:""},
+  {cat:"deposit", name:"22_Manavalakurichi_IN", desc:"Monazite-bearing coastal sands, Tamil Nadu, India.", link:""},
+  {cat:"deposit", name:"23_Ytterby_SE", desc:"Historic Ytterby REE locality, Sweden.", link:""},
+  {cat:"deposit", name:"24_Alces_Lake_CA", desc:"Alces Lake REE Project, Saskatchewan, Canada.", link:""},
+
+  /* Processing */
+  {cat:"processing", name:"Lynas – Kalgoorlie", desc:"Cracking & leaching plant, Western Australia.", link:""},
+  {cat:"processing", name:"Lynas – Kuantan", desc:"Gebeng downstream processing plant, Malaysia.", link:""},
+  {cat:"processing", name:"MP Materials – Mountain Pass", desc:"US rare earth mining & processing complex.", link:""},
+  {cat:"processing", name:"Neo – Sillamäe", desc:"Estonian rare earth separation facility.", link:""},
+  {cat:"processing", name:"Iluka – Eneabba/Narngulu", desc:"Australian rare earth refinery.", link:""},
+  {cat:"processing", name:"Carester – Lacq France", desc:"French rare earth separation pilot facility.", link:""},
+
+  /* Clusters */
+  {cat:"cluster", name:"Baotou Inner Mongolia", desc:"Major Chinese REE industrial cluster.", link:""},
+  {cat:"cluster", name:"Ganzhou Jiangxi", desc:"Southern ion-adsorption REE hub.", link:""},
+  {cat:"cluster", name:"Ningbo Zhejiang", desc:"Downstream REE processing cluster.", link:""},
+  {cat:"cluster", name:"OSCOM Odisha", desc:"Indian Rare Earths Ltd (IREL) complex.", link:""},
+  {cat:"cluster", name:"Aluva Kerala", desc:"IREL processing facility.", link:""},
+  {cat:"cluster", name:"Nellore Andhra Pradesh", desc:"Planned magnet corridor.", link:""},
+  {cat:"cluster", name:"Solikamsk Perm Krai", desc:"Russian REE processing cluster.", link:""},
+  {cat:"cluster", name:"Moscow Giredmet Institute", desc:"Metallurgy & REE research institute.", link:""},
+  {cat:"cluster", name:"Krasnokamensk Tomtor", desc:"Planned Tomtor REE processing plant.", link:""},
+
+  /* Basin */
+  {cat:"basin", name:"Ivanpah Valley Basin", desc:"Simplified hydrological basin polygon.", link:""}
+];
+
+/* ===========================
+   TABLE POPULATION
+   =========================== */
+function populateTable() {
+  const sections = {
+    deposit: document.getElementById("reeDeposits"),
+    processing: document.getElementById("reeProcessing"),
+    cluster: document.getElementById("reeClusters"),
+    basin: document.getElementById("reeBasins")
+  };
+
+  Object.values(sections).forEach(sec => sec.innerHTML = "");
+
+  reeData.forEach(item => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td style="padding:8px;border:1px solid #444;">${item.name}</td>
+      <td style="padding:8px;border:1px solid #444;">${item.desc}</td>
+      <td style="padding:8px;border:1px solid #444;">
+        <a href="${item.link || '#'}" target="_blank">🗺️</a>
+      </td>
+    `;
+    sections[item.cat].appendChild(row);
+  });
+}
+populateTable();
+
+/* ===========================
+   SEARCH
+   =========================== */
+document.getElementById("reeSearch").addEventListener("input", function() {
+  const q = this.value.toLowerCase();
+  document.querySelectorAll("#reeTable tbody tr").forEach(r => {
+    r.style.display = r.innerText.toLowerCase().includes(q) ? "" : "none";
+  });
+});
+
+/* ===========================
+   CATEGORY FILTER
+   =========================== */
+document.getElementById("reeFilter").addEventListener("change", function() {
+  const val = this.value;
+  document.querySelectorAll("#reeTable tbody").forEach(sec => {
+    sec.style.display = (!val || sec.id.includes(val)) ? "" : "none";
+  });
+});
+
+/* ===========================
+   COLLAPSIBLE SECTIONS
+   =========================== */
+function toggleSection(id) {
+  const sec = document.getElementById(id);
+  sec.style.display = sec.style.display === "none" ? "" : "none";
+}
+
+/* ===========================
+   SORTING
+   =========================== */
+function sortTable(col) {
+  const rows = [...document.querySelectorAll("#reeTable tbody tr")];
+  const sorted = rows.sort((a,b) => 
+    a.children[col].innerText.localeCompare(b.children[col].innerText)
+  );
+  const tbodies = document.querySelectorAll("#reeTable tbody");
+  tbodies.forEach(t => t.innerHTML = "");
+  sorted.forEach(r => {
+    const cat = reeData.find(x => x.name === r.children[0].innerText).cat;
+    document.getElementById("ree" + cat.charAt(0).toUpperCase() + cat.slice(1)).appendChild(r);
+  });
+}
+</script>
+  
 <audio id="hoverAudio"
        src="David%20Lowe%20Matt%20Chorley_R5L_24042026_1010mmss_axd_v0.1.mp3">
 </audio>
