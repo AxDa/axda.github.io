@@ -58,7 +58,6 @@
         position: relative;
     }
 
-    /* Pan/Zoom wrapper */
     #panzoom-wrapper {
         width: 100%;
         height: 100%;
@@ -78,7 +77,6 @@
         pointer-events: auto;
     }
 
-    /* Zoom buttons */
     #zoom-controls {
         position: absolute;
         top: 15px;
@@ -97,7 +95,23 @@
         border-radius: 6px;
     }
 
-    /* Minimap */
+    #fit-controls {
+        position: absolute;
+        top: 15px;
+        left: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        z-index: 10;
+    }
+
+    #fit-controls button {
+        width: 90px;
+        height: 32px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+
     #minimap {
         position: absolute;
         right: 15px;
@@ -143,6 +157,12 @@
         <button id="zoom-reset">⟳</button>
     </div>
 
+    <!-- Fit Buttons -->
+    <div id="fit-controls">
+        <button id="fit-width">Fit Width</button>
+        <button id="fit-height">Fit Height</button>
+    </div>
+
     <!-- Minimap -->
     <div id="minimap">
         <div id="minimap-viewport"></div>
@@ -160,10 +180,6 @@
 </main>
 
 <script>
-/* ============================================================
-   PAN / ZOOM MODULE — CLEAN, SINGLE, SELF‑CONTAINED
-   ============================================================ */
-
 (function() {
 
     const wrapper = document.getElementById("panzoom-wrapper");
@@ -179,6 +195,7 @@
     let lastY = 0;
 
     let pinchDist = 0;
+    let vb = null;
 
     function applyTransform() {
         content.style.transform =
@@ -186,14 +203,29 @@
         updateMinimap();
     }
 
-    /* ------------------------------------------------------------
-       LOAD SVG → AUTO‑FIT + MINIMAP CLONE
-       ------------------------------------------------------------ */
+    function centerCamera() {
+        const w = wrapper.clientWidth;
+        const h = wrapper.clientHeight;
+        originX = (w - vb.width * scale) / 2;
+        originY = (h - vb.height * scale) / 2;
+    }
+
+    function zoomAtPoint(factor, cx, cy) {
+        const prevScale = scale;
+        scale *= factor;
+
+        originX = cx - (cx - originX) * (scale / prevScale);
+        originY = cy - (cy - originY) * (scale / prevScale);
+
+        applyTransform();
+    }
+
     svgObject.addEventListener("load", () => {
         const svg = svgObject.contentDocument.querySelector("svg");
         if (!svg) return;
 
-        const vb = svg.viewBox.baseVal;
+        vb = svg.viewBox.baseVal;
+
         const w = wrapper.clientWidth;
         const h = wrapper.clientHeight;
 
@@ -201,53 +233,61 @@
         const scaleY = h / vb.height;
 
         scale = Math.min(scaleX, scaleY) * 0.95;
-        originX = (w - vb.width * scale) / 2;
-        originY = (h - vb.height * scale) / 2;
 
-        /* Clone SVG into minimap */
+        centerCamera();
+
         const clone = svg.cloneNode(true);
         clone.removeAttribute("width");
         clone.removeAttribute("height");
         clone.style.width = "100%";
         clone.style.height = "100%";
-
         document.getElementById("minimap").appendChild(clone);
 
         applyTransform();
     });
 
-    /* ------------------------------------------------------------
-       ZOOM BUTTONS
-       ------------------------------------------------------------ */
     document.getElementById("zoom-in").onclick = () => {
-        scale *= 1.2;
-        applyTransform();
+        zoomAtPoint(1.2, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
     };
 
     document.getElementById("zoom-out").onclick = () => {
-        scale *= 0.8;
-        applyTransform();
+        zoomAtPoint(0.8, wrapper.clientWidth / 2, wrapper.clientHeight / 2);
     };
 
     document.getElementById("zoom-reset").onclick = () => {
-        scale = 1;
-        originX = 0;
-        originY = 0;
+        const w = wrapper.clientWidth;
+        const h = wrapper.clientHeight;
+
+        const scaleX = w / vb.width;
+        const scaleY = h / vb.height;
+
+        scale = Math.min(scaleX, scaleY) * 0.95;
+        centerCamera();
         applyTransform();
     };
 
-    /* ------------------------------------------------------------
-       WHEEL ZOOM
-       ------------------------------------------------------------ */
+    /* FIT WIDTH */
+    document.getElementById("fit-width").onclick = () => {
+        const w = wrapper.clientWidth;
+        scale = w / vb.width;
+        centerCamera();
+        applyTransform();
+    };
+
+    /* FIT HEIGHT */
+    document.getElementById("fit-height").onclick = () => {
+        const h = wrapper.clientHeight;
+        scale = h / vb.height;
+        centerCamera();
+        applyTransform();
+    };
+
     wrapper.addEventListener("wheel", e => {
         e.preventDefault();
-        scale *= e.deltaY > 0 ? 0.9 : 1.1;
-        applyTransform();
+        const factor = e.deltaY > 0 ? 0.9 : 1.1;
+        zoomAtPoint(factor, e.clientX, e.clientY);
     });
 
-    /* ------------------------------------------------------------
-       DRAG PAN
-       ------------------------------------------------------------ */
     wrapper.addEventListener("pointerdown", e => {
         isDragging = true;
         lastX = e.clientX;
@@ -266,9 +306,6 @@
     wrapper.addEventListener("pointerup", () => isDragging = false);
     wrapper.addEventListener("pointerleave", () => isDragging = false);
 
-    /* ------------------------------------------------------------
-       PINCH ZOOM
-       ------------------------------------------------------------ */
     wrapper.addEventListener("touchmove", e => {
         if (e.touches.length === 2) {
             e.preventDefault();
@@ -277,24 +314,18 @@
                 t1.pageX - t2.pageX,
                 t1.pageY - t2.pageY
             );
-            if (pinchDist) scale *= dist / pinchDist;
+            if (pinchDist) {
+                const factor = dist / pinchDist;
+                zoomAtPoint(factor, (t1.pageX + t2.pageX) / 2,
+                                   (t1.pageY + t2.pageY) / 2);
+            }
             pinchDist = dist;
-            applyTransform();
         }
     });
 
-    wrapper.addEventListener("touchend", () => {
-        pinchDist = 0;
-    });
+    wrapper.addEventListener("touchend", () => pinchDist = 0);
 
-    /* ------------------------------------------------------------
-       MINIMAP VIEWPORT SYNC
-       ------------------------------------------------------------ */
     function updateMinimap() {
-        const svg = svgObject.contentDocument.querySelector("svg");
-        if (!svg) return;
-
-        const vb = svg.viewBox.baseVal;
         const mini = document.getElementById("minimap");
         const vp = document.getElementById("minimap-viewport");
 
