@@ -27045,6 +27045,44 @@
   "size": 8794351,
   "type": "png"
 },
+  {
+    "title": "1_bleaksirenst_093612_093636_052507_utc_1_21092026_v0_2.mp3",
+    "url_pages": "https://axda.github.io/1_bleakst_093612_093636_052507_utc_1_21092026_v0_2.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleakst_093612_093636_052507_utc_1_21092026_v0_2.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleakst_093612_093636_052507_utc_1_21092026_v0_2.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleakst_093612_093636_052507_utc_1_21092026_v0_2.png",
+    "tags": [
+      "bleaksirenst",
+      "bleaktulipst",
+      "093612",
+      "093636",
+      "052507",
+      "blu_index_entries79.json"
+    ],
+    "date": "2026-09-21",
+    "motif": "civic delay",
+    "cluster": "siren_blue",
+    "size": 1257473,
+    "type": "mp3"
+  },
+  {
+    "title": "1_bleaksirenst_090133_090314_utc_1_21092026_v0.2.mp3",
+    "url_pages": "https://axda.github.io/1_bleaksirenst_090133_090314_utc_1_21092026_v0.2.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleaksirenst_090133_090314_utc_1_21092026_v0.2.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleaksirenst_090133_090314_utc_1_21092026_v0_2.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleaksirenst_090133_090314_utc_1_21092026_v0_2.png",
+    "tags": [
+      "bleaksirenst",
+      "bleaktulipst",
+      "090133_090314",
+      "blu_index_entries78.json"
+    ],
+    "date": "2026-09-21",
+    "motif": "civic delay",
+    "cluster": "siren_blue",
+    "size": 4928408,
+    "type": "mp3"
+  },
 {
   "title": "core_truth_clamping_graph23.html",
   "url_pages": "https://axda.github.io/core_truth_clamping_graph23.html",
