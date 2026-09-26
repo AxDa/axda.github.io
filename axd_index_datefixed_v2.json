@@ -27815,6 +27815,30 @@
   "type": "png"
 },
 {
+    "title": "1_bleaksirenst_silence_soft_x1_5_140930_street__horn_141830e_utc_1_26092026_v0.1.mp3",
+    "url_pages": "https://axda.github.io/1_bleaksirenst_silence_soft_x1_5_140930_street__horn_141830e_utc_1_26092026_v0.1.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleaksirenst_silence_soft_x1_5_140930_street__horn_141830e_utc_1_26092026_v0.1.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleaksirenst_silence_soft_x1_5_140930_street__horn_141830e_utc_1_26092026_v0_1.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleaksirenst_silence_soft_x1_5_140930_street__horn_141830e_utc_1_26092026_v0_1.png",
+    "tags": [
+      "bleaksirenst",
+      "neighbours",
+      "silence_soft",
+      "sirenblue",
+      "x1_5",
+      "140930",
+      "street",
+      "horn",
+      "26092026",
+      "blu_index_entries81.json"
+    ],
+    "date": "2026-09-26",
+    "motif": "civic delay",
+    "cluster": "siren_blue",
+    "size": 5537375,
+    "type": "mp3"
+},
+{
     "title": "1_bleakst_105116_neighbour_111256_105800e_utc_1_26092026_v0.2.mp3",
     "url_pages": "https://axda.github.io/1_bleakst_105116_neighbour_111256_105800e_utc_1_26092026_v0.2.mp3",
     "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_bleakst_105116_neighbour_111256_105800e_utc_1_26092026_v0.2.mp3",
@@ -27839,11 +27863,35 @@
     "type": "mp3"
 },
 {
+  "title": "Thank_you_very_much_indeed_an_inconvenient_core_truth_abstract_acoustic‑landscape_version_0641_26092026.png",
+  "url_pages": "https://axda.github.io/abstract_acoustic‑landscape_version_0641_26092026.png",
+  "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/abstract_acoustic‑landscape_version_0641_26092026.png",
+  "thumbnail_pages": "https://axda.github.io/abstract_acoustic‑landscape_version_0641_26092026.png",
+  "thumbnail_raw",:  "https://raw.githubusercontent.com/AxDa/axda.github.io/main/abstract_acoustic‑landscape_version_0641_26092026.png",
+  "tags": [
+    "skulduggery",
+    "inconvenient_core_truth",
+    "stairway_case",
+    "core_alamo_weaving",
+    "LV426_bayeux_segmentation",
+    "las_pozas",
+    "mayan",
+    "clarity",
+    "cockpit",
+    "pioneer"
+  ],
+  "date": "2026-09-26",
+  "motif": "technical audit",
+  "cluster": "signal",
+  "size": 5956969, 
+  "type": "png"
+},
+{
     "title": "1_bleakst_silence_soft_hv2_183805_power_tools_trader_1924_1948_utc_1_25092026.mp3",
     "url_pages": "https://axda.github.io/1_bleakst_silence_soft_hv2_183805_power_tools_trader_1924_1948_utc_1_25092026.mp3",
     "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_bleakst_silence_soft_hv2_183805_power_tools_trader_1924_1948_utc_1_25092026.mp3",
     "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleakst_silence_soft_hv2_183805_power_tools_trader_1924_1948_utc_1_25092026.png",
-    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_bleakst_silence_soft_hv2_183805_power_tools_trader_1924_1948_utc_1_25092026.png",
+    "thumbnail_raw":  "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/_bleakst_silence_soft_hv2_183805_power_tools_trader_1924_1948_utc_1_25092026.png",
     "tags": [
       "harehills",
       "bleakst",
@@ -27895,7 +27943,7 @@
       "181900",
       "23092026"
     ],
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "motif": "civic decay",
     "cluster": "perambulator",
     "size": 3367749,
@@ -27940,7 +27988,7 @@
       "faberge_nursey",
       "schooling_abuse"
     ],
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "motif": "civic decay",
     "cluster": "perambulator",
     "size": 1078586,
