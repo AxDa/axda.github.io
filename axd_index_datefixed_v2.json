@@ -27046,6 +27046,17 @@
   "type": "png"
 },
 {
+   "title": "2026_Untitled_50_document_wk39_20092026_p20",
+   "url_pages": "https://docs.google.com/document/d/https://docs.google.com/document/d/1hwiinEoIyzsqA2AfwUcgaz9VIGOtIrvhyj6z4xvo4Rs/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-09-20",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 57100000,
+   "type": "doc"
+},
+{
     "title": "1_bleakst_street_commotion_army_bastards_k9_horns_exhausts_192215_192328_(192600e)_porambulators_utc_1_21092026_v_1.mp3",
     "url_pages": "https://axda.github.io/1_bleakst_street_commotion_army_bastards_k9_horns_exhausts_192215_192328_(192600e)_porambulators_utc_1_21092026_v_1.mp3",
     "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_bleakst_street_commotion_army_bastards_k9_horns_exhausts_192215_192328_(192600e)_porambulators_utc_1_21092026_v_1.mp3",
@@ -28045,5 +28056,16 @@
     "cluster": "firework_barrage",
     "size": 9114687,
     "type": "mp3"
-  }
+},
+{
+   "title": "2026_Untitled_51_document_wk40_27092026_p2",
+   "url_pages": "https://docs.google.com/document/d/1N1xMe2FnYtzNnc0SpFwddHJeMaZEsy4Q5Tn3xAZpgZQ/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-09-27",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 100000,
+   "type": "doc"
+}
 ]
