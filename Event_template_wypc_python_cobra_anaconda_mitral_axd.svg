@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="736pt" height="582pt" viewBox="0.00 0.00 736.00 582.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 578.4)">
+<title>EventInvestigation</title>
+<polygon fill="#000000" stroke="none" points="-4,4 -4,-578.4 732.17,-578.4 732.17,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="364.09" y="-550.6" font-family="Times,serif" font-size="22.00" fill="#eeeeee">Event_template_wypc_python_cobra_anaconda_mitral</text>
+<!-- Event -->
+<g id="node1" class="node">
+<title>Event</title>
+<path fill="none" stroke="#999999" d="M470.72,-540C470.72,-540 356.53,-540 356.53,-540 350.53,-540 344.53,-534 344.53,-528 344.53,-528 344.53,-516 344.53,-516 344.53,-510 350.53,-504 356.53,-504 356.53,-504 470.72,-504 470.72,-504 476.72,-504 482.72,-510 482.72,-516 482.72,-516 482.72,-528 482.72,-528 482.72,-534 476.72,-540 470.72,-540"/>
+<text xml:space="preserve" text-anchor="middle" x="413.62" y="-525" font-family="Times,serif" font-size="10.00" fill="#cccccc">Event (alleged)</text>
+<text xml:space="preserve" text-anchor="middle" x="413.62" y="-513" font-family="Times,serif" font-size="10.00" fill="#cccccc">What, when, where, who, how</text>
+</g>
+<!-- ClaimSource -->
+<g id="node2" class="node">
+<title>ClaimSource</title>
+<path fill="none" stroke="#999999" d="M109.24,-324C109.24,-324 12,-324 12,-324 6,-324 0,-318 0,-312 0,-312 0,-300 0,-300 0,-294 6,-288 12,-288 12,-288 109.24,-288 109.24,-288 115.24,-288 121.24,-294 121.24,-300 121.24,-300 121.24,-312 121.24,-312 121.24,-318 115.24,-324 109.24,-324"/>
+<text xml:space="preserve" text-anchor="middle" x="60.62" y="-303" font-family="Times,serif" font-size="10.00">Claim Source &amp; Narrative</text>
+</g>
+<!-- Event&#45;&gt;ClaimSource -->
+<g id="edge1" class="edge">
+<title>Event-&gt;ClaimSource</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M344.03,-514.98C272.56,-507.54 167.41,-492.75 135.62,-468 93.22,-434.98 73.79,-372.29 65.71,-335.64"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="69.15,-335.02 63.72,-325.92 62.29,-336.42 69.15,-335.02"/>
+</g>
+<!-- Witnesses -->
+<g id="node3" class="node">
+<title>Witnesses</title>
+<path fill="none" stroke="#999999" d="M193.67,-108C193.67,-108 105.57,-108 105.57,-108 99.57,-108 93.57,-102 93.57,-96 93.57,-96 93.57,-84 93.57,-84 93.57,-78 99.57,-72 105.57,-72 105.57,-72 193.67,-72 193.67,-72 199.67,-72 205.67,-78 205.67,-84 205.67,-84 205.67,-96 205.67,-96 205.67,-102 199.67,-108 193.67,-108"/>
+<text xml:space="preserve" text-anchor="middle" x="149.62" y="-87" font-family="Times,serif" font-size="10.00">Witnesses &amp; Testimony</text>
+</g>
+<!-- Event&#45;&gt;Witnesses -->
+<g id="edge2" class="edge">
+<title>Event-&gt;Witnesses</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M344.07,-514.35C280.53,-506.83 192.9,-492.34 168.62,-468 140.06,-439.36 149.62,-419.45 149.62,-379 149.62,-379 149.62,-379 149.62,-233 149.62,-193.92 149.62,-148.78 149.62,-120.08"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="153.12,-120.15 149.62,-110.15 146.12,-120.15 153.12,-120.15"/>
+</g>
+<!-- DirectEvidence -->
+<g id="node4" class="node">
+<title>DirectEvidence</title>
+<path fill="none" stroke="#999999" d="M562.97,-396C562.97,-396 506.28,-396 506.28,-396 500.28,-396 494.28,-390 494.28,-384 494.28,-384 494.28,-372 494.28,-372 494.28,-366 500.28,-360 506.28,-360 506.28,-360 562.97,-360 562.97,-360 568.97,-360 574.97,-366 574.97,-372 574.97,-372 574.97,-384 574.97,-384 574.97,-390 568.97,-396 562.97,-396"/>
+<text xml:space="preserve" text-anchor="middle" x="534.62" y="-375" font-family="Times,serif" font-size="10.00">Direct Evidence</text>
+</g>
+<!-- Event&#45;&gt;DirectEvidence -->
+<g id="edge3" class="edge">
+<title>Event-&gt;DirectEvidence</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M483.1,-509.53C506.99,-501.89 531.31,-489.17 545.62,-468 557.61,-450.27 553.55,-425.92 547.22,-407.17"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="550.52,-405.99 543.7,-397.88 543.97,-408.48 550.52,-405.99"/>
+</g>
+<!-- Context -->
+<g id="node5" class="node">
+<title>Context</title>
+<path fill="none" stroke="#999999" d="M391.28,-468C391.28,-468 305.96,-468 305.96,-468 299.96,-468 293.96,-462 293.96,-456 293.96,-456 293.96,-444 293.96,-444 293.96,-438 299.96,-432 305.96,-432 305.96,-432 391.28,-432 391.28,-432 397.28,-432 403.28,-438 403.28,-444 403.28,-444 403.28,-456 403.28,-456 403.28,-462 397.28,-468 391.28,-468"/>
+<text xml:space="preserve" text-anchor="middle" x="348.62" y="-447" font-family="Times,serif" font-size="10.00">Context &amp; Background</text>
+</g>
+<!-- Event&#45;&gt;Context -->
+<g id="edge4" class="edge">
+<title>Event-&gt;Context</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M397.55,-503.7C389.92,-495.47 380.64,-485.48 372.23,-476.42"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="375.01,-474.27 365.64,-469.32 369.88,-479.03 375.01,-474.27"/>
+</g>
+<!-- Motive -->
+<g id="node6" class="node">
+<title>Motive</title>
+<path fill="none" stroke="#999999" d="M264,-468C264,-468 189.24,-468 189.24,-468 183.24,-468 177.24,-462 177.24,-456 177.24,-456 177.24,-444 177.24,-444 177.24,-438 183.24,-432 189.24,-432 189.24,-432 264,-432 264,-432 270,-432 276,-438 276,-444 276,-444 276,-456 276,-456 276,-462 270,-468 264,-468"/>
+<text xml:space="preserve" text-anchor="middle" x="226.62" y="-447" font-family="Times,serif" font-size="10.00" fill="#cccccc">Motive &amp; Incentives</text>
+</g>
+<!-- Event&#45;&gt;Motive -->
+<g id="edge9" class="edge">
+<title>Event-&gt;Motive</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M366.92,-503.52C341.72,-494.08 310.42,-482.37 283.77,-472.39"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="285.21,-469.19 274.62,-468.97 282.75,-475.75 285.21,-469.19"/>
+</g>
+<!-- Capability -->
+<g id="node7" class="node">
+<title>Capability</title>
+<path fill="none" stroke="#999999" d="M716.17,-180C716.17,-180 643.07,-180 643.07,-180 637.07,-180 631.07,-174 631.07,-168 631.07,-168 631.07,-156 631.07,-156 631.07,-150 637.07,-144 643.07,-144 643.07,-144 716.17,-144 716.17,-144 722.17,-144 728.17,-150 728.17,-156 728.17,-156 728.17,-168 728.17,-168 728.17,-174 722.17,-180 716.17,-180"/>
+<text xml:space="preserve" text-anchor="middle" x="679.62" y="-159" font-family="Times,serif" font-size="10.00" fill="#cccccc">Capability &amp; Means</text>
+</g>
+<!-- Event&#45;&gt;Capability -->
+<g id="edge10" class="edge">
+<title>Event-&gt;Capability</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M483.16,-517.24C525.74,-511.7 579.06,-498.59 616.62,-468 650.84,-440.13 660.62,-423.13 660.62,-379 660.62,-379 660.62,-379 660.62,-305 660.62,-265.39 667.97,-220.11 673.53,-191.54"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="676.91,-192.51 675.45,-182.02 670.04,-191.13 676.91,-192.51"/>
+</g>
+<!-- Footprint -->
+<g id="node8" class="node">
+<title>Footprint</title>
+<path fill="none" stroke="#999999" d="M632.67,-108C632.67,-108 534.57,-108 534.57,-108 528.57,-108 522.57,-102 522.57,-96 522.57,-96 522.57,-84 522.57,-84 522.57,-78 528.57,-72 534.57,-72 534.57,-72 632.67,-72 632.67,-72 638.67,-72 644.67,-78 644.67,-84 644.67,-84 644.67,-96 644.67,-96 644.67,-102 638.67,-108 632.67,-108"/>
+<text xml:space="preserve" text-anchor="middle" x="583.62" y="-93" font-family="Times,serif" font-size="10.00" fill="#cccccc">Operational Footprint</text>
+<text xml:space="preserve" text-anchor="middle" x="583.62" y="-81" font-family="Times,serif" font-size="10.00" fill="#cccccc">(comms, logistics, money)</text>
+</g>
+<!-- Event&#45;&gt;Footprint -->
+<g id="edge11" class="edge">
+<title>Event-&gt;Footprint</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M483,-509.02C510.82,-501.26 541.47,-488.59 563.62,-468 595.26,-438.6 602.62,-422.19 602.62,-379 602.62,-379 602.62,-379 602.62,-233 602.62,-193.39 595.27,-148.11 589.71,-119.54"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="593.2,-119.13 587.8,-110.02 586.34,-120.51 593.2,-119.13"/>
+</g>
+<!-- Timeline -->
+<g id="node10" class="node">
+<title>Timeline</title>
+<path fill="none" stroke="#999999" d="M524.19,-468C524.19,-468 433.05,-468 433.05,-468 427.05,-468 421.05,-462 421.05,-456 421.05,-456 421.05,-444 421.05,-444 421.05,-438 427.05,-432 433.05,-432 433.05,-432 524.19,-432 524.19,-432 530.19,-432 536.19,-438 536.19,-444 536.19,-444 536.19,-456 536.19,-456 536.19,-462 530.19,-468 524.19,-468"/>
+<text xml:space="preserve" text-anchor="middle" x="478.62" y="-447" font-family="Times,serif" font-size="10.00">Timeline Reconstruction</text>
+</g>
+<!-- Event&#45;&gt;Timeline -->
+<g id="edge15" class="edge">
+<title>Event-&gt;Timeline</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M429.69,-503.7C437.32,-495.47 446.6,-485.48 455.02,-476.42"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="457.37,-479.03 461.61,-469.32 452.24,-474.27 457.37,-479.03"/>
+</g>
+<!-- SourceReliability -->
+<g id="node12" class="node">
+<title>SourceReliability</title>
+<path fill="none" stroke="#999999" d="M137.86,-36C137.86,-36 73.38,-36 73.38,-36 67.38,-36 61.38,-30 61.38,-24 61.38,-24 61.38,-12 61.38,-12 61.38,-6 67.38,0 73.38,0 73.38,0 137.86,0 137.86,0 143.86,0 149.86,-6 149.86,-12 149.86,-12 149.86,-24 149.86,-24 149.86,-30 143.86,-36 137.86,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="105.62" y="-15" font-family="Times,serif" font-size="10.00" fill="#cccccc">Source Reliability</text>
+</g>
+<!-- ClaimSource&#45;&gt;SourceReliability -->
+<g id="edge5" class="edge">
+<title>ClaimSource-&gt;SourceReliability</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M60.79,-287.77C61.52,-248.77 65.29,-151 84.62,-72 86.67,-63.64 89.75,-54.84 92.93,-46.86"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="96.08,-48.38 96.73,-37.81 89.63,-45.67 96.08,-48.38"/>
+</g>
+<!-- Witnesses&#45;&gt;SourceReliability -->
+<g id="edge6" class="edge">
+<title>Witnesses-&gt;SourceReliability</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M138.75,-71.7C133.84,-63.9 127.94,-54.51 122.49,-45.83"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="125.54,-44.12 117.26,-37.51 119.62,-47.84 125.54,-44.12"/>
+</g>
+<!-- Probability -->
+<g id="node13" class="node">
+<title>Probability</title>
+<path fill="none" stroke="#999999" d="M455.7,-324C455.7,-324 369.54,-324 369.54,-324 363.54,-324 357.54,-318 357.54,-312 357.54,-312 357.54,-300 357.54,-300 357.54,-294 363.54,-288 369.54,-288 369.54,-288 455.7,-288 455.7,-288 461.7,-288 467.7,-294 467.7,-300 467.7,-300 467.7,-312 467.7,-312 467.7,-318 461.7,-324 455.7,-324"/>
+<text xml:space="preserve" text-anchor="middle" x="412.62" y="-303" font-family="Times,serif" font-size="10.00">Probability Assessment</text>
+</g>
+<!-- DirectEvidence&#45;&gt;Probability -->
+<g id="edge7" class="edge">
+<title>DirectEvidence-&gt;Probability</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M504.15,-359.52C488.6,-350.6 469.49,-339.63 452.76,-330.03"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="454.56,-327.03 444.15,-325.09 451.08,-333.1 454.56,-327.03"/>
+</g>
+<!-- AltHypotheses -->
+<g id="node9" class="node">
+<title>AltHypotheses</title>
+<path fill="none" stroke="#999999" d="M319.47,-396C319.47,-396 227.78,-396 227.78,-396 221.78,-396 215.78,-390 215.78,-384 215.78,-384 215.78,-372 215.78,-372 215.78,-366 221.78,-360 227.78,-360 227.78,-360 319.47,-360 319.47,-360 325.47,-360 331.47,-366 331.47,-372 331.47,-372 331.47,-384 331.47,-384 331.47,-390 325.47,-396 319.47,-396"/>
+<text xml:space="preserve" text-anchor="middle" x="273.62" y="-381" font-family="Times,serif" font-size="10.00">Alternative Explanations</text>
+<text xml:space="preserve" text-anchor="middle" x="273.62" y="-369" font-family="Times,serif" font-size="10.00">Competing hypotheses</text>
+</g>
+<!-- Context&#45;&gt;AltHypotheses -->
+<g id="edge8" class="edge">
+<title>Context-&gt;AltHypotheses</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M330.08,-431.7C321.16,-423.37 310.29,-413.22 300.48,-404.07"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="303.12,-401.75 293.43,-397.48 298.35,-406.86 303.12,-401.75"/>
+</g>
+<!-- Motive&#45;&gt;AltHypotheses -->
+<g id="edge12" class="edge">
+<title>Motive-&gt;AltHypotheses</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M238.24,-431.7C243.53,-423.81 249.92,-414.3 255.8,-405.55"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="258.54,-407.74 261.21,-397.49 252.73,-403.84 258.54,-407.74"/>
+</g>
+<!-- Capability&#45;&gt;Footprint -->
+<g id="edge13" class="edge">
+<title>Capability-&gt;Footprint</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M655.89,-143.7C644.01,-135.03 629.43,-124.4 616.49,-114.96"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="618.9,-112.39 608.76,-109.33 614.78,-118.05 618.9,-112.39"/>
+</g>
+<!-- Footprint&#45;&gt;DirectEvidence -->
+<g id="edge14" class="edge">
+<title>Footprint-&gt;DirectEvidence</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M582.07,-108.41C578.41,-147.36 568.17,-244.4 550.62,-324 548.84,-332.07 546.45,-340.7 544.06,-348.6"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="540.8,-347.33 541.14,-357.92 547.47,-349.43 540.8,-347.33"/>
+</g>
+<!-- AltHypotheses&#45;&gt;Probability -->
+<g id="edge18" class="edge">
+<title>AltHypotheses-&gt;Probability</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M308.34,-359.52C326.39,-350.43 348.65,-339.22 367.97,-329.49"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="369.5,-332.63 376.86,-325.01 366.35,-326.38 369.5,-332.63"/>
+</g>
+<!-- Aftermath -->
+<g id="node11" class="node">
+<title>Aftermath</title>
+<path fill="none" stroke="#999999" d="M464.16,-396C464.16,-396 361.08,-396 361.08,-396 355.08,-396 349.08,-390 349.08,-384 349.08,-384 349.08,-372 349.08,-372 349.08,-366 355.08,-360 361.08,-360 361.08,-360 464.16,-360 464.16,-360 470.16,-360 476.16,-366 476.16,-372 476.16,-372 476.16,-384 476.16,-384 476.16,-390 470.16,-396 464.16,-396"/>
+<text xml:space="preserve" text-anchor="middle" x="412.62" y="-375" font-family="Times,serif" font-size="10.00">Aftermath &amp; Consequences</text>
+</g>
+<!-- Timeline&#45;&gt;Aftermath -->
+<g id="edge16" class="edge">
+<title>Timeline-&gt;Aftermath</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M462.31,-431.7C454.55,-423.47 445.13,-413.48 436.59,-404.42"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="439.3,-402.19 429.89,-397.32 434.2,-406.99 439.3,-402.19"/>
+</g>
+<!-- Aftermath&#45;&gt;Probability -->
+<g id="edge17" class="edge">
+<title>Aftermath-&gt;Probability</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M412.62,-359.7C412.62,-352.41 412.62,-343.73 412.62,-335.54"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="416.12,-335.77 412.62,-325.77 409.12,-335.77 416.12,-335.77"/>
+</g>
+<!-- BRD -->
+<g id="node14" class="node">
+<title>BRD</title>
+<path fill="none" stroke="#999999" d="M486.22,-252C486.22,-252 387.02,-252 387.02,-252 381.02,-252 375.02,-246 375.02,-240 375.02,-240 375.02,-228 375.02,-228 375.02,-222 381.02,-216 387.02,-216 387.02,-216 486.22,-216 486.22,-216 492.22,-216 498.22,-222 498.22,-228 498.22,-228 498.22,-240 498.22,-240 498.22,-246 492.22,-252 486.22,-252"/>
+<text xml:space="preserve" text-anchor="middle" x="436.62" y="-237" font-family="Times,serif" font-size="10.00">Beyond Reasonable Doubt</text>
+<text xml:space="preserve" text-anchor="middle" x="436.62" y="-225" font-family="Times,serif" font-size="10.00">Legal/strict threshold</text>
+</g>
+<!-- Probability&#45;&gt;BRD -->
+<g id="edge19" class="edge">
+<title>Probability-&gt;BRD</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M418.55,-287.7C421.11,-280.24 424.17,-271.32 427.03,-262.97"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="430.29,-264.27 430.22,-253.68 423.66,-262 430.29,-264.27"/>
+</g>
+<!-- Unknowns -->
+<g id="node15" class="node">
+<title>Unknowns</title>
+<path fill="none" stroke="#999999" d="M345.16,-252C345.16,-252 250.09,-252 250.09,-252 244.09,-252 238.09,-246 238.09,-240 238.09,-240 238.09,-228 238.09,-228 238.09,-222 244.09,-216 250.09,-216 250.09,-216 345.16,-216 345.16,-216 351.16,-216 357.16,-222 357.16,-228 357.16,-228 357.16,-240 357.16,-240 357.16,-246 351.16,-252 345.16,-252"/>
+<text xml:space="preserve" text-anchor="middle" x="297.62" y="-231" font-family="Times,serif" font-size="10.00" fill="#cccccc">Unknowns &amp; Blind Spots</text>
+</g>
+<!-- Probability&#45;&gt;Unknowns -->
+<g id="edge20" class="edge">
+<title>Probability-&gt;Unknowns</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M383.9,-287.52C369.38,-278.68 351.57,-267.84 335.91,-258.3"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="337.76,-255.34 327.4,-253.13 334.12,-261.32 337.76,-255.34"/>
+</g>
+<!-- Avenues -->
+<g id="node16" class="node">
+<title>Avenues</title>
+<path fill="none" stroke="#999999" d="M438.91,-180C438.91,-180 328.33,-180 328.33,-180 322.33,-180 316.33,-174 316.33,-168 316.33,-168 316.33,-156 316.33,-156 316.33,-150 322.33,-144 328.33,-144 328.33,-144 438.91,-144 438.91,-144 444.91,-144 450.91,-150 450.91,-156 450.91,-156 450.91,-168 450.91,-168 450.91,-174 444.91,-180 438.91,-180"/>
+<text xml:space="preserve" text-anchor="middle" x="383.62" y="-165" font-family="Times,serif" font-size="10.00">Investigative Avenues</text>
+<text xml:space="preserve" text-anchor="middle" x="383.62" y="-153" font-family="Times,serif" font-size="10.00">Next checks, tests, interviews</text>
+</g>
+<!-- Unknowns&#45;&gt;Avenues -->
+<g id="edge21" class="edge">
+<title>Unknowns-&gt;Avenues</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M318.88,-215.7C329.32,-207.2 342.08,-196.81 353.5,-187.51"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="355.47,-190.43 361.02,-181.4 351.05,-185 355.47,-190.43"/>
+</g>
+<!-- Avenues&#45;&gt;Witnesses -->
+<g id="edge23" class="edge">
+<title>Avenues-&gt;Witnesses</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M325.18,-143.52C292.32,-133.69 251.16,-121.37 216.95,-111.14"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="218.29,-107.89 207.71,-108.38 216.28,-114.6 218.29,-107.89"/>
+</g>
+<!-- Avenues&#45;&gt;DirectEvidence -->
+<g id="edge22" class="edge">
+<title>Avenues-&gt;DirectEvidence</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M451.13,-178.16C472.16,-186.1 493.51,-198.06 507.62,-216 537.64,-254.16 539.57,-313.34 537.57,-348.32"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="534.1,-347.72 536.86,-357.95 541.08,-348.24 534.1,-347.72"/>
+</g>
+<!-- Avenues&#45;&gt;Footprint -->
+<g id="edge24" class="edge">
+<title>Avenues-&gt;Footprint</title>
+<path fill="none" stroke="#999999" stroke-width="1.1" d="M433.57,-143.52C460.76,-134 494.6,-122.16 523.26,-112.13"/>
+<polygon fill="#999999" stroke="#999999" stroke-width="1.1" points="524.11,-115.54 532.39,-108.93 521.79,-108.93 524.11,-115.54"/>
+</g>
+</g>
+</svg>
