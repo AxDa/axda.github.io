@@ -28235,7 +28235,7 @@
    "date": "2026-09-27",
    "motif": "reference_material",
    "cluster": "documents",
-   "size": 100000,
+   "size": 50900000,
    "type": "doc"
 },
 {
@@ -29164,5 +29164,16 @@
   "cluster": "siren_blue",
   "size": 4355612,
   "type": "png"
+},
+{
+   "title": "2026_Untitled_52_document_wk41_04102026_p2",
+   "url_pages": "https://docs.google.com/document/d/1AxaaJNirJ01uTvT_md9XdxIS7fW_7KabxPlkgDDlK1Q/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-10-04",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 100000,
+   "type": "doc"
 }
 ]
