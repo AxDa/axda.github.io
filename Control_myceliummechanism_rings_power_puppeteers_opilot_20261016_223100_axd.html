@@ -88,6 +88,90 @@ div {
         </button>
     
      </div>
+
+<!-- Ribblehead clickable image block (inside header) -->
+<div id="ribblehead-header-block" style="margin-left:20px;">
+  <img id="ribblehead-img"
+       src="https://axda.github.io/Blu/Ribblehead_scene_clouds_over_whernside_0140_utc_1_17102026_axd.png"
+       alt="Ribblehead Scene"
+       style="height:48px; cursor:pointer; border:1px solid #333; border-radius:4px;">
+</div>
+
+<!-- Modal overlay (for click-outside-to-close) -->
+<div id="ribblehead-overlay"
+     style="
+       display:none;
+       position:fixed;
+       top:0; left:0;
+       width:100vw; height:100vh;
+       background:rgba(0,0,0,0.6);
+       z-index:9998;
+     ">
+</div>
+
+<!-- Modal dialog -->
+<div id="ribblehead-dialog"
+     style="
+       display:none;
+       position:fixed;
+       top:50%; left:50%;
+       transform:translate(-50%, -50%);
+       background:#111;
+       padding:25px;
+       border:2px solid #555;
+       box-shadow:0 0 25px rgba(0,0,0,0.7);
+       z-index:9999;
+       color:#e0e0ff;
+       text-align:center;
+       border-radius:10px;
+     ">
+  <p style="font-size:18px; margin-bottom:20px;">Choose destination</p>
+
+  <button onclick="window.location.href='https://axda.github.io/Blu/axd_archive_index_2.html'"
+          style="padding:10px 20px; margin:10px; font-size:16px; cursor:pointer;">
+    GitHub Archive
+  </button>
+
+  <button onclick="window.location.href='https://docs.google.com/document/d/1d7txBpxkIJMJ87wNwG9EiT83idJ2WHpbOmGKO4yEZEc/edit?usp=sharing'"
+          style="padding:10px 20px; margin:10px; font-size:16px; cursor:pointer;">
+    Google Doc
+  </button>
+
+  <button onclick="closeRibbleheadDialog()"
+          style="padding:10px 20px; margin:10px; font-size:16px; cursor:pointer; background:#444;">
+    Cancel
+  </button>
+</div>
+
+<script>
+  const dialog = document.getElementById("ribblehead-dialog");
+  const overlay = document.getElementById("ribblehead-overlay");
+
+  // Open dialog
+  document.getElementById("ribblehead-img").onclick = function() {
+    dialog.style.display = "block";
+    overlay.style.display = "block";
+  };
+
+  // Close function
+  function closeRibbleheadDialog() {
+    dialog.style.display = "none";
+    overlay.style.display = "none";
+  }
+
+  // ESC key closes dialog
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      closeRibbleheadDialog();
+    }
+  });
+
+  // Click outside dialog closes it
+  overlay.onclick = function() {
+    closeRibbleheadDialog();
+  };
+</script>
+
 </header>
 
 <div id="viewport">
