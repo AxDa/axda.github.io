@@ -889,85 +889,86 @@ async function loadIndex() {
         return null;
     }
 
-function chooseBestUrl(item) {
-    const raw = item.url_raw;
-    const pages = item.url_pages;
-    const simple = item.url ? pickUrl(item) : null;
+    function chooseBestUrl(item) {
+        const raw = item.url_raw;
+        const pages = item.url_pages;
+        const simple = item.url ? pickUrl(item) : null;
+    
+        if (pages) return Promise.resolve(pages);
+        if (raw)   return Promise.resolve(raw);
+        return Promise.resolve(simple);
+    }
 
-    if (pages) return Promise.resolve(pages);
-    if (raw)   return Promise.resolve(raw);
-    return Promise.resolve(simple);
-}
-
-function render(items) {
-    container.innerHTML = '';
-    const grid = document.createElement('div');
-    grid.className = compactMode ? 'index-grid compact' : 'index-grid';
-
-    items.forEach(item => {
-        const motifClass = `motif-${(item.motif || "unknown").replace(/\s+/g, '-')}`;
-        const div = document.createElement('div');
-        div.className = `item ${motifClass}`;
-
-        const img = document.createElement('img');
-
-        // NEW thumbnail logic
-        chooseThumbnail(item, mode).then(url => {
-            img.src = url;
-            img.loading = "lazy";
+    function render(items) {
+        container.innerHTML = "";
+        const grid = document.createElement("div");
+        grid.className = compactMode ? "index-grid compact" : "index-grid";
+    
+        items.forEach(item => {
+            const motifClass = "motif-" + (item.motif || "unknown").replace(/\s+/g, "-");
+            const div = document.createElement("div");
+            div.className = "item " + motifClass;
+    
+            const img = document.createElement("img");
+    
+            chooseThumbnail(item, mode).then(url => {
+                img.src = url;
+                img.loading = "lazy";
+            });
+    
+            img.alt = item.title || "Untitled";
+    
+            img.onerror = () => {
+                if (img.dataset.fallbackApplied === "true") return;
+                img.src = "icon_orange.png";
+                img.dataset.fallbackApplied = "true";
+                img.classList.add("thumb-orange");
+            };
+    
+            if (!compactMode) div.appendChild(img);
+    
+            const link = document.createElement("a");
+            link.className = "archive-item";
+    
+            const filename = pickFilename(item);
+            link.dataset.filename = filename || "";
+    
+            // ⭐ viewer_pages support
+            if (item.viewer_pages) {
+                link.href = item.viewer_pages;
+            } else {
+                chooseBestUrl(item).then(best => {
+                    if (best) link.href = best;
+                });
+            }
+    
+            link.target = "_blank";
+            link.textContent = item.title;
+    
+            const date = document.createElement("p");
+            date.textContent = item.date;
+    
+            let extra;
+            if (compactMode) {
+                extra = document.createElement("span");
+                extra.style.color = motifColors[item.motif] || "#999";
+                extra.textContent = item.motif;
+            } else {
+                extra = document.createElement("p");
+                extra.textContent = item.cluster;
+            }
+    
+            const sizeEl = document.createElement("p");
+            sizeEl.className = "item-size";
+            sizeEl.textContent = item.size ? "Size: " + item.size + " bytes" : "";
+    
+            div.append(link, date, extra, sizeEl);
+            grid.appendChild(div);
         });
-
-        img.alt = item.title || "Untitled";
-
-        // UNIVERSAL FALLBACK FOR ANY BROKEN THUMBNAIL
-        img.onerror = () => {
-            if (img.dataset.fallbackApplied === "true") return;
-            img.src = "icon_orange.png";
-            img.dataset.fallbackApplied = "true";
-            img.classList.add("thumb-orange");
-        };
-
-        if (!compactMode) div.appendChild(img);
-
-        const link = document.createElement('a');
-        link.className = "archive-item";
-
-        const filename = pickFilename(item);
-        link.dataset.filename = filename || "";
-
-        chooseBestUrl(item).then(best => {
-            if (best) link.href = best;
-        });
-
-        link.target = "_blank";
-        link.textContent = item.title;
-
-        const date = document.createElement('p');
-        date.textContent = item.date;
-
-        let extra;
-        if (compactMode) {
-            extra = document.createElement('span');
-            extra.style.color = motifColors[item.motif] || '#999';
-            extra.textContent = item.motif;
-        } else {
-            extra = document.createElement('p');
-            extra.textContent = item.cluster;
-        }
-
-        const sizeEl = document.createElement('p');
-        sizeEl.className = "item-size";
-        sizeEl.textContent = item.size ? `Size: ${item.size} bytes` : "";
-
-        div.append(link, date, extra, sizeEl);
-        grid.appendChild(div);
-    });
-
-    container.appendChild(grid);
-    updateLinks();
-}
-
-
+    
+        container.appendChild(grid);
+        updateLinks();   // ⭐ MUST remain here
+    }
 
     function filterAndRender() {
         const q = searchBox.value.toLowerCase();
