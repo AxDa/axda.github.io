@@ -277887,7 +277887,50 @@ div {
 
     </div>
 
+<!-- ============================
+     BACKGROUND TOGGLE BUTTON
+     ============================ -->
+<style>
+  #bgToggleBtn {
+    position: fixed;
+    top: 15px;
+    right: 60px;
+    padding: 10px 16px;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+</style>
+
+<button id="bgToggleBtn">Toggle Background</button>
+
 <script>
+  (function () {
+    let isBlack = true;
+
+    document.getElementById("bgToggleBtn").onclick = function () {
+      isBlack = !isBlack;
+
+      // Toggle page background
+      document.body.style.backgroundColor = isBlack ? "black" : "white";
+
+      // Toggle SVG background if present
+      const svg = document.querySelector("svg");
+      if (svg) {
+        svg.style.backgroundColor = isBlack ? "black" : "white";
+      }
+
+      // Button styling flips too
+      this.style.backgroundColor = isBlack ? "#ffffff" : "#000000";
+      this.style.color = isBlack ? "#000000" : "#ffffff";
+      this.style.borderColor = isBlack ? "#000000" : "#ffffff";
+    };
+  })();
+
     const svg = document.getElementById('scene');
     let viewBox = svg.viewBox.baseVal;
 
