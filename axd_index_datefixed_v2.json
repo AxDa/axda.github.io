@@ -32605,7 +32605,7 @@
   "type": "png"
 },
 {
-  "title": "clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_1_25102026.html",
+  "title": "clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_25102026.html",
   "url_pages": "https://axda.github.io/clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_1_25102026.html",
   "url_raw": "https://raw.githubusercontent.com/AxDa/main/clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_1_25102026.html",
   "thumbnail_pages": "https://axda.github.io/clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_1_25102026_thumb.png",
@@ -32650,7 +32650,7 @@
   "type": "html"
 },
 {
-  "title": "clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_1_25102026.svg",
+  "title": "clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_25102026.svg",
   "url_pages": "https://axda.github.io/clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_1_25102026.svg",
   "url_raw": "https://raw.githubusercontent.com/AxDa/main/clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_1_25102026.svg",
   "thumbnail_pages": "https://axda.github.io/clamping_date_time_range_bleakst_21_thru_25102026_graph_40_0724_utc_1_25102026_thumb.png",
@@ -32704,5 +32704,117 @@
    "cluster": "documents",
    "size": 100000,
    "type": "doc"
-}
+},
+{
+    "title": "1_bleakst_street_1456_153624_utc_25102026_v0.0a.mp3",
+    "viewer_pages": "https://axda.github.io/viewers/viewer_1_bleakst_street_1456_153624_utc_25102026_v0_0a.html",
+    "url_pages": "https://axda.github.io/1_bleakst_street_1456_153624_utc_25102026_v0.0a.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleakst_street_1456_153624_utc_25102026_v0.0a.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleakst_street_1456_153624_utc_25102026_v0_0a.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleakst_street_1456_153624_utc_25102026_v0_0a.png",
+    "tags": [
+      "bleakst",
+      "perambulators",
+      "horn",
+      "bbcreau",
+      "agency",
+      "milinary_garden",
+      "Think_of_Andrew_Davison",
+      "WYPC_Log",
+      "clips",
+      "0304hhmm",
+      "soft_silence_103400_133800_utc_20102026",
+      "soft_silence",
+      "archive_index_entries_19.json"
+    ],
+    "date": "2026-10-26",
+    "motif": "civic",
+    "cluster": "agency",
+    "size": 38793551,
+    "type": "mp3"
+  },
+  {
+    "title": "1_bleakst_street_1532_utc_25102026_v_01.mp3",
+    "viewer_pages": "https://axda.github.io/viewers/viewer_1_bleakst_street_1532_utc_25102026_v_01.html",
+    "url_pages": "https://axda.github.io/1_bleakst_street_1532_utc_25102026_v_01.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleakst_street_1532_utc_25102026_v_01.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleakst_street_1532_utc_25102026_v_01.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleakst_street_1532_utc_25102026_v_01.png",
+    "tags": [
+      "bleakst",
+      "perambulators",
+      "horn",
+      "bbcreau",
+      "agency",
+      "milinary_garden",
+      "Think_of_Andrew_Davison",
+      "WYPC_Log",
+      "clips",
+      "0304hhmm",
+      "soft_silence_103400_133800_utc_20102026",
+      "soft_silence",
+      "archive_index_entries_19.json"
+    ],
+    "date": "2026-10-26",
+    "motif": "civic",
+    "cluster": "agency",
+    "size": 262312,
+    "type": "mp3"
+  },
+  {
+    "title": "1_bleakst_street_172214_utc_25102026_v0_1.mp3",
+    "viewer_pages": "https://axda.github.io/viewers/viewer_1_bleakst_street_172214_utc_25102026_v0_1.html",
+    "url_pages": "https://axda.github.io/1_bleakst_street_172214_utc_25102026_v0_1.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleakst_street_172214_utc_25102026_v0_1.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleakst_street_172214_utc_25102026_v0_1.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleakst_street_172214_utc_25102026_v0_1.png",
+    "tags": [
+      "bleakst",
+      "perambulators",
+      "horn",
+      "bbcreau",
+      "agency",
+      "milinary_garden",
+      "Think_of_Andrew_Davison",
+      "WYPC_Log",
+      "clips",
+      "0304hhmm",
+      "soft_silence_103400_133800_utc_20102026",
+      "soft_silence",
+      "archive_index_entries_19.json"
+    ],
+    "date": "2026-10-26",
+    "motif": "civic",
+    "cluster": "agency",
+    "size": 723321,
+    "type": "mp3"
+  },
+  {
+    "title": "1_bleakst_clips_0304hhmm_soft_silence_103400_133800_utc_20102026_v0_1.mp3",
+    "viewer_pages": "https://axda.github.io/viewers/viewer_1_bleakst_clips_0304hhmm_soft_silence_103400_133800_utc_20102026_v0_1.html",
+    "url_pages": "https://axda.github.io/1_bleakst_clips_0304hhmm_soft_silence_103400_133800_utc_20102026_v0_1.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleakst_clips_0304hhmm_soft_silence_103400_133800_utc_20102026_v0_1.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleakst_clips_0304hhmm_soft_silence_103400_133800_utc_20102026_v0_1.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_bleakst_clips_0304hhmm_soft_silence_103400_133800_utc_20102026_v0_1.png",
+    "tags": [
+      "bleakst",
+      "perambulators",
+      "horn",
+      "bbcreau",
+      "agency",
+      "milinary_garden",
+      "Think_of_Andrew_Davison",
+      "WYPC_Log",
+      "clips",
+      "0304hhmm",
+      "soft_silence_103400_133800_utc_20102026",
+      "soft_silence",
+      "archive_index_entries_19.json"
+    ],
+    "date": "2026-10-26",
+    "motif": "civic",
+    "cluster": "agency",
+    "size": 11448572,
+    "type": "mp3"
+  }
 ]
