@@ -32695,6 +32695,37 @@
   "type": "svg"
 },
 {
+   "title": "2026_Untitled_55_document_wk44_25102026_p2",
+   "url_pages": "https://docs.google.com/document/d/1vmAw9NMbU0Eftzi-5D_zdv_nNjuruwRal6gYo-C1C9E/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-10-25",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 100000,
+   "type": "doc"
+},
+{
+    "title": "1_bleaksirenst_223646_223806_26102026_v0_2.mp3",
+    "url_pages": "https://axda.github.io/1_bleaksirenst_223646_223806_26102026_v0_2.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/1_bleaksirenst_223646_223806_26102026_v0_2.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_bleaksirenst_223646_223806_26102026_v0_2.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/Blu/master/waveform_thumbnails/1_bleaksirenst_223646_223806_26102026_v0_2.png",
+    "tags": [
+      "bleaksirenst",
+      "bleaksirenst",
+      "223646",
+      "223806",
+      "26102026",
+      "blu_index_entries_x26_json"
+    ],
+    "date": "2026-10-26",
+    "motif": "civic decay",
+    "cluster": "siren_blue",
+    "size": 3956653,
+    "type": "mp3"
+},
+{
     "title": "1_bleakst_street_222737_bbcreau_222940_223200_utc_26102026_v0_2.mp3",
     "url_pages": "https://axda.github.io/1_bleakst_street_222737_bbcreau_222940_223200_utc_26102026_v0_2.mp3",
     "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_bleakst_street_222737_bbcreau_222940_223200_utc_26102026_v0_2.mp3",
@@ -32717,17 +32748,6 @@
     "cluster": "bbcreau_corp",
     "size": 4426857,
     "type": "mp3"
-},
-{
-   "title": "2026_Untitled_55_document_wk44_25102026_p2",
-   "url_pages": "https://docs.google.com/document/d/1vmAw9NMbU0Eftzi-5D_zdv_nNjuruwRal6gYo-C1C9E/edit?usp=sharing",
-   "thumbnail_pages": "edit",
-   "tags": ["document", "google", "reference" ],
-   "date": "2026-10-25",
-   "motif": "reference_material",
-   "cluster": "documents",
-   "size": 100000,
-   "type": "doc"
 },
 {
     "title": "1_bleaksirenst_45s_2354_ss_105700_26102026_v0_1.mp3",
