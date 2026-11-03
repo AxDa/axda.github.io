@@ -33445,7 +33445,18 @@
   "cluster": "signal",
   "size": 3041280,  
   "type": "mp3"
-}, 
+},
+{
+   "title": "2026_Untitled_56_document_wk45_01112026_p2",
+   "url_pages": "https://docs.google.com/document/d/13Z6z5Qr7-X4VnPW7A3uFk9-HNezHSBv3b9z53g-aUhs/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-11-01",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 100000,
+   "type": "doc"
+},
 {
     "title": "1_king_charles_iii_2000_news_200000_bleakst_fireworks_195013_195043_utc_03112026_v0_2.mp3",
     "url_pages": "https://axda.github.io/1_king_charles_iii_2000_news_200000_bleakst_fireworks_195013_195043_utc_03112026_v0_2.mp3",
