@@ -33251,7 +33251,6 @@
   "size": 4301988,  
   "type": "mp3"
 },
-
 {
   "title": "5.Dame_Judi_Dench_Patta_patta_Miriam_Makeba_Henry_Bonsu_2200_utc_Times_News_30102026_v0_1.png",
   "url_pages": "https://axda.github.io/5.Dame_Judi_Dench_Patta_patta_Miriam_Makeba_Henry_Bonsu_2200_utc_Times_News_30102026_v0_1..mp3",
@@ -33562,6 +33561,64 @@
     "motif": "Tour",
     "cluster": "signal",
     "size": 7110573,
+    "type": "mp3" 
+},
+  {
+    "title": "1_starship_upper_catch_release_bbc_online_vid_coverage_space_x_2305_utc_14112026_v0_2.mp3",
+    "url_pages": "https://axda.github.io/1_starship_upper_catch_release_bbc_online_vid_coverage_space_x_2305_utc_14112026_v0_2.mp3",
+    "url_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/1_starship_upper_catch_release_bbc_online_vid_coverage_space_x_2305_utc_14112026_v0_2.mp3",
+    "thumbnail_pages": "https://axda.github.io/waveform_thumbnails/1_starship_upper_catch_release_bbc_online_vid_coverage_space_x_2305_utc_14112026_v0_2.png",
+    "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/axda.github.io/main/waveform_thumbnails/1_starship_upper_catch_release_bbc_online_vid_coverage_space_x_2305_utc_14112026_v0_2.png",
+    "tags": [
+      "Starship",
+      "upper_catch_release_BBC",
+      "online_Vid_coverage",
+      "Space_X",
+      "14112026",
+      "blu_index_entries_Pc15.json"
+    ],
+    "date": "2026-11-14",
+    "motif": "Tour",
+    "cluster": "signal",
+    "size": 2292340,
     "type": "mp3"
-  }
+  },
+  {
+  "title": "System_architecture_atlas_0444_utc_16112026.png",
+  "url_pages": "https://axda.github.io/System_architecture_atlas_0444_utc_16112026.png",
+  "url_raw": "https://raw.githubusercontent.com/AxDa/main/System_architecture_atlas_0444_utc_16112026.png",
+  "thumbnail_pages": "https://axda.github.io/System_architecture_atlas_0444_utc_16112026.png",
+  "thumbnail_raw": "https://raw.githubusercontent.com/AxDa/main/System_architecture_atlas_0444_utc_16112026.png",
+    "tags": [
+    "graph",
+    "mycelium_matrix",
+    "observe_analyse_log_understand",
+    "Scylla_come_out",
+    "XVIII_chipping-norton_malfeasance",
+    "systemicus_epstienium_type-c",
+    "five_triangle_something",
+    "underworld",
+    "hybrid_mycelium_matrix_rings_cave",
+    "conundrum",
+    "corollary_core",
+    "clarity",
+    "pioneer"
+  ],
+  "date": "2026-11-16",
+  "motif": "technical audit",
+  "cluster": "signal",
+  "size": 5991446,    
+  "type": "png"
+},
+{
+   "title": "2026_Untitled_58_document_wk47_16112026_p2",
+   "url_pages": "https://docs.google.com/document/d/1IRtJi2wzmlJOjjpxXs0MDfqyvht7mAlgnJWoUXMReNQ/edit?usp=sharing",
+   "thumbnail_pages": "edit",
+   "tags": ["document", "google", "reference" ],
+   "date": "2026-11-15",
+   "motif": "reference_material",
+   "cluster": "documents",
+   "size": 100000,
+   "type": "doc"
+}
 ]
